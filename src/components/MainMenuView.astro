@@ -1,0 +1,60 @@
+<input type="checkbox" id="open" class="menu-checkbox" />
+<nav>
+	<label for="open" class="menu-open"></label>
+	<ul>
+		<slot />
+	</ul>
+</nav>
+
+<style lang="stylus">
+	nav
+		height 4rem
+		text-align center
+		width 100%
+		animation callme 1s ease-in-out both
+		animation-delay 2s
+		ul
+			display flex
+			align-items center
+			height 4rem
+			margin 0 auto
+			max-width 1440px
+
+	.menu-checkbox
+		display none
+
+	/* Responsive Design */
+	@media screen and (max-width:1366px)
+		nav
+			height 3rem
+			ul
+				height 3rem
+				max-width 1024px
+
+	@media screen and (max-width:640px)
+		nav
+			border 0
+			height auto
+			ul
+				display none
+				height auto
+		
+		.menu-open
+			user-select none
+			cursor pointer
+			height 40px
+			width 40px
+			background url(/img/icon-hamburger.svg) no-repeat center
+			background-size 60%
+			display inline-block
+			margin-top 1rem
+			margin-bottom 1rem
+		
+		.menu-checkbox:checked ~ nav
+			.menu-open
+				background url(/img/icon-close.svg) no-repeat center !important
+				background-size 60% !important
+			ul
+				display block
+
+</style>

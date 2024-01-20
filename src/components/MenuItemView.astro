@@ -1,0 +1,44 @@
+---
+import type { Link } from "../types/types";
+
+interface Props extends Link {}
+
+const { title, url } = Astro.props;
+---
+
+<li>
+    <a href={url} title={title} class="anin-rapido">{title}</a>
+</li>
+
+<style lang="stylus">
+    li
+        width 20%
+        a
+        cursor pointer
+        font-size 2rem
+        letter-spacing 1px
+        text-transform uppercase
+        font-weight bolder
+
+    /* Responsive Design */
+    @media screen and (max-width:1366px)
+        li
+            display flex
+            align-items center
+            justify-content center
+            a
+                font-size 1rem
+    
+    @media screen and (max-width:768px)
+        li
+            a
+                font-size 1rem
+                font-weight normal
+
+    @media screen and (max-width:640px)
+        li
+            width 100%
+            line-height 4rem
+            border-top solid 1px rgb(61, 188, 230)
+
+</style>

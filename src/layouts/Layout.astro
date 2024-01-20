@@ -1,0 +1,858 @@
+---
+import MainHeaderView from "../components/MainHeaderView.astro";
+import HeaderLogoView from "../components/HeaderLogoView.astro";
+import headerLogo from "../data/headerLogoData";
+import HgroupView from "../components/HgroupView.astro";
+import hgroup from "../data/hgroupData";
+import CallView from "../components/CallView.astro";
+import call from "../data/callData";
+import MainMenuView from "../components/MainMenuView.astro";
+import MenuItemView from "../components/MenuItemView.astro";
+import menuItems from "../data/menuItemsData";
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta
+			name="keywords"
+			content="desarrollo de paginas web, diseñador gráfico, maquetador web, elaboración de paginas web, desarrollo web profesional"
+		/>
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, maximum-scale=1"
+		/>
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link
+			rel="apple-touch-icon"
+			sizes="144x144"
+			href="apple-touch-icon.png"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+
+		<meta name="distribution" content="global" />
+		<meta name="author" content="Edgar Cornejo Cahuana" />
+		<meta name="designer" content="Edgar Cornejo" />
+		<meta property="fb:page_id" content="394466673993640" />
+		<meta property="fb:admins" content="100000001685554" />
+		<meta property="og:title" content="edgarcornejo.com" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://www.edgarcornejo.com" />
+		<meta
+			property="og:image"
+			content="https://www.edgarcornejo.com/img/edgarcornejo.png"
+		/>
+		<meta property="og:site_name" content="edgarcornejo.com" />
+		<meta
+			name="google-site-verification"
+			content="tepZV8pXm5w4Dq1SGa9KJml6qC2Ojq0dLlvHRBAAllQ"
+		/>
+		<meta name="msvalidate.01" content="7E5549D4E71D0C4A0620EA0367533CD9" />
+
+		<!--Twitter Card-->
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:site" content="@devcornejo" />
+		<meta name="twitter:title" content="Edgar Cornejo" />
+		<meta
+			name="twitter:description"
+			content="Mi nombre es Edgar Cornejo ofrezco los servicios de diseño gráfico, desarrollo web front-end y posicionamiento en Internet."
+		/>
+		<meta name="twitter:creator" content="@devcornejo" />
+		<meta
+			name="twitter:image"
+			content="https://www.edgarcornejo.com/img/edgarcornejo.png"
+		/>
+		<meta name="twitter:domain" content="https://www.edgarcornejo.com/" />
+
+		<script type="application/ld+json">
+			{
+				"@context": "http://schema.org",
+				"@type": "Organization",
+				"name": "Edgar Cornejo",
+				"email": "info@edgarcornejo.com",
+				"url": "https://www.edgarcornejo.com",
+				"logo": "https://www.edgarcornejo.com/img/edgarcornejo.png",
+				"contactPoint": [
+					{
+						"@type": "ContactPoint",
+						"telephone": "+51-974795622",
+						"contactType": "customer support"
+					}
+				],
+				"sameAs": [
+					"https://www.facebook.com/devcornejo",
+					"https://github.com/edgarcornejo",
+					"https://twitter.com/devcornejo",
+					"https://www.youtube.com/user/devcornejo",
+					"http://pinterest.com/Edgarcornejo/",
+					"https://www.linkedin.com/pub/edgar-cornejo-cahuana/48/150/974"
+				]
+			}
+		</script>
+
+		<!-- Google tag (gtag.js) 
+		<script
+			async
+			src="https://www.googletagmanager.com/gtag/js?id=G-PRJWX26WVF"
+		></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag("js", new Date());
+
+			gtag("config", "G-PRJWX26WVF");
+		</script>-->
+	</head>
+
+	<body itemscope itemtype="http://data-vocabulary.org/Person">
+		<MainHeaderView>
+			{headerLogo.map((logo) => <HeaderLogoView {...logo} />)}
+
+			{hgroup.map((h) => <HgroupView {...h} />)}
+
+			{call.map((c) => <CallView {...c} />)}
+
+			<MainMenuView>
+				{menuItems.map((item) => <MenuItemView {...item} />)}
+			</MainMenuView>
+		</MainHeaderView>
+
+		<section class="promo">
+			<article>
+				<div class="wrapper-text">
+					<h3>Firma de correo</h3>
+					<p>
+						Tener una firma de correo es importante para nuestras
+						comunicaciones con clientes o colaboradores. Obtén la
+						tuya ahora.<br /><br /> Comunicate a
+						<a
+							href="mailto:info@edgarcornejo.com"
+							title="info@edgarcornejo.com"
+							>info@edgarcornejo.com</a
+						>
+					</p>
+				</div>
+			</article>
+		</section>
+
+		<section class="main-section">
+			<article>
+				<div class="wrapper-text">
+					<h3>Marcas</h3>
+					<p>
+						Te recomiendo algunas páginas que te puedan interesar
+						como: Agregarte en un directorio de profesionales y
+						empresas, si necesitas recursos fotográficos, si te
+						gustan las naves hechas de papel o enterarte de noticias
+						de tecnología.
+					</p>
+				</div>
+
+				<div class="marcas-container">
+					<figure>
+						<img
+							src="/img/portafolio/fotosgratislogo.png"
+							loading="lazy"
+							alt="Fotos Gratis"
+						/>
+
+						<figcaption>
+							<a
+								href="https://www.fotos.edgarcornejo.com"
+								title="Fotos Gratis"
+								target="_blank"
+							>
+								Fotos Gratis
+							</a>
+						</figcaption>
+					</figure>
+
+					<figure>
+						<img
+							src="/img/portafolio/minilink-soluciones.png"
+							loading="lazy"
+							class="desaturar"
+							alt="Minilink Soluciones"
+						/>
+
+						<figcaption>
+							<a
+								href="https://www.minilink.edgarcornejo.com"
+								title="Minilink Soluciones"
+								target="_blank"
+							>
+								Minilink
+							</a>
+						</figcaption>
+					</figure>
+
+					<figure>
+						<img
+							src="/img/portafolio/naves-de-papel.png"
+							loading="lazy"
+							alt="Nave de Papel"
+						/>
+
+						<figcaption>
+							<a
+								href="https://www.navedepapel.edgarcornejo.com"
+								title="Nave de Papel"
+								target="_blank"
+							>
+								Nave de Papel
+							</a>
+						</figcaption>
+					</figure>
+
+					<figure>
+						<img
+							src="/img/portafolio/renova-design-logotipo.png"
+							loading="lazy"
+							class="desaturar"
+							alt="Renova Design"
+						/>
+
+						<figcaption>
+							<a
+								href="https://renovadesign.blogspot.pe"
+								title="Renova Design"
+								target="_blank"
+							>
+								Renova Design
+							</a>
+						</figcaption>
+					</figure>
+				</div>
+			</article>
+		</section>
+
+		<section class="main-section top-post">
+			<article>
+				<div class="wrapper-text">
+					<h3>Últimas Publicaciones</h3>
+					<p>
+						Me gusta compartir lo que conozco, si tienes alguna duda
+						posiblemente tengo algunas recomendaciones que hago en
+						estas publicaciones.
+					</p>
+				</div>
+
+				<p>
+					<a
+						href="publicaciones/que-necesito-para-mi-primera-web"
+						class="anin-rapido"
+						title="Que necesito para mi primera web"
+					>
+						Que necesito para mi primera web
+					</a>
+
+					<a
+						href="publicaciones/como-elegir-un-buen-hosting"
+						class="anin-rapido"
+						title="Como elegir un buen hosting"
+					>
+						Como elegir un buen hosting
+					</a>
+
+					<a
+						href="publicaciones/mi-primer-dominio"
+						class="anin-rapido"
+						title="Mi primer dominio"
+					>
+						Mi primer dominio
+					</a>
+
+					<a
+						href="publicaciones/el-servicio-de-desarrollo-front-end"
+						class="anin-rapido"
+						title="El servicio de Desarrollo fron-end"
+					>
+						El servicio de Desarrollo front-end
+					</a>
+
+					<a href="publicaciones/" class="anin-rapido">Ver más</a>
+				</p>
+			</article>
+		</section>
+
+		<section class="main-section">
+			<article>
+				<div class="wrapper-text">
+					<h3>Contacto</h3>
+					<p>
+						Actualmente me encuentro en
+						<strong>Arequipa, Perú</strong>
+						.
+						<br />
+						Consultas o presupuestos, envía un correo a info@edgarcornejo.com
+					</p>
+				</div>
+
+				<div id="social">
+					<a
+						class="anin-normal"
+						href="https://www.linkedin.com/pub/edgar-cornejo-cahuana/48/150/974"
+						target="_blank"
+						title="Linkedin"
+					>
+						Linkedin
+					</a>
+					<a
+						class="anin-normal"
+						href="https://www.behance.net/edgarcornejo"
+						target="_blank"
+						title="Sígueme en Behance"
+					>
+						Behance
+					</a>
+					<a
+						class="anin-normal"
+						href="https://www.instagram.com/devcornejo"
+						target="_blank"
+						title="Sígueme en Instagram"
+					>
+						Instagram
+					</a>
+					<a
+						class="anin-normal"
+						href="https://github.com/edgarcornejo"
+						target="_blank"
+						title="Sígueme en GitHub"
+					>
+						GitHub
+					</a>
+					<a
+						class="anin-normal"
+						href="http://pinterest.com/Edgarcornejo"
+						target="_blank"
+						title="Sígueme en Pinterest"
+					>
+						Pinterest
+					</a>
+					<a
+						class="anin-normal"
+						href="https://www.facebook.com/edgarcornejopage"
+						target="_blank"
+						title="Sígueme en Facebook"
+					>
+						Facebook
+					</a>
+					<a
+						class="anin-normal"
+						href="https://twitter.com/devcornejo"
+						target="_blank"
+						title="Sígueme en Twitter"
+					>
+						Twitter
+					</a>
+					<a
+						class="anin-normal"
+						href="https://www.youtube.com/user/devcornejo"
+						target="_blank"
+						title="Sígueme en YouTube"
+					>
+						YouTube
+					</a>
+				</div>
+
+				<ul class="mailing-list">
+					<address>
+						<li>
+							<strong>Correo:</strong>
+							<a
+								href="mailto:info@edgarcornejo.com"
+								class="anin-normal"
+								title="info@edgarcornejo.com"
+								itemprop="email"
+							>
+								info@edgarcornejo.com
+							</a>
+						</li>
+
+						<li>
+							<strong>Web:</strong>
+							<a
+								href="https://www.edgarcornejo.com"
+								itemprop="url"
+								class="anin-normal"
+								title="Pagina Web"
+							>
+								www.edgarcornejo.com
+							</a>
+						</li>
+
+						<li>
+							<strong>Teléfono:</strong>
+							<a
+								itemprop="telephone"
+								href="tel:+51974795622"
+								class="anin-normal"
+								title="+51974795622"
+							>
+								+51 974 795 622
+							</a>
+						</li>
+
+						<li>
+							<strong>Skype:</strong>
+							<a
+								href="skype:devcornejo?call"
+								class="anin-normal"
+								title="devcornejo"
+							>
+								devcornejo
+							</a>
+						</li>
+
+						<li>
+							<strong>Facebook</strong>
+							<a
+								href="https://www.facebook.com/edgarcornejopage"
+								target="_blank"
+								class="anin-normal"
+								title="Sígueme en Facebook"
+								itemprop="nickname"
+							>
+								devcornejo
+							</a>
+						</li>
+					</address>
+				</ul>
+			</article>
+		</section>
+
+		<slot />
+
+		<footer>
+			<p>
+				Copyright ©
+				<a href="https://www.edgarcornejo.com/" title="Edgar Cornejo">
+					Edgar Cornejo
+				</a>
+				All Rights Reserved.
+			</p>
+		</footer>
+	</body>
+</html>
+
+<style is:global lang="stylus">
+	eCeleste = rgb(61, 188, 230)
+	eAzul = rgb(103, 61, 230)
+	eRed = rgb(230, 61, 103)
+	eDark = rgb(8, 12, 63)
+	White = rgb(255, 255, 255)
+	backCeleste = rgb(191, 238, 231)
+
+	/* reset */
+	html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video
+		border 0
+		box-sizing border-box
+		font-size 100%
+		margin 0
+		outline 0
+		padding 0
+		text-rendering optimizeLegibility
+		vertical-align top
+
+	li
+		list-style none
+
+	@viewport
+		width device-width
+
+	::-webkit-scrollbar
+		width 15px
+
+	::-webkit-scrollbar-track
+		background backCeleste
+
+	::-webkit-scrollbar-thumb
+		border-radius 5px
+		background rgb(61, 188, 230)
+
+	img
+		vertical-align middle
+
+	/*Estilos de pagina*/
+	body
+		background rgb(255, 255, 255)
+		font-family 'Ubuntu',Helvetica,Arial,sans-serif
+		font-variant-ligatures no-common-ligatures
+		width 100%
+		height 100%
+		color rgb(8, 12, 63)
+		background linear-gradient(90deg, rgb(255, 255, 255) 20px, transparent 1%) center, linear-gradient(rgb(255, 255, 255) 20px, transparent 1%) center, rgb(191, 238, 231)
+		background-size 22px 22px
+
+	html
+		width 100%
+		height 100%
+		scroll-behavior smooth
+
+	a
+		text-decoration none
+		color rgb(61, 188, 230)
+		&:hover
+			color rgb(8, 12, 63)
+
+	/*Animacion basica*/
+	.anin-rapido
+		transition all .1s ease-in-out
+
+	.anin-normal
+		transition all .2s ease-in-out
+
+	.anin-lento
+		transition all .3s ease-in-out
+
+	/*Logotipo principal*/
+	@keyframes logo
+		from
+			opacity 0
+			left -100px
+		to
+			opacity 1
+			left 0
+
+	/*Logotipo secundario*/
+	@keyframes logo-s
+		from
+			opacity 0
+			left -100px
+		to
+			opacity 1
+			left 80px
+
+	/*Menu secundario*/
+	@keyframes menu-s
+		from
+			opacity 0
+			left -100px
+		to
+			opacity 1
+			left 100px
+
+	@keyframes callme
+		from
+			opacity 0
+		to
+			opacity 1
+
+	@keyframes titulo1
+		from
+			opacity 0
+			bottom 100px
+		to
+			opacity 1
+			bottom 0
+
+	@keyframes titulo2
+		from
+			opacity 0
+			bottom 50px
+		to
+			opacity 1
+			bottom 0
+
+	/*Secciones principales*/
+	.main-section
+		margin 0 auto
+		padding 8rem 0 8rem 0
+		article
+			margin 0 auto
+			max-width 1300px
+			width 100%
+			.wrapper-text
+				display flex
+				padding-bottom 6rem
+				h3
+					font-size 3rem
+					align-self center
+					text-transform uppercase
+					padding-left 10px
+					border-left solid 10px rgb(103, 61, 230)
+				p
+					font-size 2rem
+					padding-left 50px
+					font-weight lighter
+
+	/*Espacio Promoción*/
+	.promo
+		background linear-gradient(90deg, eRed 20px, transparent 1%) center, linear-gradient(eRed 20px, transparent 1%) center, salmon
+		background-size 22px 22px
+		color rgb(255, 255, 255)
+		margin 0 auto
+		padding 8rem 0 8rem 0
+		article
+			margin 0 auto
+			max-width 1300px
+			width 100%
+			.wrapper-text
+				display flex
+				a
+					color rgb(255, 255, 255)
+				h3
+					font-size 3rem
+					align-self center
+					text-transform uppercase
+					padding-left 10px
+					border-left solid 10px rgb(255, 255, 255)
+				p
+					font-size 2rem
+					padding-left 50px
+					font-weight 300
+	
+	/*Marcas*/
+	.marcas-container
+		display flex
+		text-align center
+		figure
+			width 25%
+			img
+				max-height 100px
+				width auto/9
+				filter grayscale(100%)
+				&:hover img
+					filter grayscale(0%)
+					opacity 1
+				figcaption
+					text-align center
+					margin-top 2.5rem
+					a
+						padding 15px
+						border solid 1px rgb(103, 61, 230)
+						border-radius 5px
+						font-size 1.5rem
+						&:hover
+							color #FFF
+							background rgb(103, 61, 230)
+				.desaturar
+					opacity 0.3
+
+	/*Publicaciones Principales*/
+	.top-post
+		a
+			padding 15px
+			border solid 1px rgb(103, 61, 230)
+			border-radius 5px
+			font-size 2rem
+			display inline-block
+			margin 5px
+			&:last-child
+				background rgb(103, 61, 230)
+				color #FFF
+			&:hover
+				color #FFF
+				background rgb(103, 61, 230)
+	
+	/* Contacto */
+	#social
+		margin-bottom 3rem
+		display flex
+		justify-content center
+		a
+			background url(/img/icon-social.svg) no-repeat rgb(61, 188, 230)
+			background-size cover
+			border-radius 5px
+			color transparent
+			font-size 0
+			height 48px
+			margin-right 10px
+			text-indent -99999999px
+			width 48px
+			&:nth-child(1)
+				background-position 0 0
+			&:nth-child(2)
+				background-position -48px 0
+			&:nth-child(3)
+				background-position -96px 0
+			&:nth-child(4)
+				background-position -143px 0
+			&:nth-child(5)
+				background-position -191px 0
+			&:nth-child(6)
+				background-position -243px 0
+			&:nth-child(7)
+				background-position -287px 0
+			&:nth-child(8)
+				background-position -336px 0
+			&:hover
+				background-color rgb(103, 61, 230)
+				transform scale3d(1.2, 1.2, 1)
+
+	.mailing-list
+		address
+			font-style normal
+		li
+			height auto
+			padding-bottom 1rem
+			width 90%
+			display flex
+			a
+				font-size 2rem
+				padding 15px
+				border solid 1px rgb(103, 61, 230)
+				border-radius 5px
+				&:hover
+					color #FFF
+					background rgb(103, 61, 230)
+		strong
+			font-size 2rem
+			align-self center
+			font-weight lighter
+			width 160px
+	
+	/* Pie */
+	footer
+		font-size 1.2rem
+		height auto
+		margin 0 auto
+		padding 2rem 0 2rem 0
+		text-align right
+		max-width 1920px
+		width 90%
+
+	/* Responsive Design */
+	@media screen and (max-width:1366px)
+		.main-section
+			padding 6rem 0 6rem 0
+			article
+				max-width 1024px
+				.wrapper-text
+					padding-bottom 4rem
+					h3
+						font-size 2rem
+					p
+						font-size 1rem
+		
+		.promo
+			padding 6rem 0 6rem 0
+			article
+				max-width 1024px
+				.wrapper-text
+					h3
+						font-size 2rem
+					p
+						font-size 1rem
+
+		.marcas-container
+			figure
+				img
+					max-height 80px
+				figcaption
+					margin-top 2rem
+					a
+						font-size 1rem
+		
+		.top-post
+			a
+				font-size 1rem
+		
+		.mailing-list
+			li
+				a
+					font-size 1rem
+				strong
+					font-size 1rem
+					width 120px
+
+		footer
+			font-size 1rem
+			max-width 1024px
+	
+	@media screen and (max-width:1024px)
+		.main-section
+			padding 4rem 0 4rem 0
+			article
+				width 90%
+				.wrapper-text
+					padding-bottom 3rem
+		
+		.promo
+			article
+				width 90%
+
+		.marcas-container
+			figure
+				img
+					filter grayscale(0%)
+				.desaturar
+					opacity 1
+		
+	@media screen and (max-width:768px)
+		.main-section
+			article
+				.wrapper-text
+					h3
+						font-size 1.6rem
+		
+		.promo
+			article
+				.wrapper-text
+					h3
+						font-size 1.6rem
+
+	@media screen and (max-width:620px)
+		.marcas-container
+			flex-wrap wrap
+			figure
+				width 50%
+				margin-bottom 3rem
+
+	@media screen and (max-width:480px)
+		.main-section
+			article
+				.wrapper-text
+					flex-wrap wrap
+					justify-content center
+					h3
+						align-self flex-start
+						font-size 1.2rem
+						border none
+						padding 0 0 2rem 0
+						text-align center
+					p
+						padding 0
+
+		.promo
+			article
+				.wrapper-text
+					flex-wrap wrap
+					justify-content center
+					h3
+						align-self flex-start
+						font-size subtituloh5
+						border none
+						padding 0 0 2rem 0
+						text-align center
+					p
+						padding 0
+
+		.marcas-container
+			figure
+				width 100%
+				margin-bottom 3rem
+				img
+					max-height 100px
+		
+		#social
+			flex-wrap wrap
+			a
+				margin-bottom 10px
+
+
+</style>
