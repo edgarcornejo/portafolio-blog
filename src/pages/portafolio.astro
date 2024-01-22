@@ -1,0 +1,114 @@
+---
+import Layout from "../layouts/Layout.astro";
+import LogoView from "../components/LogoView.astro";
+import logo from "../data/logoData";
+import MainMenuView from "../components/MainMenuView.astro";
+import MenuItemView from "../components/MenuItemView.astro";
+import menuItems from "../data/menuItemsData";
+import AsideMenuView from "../components/AsideMenuView.astro";
+import asideItems from "../data/asideItemsData";
+import AsideItemView from "../components/AsideItemView.astro";
+---
+
+<Layout
+    title="Portafolio - Edgar Cornejo, Diseñador gráfico, desarrolador Web front-end y Posicionamiento en Internet."
+>
+    {logo.map((img) => <LogoView {...img} />)}
+
+    <MainMenuView>
+        {menuItems.map((item) => <MenuItemView {...item} />)}
+    </MainMenuView>
+
+    <AsideMenuView>
+        {asideItems.map((aitem) => <AsideItemView {...aitem} />)}
+    </AsideMenuView>
+
+    <div class="main-content">
+        <header>
+            <h1>Portafolio</h1>
+        </header>
+
+        <main>
+            <section>
+                <article>
+                    <header>
+                        <h2>Diseño</h2>
+                    </header>
+
+                    <article>
+                        <p>
+                            Trabajos realizados en el área de diseño gráfico,
+                            puedes revizar los últimos realizados.
+                        </p>
+                    </article>
+                </article>
+            </section>
+
+            <section>
+                <article>
+                    <header>
+                        <h2>Diseño Web</h2>
+                    </header>
+
+                    <article>
+                        <p>
+                            Trabajos realizados en el área de diseño web, puedes
+                            revizar los últimos realizados.
+                        </p>
+                    </article>
+                </article>
+            </section>
+
+            <section>
+                <article>
+                    <header>
+                        <h2>SEO</h2>
+                    </header>
+
+                    <article>
+                        <p>
+                            Trabajos realizados en el área de posicionamiento en
+                            buscadores SEO, puedes revizar los últimos
+                            realizados.
+                        </p>
+                    </article>
+                </article>
+            </section>
+
+            <section>
+                <article>
+                    <header>
+                        <h2>Propios</h2>
+                    </header>
+
+                    <article>
+                        <p>
+                            Trabajos propios, puedes revizar los últimos
+                            realizados.
+                        </p>
+                    </article>
+                </article>
+            </section>
+        </main>
+    </div>
+</Layout>
+
+<style lang="stylus" is:global>
+    /* Selector  Menu Principal */
+    label + ul li:nth-child(3)
+        border-top solid 8px rgb(103, 61, 230)
+        a
+            opacity 0.2
+    
+    /* Responsive Design */
+    @media screen and (max-width:768px)
+        label + ul li:nth-child(3)
+            border-top solid 1px rgb(61, 188, 230)
+            a
+                opacity 1
+            
+</style>
+
+<style lang="stylus">
+
+</style>

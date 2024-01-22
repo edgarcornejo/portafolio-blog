@@ -1,0 +1,35 @@
+---
+import type { Link } from "../types/types";
+
+interface Props extends Link {}
+
+const { title, url } = Astro.props;
+---
+
+<li>
+    <a href={url} title={title} class="anin-rapido">{title}</a>
+</li>
+
+<style lang="stylus">
+    li
+        display flex
+        height 80px
+        width 100%
+        a
+            align-self center
+            color rgb(8, 12, 63)
+            padding-left 1.5rem
+            font-weight 700
+            text-transform uppercase
+            letter-spacing 2pt
+            font-size 2rem
+            &:hover
+                color rgb(103, 61, 230)
+    
+    /* Responsive Design */
+    @media screen and (max-width:2560px)
+        li
+            height 60px
+            a
+                font-size 1.4rem
+</style>

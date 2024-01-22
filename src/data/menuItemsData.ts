@@ -1,6 +1,6 @@
-import type { MenuItem } from "../types/types";
+import type { Link } from "../types/types";
 
-const menuItems: MenuItem[] = [
+const menuItems: Link[] = [
     {
         title: "Inicio",
         url: "/"

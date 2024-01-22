@@ -1,0 +1,45 @@
+---
+import type { LinkImg } from "../types/types";
+
+interface Props extends LinkImg {}
+
+const { title, url, img } = Astro.props;
+---
+
+<div>
+    <a href={url} title={title}>
+        <img itemprop="logo" src={img} alt={title} />
+    </a>
+</div>
+
+<style lang="stylus">
+    /* Estilos de paginas segundarias */
+    /* Logo */
+    div
+        max-width 3840px
+        margin 0 auto
+
+    img
+        z-index 1
+        height auto
+        left 120px
+        max-width 110px
+        position fixed
+        top 44px
+        width auto/9
+        animation logo-s .5s ease-in-out both
+    
+    @media screen and (max-width:1024px)
+        div
+            display flex
+            justify-content center
+            width 100%
+            height auto
+            padding 3rem 0 2rem 0
+
+        img
+            height auto
+            width 110px
+            position static
+
+</style>

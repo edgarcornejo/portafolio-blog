@@ -1,0 +1,43 @@
+---
+import Layout from "../layouts/Layout.astro";
+import LogoView from "../components/LogoView.astro";
+import logo from "../data/logoData";
+import MainMenuView from "../components/MainMenuView.astro";
+import MenuItemView from "../components/MenuItemView.astro";
+import menuItems from "../data/menuItemsData";
+import AsideMenuView from "../components/AsideMenuView.astro";
+import asideItems from "../data/asideItemsData";
+import AsideItemView from "../components/AsideItemView.astro";
+---
+
+<Layout
+    title="Contacto - Edgar Cornejo, Diseñador gráfico, desarrolador Web front-end y Posicionamiento en Internet."
+>
+    {logo.map((img) => <LogoView {...img} />)}
+
+    <MainMenuView>
+        {menuItems.map((item) => <MenuItemView {...item} />)}
+    </MainMenuView>
+
+    <AsideMenuView>
+        {asideItems.map((aitem) => <AsideItemView {...aitem} />)}
+    </AsideMenuView>
+</Layout>
+
+<style lang="stylus" is:global>
+    /* Selector  Menu Principal */
+    label + ul li:nth-child(5)
+        border-top solid 8px rgb(103, 61, 230)
+        a
+            opacity 0.2
+    
+    /* Responsive Design */
+    @media screen and (max-width:1024px)
+        label + ul li:nth-child(2)
+            border-top 0
+            
+</style>
+
+<style lang="stylus">
+
+</style>

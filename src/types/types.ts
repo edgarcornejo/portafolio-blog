@@ -3,6 +3,12 @@ export interface Link {
     url: string;
 }
 
+export interface LinkImg {
+    title: string;
+    url: string;
+    img: string;
+}
+
 export interface Hgroup {
     subtitle: string;
     urldesign: string;
