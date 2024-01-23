@@ -1,0 +1,272 @@
+/* Variables */
+/* Tamaño de Tipografía */
+/* Colores */
+/* Contenedor principal de página */
+.main-content {
+  width: 90%;
+  max-width: 1920px;
+  margin: 0 auto;
+/* Cabecera de página */
+}
+.main-content > header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  padding: 10rem 0 6rem 0;
+/* Titulo de página H1 */
+}
+.main-content > header h1 {
+  font: italic normal 300 8rem Ubuntu;
+  color: #e63d67;
+}
+/* Contenedor de sections*/
+main {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+/* Estilos de sections */
+section {
+  width: 100%;
+  padding-bottom: 10rem;
+/* Article Contenedor */
+/* Headers de Articles */
+/* Subtitulo H3 */
+}
+section article {
+  display: flex;
+  flex-direction: column;
+/* Article para parrafos */
+}
+section article article {
+  padding-top: 3rem;
+  align-self: center;
+  width: 90%;
+}
+section header {
+  border-top: 8px solid #3dbce6;
+  border-right: 8px solid #3dbce6;
+  padding: 2rem;
+/* Subtitulo H2 */
+}
+section header h2 {
+  font: normal normal 700 4.6rem Ubuntu;
+  text-align: right;
+  letter-spacing: -1pt;
+}
+section h3 {
+  font: normal normal 400 4.2rem Ubuntu;
+}
+/* Estilos de Parrafos en article*/
+article article .text-big {
+  font: normal normal 300 3.2rem Ubuntu;
+  line-height: 140%;
+  letter-spacing: 1pt;
+}
+article article p {
+  padding: 2rem 0 6rem 0;
+  font: normal normal 300 3rem Ubuntu;
+  line-height: 140%;
+}
+article article ul {
+  padding: 2rem 0 4rem 0;
+}
+article article ul li {
+  font: normal normal 300 3rem Ubuntu;
+  line-height: 140%;
+  list-style: disc inside;
+}
+/* Enlaces  */
+.enlaces {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 1rem;
+}
+.enlaces a {
+  padding: 1.6rem;
+  outline: solid 2px #3dbce6;
+  border-radius: 6px;
+  transition: all 0.1s ease-in-out;
+  font: normal normal 400 3rem Ubuntu;
+}
+.enlaces a:hover {
+  color: #fff;
+  background: #080c3f;
+  outline: transparent;
+}
+/* Contenedor de uls */
+.wrapper-ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+.wrapper-ul div {
+  max-width: 45%;
+}
+/* Estilos de enlaces de contacto */
+.mailing-list address {
+  font-style: normal;
+}
+.mailing-list li {
+  height: auto;
+  padding-bottom: 1rem;
+  width: 90%;
+  display: flex;
+}
+.mailing-list li a {
+  font-size: 2rem;
+  padding: 15px;
+  border: solid 1px #673de6;
+  border-radius: 5px;
+}
+.mailing-list li a:hover {
+  color: #fff;
+  background: #673de6;
+}
+.mailing-list strong {
+  font-size: 2rem;
+  align-self: center;
+  font-weight: lighter;
+  width: 160px;
+}
+/* Responsive Design */
+@media screen and (max-width: 1920px) {
+  .main-content {
+    width: 70%;
+  }
+  .main-content > header h1 {
+    font: italic normal 300 6rem Ubuntu;
+  }
+  article article .text-big {
+    font: normal normal 300 2.4rem Ubuntu;
+  }
+  article article p {
+    font: normal normal 300 2.2rem Ubuntu;
+  }
+  article article ul li {
+    font: normal normal 300 2.2rem Ubuntu;
+  }
+  .enlaces a {
+    font: normal normal 400 2.2rem Ubuntu;
+  }
+  section header h2 {
+    font: normal normal 700 3.6rem Ubuntu;
+  }
+  section h3 {
+    font: normal normal 400 3.2rem Ubuntu;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .main-content {
+    width: 60%;
+  }
+  .main-content > header {
+    padding: 4rem 0 6rem 0;
+  }
+  .main-content > header h1 {
+    font: italic normal 300 4rem Ubuntu;
+  }
+  article article .text-big {
+    font: normal normal 300 2rem Ubuntu;
+  }
+  article article p {
+    padding: 2rem 0 6rem 0;
+    font: normal normal 300 1.6rem Ubuntu;
+  }
+  article article ul li {
+    font: normal normal 300 1.6rem Ubuntu;
+  }
+  .enlaces a {
+    padding: 1rem;
+    font: normal normal 400 1.6rem Ubuntu;
+  }
+  section {
+    padding-bottom: 4rem;
+/* Headers de Articles */
+/* Subtitulo H3 */
+  }
+  section header {
+    border-top: 5px solid #3dbce6;
+    border-right: 5px solid #3dbce6;
+    padding: 1.6rem;
+  }
+  section header h2 {
+    font: normal normal 700 3rem Ubuntu;
+  }
+  section h3 {
+    font: normal normal 400 2.6rem Ubuntu;
+  }
+}
+@media screen and (max-width: 1366px) {
+  .main-content > header {
+    padding: 2rem 0 4rem 0;
+  }
+  .main-content > header h1 {
+    font: italic normal 300 3rem Ubuntu;
+  }
+  section article article {
+    padding-top: 1rem;
+  }
+  article article .text-big {
+    font: normal normal 300 1.4rem Ubuntu;
+    letter-spacing: 0;
+  }
+  article article p {
+    padding: 2rem 0 2rem 0;
+    font: normal normal 300 1rem Ubuntu;
+  }
+  article article ul li {
+    font: normal normal 300 1rem Ubuntu;
+  }
+  .enlaces a {
+    font: normal normal 400 1rem Ubuntu;
+  }
+  section {
+    padding-bottom: 2rem;
+/* Headers de Articles */
+/* Subtitulo H3 */
+  }
+  section header {
+    border-top: 2px solid #3dbce6;
+    border-right: 2px solid #3dbce6;
+    padding: 1.4rem;
+  }
+  section header h2 {
+    font: normal normal 700 2rem Ubuntu;
+  }
+  section h3 {
+    font: normal normal 400 1.6rem Ubuntu;
+  }
+  .mailing-list li a {
+    font-size: 1rem;
+  }
+  .mailing-list li strong {
+    font-size: 1rem;
+    width: 120px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .main-content {
+    width: 90%;
+/* Estilos de sections */
+  }
+  .main-content > header {
+    justify-content: center;
+  }
+  section header {
+    border-right: 0;
+/* Subtitulo H2 */
+  }
+  section header h2 {
+    text-align: left;
+  }
+}
+@media screen and (max-width: 480px) {
+  .wrapper-ul div {
+    max-width: 100%;
+  }
+}

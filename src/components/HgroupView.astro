@@ -6,16 +6,24 @@ interface Props extends Hgroup {}
 const { subtitle, urldesign, design, urlweb, web } = Astro.props;
 ---
 
-<hgroup>
-  <h2 itemprop="name">{subtitle}</h2>
-  <h1 itemprop="jobTitle">
-    Soy
-    <a href={urldesign} title={design}>{design}</a> y<br />
-    <a href={urlweb} title={web}>{web}</a>
-  </h1>
-</hgroup>
+<header>
+  <hgroup>
+    <h2 itemprop="name">{subtitle}</h2>
+    <h1 itemprop="jobTitle">
+      Soy
+      <a href={urldesign} title={design}>{design}</a> y<br />
+      <a href={urlweb} title={web}>{web}</a>
+    </h1>
+  </hgroup>
+</header>
 
 <style lang="stylus">
+  header
+    height auto
+    padding-top 4rem
+    width 100%
+    margin 0 auto
+
   hgroup
     margin 0 auto
     width 100%
@@ -48,6 +56,9 @@ const { subtitle, urldesign, design, urlweb, web } = Astro.props;
     
   /* Responie Design */
   @media screen and (max-width:1366px)
+    header
+      padding-top 3rem
+
     hgroup
       max-width 1024px
       h2

@@ -1,6 +1,6 @@
 import type { Link } from "../types/types";
 
-const asideItems: Link[] = [
+const asideItemsPre: Link[] = [
     {
         title: "Hola",
         url: "#hola"
@@ -23,4 +23,4 @@ const asideItems: Link[] = [
     },
 ];
 
-export default asideItems;
+export default asideItemsPre;

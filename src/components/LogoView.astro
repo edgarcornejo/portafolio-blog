@@ -27,8 +27,13 @@ const { title, url, img } = Astro.props;
         position fixed
         top 44px
         width auto/9
-        animation logo-s .5s ease-in-out both
+        animation logo .5s ease-in-out both
     
+    /* Responsive Design */
+    @media screen and (max-width:1366px)
+        img
+            max-width 80px
+
     @media screen and (max-width:1024px)
         div
             display flex

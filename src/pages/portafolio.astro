@@ -1,26 +1,15 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import LogoView from "../components/LogoView.astro";
-import logo from "../data/logoData";
-import MainMenuView from "../components/MainMenuView.astro";
-import MenuItemView from "../components/MenuItemView.astro";
-import menuItems from "../data/menuItemsData";
 import AsideMenuView from "../components/AsideMenuView.astro";
-import asideItems from "../data/asideItemsData";
+import asideItemsPor from "../data/asideItemsPorData";
 import AsideItemView from "../components/AsideItemView.astro";
 ---
 
 <Layout
     title="Portafolio - Edgar Cornejo, Diseñador gráfico, desarrolador Web front-end y Posicionamiento en Internet."
 >
-    {logo.map((img) => <LogoView {...img} />)}
-
-    <MainMenuView>
-        {menuItems.map((item) => <MenuItemView {...item} />)}
-    </MainMenuView>
-
     <AsideMenuView>
-        {asideItems.map((aitem) => <AsideItemView {...aitem} />)}
+        {asideItemsPor.map((aitem) => <AsideItemView {...aitem} />)}
     </AsideMenuView>
 
     <div class="main-content">
@@ -29,7 +18,7 @@ import AsideItemView from "../components/AsideItemView.astro";
         </header>
 
         <main>
-            <section>
+            <section id="design">
                 <article>
                     <header>
                         <h2>Diseño</h2>
@@ -44,7 +33,7 @@ import AsideItemView from "../components/AsideItemView.astro";
                 </article>
             </section>
 
-            <section>
+            <section id="web">
                 <article>
                     <header>
                         <h2>Diseño Web</h2>
@@ -59,7 +48,7 @@ import AsideItemView from "../components/AsideItemView.astro";
                 </article>
             </section>
 
-            <section>
+            <section id="seo">
                 <article>
                     <header>
                         <h2>SEO</h2>
@@ -75,7 +64,7 @@ import AsideItemView from "../components/AsideItemView.astro";
                 </article>
             </section>
 
-            <section>
+            <section id="propios">
                 <article>
                     <header>
                         <h2>Propios</h2>
@@ -101,12 +90,15 @@ import AsideItemView from "../components/AsideItemView.astro";
             opacity 0.2
     
     /* Responsive Design */
+    @media screen and (max-width:1920px)
+        label + ul li:nth-child(3)
+            border-top solid 5px rgb(61, 188, 230)
+
     @media screen and (max-width:768px)
         label + ul li:nth-child(3)
             border-top solid 1px rgb(61, 188, 230)
             a
-                opacity 1
-            
+                opacity 1   
 </style>
 
 <style lang="stylus">

@@ -1,0 +1,99 @@
+/* reset */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video
+    border 0
+    box-sizing border-box
+    font-size 100%
+    margin 0
+    outline 0
+    padding 0
+    text-rendering optimizeLegibility
+    vertical-align top
+
+/* Reset Img */
+img
+    vertical-align middle
+
+/* Etilos enlaces*/
+a
+    text-decoration none
+    color rgb(61, 188, 230)
+    &:hover
+        color rgb(8, 12, 63)
+
+/* Reset Li */
+li
+    list-style none
+
+/* Responsive */
+@viewport
+    width device-width
+
+/* Estilos ScrollBar */
+::-webkit-scrollbar
+    width 15px
+
+::-webkit-scrollbar-track
+    background rgb(191, 238, 231)
+
+::-webkit-scrollbar-thumb
+    border-radius 5px
+    background rgb(61, 188, 230)
+
+/* Estilos de Body */
+body
+    background rgb(255, 255, 255)
+    font-family 'Ubuntu',Helvetica,Arial,sans-serif
+    font-variant-ligatures no-common-ligatures
+    width 100%
+    height 100%
+    color rgb(8, 12, 63)
+    background linear-gradient(90deg, rgb(255, 255, 255) 20px, transparent 1%) center, linear-gradient(rgb(255, 255, 255) 20px, transparent 1%) center, rgb(191, 238, 231)
+    background-size 22px 22px
+
+html
+    width 100%
+    height 100%
+    scroll-behavior smooth
+
+/* Animación básica */
+.anin-rapido
+    transition all .1s ease-in-out
+
+.anin-normal
+    transition all .2s ease-in-out
+
+.anin-lento
+    transition all .3s ease-in-out
+
+/* Logotipo principal */
+@keyframes logo
+    from
+        opacity 0
+        left -100px
+    to
+        opacity 1
+        left 80px
+
+/* Menu y callme */
+@keyframes callme
+    from
+        opacity 0
+    to
+        opacity 1
+
+/* H1 y H2 */
+@keyframes titulo1
+    from
+        opacity 0
+        bottom 100px
+    to
+        opacity 1
+        bottom 0
+
+@keyframes titulo2
+    from
+        opacity 0
+        bottom 50px
+    to
+        opacity 1
+        bottom 0
