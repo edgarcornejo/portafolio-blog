@@ -20,71 +20,73 @@ const { subtitle, urldesign, design, urlweb, web } = Astro.props;
 <style lang="stylus">
   header
     height auto
-    padding-top 4rem
+    padding 14rem 0 8rem 0
     width 100%
-    margin 0 auto
 
   hgroup
     margin 0 auto
-    width 100%
-    max-width 1300px
+    width 90%
+    max-width 1920px
     text-transform uppercase
     display flex
     flex-flow column wrap
 
   h2
-    letter-spacing -1px
+    color rgb(230, 61, 103)
     position relative
-    padding-top 10rem
-    font-size 5rem
+    font 700 8rem Ubuntu
     animation titulo1 1s ease-in-out both
-    line-height 4.2rem
   h1
     position relative
-    font-size 1.5rem
-    padding-bottom 8rem
+    font 400 3rem/1.2 Ubuntu
     padding-top 1rem
     animation titulo2 1s ease-in-out both
     animation-delay 1s
-    letter-spacing .3rem
-    line-height 2rem
-    font-weight 400
+    word-spacing 2pt
     a
       color rgb(8, 12, 63)
       &:hover
-        color rgb(103, 61, 230)
+        color rgb(61, 188, 230)
     
   /* Responie Design */
+  @media screen and (max-width:2560px)
+    h2
+      font 700 6rem Ubuntu
+
+    h1
+      font 400 2.2rem/1.2 Ubuntu
+
+  @media screen and (max-width:1440px)
+    header
+      padding 10rem 0 8rem 0
+
+    h2
+      font 700 4rem Ubuntu
+
+    h1
+      font 400 1.4rem/1.2 Ubuntu
+
   @media screen and (max-width:1366px)
     header
-      padding-top 3rem
+      padding 8rem 0 4rem 0
 
     hgroup
       max-width 1024px
-      h2
-        letter-spacing -2px
-        padding-top 6rem
-        font-size 3rem
-        line-height 2.4rem
-      h1
-        font-size 1rem
-        padding-bottom 4rem
-        padding-top 1rem
-        letter-spacing .1rem
-        line-height 1.3rem
+
+    h2
+      font 700 3rem/1 Ubuntu
+
+    h1
+      font 400 1.2rem/1.2 Ubuntu
 
   @media screen and (max-width:1024px)
-    hgroup
-      width 90%
-  
-  @media screen and (max-width:768px)
-    hgroup
-      justify-content center
-      h2
-        padding-top 4rem
-        text-align center
-        line-height 2.8rem
-      h1
-        text-align center
+    header
+      padding 4rem 0 6rem 0
+
+    h2
+      text-align center
+
+    h1
+      text-align center
 
 </style>

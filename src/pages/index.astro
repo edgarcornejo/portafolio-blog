@@ -378,13 +378,6 @@ import call from "../data/callData";
 			.desaturar
 				opacity 0.3
 
-	/* Últimas Publicaciones */
-	.enlaces
-		a
-			&:last-child
-				background rgb(103, 61, 230)
-				color #FFF
-	
 	/* Contacto */
 	#social
 		margin-bottom 3rem
@@ -422,7 +415,23 @@ import call from "../data/callData";
 				background-color rgb(103, 61, 230)
 				transform scale3d(2.2, 2.2, 1)
 
+	/* Últimas Publicaciones */
+	.enlaces
+		a
+			&:last-child
+				background rgb(103, 61, 230)
+				color #FFF
+
 	/* Responsive Design */	
+	@media screen and (max-width:1920px)
+		/* Contacto */
+		#social
+			gap 1rem
+			a
+				transform scale(1)
+				&:hover
+					transform scale3d(1.2, 1.2, 1)
+
 	@media screen and (max-width:1024px)
 		.marcas-container
 			figure

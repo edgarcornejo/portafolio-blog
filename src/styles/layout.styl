@@ -1,11 +1,4 @@
 /* Variables */
-/* Tamaño de Tipografía */
-tituloH1 = italic normal 300 8rem Ubuntu
-subtituloH2 = normal normal 700 4.6rem Ubuntu
-subtituloH3 = normal normal 400 4.2rem Ubuntu
-parrafoP = normal normal 300 3rem Ubuntu
-parrafoA = normal normal 400 3rem Ubuntu
-
 /* Colores */
 eRed = rgb(230, 61, 103)
 eSkyBlue = rgb(61, 188, 230)
@@ -18,7 +11,7 @@ eGray = rgb(191, 238, 231)
 .main-content
     width 90%
     max-width 1920px
-    margin 0 auto
+    margin 2rem auto
     /* Cabecera de página */
     & > header 
         display flex
@@ -28,7 +21,7 @@ eGray = rgb(191, 238, 231)
         padding 10rem 0 6rem 0
         /* Titulo de página H1 */
         h1 
-            font tituloH1
+            font italic 300 8rem Ubuntu
             color eRed
 
 /* Contenedor de sections*/
@@ -49,43 +42,41 @@ section
         flex-direction column
         /* Article para parrafos */
         article
-            padding-top 3rem
+            padding-top 6rem
             align-self center
             width 90%
     /* Headers de Articles */
     header
-        border-top 8px solid eSkyBlue
-        border-right 8px solid eSkyBlue
+        border-bottom 8px solid eRed
         padding 2rem
         /* Subtitulo H2 */
         h2
-            font subtituloH2
+            font 700 4.6rem/1 Ubuntu
             text-align right
             letter-spacing -1pt
+            color eSkyBlue
     /* Subtitulo H3 */
     h3
-        font subtituloH3
+        font 400 4.2rem/1 Ubuntu
+        color eSkyBlue
     
 /* Estilos de Parrafos en article*/
 article
     article
         /* Parrafo Grande */
         .text-big
-            font normal normal 300 3.2rem Ubuntu
-            line-height 140%
+            font 400 3.2rem/1.4 Ubuntu
             letter-spacing 1pt
         /* Parrafo General */
         p
             padding 2rem 0 6rem 0
-            font parrafoP
-            line-height 140%
+            font 300 3rem/1.4 Ubuntu
         /* Listas */
         ul
             padding 2rem 0 4rem 0
-            li
-                font parrafoP
-                line-height 140%
-                list-style disc inside
+        li
+            font 300 3rem/1.6 Ubuntu
+            list-style disc inside
 
 /* Enlaces  */
 .enlaces
@@ -97,7 +88,7 @@ article
         outline solid 2px eSkyBlue
         border-radius 6px
         transition all .1s ease-in-out
-        font parrafoA
+        font 400 3rem Ubuntu
         &:hover
             color #FFF
             background eBlueDeep
@@ -121,56 +112,59 @@ article
         padding-bottom 1rem
         width 90%
         display flex
-        a
-            font-size 2rem
-            padding 15px
-            border solid 1px rgb(103, 61, 230)
-            border-radius 5px
-            &:hover
-                color #FFF
-                background rgb(103, 61, 230)
+    a
+        padding 1.6rem
+        outline solid 2px eSkyBlue
+        border-radius 6px
+        transition all .1s ease-in-out
+        font 400 3rem Ubuntu
+        &:hover
+            color #FFF
+            background eBlueDeep
+            outline transparent
     strong
-        font-size 2rem
+        font 300 3rem Ubuntu
         align-self center
-        font-weight lighter
-        width 160px
-
+        width 240px
 
 /* Responsive Design */
-@media screen and (max-width:1920px)
-    /* Variables */
-    /* Tamaño de Tipografia */
-    tituloH1 = italic normal 300 6rem Ubuntu
-    subtituloH2 = normal normal 700 3.6rem Ubuntu
-    subtituloH3 = normal normal 400 3.2rem Ubuntu
-    parrafoP = normal normal 300 2.2rem Ubuntu
-    parrafoA = normal normal 400 2.2rem Ubuntu
+@media screen and (max-width:2560px)
+    /* Estilos de enlaces de contacto */
+    .mailing-list
+        a
+            padding 1rem
+            font 400 2rem Ubuntu
+        strong
+            font 300 2rem Ubuntu
+            width 200px
 
+@media screen and (max-width:1920px)
     /* Contenedor principal de página */
     .main-content
         width 70%
         & > header
+            padding 6rem 0 4rem 0
             h1
-                font tituloH1
+                font italic 300 5rem Ubuntu
 
     /* Estilos de Parrafos en article*/
     article
         article
             /* Parrafo Grande */
             .text-big
-                font normal normal 300 2.4rem Ubuntu
+                font 300 2.4rem/1.4 Ubuntu
             /* Parrafo General */
             p
-                font parrafoP
+                font 300 2.2rem/1.4 Ubuntu
             /* Listas */
             ul
                 li
-                    font parrafoP
+                    font 300 2.2rem/1.6 Ubuntu
 
     /* Enlaces  */
     .enlaces
         a
-            font parrafoA
+            font 400 2.2rem Ubuntu
 
 
     /* Estilos de sections */
@@ -178,78 +172,68 @@ article
         /* Headers de Articles */
         header
             h2
-                font subtituloH2
+                font 700 3.6rem Ubuntu
         /* Subtitulo H3 */
         h3
-            font subtituloH3
+            font 400 3.2rem Ubuntu
+    
+    /* Estilos de enlaces de contacto */
+    .mailing-list
+        a
+            font 400 1.4rem Ubuntu
+        strong
+            font 300 1.4rem Ubuntu
+            width 120px
 
 @media screen and (max-width:1440px)
-    /* Variables */
-    /* Tamaño de Tipografia */
-    tituloH1 = italic normal 300 4rem Ubuntu
-    subtituloH2 = normal normal 700 3rem Ubuntu
-    subtituloH3 = normal normal 400 2.6rem Ubuntu
-    parrafoP = normal normal 300 1.6rem Ubuntu
-    parrafoA = normal normal 400 1.6rem Ubuntu
-
     /* Contenedor principal de página */
     .main-content
         width 60%
         & > header
-            padding 4rem 0 6rem 0
+            padding 2rem 0 4rem 0
             h1
-                font tituloH1
+                font 300 3.8rem Ubuntu
 
     /* Estilos de Parrafos en article*/
     article
         article
             /* Parrafo Grande */
             .text-big
-                font normal normal 300 2rem Ubuntu
+                font 300 2rem/1.4 Ubuntu
             /* Parrafo General */
             p
-                padding 2rem 0 6rem 0
-                font parrafoP
+                padding 2rem 0 2rem 0
+                font 300 1.6rem/1.2 Ubuntu
             /* Listas */
             ul
                 li
-                    font parrafoP
+                    font 300 1.6rem/1.4 Ubuntu
 
     /* Enlaces  */
     .enlaces
         a
             padding 1rem
-            font parrafoA
+            font 400 1.6rem Ubuntu
 
     /* Estilos de sections */
     section
-        padding-bottom 4rem
         /* Headers de Articles */
         header
-            border-top 5px solid eSkyBlue
-            border-right 5px solid eSkyBlue
+            border-bottom solid 5px eRed
             padding 1.6rem
             h2
-                font subtituloH2
+                font 700 2.6rem Ubuntu
         /* Subtitulo H3 */
         h3
-            font subtituloH3
+            font 400 2.2rem Ubuntu
 
 @media screen and (max-width:1366px)
-    /* Variables */
-    /* Tamaño de Tipografia */
-    tituloH1 = italic normal 300 3rem Ubuntu
-    subtituloH2 = normal normal 700 2rem Ubuntu
-    subtituloH3 = normal normal 400 1.6rem Ubuntu
-    parrafoP = normal normal 300 1rem Ubuntu
-    parrafoA = normal normal 400 1rem Ubuntu
-
     /* Contenedor principal de página */
     .main-content
         & > header
             padding 2rem 0 4rem 0
             h1
-                font tituloH1
+                font italic 300 3rem Ubuntu
     
     /* Estilos de sections */
     section
@@ -264,35 +248,34 @@ article
         article
             /* Parrafo Grande */
             .text-big
-                font normal normal 300 1.4rem Ubuntu
+                font 300 1.4rem Ubuntu
                 letter-spacing 0
             /* Parrafo General */
             p
                 padding 2rem 0 2rem 0
-                font parrafoP
+                font 300 1rem/1.2 Ubuntu
             /* Listas */
             ul
                 li
-                    font parrafoP
+                    font 300 1rem/1.4 Ubuntu
 
     /* Enlaces  */
     .enlaces
         a
-            font parrafoA
+            font 400 1rem Ubuntu
 
     /* Estilos de sections */
     section
         padding-bottom 2rem
         /* Headers de Articles */
         header
-            border-top 2px solid eSkyBlue
-            border-right 2px solid eSkyBlue
+            border-bottom 2px solid eRed
             padding 1.4rem
             h2
-                font subtituloH2
+                font 700 2rem Ubuntu
         /* Subtitulo H3 */
         h3
-            font subtituloH3
+            font 400 1.6rem Ubuntu
 
     /* Estilos de enlaces de contacto */
     .mailing-list
@@ -308,6 +291,7 @@ article
     .main-content
         width 90%
         & > header
+            padding 2rem 0 2rem 0
             justify-content center
                 
         /* Estilos de sections */
@@ -318,6 +302,14 @@ article
             /* Subtitulo H2 */
             h2
                 text-align left
+
+    /* Estilos de enlaces de contacto */
+    .mailing-list
+        a
+            font 400 1rem Ubuntu
+        strong
+            font 300 1rem Ubuntu
+            width 80px
 
 @media screen and (max-width:480px)
     /* Contenedor de uls */

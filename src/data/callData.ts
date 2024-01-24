@@ -2,7 +2,7 @@ import type { Link } from "../types/types";
 
 const call: Link[] = [
     {
-        title: "Llámame: +51 974 795 622",
+        title: "Llámame",
         url: "tel:+51974795622"
     }
 ];

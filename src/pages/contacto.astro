@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import "../styles/layout.css";
 ---
 
 <Layout
@@ -119,20 +120,18 @@ import Layout from "../layouts/Layout.astro";
                                         title="devcornejo">devcornejo</a
                                     >
                                 </li>
-                            </address>
-                        </ul>
 
-                        <ul class="list mailing-list">
-                            <li>
-                                <strong>Facebook</strong>
-                                <a
-                                    href="https://www.facebook.com/edgarcornejopage"
-                                    target="_blank"
-                                    class="anin-normal"
-                                    title="Sígueme en Facebook"
-                                    itemprop="nickname">devcornejo</a
-                                >
-                            </li>
+                                <li>
+                                    <strong>Facebook</strong>
+                                    <a
+                                        href="https://www.facebook.com/edgarcornejopage"
+                                        target="_blank"
+                                        class="anin-normal"
+                                        title="Sígueme en Facebook"
+                                        itemprop="nickname">devcornejo</a
+                                    >
+                                </li>
+                            </address>
                         </ul>
                     </article>
                 </article>
@@ -161,5 +160,51 @@ import Layout from "../layouts/Layout.astro";
 </style>
 
 <style lang="stylus">
+    /* Contacto */
+	#social
+		margin-bottom 3rem
+		display flex
+		flex-wrap wrap
+		justify-content space-around
+		gap 4rem
+		a
+			background url(/img/icon-social.svg) no-repeat rgb(61, 188, 230)
+			background-size cover
+			border-radius 5px
+			color transparent
+			font-size 0
+			height 48px
+			text-indent -99999999px
+			width 48px
+			transform scale(2)
+			&:nth-child(1)
+				background-position 0 0
+			&:nth-child(2)
+				background-position -48px 0
+			&:nth-child(3)
+				background-position -96px 0
+			&:nth-child(4)
+				background-position -143px 0
+			&:nth-child(5)
+				background-position -191px 0
+			&:nth-child(6)
+				background-position -243px 0
+			&:nth-child(7)
+				background-position -287px 0
+			&:nth-child(8)
+				background-position -336px 0
+			&:hover
+				background-color rgb(103, 61, 230)
+				transform scale3d(2.2, 2.2, 1)
+                
+    /* Responsive Design */	
+	@media screen and (max-width:1920px)
+		/* Contacto */
+		#social
+			gap 1rem
+			a
+				transform scale(1)
+				&:hover
+					transform scale3d(1.2, 1.2, 1)
 
 </style>

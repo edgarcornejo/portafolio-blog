@@ -1,11 +1,10 @@
 /* Variables */
-/* Tamaño de Tipografía */
 /* Colores */
 /* Contenedor principal de página */
 .main-content {
   width: 90%;
   max-width: 1920px;
-  margin: 0 auto;
+  margin: 2rem auto;
 /* Cabecera de página */
 }
 .main-content > header {
@@ -17,7 +16,7 @@
 /* Titulo de página H1 */
 }
 .main-content > header h1 {
-  font: italic normal 300 8rem Ubuntu;
+  font: italic 300 8rem Ubuntu;
   color: #e63d67;
 }
 /* Contenedor de sections*/
@@ -42,41 +41,39 @@ section article {
 /* Article para parrafos */
 }
 section article article {
-  padding-top: 3rem;
+  padding-top: 6rem;
   align-self: center;
   width: 90%;
 }
 section header {
-  border-top: 8px solid #3dbce6;
-  border-right: 8px solid #3dbce6;
+  border-bottom: 8px solid #e63d67;
   padding: 2rem;
 /* Subtitulo H2 */
 }
 section header h2 {
-  font: normal normal 700 4.6rem Ubuntu;
+  font: 700 4.6rem/1 Ubuntu;
   text-align: right;
   letter-spacing: -1pt;
+  color: #3dbce6;
 }
 section h3 {
-  font: normal normal 400 4.2rem Ubuntu;
+  font: 400 4.2rem/1 Ubuntu;
+  color: #3dbce6;
 }
 /* Estilos de Parrafos en article*/
 article article .text-big {
-  font: normal normal 300 3.2rem Ubuntu;
-  line-height: 140%;
+  font: 400 3.2rem/1.4 Ubuntu;
   letter-spacing: 1pt;
 }
 article article p {
   padding: 2rem 0 6rem 0;
-  font: normal normal 300 3rem Ubuntu;
-  line-height: 140%;
+  font: 300 3rem/1.4 Ubuntu;
 }
 article article ul {
   padding: 2rem 0 4rem 0;
 }
-article article ul li {
-  font: normal normal 300 3rem Ubuntu;
-  line-height: 140%;
+article article li {
+  font: 300 3rem/1.6 Ubuntu;
   list-style: disc inside;
 }
 /* Enlaces  */
@@ -90,7 +87,7 @@ article article ul li {
   outline: solid 2px #3dbce6;
   border-radius: 6px;
   transition: all 0.1s ease-in-out;
-  font: normal normal 400 3rem Ubuntu;
+  font: 400 3rem Ubuntu;
 }
 .enlaces a:hover {
   color: #fff;
@@ -117,47 +114,68 @@ article article ul li {
   width: 90%;
   display: flex;
 }
-.mailing-list li a {
-  font-size: 2rem;
-  padding: 15px;
-  border: solid 1px #673de6;
-  border-radius: 5px;
+.mailing-list a {
+  padding: 1.6rem;
+  outline: solid 2px #3dbce6;
+  border-radius: 6px;
+  transition: all 0.1s ease-in-out;
+  font: 400 3rem Ubuntu;
 }
-.mailing-list li a:hover {
+.mailing-list a:hover {
   color: #fff;
-  background: #673de6;
+  background: #080c3f;
+  outline: transparent;
 }
 .mailing-list strong {
-  font-size: 2rem;
+  font: 300 3rem Ubuntu;
   align-self: center;
-  font-weight: lighter;
-  width: 160px;
+  width: 240px;
 }
 /* Responsive Design */
+@media screen and (max-width: 2560px) {
+  .mailing-list a {
+    padding: 1rem;
+    font: 400 2rem Ubuntu;
+  }
+  .mailing-list strong {
+    font: 300 2rem Ubuntu;
+    width: 200px;
+  }
+}
 @media screen and (max-width: 1920px) {
   .main-content {
     width: 70%;
   }
+  .main-content > header {
+    padding: 6rem 0 4rem 0;
+  }
   .main-content > header h1 {
-    font: italic normal 300 6rem Ubuntu;
+    font: italic 300 5rem Ubuntu;
   }
   article article .text-big {
-    font: normal normal 300 2.4rem Ubuntu;
+    font: 300 2.4rem/1.4 Ubuntu;
   }
   article article p {
-    font: normal normal 300 2.2rem Ubuntu;
+    font: 300 2.2rem/1.4 Ubuntu;
   }
   article article ul li {
-    font: normal normal 300 2.2rem Ubuntu;
+    font: 300 2.2rem/1.6 Ubuntu;
   }
   .enlaces a {
-    font: normal normal 400 2.2rem Ubuntu;
+    font: 400 2.2rem Ubuntu;
   }
   section header h2 {
-    font: normal normal 700 3.6rem Ubuntu;
+    font: 700 3.6rem Ubuntu;
   }
   section h3 {
-    font: normal normal 400 3.2rem Ubuntu;
+    font: 400 3.2rem Ubuntu;
+  }
+  .mailing-list a {
+    font: 400 1.4rem Ubuntu;
+  }
+  .mailing-list strong {
+    font: 300 1.4rem Ubuntu;
+    width: 120px;
   }
 }
 @media screen and (max-width: 1440px) {
@@ -165,40 +183,34 @@ article article ul li {
     width: 60%;
   }
   .main-content > header {
-    padding: 4rem 0 6rem 0;
+    padding: 2rem 0 4rem 0;
   }
   .main-content > header h1 {
-    font: italic normal 300 4rem Ubuntu;
+    font: 300 3.8rem Ubuntu;
   }
   article article .text-big {
-    font: normal normal 300 2rem Ubuntu;
+    font: 300 2rem/1.4 Ubuntu;
   }
   article article p {
-    padding: 2rem 0 6rem 0;
-    font: normal normal 300 1.6rem Ubuntu;
+    padding: 2rem 0 2rem 0;
+    font: 300 1.6rem/1.2 Ubuntu;
   }
   article article ul li {
-    font: normal normal 300 1.6rem Ubuntu;
+    font: 300 1.6rem/1.4 Ubuntu;
   }
   .enlaces a {
     padding: 1rem;
-    font: normal normal 400 1.6rem Ubuntu;
-  }
-  section {
-    padding-bottom: 4rem;
-/* Headers de Articles */
-/* Subtitulo H3 */
+    font: 400 1.6rem Ubuntu;
   }
   section header {
-    border-top: 5px solid #3dbce6;
-    border-right: 5px solid #3dbce6;
+    border-bottom: solid 5px #e63d67;
     padding: 1.6rem;
   }
   section header h2 {
-    font: normal normal 700 3rem Ubuntu;
+    font: 700 2.6rem Ubuntu;
   }
   section h3 {
-    font: normal normal 400 2.6rem Ubuntu;
+    font: 400 2.2rem Ubuntu;
   }
 }
 @media screen and (max-width: 1366px) {
@@ -206,24 +218,24 @@ article article ul li {
     padding: 2rem 0 4rem 0;
   }
   .main-content > header h1 {
-    font: italic normal 300 3rem Ubuntu;
+    font: italic 300 3rem Ubuntu;
   }
   section article article {
     padding-top: 1rem;
   }
   article article .text-big {
-    font: normal normal 300 1.4rem Ubuntu;
+    font: 300 1.4rem Ubuntu;
     letter-spacing: 0;
   }
   article article p {
     padding: 2rem 0 2rem 0;
-    font: normal normal 300 1rem Ubuntu;
+    font: 300 1rem/1.2 Ubuntu;
   }
   article article ul li {
-    font: normal normal 300 1rem Ubuntu;
+    font: 300 1rem/1.4 Ubuntu;
   }
   .enlaces a {
-    font: normal normal 400 1rem Ubuntu;
+    font: 400 1rem Ubuntu;
   }
   section {
     padding-bottom: 2rem;
@@ -231,15 +243,14 @@ article article ul li {
 /* Subtitulo H3 */
   }
   section header {
-    border-top: 2px solid #3dbce6;
-    border-right: 2px solid #3dbce6;
+    border-bottom: 2px solid #e63d67;
     padding: 1.4rem;
   }
   section header h2 {
-    font: normal normal 700 2rem Ubuntu;
+    font: 700 2rem Ubuntu;
   }
   section h3 {
-    font: normal normal 400 1.6rem Ubuntu;
+    font: 400 1.6rem Ubuntu;
   }
   .mailing-list li a {
     font-size: 1rem;
@@ -255,6 +266,7 @@ article article ul li {
 /* Estilos de sections */
   }
   .main-content > header {
+    padding: 2rem 0 2rem 0;
     justify-content: center;
   }
   section header {
@@ -263,6 +275,13 @@ article article ul li {
   }
   section header h2 {
     text-align: left;
+  }
+  .mailing-list a {
+    font: 400 1rem Ubuntu;
+  }
+  .mailing-list strong {
+    font: 300 1rem Ubuntu;
+    width: 80px;
   }
 }
 @media screen and (max-width: 480px) {
