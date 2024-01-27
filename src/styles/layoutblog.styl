@@ -1,0 +1,99 @@
+/* Layout Blog */
+/* Cabecera de página */
+.header-page
+    display flex
+    flex-direction column
+    align-items center
+    gap 1rem 0
+    width 100%
+    padding-top 8rem
+    text-align center
+    /* Titulo de página H1 */
+    h1 
+        font italic 300 8rem Ubuntu
+        color rgb(230, 61, 103)
+    /* Descripcion de página H2 */
+    h2
+        font 300 4rem/1 Ubuntu
+        letter-spacing -1pt
+        color rgb(61, 188, 230)
+
+/* Espacio de publicidad */
+.space-ads-horizontal
+    padding 2rem
+    margin 4rem auto
+    max-width 1920px
+    outline solid 1px red
+
+.space-ads-vertical
+    padding 2rem
+    margin 2rem auto
+    outline solid 1px red
+
+/* Contenedor de página */
+.wrapper-content
+    width 100%
+    display flex
+    justify-content center
+    padding 10rem 0 10rem 0
+
+/* Contenido */
+main
+    width 90%
+    max-width 1920px
+
+/* Informacion y Publicidad */
+aside
+    width 20%
+    padding 2rem
+    h4
+        font italic 300 2.4rem Ubuntu
+        padding 1rem
+
+/* Post solo*/
+.wrapper-post
+    display flex
+    flex-wrap wrap
+    h1
+        font 500 5rem/1.2 Ubuntu
+        margin-bottom 4rem
+        padding-bottom 1rem 
+        width 100%
+        border-bottom solid 4px rgb(230, 61, 103)
+    h2
+        font 400 4rem/1.2 Ubuntu
+        margin-bottom 2rem
+        padding 4rem 0 1rem 0
+        width 100%
+        border-bottom solid 4px rgb(230, 61, 103)
+    p 
+        font 300 3rem/1.2 Ubuntu
+        padding 1rem 0 1rem 0
+    figure
+        display flex
+        flex-direction column
+        align-items center
+        padding 2rem 0 2rem 0
+        width 100%
+    img
+        width auto/9
+        height auto
+        max-width 1024px
+    figcaption
+        padding-top 1rem
+        font italic 300 2rem/1.2 Ubuntu
+    /* Container Iframe */
+    .wrapper-iframe
+        margin-top 2rem
+        position relative
+        overflow hidden
+        width 100%
+        padding-top 56.25%
+        iframe
+            position absolute
+            top 0
+            left 0
+            bottom 0
+            right 0
+            width 100%
+            height 100%

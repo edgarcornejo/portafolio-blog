@@ -1,0 +1,16 @@
+---
+import PostPreview from "../components/PostPreview.astro";
+import LayoutBlog from "../layouts/LayoutBlog.astro";
+
+const posts = await Astro.glob("./publicaciones/*.md");
+---
+
+<LayoutBlog
+    title="Publicaciones - Blog de diseño, desarrollo, técnologia, seo, marketing online y trucos"
+>
+    {
+        posts.map((post, index) => {
+            return index < 6 ? <PostPreview key={index} post={post} /> : null;
+        })
+    }
+</LayoutBlog>
