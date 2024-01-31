@@ -30,15 +30,15 @@ La música de fondo nos puede ayudar a envolver al lector en el tema que tratamo
 Recordar que el lector tenga control del volumen y poder pausar la música.
 Ahora algunos enlaces con recursos para utilizar o descargable.
 
-- <https://soundcloud.com>
+- <a href="https://soundcloud.com" title="SoundCloud" target="_blank">SoundCloud</a>
 
-- <http://freemusicarchive.org>
+- <a href="http://freemusicarchive.org" title="Free Music Archive" target="_blank">Free Music Archive</a>
 
-- <https://www.youtube.com/audiolibrary/music>
+- <a href="https://www.youtube.com/audiolibrary/music" title="YouTube Audio Library" target="_blank">YouTube Audio Library</a>
 
 <figure>
   <img src="../../blog/recursos-de-musica-y-audio.jpg" alt="Recursos de audio"/>
   <figcaption>Recursos de audio</figcaption>
 </figure>
 
-Te recomendamos leer: [Música y sonido de fondo para tus proyectos digitales](musica-y-sonido-de-fondo-para-tus-proyectos)
+Te recomendamos leer: [Música y sonido de fondo para tus proyectos digitales](musica-y-sonido-de-fondo-para-tus-proyectos "Música y sonido de fondo para tus proyectos digitales")

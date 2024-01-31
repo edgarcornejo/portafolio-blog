@@ -22,7 +22,7 @@ tags: ["android", "game mobile", "mushroom garden", "tamagochi"]
 
 ## Tú granja de hongos
 
-Ya desde hace un buen tiempo empece a jugar "[Touch Detective Mushroom Garden](http://beeworksgames.com/~touchdetective/gardeningkit/index.html)" es mas o menos algo así como **Tamagochi**, pero esta ves cuidaras una **granja hongos** y con la meta de poder coleccionar una gran cantidad de tipos de hongos y para poder hacerlo necesitaras implementar tu granja con unos instrumentos para poder cuidar tus hongos.
+Ya desde hace un buen tiempo empece a jugar "<a href="http://beeworksgames.com/~touchdetective/gardeningkit/index.html" title="Touch Detective Mushroom Garden" target="_blank">Touch Detective Mushroom Garden</a>" es mas o menos algo así como **Tamagochi**, pero esta ves cuidaras una **granja hongos** y con la meta de poder coleccionar una gran cantidad de tipos de hongos y para poder hacerlo necesitaras implementar tu granja con unos instrumentos para poder cuidar tus hongos.
 
 <figure>
   <img src="../../blog/mushroom-garden-app.jpg" alt="Mushroom Garden APP"/>
@@ -45,11 +45,9 @@ Quería explotar por que siempre me gusta terminar bien los juegos y en este ca
 
 Les dejo los link para la descarga:
 
-- Android: <https://play.google.com/store/apps/details?id=com.beeworks.ozawa&hl=es>
+- <a href="https://itunes.apple.com/us/app/mushroom-garden-a.k.a.-funghi/id438171814?mt=8" title="iOS" target="_blank">iOS</a>
 
-- iOS: <https://itunes.apple.com/us/app/mushroom-garden-a.k.a.-funghi/id438171814?mt=8>
-
-- Web: <http://namepara.com/hd/en/>
+- <a href="http://namepara.com/hd/en/" title="Web" target="_blank">Web</a>
 
 <div class="wrapper-iframe">
     <iframe width="1280" height="720" src="https://www.youtube.com/embed/o0N3BTqB_lo" title="なめこのPV" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

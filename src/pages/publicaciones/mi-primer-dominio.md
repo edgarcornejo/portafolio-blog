@@ -59,6 +59,6 @@ Recomendamos no utilizar la razón social o el slogan. La elección de la **exte
 
 No todos son accesibles, debes presentar información dependiendo del que quieras utilizar.
 
-Si quieres probar si un dominio está disponible puedes hacerlo aquí: <https://www.whois.net>
+Si quieres probar si un dominio está disponible puedes hacerlo aquí: <a href="https://www.whois.net" title="Whois" target="_blank">Whois</a>
 
-Te recomendamos leer: [Que necesito para mi primera web](http://www.edgarcornejo.com/publicaciones/que-necesito-para-mi-primera-web)
+Te recomendamos leer: [Que necesito para mi primera web](http://www.edgarcornejo.com/publicaciones/que-necesito-para-mi-primera-web "Que necesito para mi primera web")

@@ -44,14 +44,14 @@ Es importante decir que hay que tener criterio para escoger una imagen, el tema,
 
 Y ahora de donde podemos seleccionarla, aquí les dejo unos enlaces:
 
-- <https://www.flickr.com/commons>
+- <a href="https://www.flickr.com/commons" title="Flickr" target="_blank">Flickr</a>
 
-- <http://www.morguefile.com>
+- <a href="http://www.morguefile.com" title="Morgue File" target="_blank">Morgue File</a>
 
-- <https://unsplash.com>
+- <a href="https://unsplash.com" title="Unsplash" target="_blank">Unsplash</a>
 
-- <https://images.google.com>
+- <a href="https://images.google.com" title="Google Images" target="_blank">Google Images</a>
 
-- <http://commons.wikimedia.org/wiki/Main_Page>
+- <a href="http://commons.wikimedia.org/wiki/Main_Page" title="Wikimedia" target="_blank">Wikimedia</a>
 
-- <http://www.fotos.edgarcornejo.com>
+- <a href="http://www.fotos.edgarcornejo.com" title="Fotos Edgar Cornejo" target="_blank">Fotos Edgar Cornejo</a>

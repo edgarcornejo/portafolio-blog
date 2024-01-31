@@ -26,13 +26,13 @@ Una imagen, artículos, audio - música y gifs animados - vídeos lo pueden ca
 
 Utiliza los recursos adecuadamente, no se trata de ponerle todo, solo lo esencial que apoye el texto ya que es lo mas importante. Recuerda modificarla para que tenga calidad y no pese mucho.
 
-- [Imágenes](consejos-y-recursos-para-nuestra-pagina-web-imagenes)
+- [Imágenes](consejos-y-recursos-para-nuestra-pagina-web-imagenes "Consejos y recursos para nuestra página web, imágenes")
 
-- [Artículos](consejos-y-recursos-para-nuestra-pagina-web-articulos)
+- [Artículos](consejos-y-recursos-para-nuestra-pagina-web-articulos "Consejos y recursos para nuestra página web, artículos")
 
-- [Audio y música](consejos-y-recursos-para-nuestra-pagina-web-audio-y-musica)
+- [Audio y música](consejos-y-recursos-para-nuestra-pagina-web-audio-y-musica "Consejos y recursos para nuestra página web, audio y música")
 
-- [Gifs animados y videos](consejos-y-recursos-para-nuestra-pagina-web-gifs-animados-y-videos)
+- [Gifs animados y videos](consejos-y-recursos-para-nuestra-pagina-web-gifs-animados-y-videos "Consejos y recursos para nuestra página web, gifs animados y videos")
 
 Recuerda siempre verificar la procedencia de los recursos que vas a utilizar y los derechos que estos tengan para no cometer errores. Y también dar los créditos correspondientes. 
 

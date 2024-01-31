@@ -42,14 +42,14 @@ Ahora llegamos al punto central, la herramienta que hará esta magia.
 Se utiliza con un lado de la otra (vista dual) o interfaz única vista para comparar el original con la imagen optimizada en tiempo real y ver al instante el tamaño del archivo resultante. Es ligero, rápido y fácil de usar, pero potente para usuarios avanzados. Usted será capaz de controlar la compresión, número de colores, configuración de metadatos y mucho más, y seleccionar el formato de imagen (JPG, GIF o PNG) para el archivo de salida.
 
 RIOT se puede integrar como plug-in en programas conocidos como The GIMP, IrfanView y XnView.
-Descarga el programa: <http://luci.criosweb.ro/riot/>
+Descarga el programa: <a href="http://luci.criosweb.ro/riot/" title="RIOT" target="_blank">RIOT</a>
 
 ## Herramienta online
 
 Si no quieres descargar ninguna herramienta, existen varias **herramientas online**. Esta ves te recomiendo:
 
-Compresor de imágenes PNG y JGP: <https://www.websiteplanet.com/es/webtools/imagecompressor/>
+Compresor de imágenes PNG y JGP: <a href="https://www.websiteplanet.com/es/webtools/imagecompressor/" title="WebSitePlanet" target="_blank">WebSitePlanet</a>
 
 Mencionar que hay otros trucos para reducir el peso de las imágenes y lo estaré mencionando en los próximos post.
 
-Tal ves te interese el siguiente post : [Google PageSpeed – Más velocidad para su web](http://blog.edgarcornejo.com/google-pagespeed)
+Tal ves te interese el siguiente post : [Google PageSpeed – Más velocidad para su web](google-pagespeed "Google PageSpeed – Más velocidad para su web")

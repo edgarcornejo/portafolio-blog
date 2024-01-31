@@ -22,7 +22,7 @@ tags: ["bloquear celular", "encontrar mi móvil", "find my mobile", "teléfono p
 
 ## Encontrar tu smartphone si eres usuario Samsung
 
-Hace unos días me dio curiosidad saber que servicios tengo al ser usuario Samsung (tengo un Samsung Galaxy Y) y bueno al entrar a la pagina oficial y loguearme vi unos servicios muy buenos como "[Find my mobile](https://www.samsung.com/pe/apps/smartthings-find/)" - Encontrar Mi Móvil. Se trata de un servicio que te permite encontrar tu smartphone y no solo eso también:
+Hace unos días me dio curiosidad saber que servicios tengo al ser usuario Samsung (tengo un Samsung Galaxy Y) y bueno al entrar a la pagina oficial y loguearme vi unos servicios muy buenos como "<a href="https://www.samsung.com/pe/apps/smartthings-find/" title="Find my mobile" target="_blank">Find my mobile</a>" - Encontrar Mi Móvil. Se trata de un servicio que te permite encontrar tu smartphone y no solo eso también:
 
 <figure>
   <img src="../../blog/find-my-mobile-pc.jpg" alt="Find my mobile PC"/>

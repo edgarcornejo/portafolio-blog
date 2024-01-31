@@ -26,9 +26,17 @@ Solo nos enfocaremos en los primeros pasos, ya que el tema de **vender online** 
 
 El programa que se encargara de recibir las ventas como un cajero del supermercado, administrar los clientes, guardar los datos de las ventas, configuración de promociones, stock de productos, los precios, envíos y un sin un fin de funciones; a la vez de un panel de administración donde se agregan productos sus imágenes y características.
 
-Usted puede elegir entre que se desarrolle y diseñe este software desde 0, lo cual es más costoso y se necesita más tiempo, pero tendrá su tienda personalizada para su producto o servicio y será único.
+Usted puede elegir entre que se desarrolle y diseñe este software desde 0, lo cual es más costoso y se necesita más tiempo, pero tendrá su tienda personalizada para su producto o servicio y será único. Tiendas online de código abierto: 
 
-O elegir un software de ventas de código abierto, gratuitos como: [PrestaShop](http://www.prestashop.com/es/) - [Magento](http://magento.com/) - [OpenCart](http://www.opencart.com/) - [Oscommerce](http://www.oscommerce.com/) - [Zen Cart](http://www.zen-cart.com/)
+- <a href="http://www.prestashop.com/es/" title="PrestaShop" target="_blank">PrestaShop</a>
+
+- <a href="http://magento.com/" title="Magento" target="_blank">Magento</a>
+
+- <a href="http://www.opencart.com/" title="OpenCart" target="_blank">OpenCart</a>
+
+- <a href="http://www.oscommerce.com/" title="Oscommerce" target="_blank">Oscommerce</a>
+
+- <a href="http://www.zen-cart.com/" title="Zen Cart" target="_blank">Zen Cart</a>
 
 <figure>
   <img src="../../blog/e-commerce.jpg" alt="E-commerce"/>
@@ -44,6 +52,6 @@ Casi todos tenemos un acercamiento muy leve o profundo a lo que es transferencia
 Aquí llegamos a preguntarnos, ¿cómo el cliente va a pagarme por su compra?
 Pues utilizara uno de estos medios. Los más utilizados son Visa, MasterCard y Paypal.
 
-Quiero centrarme en el caso de visa y aquí les dejo un enlace para saber que se necesita para obtener esta opción de pago. <http://www.visanet.com.pe/como-vender/por-internet/en-su-tienda-virtual/con-visanet-(individuales).html>
+Quiero centrarme en el caso de visa y aquí les dejo un enlace para saber que se necesita para obtener esta opción de pago. <a href="http://www.visanet.com.pe/como-vender/por-internet/en-su-tienda-virtual/con-visanet-(individuales).html" title="VISA" target="_blank">VISA</a>
 
 Por ahora les dejo esta información esperando que sea útil y si tiene alguna duda, por favor dejen su comentario.

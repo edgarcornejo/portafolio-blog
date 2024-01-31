@@ -28,7 +28,7 @@ Una forma fácil para saber qué tema tratar en un blog de que trata temas de no
 
 Tienes que investigar muy bien para que no brindes información errónea y después tengas de pedir disculpas. Recuerda elegir las palabras correctas para decir lo que piensas ya que puedes molestar a lectores, piénsalo dos veces o mejor tres.
 
-En este enlace puede ver las tendencias de la web <http://www.google.com/trends>
+En este enlace puede ver las tendencias de la web <a href="http://www.google.com/trends" title="Google Trends" target="_blank">Google Trends</a>
 
 También puedes citar información de otras web pero es importante que escribas de donde citas esta información o frase; si solo copeas el contenido de otro, tu pagina sera considerada como span y penalizada por Google.
 
@@ -37,4 +37,4 @@ También puedes citar información de otras web pero es importante que escribas 
   <figcaption>Redacción digital</figcaption>
 </figure>
 
-Te recomendamos leer: [Como debe ser el contenido que publique en mi blog](como-debe-ser-el-contenido-que-publique-en-mi-blog)
+Te recomendamos leer: [Como debe ser el contenido que publique en mi blog](como-debe-ser-el-contenido-que-publique-en-mi-blog "Como debe ser el contenido que publique en mi blog")

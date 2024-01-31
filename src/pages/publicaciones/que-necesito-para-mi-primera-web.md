@@ -69,4 +69,4 @@ Los precios de las imágenes fueron obtenidos de la empresa AQPHost.
 
 Lo último que necesitas es contratar los servicios diseño web o desarrollo web para que se empiece a armar tu web.
 
-Te recomendamos leer: [Mi primer dominio](http://www.edgarcornejo.com/publicaciones/mi-primer-dominio)
+Te recomendamos leer: [Mi primer dominio](https://www.edgarcornejo.com/publicaciones/mi-primer-dominio "Mi primer dominio")

@@ -31,7 +31,7 @@ No importa si es un presentación, sitio web, video, película, publicidad, tele
   <figcaption>Melody Loops</figcaption>
 </figure>
 
-Sin duda alguna yo recomendaría [Melody Loops](http://www.melodyloops.com/), la mejor alternativa para nuestros proyectos digitales.
+Sin duda alguna yo recomendaría <a href="http://www.melodyloops.com/" title="Melody Loops" target="_blank">Melody Loops</a>, la mejor alternativa para nuestros proyectos digitales.
 
 <figure>
   <img src="../../blog/melodyloops-interface.jpg" alt="Melody Loops Interface"/>

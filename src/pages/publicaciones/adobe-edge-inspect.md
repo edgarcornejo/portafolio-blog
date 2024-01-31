@@ -36,4 +36,4 @@ Una herramienta muy fácil de usar, solo tienes que tener instalado Adobe Creati
 
 - Básicamente podrás ver y probar como se ve una web en los dispositivos que tengan a mano Tablets y smartphones.
 
-Imágenes de la herramienta: *imágenes de Adobe Edge Inspect - <http://html.adobe.com/edge/inspect/>
+Imágenes de la herramienta: <a href="http://html.adobe.com/edge/inspect/" title="Adobe Edge Inspect" target="_blank">Adobe Edge Inspect</a>

@@ -32,11 +32,11 @@ Siguiendo con el tema de las herramientas, hoy les presento PicPick una herramie
 PicPick es un programa todo en uno que ofrece una herramienta de captura de pantalla con todas las funciones, un intuitivo editor de imágenes, un selector de color, paleta de colores, un píxel regla, un transportador, una cruz e incluso una pizarra.
 
 Este software se distribuye como un programa gratuito para uso personal. En este caso, se le concede el derecho a utilizar este programa de forma gratuita. De lo contrario, usted tiene que pagar por una licencia para uso comercial.
-<http://www.picpick.org/en>
+<a href="http://www.picpick.org/en" title="PicPick" target="_blank">PicPick</a>
 
 Una de sus características que más me gusta es su bajo peso. Sin mencionar que es gratuito para uso personal.
 
-PicPick - <http://www.picpick.org/>
+<a href="http://www.picpick.org" title="PicPick" target="_blank">PicPick</a>
 
 Dejo un video probando el programa:
 
@@ -44,4 +44,4 @@ Dejo un video probando el programa:
 <iframe width="1280" height="722" src="https://www.youtube.com/embed/8qzmmG6SL2o" title="Probando - PicPick - Herramienta para Diseñadores (recomendado) @devcornejo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 
-Te animo a que pruebes esta magnífica herramienta puedes descargarlo aquí: <http://www.picpick.org/en/download_free>
+Te animo a que pruebes esta magnífica herramienta puedes descargarlo aquí: <><a href="http://www.picpick.org/en/download_free" title="PicPick descargar" target="_blank">PicPick descargar</a>

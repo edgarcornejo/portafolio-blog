@@ -28,19 +28,19 @@ La mejor forma de obtener estos recursos es crearlos uno mismo, este recurso se 
 
 Tenemos opciones gratuitas y de pago, te mencionare las gratuitas ya que las de pago fácilmente las encontrarás buscando en Google.
 
-- Pixabay: <https://pixabay.com/es/videos/>
+- <a href="https://pixabay.com/es/videos/" title="Pixabay" target="_blank">Pixabay</a>
 
-- Videesy: <https://es.videezy.com/>
+- <a href="https://es.videezy.com/" title="Videesy" target="_blank">Videesy</a>
 
-- Pexels: <https://www.pexels.com/es-es/videos/>
+- <a href="https://www.pexels.com/es-es/videos/" title="Pexels" target="_blank">Pexels</a>
 
-- Dephositphotos: <https://br.depositphotos.com/stock-footage/videos.html>
+- <a href="https://br.depositphotos.com/stock-footage/videos.html" title="Dephositphotos" target="_blank">Dephositphotos</a>
 
-- Videvo: <https://www.videvo.net/>
+- <a href="https://www.videvo.net/" title="Videvo" target="_blank">Videvo</a>
 
 Recuerda leer los términos y condiciones de cada página para saber si es necesario dar crédito al autor.
 
-Ahora es muy fácil poder crear un gif a partir de un video la web que recomiendo es  <https://gifyoutube.com> una herramienta online, fácil de utilizar, rápida y es online. 
+Ahora es muy fácil poder crear un gif a partir de un video la web que recomiendo es <a href="https://gifyoutube.com" title="Gif YouTube" target="_blank">Gif YouTube</a> una herramienta online, fácil de utilizar, rápida y es online.
 
 Recomiendo no utilizar mas de 2 o 3 gif por pagina o máximo 1 si es la pagina de entrada ya que los gif son muy pesados y harán lenta tu web. En los video es otra historia ya que tu eliges cuando se carga y se reproduzca.
 
@@ -51,10 +51,10 @@ Recomiendo no utilizar mas de 2 o 3 gif por pagina o máximo 1 si es la pagina 
 
 Mi recomendación para subir vídeos propios en la Internet es YouTube, tienes mucha opciones y después agregarla a cualquier web que quieres.
 
-- Gifyoutube: <https://gifyoutube.com>
+- <a href="https://gifyoutube.com" title="Gifyoutube" target="_blank">Gifyoutube</a>
 
-- Giphy: <http://giphy.com/>
+- <a href="http://giphy.com/" title="Giphy" target="_blank">Giphy</a>
 
-- Picasion: <https://picasion.com/es/>
+- <a href="<https://picasion.com/es/" title="Picasion" target="_blank">Picasion</a>
 
-- Kizoa: <https://www.kizoa.es/GIF-animado>
+- <a href="https://www.kizoa.es/GIF-animado" title="Kizoa" target="_blank">Kizoa</a>

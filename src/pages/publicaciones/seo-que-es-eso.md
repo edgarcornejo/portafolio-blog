@@ -44,6 +44,6 @@ Pero eso es solo una parte, la mejor forma de poder mejorar nuestro web es teni
   <figcaption>Medición</figcaption>
 </figure>
 
-La mejor forma de poder llevar una buena e inteligente **medición** de las visitas a nuestra web es con [Google Analytics](http://www.google.com/analytics/).
+La mejor forma de poder llevar una buena e inteligente **medición** de las visitas a nuestra web es con <a href="http://www.google.com/analytics/" title="Google Analytics" target="_blank">Google Analytics</a>.
 
 Esa es la parte básica para poder hacer **SEO** a nuestra pagina web, pero si quiere mejorar profundamente su web se requiere se una persona especializada en el tema.

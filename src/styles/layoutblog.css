@@ -3,11 +3,12 @@
 .header-page {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 1rem 0;
-  width: 100%;
+  width: 90%;
+  max-width: 1920px;
   padding-top: 8rem;
   text-align: center;
+  margin: 0 auto;
 /* Titulo de página H1 */
 /* Descripcion de página H2 */
 }
@@ -25,24 +26,23 @@
   padding: 2rem;
   margin: 4rem auto;
   max-width: 1920px;
-  outline: solid 1px #f00;
 }
 .space-ads-vertical {
   padding: 2rem;
   margin: 2rem auto;
-  outline: solid 1px #f00;
 }
 /* Contenedor de página */
 .wrapper-content {
-  width: 100%;
+  width: 90%;
+  max-width: 1920px;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   padding: 10rem 0 10rem 0;
 }
 /* Contenido */
 main {
-  width: 90%;
-  max-width: 1920px;
+  width: 100%;
 }
 /* Informacion y Publicidad */
 aside {
@@ -77,6 +77,18 @@ aside h4 {
   font: 300 3rem/1.2 Ubuntu;
   padding: 1rem 0 1rem 0;
 }
+.wrapper-post ul {
+  display: flex;
+  width: 100%;
+  flex-flow: column wrap;
+}
+.wrapper-post li {
+  list-style: disc inside;
+  font: 300 3rem/1.4 Ubuntu;
+}
+.wrapper-post li::marker {
+  color: #e63d67;
+}
 .wrapper-post figure {
   display: flex;
   flex-direction: column;
@@ -108,4 +120,117 @@ aside h4 {
   right: 0;
   width: 100%;
   height: 100%;
+}
+/* Responsive Design */
+@media screen and (max-width: 2560px) {
+  .wrapper-post h1 {
+    font: 500 4rem/1.2 Ubuntu;
+  }
+  .wrapper-post h2 {
+    font: 400 3rem/1.2 Ubuntu;
+  }
+  .wrapper-post p {
+    font: 300 2.2rem/1.2 Ubuntu;
+  }
+  .wrapper-post li {
+    font: 300 2.2rem/1.4 Ubuntu;
+  }
+}
+@media screen and (max-width: 1920px) {
+  .header-page h1 {
+    font: italic 300 5rem Ubuntu;
+  }
+  .header-page h2 {
+    font: 300 3rem/1 Ubuntu;
+  }
+  .wrapper-content {
+    padding: 0;
+  }
+  aside {
+    padding: 1.4rem;
+  }
+  aside h4 {
+    font: italic 300 1.8rem Ubuntu;
+  }
+  .space-ads-horizontal,
+  .space-ads-vertical {
+    padding: 1.4rem;
+  }
+  .wrapper-post h1 {
+    font: 500 3rem/1.2 Ubuntu;
+  }
+  .wrapper-post h2 {
+    font: 400 2.6rem/1.2 Ubuntu;
+  }
+  .wrapper-post p {
+    font: 300 1.8rem/1.2 Ubuntu;
+  }
+  .wrapper-post li {
+    font: 300 1.8rem/1.4 Ubuntu;
+  }
+  .wrapper-post figcaption {
+    font: italic 300 1rem/1.2 Ubuntu;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .header-page {
+    padding-top: 4rem;
+/* Titulo de página H1 */
+/* Descripcion de página H2 */
+  }
+  .header-page h1 {
+    font: italic 300 4rem Ubuntu;
+  }
+  .header-page h2 {
+    font: 300 2.2rem/1 Ubuntu;
+  }
+  aside {
+    padding: 1rem;
+  }
+  aside h4 {
+    font: italic 300 1.2rem Ubuntu;
+    padding: 0;
+  }
+  .space-ads-horizontal,
+  .space-ads-vertical {
+    padding: 1.2rem;
+  }
+  .wrapper-post h1 {
+    font: 500 2rem/1.2 Ubuntu;
+    border-bottom: solid 1px #e63d67;
+  }
+  .wrapper-post h2 {
+    font: 400 1.6rem/1.2 Ubuntu;
+    border-bottom: solid 1px #e63d67;
+  }
+  .wrapper-post p {
+    font: 300 1.2rem/1.2 Ubuntu;
+  }
+  .wrapper-post li {
+    font: 300 1.2rem/1.4 Ubuntu;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .header-page {
+    padding-top: 3rem;
+/* Titulo de página H1 */
+/* Descripcion de página H2 */
+  }
+  .header-page h1 {
+    font: italic 300 2.2rem Ubuntu;
+  }
+  .header-page h2 {
+    font: 300 1.6rem/1 Ubuntu;
+  }
+  aside {
+    display: none;
+  }
+  .wrapper-post img {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .wrapper-post img {
+    width: 90%;
+  }
 }

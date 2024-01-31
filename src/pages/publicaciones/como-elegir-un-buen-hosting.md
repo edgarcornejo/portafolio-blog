@@ -41,7 +41,7 @@ Esto limita la cantidad de visitas mensuales a la web, dependiendo del peso de l
 
 ## Cuentas de correo
 
-El número máximo de correos corporativos que puedes crear, ejemplo <info@edgarcornejo.com>.
+El número máximo de correos corporativos que puedes crear, ejemplo info@edgarcornejo.com.
 
 ## Bases de datos
 

@@ -23,6 +23,6 @@ Uno de los factores más importantes para hacer SEO en nuestra web, además de g
 
 Pero por que no  ahorrarnos unos pasos e incluso optimizar la carga de toda nuestra desde el CSS y las imágenes. Google PageSpeed nos puede ayudar con esto.
 
-Primero veamos que debemos mejorar en nuestra web pegando la URL del sitio que queramos medir su velocidad en el siguiente link: <https://developers.google.com/speed/pagespeed/insights>
+Primero veamos que debemos mejorar en nuestra web pegando la URL del sitio que queramos medir su velocidad en el siguiente link: <a href="https://developers.google.com/speed/pagespeed/insights" title="Google Page Speed" target="_blank">Google Page Speed</a>
 
 Nos mostrara un informe con lo que debemos mejorar nuestra web.

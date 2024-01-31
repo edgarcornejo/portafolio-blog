@@ -41,11 +41,10 @@ Regístrate en LinkedIn y crear un perfil de empresa en LinkedIn
 
 Crear un blog y puedes iniciar con estos 2 sitios para blogs gratuitos:
 
-[WordPress](https://es.wordpress.com/): Es muy fácil crear tu blog, elige bien el nombre para tu blog 
+<a href="https://es.wordpress.com/" title="WordPress" target="_blank">WordPress</a>: Es muy fácil crear tu blog, elige bien el nombre para tu blog 
 
-[Blogger](https://accounts.google.com/ServiceLogin?service=blogger&ltmpl=start&hl=es&passive=1209600&continue=http://www.blogger.com/home): Primero debes crearte una cuenta en Google si tienes Gmail, inicia sesión con tu cuenta y crea tu blog es fácil y elige bien tu nombre en el blog
+<a href="https://accounts.google.com/ServiceLogin?service=blogger&ltmpl=start&hl=es&passive=1209600&continue=http://www.blogger.com/home" title="Blogger" target="_blank">Blogger</a>: Primero debes crearte una cuenta en Google si tienes Gmail, inicia sesión con tu cuenta y crea tu blog es fácil y elige bien tu nombre en el blog
 
 En esta página estaremos publicando como lo harás gratuitamente o invirtiendo dinero. Si tienes dinero para invertir, lo mejor sería que contrates a un desarrollador web o una agencia de publicidad. Te recomendamos que te informes del tema.
 
 Estos serían los primeros pasos, seguiremos publicando ya que este tema es grande.
-Hasta luego, espero sus comentarios y dudas.
