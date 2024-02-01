@@ -6,7 +6,7 @@ description: "Una de las necesidades que se requieren actualmente son las de un 
 image:
   url: "../../blog/software-para-dar-clases-online.jpg"
   alt: "Software para dar clases online"
-pubDate: 2020-06-22
+date: 2020-06-22
 lastBuildDate: 2020-06-22
 category: Programas
 language: es-PE

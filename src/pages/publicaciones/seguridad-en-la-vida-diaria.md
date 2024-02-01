@@ -6,7 +6,7 @@ description: "Vivimos una vida que casi se repite diariamente tanto así que dej
 image:
   url: "../../blog/seguridad-en-la-vida-diaria.png"
   alt: "Seguridad en la vida diaria"
-pubDate: 2015-07-29
+date: 2015-07-29
 lastBuildDate: 2015-07-29
 category: Seguridad
 language: es-PE

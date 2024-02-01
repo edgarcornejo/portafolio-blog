@@ -6,7 +6,7 @@ description: "Flash esta siendo abandonado ya que ahora hay mejores tecnologías
 image:
   url: "../../blog/adios-flash.png"
   alt: "Adiós Flash"
-pubDate: 2015-12-09
+date: 2015-12-09
 lastBuildDate: 2015-12-09
 category: Web
 language: es-PE

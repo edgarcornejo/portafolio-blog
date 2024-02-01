@@ -6,7 +6,7 @@ description: "Te recomiendo que solo instales los plugins que necesites, ya que 
 image:
   url: "../../blog/plugins-que-debes-tener-en-tu-pagina-wordpress.webp"
   alt: "Plugins que debes tener en tu página WordPress"
-pubDate: 2020-08-17
+date: 2020-08-17
 lastBuildDate: 2020-08-17
 category: Web
 language: es-PE

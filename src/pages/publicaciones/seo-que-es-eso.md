@@ -6,7 +6,7 @@ description: "El primer resultado que me muestra es la pagina que tiene mas cont
 image:
   url: "../../blog/seo-que-es-eso.png"
   alt: "SEO que es eso"
-pubDate: 2015-09-14
+date: 2015-09-14
 lastBuildDate: 2015-09-14
 category: Web
 language: es-PE

@@ -6,7 +6,7 @@ description: "La mejor forma de obtener estos recursos es crearlos uno mismo, es
 image:
   url: "../../blog/Consejos-y-recursos-para-nuestra-página-web-gifs-animados-y-videos.png"
   alt: "Consejos y recursos para nuestra página web, gifs animados y vídeos"
-pubDate: 2015-11-06
+date: 2015-11-06
 lastBuildDate: 2015-11-06
 category: Web
 language: es-PE

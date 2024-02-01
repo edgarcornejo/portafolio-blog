@@ -6,7 +6,7 @@ description: "Ahora todos ya sabemos que es web adaptable y han cambiado su th
 image:
   url: "../../blog/Lo-que-necesitas-saber-sobre-una-página-web-adaptable.png"
   alt: "Lo que necesitas saber sobre una página web adaptable"
-pubDate: 2015-11-10
+date: 2015-11-10
 lastBuildDate: 2015-11-10
 category: Web
 language: es-PE

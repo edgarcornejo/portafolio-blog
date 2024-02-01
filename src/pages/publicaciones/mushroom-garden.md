@@ -6,7 +6,7 @@ description: "Personalmente en mi opinión es mejor tener un hosting que se encu
 image:
   url: "../../blog/mushroom-garden.jpg"
   alt: "Touch Detective Mushroom Garden"
-pubDate: 2015-09-13
+date: 2015-09-13
 lastBuildDate: 2015-09-13
 category: Game
 language: es-PE

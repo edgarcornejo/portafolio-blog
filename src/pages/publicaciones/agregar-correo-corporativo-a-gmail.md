@@ -6,7 +6,7 @@ description: "Importar tus emails de correos corporativos en tu cuenta de Gmail 
 image:
   url: "../../blog/informacion-de-correo.jpg"
   alt: "Agregar correo corporativo a Gmail"
-pubDate: 2016-06-15
+date: 2016-06-15
 lastBuildDate: 2016-06-15
 category: Web
 language: es-PE

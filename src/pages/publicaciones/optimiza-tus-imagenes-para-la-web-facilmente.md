@@ -6,7 +6,7 @@ description: "Una de las herramientas que necesitamos diseñadores y desarrollad
 image:
   url: "../../blog/riot.jpg"
   alt: "Optimiza tus imágenes para la web fácilmente"
-pubDate: 2015-09-23
+date: 2015-09-23
 lastBuildDate: 2015-09-23
 category: Tips
 language: es-PE

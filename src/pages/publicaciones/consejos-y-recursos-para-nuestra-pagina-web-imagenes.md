@@ -6,7 +6,7 @@ description: "Dicen que las imágenes valen más que mil palabras y es muy cie
 image:
   url: "../../blog/imagenes-para-nuestra-pagina-web.png"
   alt: "Consejos y recursos para nuestra página web, imágenes"
-pubDate: 2015-10-30
+date: 2015-10-30
 lastBuildDate: 2015-10-30
 category: Web
 language: es-PE

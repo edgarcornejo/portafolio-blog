@@ -6,7 +6,7 @@ description: "El programa que se encargara de recibir las ventas como un cajero 
 image:
   url: "../../blog/que-necesito-saber-si-quiero-una-tienda-online.png"
   alt: "Que necesito saber si quiero una tienda online"
-pubDate: 2015-10-12
+date: 2015-10-12
 lastBuildDate: 2015-10-12
 category: Web
 language: es-PE

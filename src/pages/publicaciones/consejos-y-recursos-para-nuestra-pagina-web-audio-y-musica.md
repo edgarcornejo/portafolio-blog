@@ -6,7 +6,7 @@ description: "Sin duda los sonidos nos comunican mucha información en poco tiem
 image:
   url: "../../blog/recursos-de-audio-y-musica.png"
   alt: "Consejos y recursos para nuestra página web, audio y música"
-pubDate: 2015-11-04
+date: 2015-11-04
 lastBuildDate: 2015-11-04
 category: Web
 language: es-PE

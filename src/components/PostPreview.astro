@@ -1,4 +1,6 @@
 ---
+import { formatDate } from "../js/utils";
+
 const { post } = Astro.props;
 ---
 
@@ -16,7 +18,7 @@ const { post } = Astro.props;
             <figcaption>
                 <time
                     >Publicado el: <br />{
-                        post.frontmatter.pubDate.slice(0, 10)
+                        formatDate(post.frontmatter.date)
                     }</time
                 >
             </figcaption>

@@ -6,7 +6,7 @@ description: "Hablando más técnicamente, es un programa que interpreta a trav�
 image:
   url: "../../blog/navegadores-web-que-debes-probar.webp"
   alt: "Navegadores web que debes probar"
-pubDate: 2020-09-14
+date: 2020-09-14
 lastBuildDate: 2020-09-14
 category: Programas
 language: es-PE

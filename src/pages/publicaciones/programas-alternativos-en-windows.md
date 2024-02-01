@@ -6,7 +6,7 @@ description: "Todos los días utilizamos varios programas que nos ayudan a hacer
 image:
   url: "../../blog/programas-alternativos-en-windows.webp"
   alt: "Programas alternativos en Windows"
-pubDate: 2020-07-27
+date: 2020-07-27
 lastBuildDate: 2020-07-27
 category: Web
 language: es-PE

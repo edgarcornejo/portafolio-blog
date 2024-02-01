@@ -6,7 +6,7 @@ description: "Normalmente las comunicaciones con los clientes se hacen por disti
 image:
   url: "../../blog/firma-en-gmail.png"
   alt: "Tarjetas de presentación digitales para su empresa"
-pubDate: 2020-04-20
+date: 2020-04-20
 lastBuildDate: 2020-04-20
 category: Diseño
 language: es-PE

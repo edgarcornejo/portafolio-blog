@@ -6,7 +6,7 @@ description: "Como en toda profesión siempre es importante contar con las herra
 image:
   url: "../../blog/adobe-edge-inspect.png"
   alt: "Adobe Edge Inspect"
-pubDate: 2015-09-21
+date: 2015-09-21
 lastBuildDate: 2015-09-21
 category: Web
 language: es-PE

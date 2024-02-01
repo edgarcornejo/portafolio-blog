@@ -6,7 +6,7 @@ description: "Ahora es cuando cobra más valor que una página que se adapte a d
 image:
   url: "../../blog/una-pagina-web-adaptable-para-vencerlas-a-todas.png"
   alt: "Una página web adaptable para vencerlas a todas"
-pubDate: 2015-10-24
+date: 2015-10-24
 lastBuildDate: 2015-10-24
 category: Web
 language: es-PE

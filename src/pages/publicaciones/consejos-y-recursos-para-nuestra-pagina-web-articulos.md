@@ -6,7 +6,7 @@ description: "El contenido es muy importante para una página web, frases como �
 image:
   url: "../../blog/Consejos-y-recursos-para-nuestra-página-web-artículos.png"
   alt: "Consejos y recursos para nuestra página web, artículos"
-pubDate: 2015-11-02
+date: 2015-11-02
 lastBuildDate: 2015-11-02
 category: Web
 language: es-PE

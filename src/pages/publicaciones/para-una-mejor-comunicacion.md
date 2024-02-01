@@ -6,7 +6,7 @@ description: "Si eres una persona que me ha enviado o piensas enviar un mensaje 
 image:
   url: "../../blog/para-una-mejor-comunicacion.png"
   alt: "Para una mejor comunicación"
-pubDate: 2016-05-07
+date: 2016-05-07
 lastBuildDate: 2016-05-07
 category: Web
 language: es-PE

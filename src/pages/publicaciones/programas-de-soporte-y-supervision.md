@@ -6,7 +6,7 @@ description: "Hoy les recomendare dos programas que te pueden ayudar a dar sopor
 image:
   url: "../../blog/programas-de-soporte-y-supervision.webp"
   alt: "Programas de soporte y supervisión"
-pubDate: 2020-08-10
+date: 2020-08-10
 lastBuildDate: 2020-08-10
 category: Web
 language: es-PE

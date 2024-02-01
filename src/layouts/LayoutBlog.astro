@@ -6,12 +6,19 @@ import logo from "../data/logoData";
 import MainMenuView from "../components/MainMenuView.astro";
 import MenuItemView from "../components/MenuItemView.astro";
 import menuItems from "../data/menuItemsData";
+import ListPosts from "../components/ListPosts.astro";
+import { formatBlogPosts } from "../js/utils";
 
 interface Props {
     title: string;
 }
 
 const { title, frontmatter } = Astro.props;
+
+const allPosts = await Astro.glob("../pages/publicaciones/*.md");
+const formattedPosts = formatBlogPosts(allPosts, {
+    limit: 10,
+});
 ---
 
 <!doctype html>
@@ -145,6 +152,14 @@ const { title, frontmatter } = Astro.props;
             <aside>
                 <h4>Publicidad</h4>
                 <div class="space-ads-vertical"></div>
+                <h4>Publicaciones</h4>
+                <ol class="post-container">
+                    {
+                        formattedPosts.map((lipost: any) => (
+                            <ListPosts post={lipost} />
+                        ))
+                    }
+                </ol>
             </aside>
         </section>
 

@@ -6,7 +6,7 @@ description: "No importa si es un presentación, sitio web, video, película, pu
 image:
   url: "../../blog/sonido-para-proyectos-digitales.png"
   alt: "Música y sonido de fondo para tus proyectos"
-pubDate: 2015-10-02
+date: 2015-10-02
 lastBuildDate: 2015-10-02
 category: Web
 language: es-PE

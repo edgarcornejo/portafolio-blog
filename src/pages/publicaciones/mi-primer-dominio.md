@@ -6,7 +6,7 @@ description: "Uno de los primeros pasos para tener una página web es tener un d
 image:
   url: "../../blog/mi-primer-dominio.png"
   alt: "Mi primer Dominio"
-pubDate: 2015-07-19
+date: 2015-07-19
 lastBuildDate: 2015-07-19
 category: Web
 language: es-PE

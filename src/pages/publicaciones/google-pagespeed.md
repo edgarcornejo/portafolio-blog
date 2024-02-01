@@ -6,7 +6,7 @@ description: "Uno de los factores más importantes para hacer SEO en nuestra web
 image:
   url: "../../blog/google-pagespeed-insights.png"
   alt: "Google PageSpeed"
-pubDate: 2015-09-16
+date: 2015-09-16
 lastBuildDate: 2015-09-16
 category: Web
 language: es-PE

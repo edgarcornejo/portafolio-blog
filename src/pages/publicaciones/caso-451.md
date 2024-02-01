@@ -6,7 +6,7 @@ description: "Miércoles 17 de Julio del 2019, caso 451, señora Leonor Campos. 
 image:
   url: "../../blog/caso-451.jpg"
   alt: "Caso 451"
-pubDate: 2020-04-04
+date: 2020-04-04
 lastBuildDate: 2020-04-07
 category: Cuento
 language: es-PE

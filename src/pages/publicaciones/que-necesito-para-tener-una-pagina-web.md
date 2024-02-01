@@ -6,7 +6,7 @@ description: "Los conceptos con los que hay que familiarizarnos son los siguient
 image:
   url: "../../blog/como-eleguir-un-buen-hosting.png"
   alt: "Qué necesito para tener una página web"
-pubDate: 2016-02-27
+date: 2016-02-27
 lastBuildDate: 2016-02-27
 category: Web
 language: es-PE

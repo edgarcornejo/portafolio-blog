@@ -6,7 +6,7 @@ description: "Me dejo muy en claro no solo acerca del tema si no también acerca
 image:
   url: "../../blog/enfocate-en-vender-beneficios-no-caracteristicas.jpg"
   alt: "Enfócate en vender beneficios no características"
-pubDate: 2015-09-18
+date: 2015-09-18
 lastBuildDate: 2015-09-18
 category: Marketing
 language: es-PE

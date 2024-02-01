@@ -6,7 +6,7 @@ description: "Cuando un cliente se contacta conmigo, me pregunta por el servicio
 image:
   url: "../../blog/servicio-desarrollo-web-frontend.png"
   alt: "El servicio de Desarrollo Web front-end"
-pubDate: 2015-12-04
+date: 2015-12-04
 lastBuildDate: 2015-12-04
 category: Web
 language: es-PE

@@ -6,7 +6,7 @@ description: "Con el tiempo muchas personas saben que para mejorar nuestra visib
 image:
   url: "../../blog/mejorar-publicaciones-de-blogger.jpg"
   alt: "Mejorar publicaciones de Blogger"
-pubDate: 2015-09-19
+date: 2015-09-19
 lastBuildDate: 2015-09-19
 category: Web
 language: es-PE

@@ -6,7 +6,7 @@ description: "Primero redacte y busque la información que ira dentro de la web,
 image:
   url: "../../blog/que-necesito-para-mi-primera-web.png"
   alt: "Que necesito para mi primera web"
-pubDate: 2015-07-28
+date: 2015-07-28
 lastBuildDate: 2015-07-28
 category: Web
 language: es-PE

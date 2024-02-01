@@ -6,7 +6,7 @@ description: "Con el pasar del tiempo muchas cosas han cambiado, desde las polí
 image:
   url: "../../blog/nuestra-libertad.png"
   alt: "Nuestra libertad"
-pubDate: 2015-10-26
+date: 2015-10-26
 lastBuildDate: 2015-10-26
 category: Tips
 language: es-PE

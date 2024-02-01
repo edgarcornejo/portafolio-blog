@@ -6,7 +6,7 @@ description: "Personalmente en mi opinión es mejor tener un hosting que se encu
 image:
   url: "../../blog/como-eleguir-un-buen-hosting.png"
   alt: "Como elegir un buen hosting"
-pubDate: 2015-08-14
+date: 2015-08-14
 lastBuildDate: 2015-08-14
 category: Web
 language: es-PE

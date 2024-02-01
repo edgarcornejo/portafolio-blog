@@ -6,7 +6,7 @@ description: "Hace unos días me dio curiosidad saber que servicios tengo al s
 image:
   url: "../../blog/find-my-mobile.png"
   alt: "Encontrar mi smartphone"
-pubDate: 2015-09-14
+date: 2015-09-14
 lastBuildDate: 2015-09-14
 category: Tips
 language: es-PE

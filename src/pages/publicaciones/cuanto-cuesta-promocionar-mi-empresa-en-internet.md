@@ -6,7 +6,7 @@ description: "Promocionar o publicar tu empresa en Internet se ha vuelto en un
 image:
   url: "../../blog/cuanto-cuesta-promocionar-mi-empresa-en-internet.png"
   alt: "Cuánto cuesta promocionar mi empresa en Internet"
-pubDate: 2015-10-22
+date: 2015-10-22
 lastBuildDate: 2015-10-22
 category: Web
 language: es-PE

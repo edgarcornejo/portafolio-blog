@@ -6,7 +6,7 @@ description: "Puede optar por otros medios como una fan page en Facebook o un bl
 image:
   url: "../../blog/realmente-necesito-una-pagina-web.png"
   alt: "Realmente necesito una página web"
-pubDate: 2015-10-20
+date: 2015-10-20
 lastBuildDate: 2015-10-20
 category: Web
 language: es-PE

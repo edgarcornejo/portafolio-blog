@@ -6,7 +6,7 @@ description: "Definitivamente si, Internet ha cambiado mucho y el gran cambio es
 image:
   url: "../../blog/web-moderna.jpg"
   alt: "Una web moderna para una Internet moderna"
-pubDate: 2015-10-06
+date: 2015-10-06
 lastBuildDate: 2015-10-06
 category: Web
 language: es-PE

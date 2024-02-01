@@ -6,7 +6,7 @@ description: "Cuando inicie en el desarrollo web, una de las preguntas que tení
 image:
   url: "../../blog/000webhost-web.jpg"
   alt: "Hosting gratuito para probar tus proyectos Web"
-pubDate: 2020-09-07
+date: 2020-09-07
 lastBuildDate: 2020-09-07
 category: Web
 language: es-PE

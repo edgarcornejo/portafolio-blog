@@ -6,7 +6,7 @@ description: "Al igual que una página web un blog necesita de un continuo cuida
 image:
   url: "../../blog/blog-para-mi-web.png"
   alt: "Necesito un blog para mi página web"
-pubDate: 2015-10-09
+date: 2015-10-09
 lastBuildDate: 2015-10-09
 category: Web
 language: es-PE

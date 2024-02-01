@@ -6,7 +6,7 @@ description: "Cuando navegamos por Internet lo hacemos sin darnos cuenta, pero p
 image:
   url: "../../blog/programas-para-la-accesibilidad.webp"
   alt: "Programas para la accesibilidad"
-pubDate: 2020-07-13
+date: 2020-07-13
 lastBuildDate: 2020-07-13
 category: Programas
 language: es-PE

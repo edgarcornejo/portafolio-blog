@@ -6,7 +6,7 @@ description: "El programa de utilizo como ya sabrán es el Adobe Illustrator, es
 image:
   url: "../../blog/jugando-con-illustrator.png"
   alt: "Jugando con Illustrator"
-pubDate: 2015-11-20
+date: 2015-11-20
 lastBuildDate: 2015-11-20
 category: Diseño
 language: es-PE

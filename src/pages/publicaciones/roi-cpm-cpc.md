@@ -6,7 +6,7 @@ description: "Personalmente en mi opinión es mejor tener un hosting que se encu
 image:
   url: "../../blog/roi-cpm-cpc.png"
   alt: "ROI, CPM y CPC"
-pubDate: 2015-09-01
+date: 2015-09-01
 lastBuildDate: 2015-09-01
 category: Web
 language: es-PE

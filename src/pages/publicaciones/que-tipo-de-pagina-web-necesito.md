@@ -6,7 +6,7 @@ description: "Hoy voy a mencionarles los tipos de web que conozco, tal vez sea l
 image:
   url: "../../blog/que-tipo-de-pagina-web-necesito.jpg"
   alt: "Qué tipo de página web necesito"
-pubDate: 2019-03-05
+date: 2019-03-05
 lastBuildDate: 2019-03-05
 category: Web
 language: es-PE

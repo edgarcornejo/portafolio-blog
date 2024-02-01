@@ -6,7 +6,7 @@ description: "Con las experiencias en algunos trabajos, es importante contar con
 image:
   url: "../../blog/Consejos-y-recursos-para-nuestra-página-web.png"
   alt: "Consejos y recursos para nuestra página web"
-pubDate: 2015-10-28
+date: 2015-10-28
 lastBuildDate: 2015-10-28
 category: Web
 language: es-PE

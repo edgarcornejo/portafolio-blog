@@ -6,7 +6,7 @@ description: "SEM de las siglas en ingles de Search Engine Marketing y en españ
 image:
   url: "../../blog/sem-adwords-semrush.png"
   alt: "SEM, Adwords y SEMrush"
-pubDate: 2015-08-28
+date: 2015-08-28
 lastBuildDate: 2015-08-28
 category: Web
 language: es-PE

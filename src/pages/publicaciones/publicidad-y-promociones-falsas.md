@@ -6,7 +6,7 @@ description: "Caer en engaños que se esconden como publicidad o promociones es 
 image:
   url: "../../blog/publicidad-y-promociones-falsas.webp"
   alt: "Publicidad y promociones falsas"
-pubDate: 2020-07-20
+date: 2020-07-20
 lastBuildDate: 2020-07-20
 category: Web
 language: es-PE

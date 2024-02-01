@@ -6,7 +6,7 @@ description: "Siguiendo con el tema de las herramientas, hoy les presento PicPic
 image:
   url: "../../blog/picpick.jpg"
   alt: "PicPick todo en una herramienta de diseño"
-pubDate: 2015-09-25
+date: 2015-09-25
 lastBuildDate: 2015-09-25
 category: Tips
 language: es-PE

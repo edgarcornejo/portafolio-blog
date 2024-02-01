@@ -1,0 +1,14 @@
+---
+import { formatDate } from "../js/utils";
+
+const { post } = Astro.props;
+---
+
+<li>
+    <h5>
+        <a href={post.url} title={post.frontmatter.title}
+            >{post.frontmatter.title}</a
+        >
+    </h5>
+    <time>Publicado el: {formatDate(post.frontmatter.date)}</time>
+</li>

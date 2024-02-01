@@ -6,7 +6,7 @@ description: "Contenido que invite a la conversación: Un lector cuando termina 
 image:
   url: "../../blog/como-debe-ser-el-contenido-que-publique-en-mi-blog.png"
   alt: "Como debe ser el contenido que publique en mi blog"
-pubDate: 2015-10-24
+date: 2015-10-24
 lastBuildDate: 2015-10-24
 category: Web
 language: es-PE

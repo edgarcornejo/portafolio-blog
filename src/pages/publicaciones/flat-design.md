@@ -6,7 +6,7 @@ description: "Es una tendencia de diseño que lleva un tiempo, básicamente trat
 image:
   url: "../../blog/flat design.png"
   alt: "Flat Design"
-pubDate: 2016-02-27
+date: 2016-02-27
 lastBuildDate: 2016-02-27
 category: Web
 language: es-PE

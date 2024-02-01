@@ -6,7 +6,7 @@ description: "Quise crear esto post para daros una de idea del costo de los serv
 image:
   url: "../../blog/acerca-de-los-precios.png"
   alt: "Acerca de los precios"
-pubDate: 2017-06-17
+date: 2017-06-17
 lastBuildDate: 2017-06-17
 category: Comunicación
 language: es-PE

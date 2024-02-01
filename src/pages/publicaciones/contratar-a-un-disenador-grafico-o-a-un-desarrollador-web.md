@@ -6,7 +6,7 @@ description: "La elección del profesional es muy importante por ello quisiera r
 image:
   url: "../../blog/disenador-o-desarrollador.png"
   alt: "Contratar a un diseñador gráfico o a un desarrollador web"
-pubDate: 2015-09-29
+date: 2015-09-29
 lastBuildDate: 2015-09-29
 category: Tips
 language: es-PE

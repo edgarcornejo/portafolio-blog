@@ -6,7 +6,7 @@ description: "ay que iniciar instalando Streamlabs OBS este software tiene una v
 image:
   url: "../../blog/hacer-transmisiones-en-varias-redes-sociales.webp"
   alt: "Hacer transmisiones en varias redes sociales"
-pubDate: 2020-06-29
+date: 2020-06-29
 lastBuildDate: 2020-06-29
 category: Tips
 language: es-PE

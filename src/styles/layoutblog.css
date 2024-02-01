@@ -46,12 +46,23 @@ main {
 }
 /* Informacion y Publicidad */
 aside {
-  width: 20%;
+  width: 30%;
   padding: 2rem;
 }
 aside h4 {
   font: italic 300 2.4rem Ubuntu;
-  padding: 1rem;
+  padding: 1rem 1rem 1rem 1rem;
+}
+aside ol {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 1.2rem 0;
+}
+aside ol h5 {
+  font: 400 1.4rem/1.2 Ubuntu;
+}
+aside ol h5 a {
+  color: #e63d67;
 }
 /* Post solo*/
 .wrapper-post {
@@ -189,7 +200,10 @@ aside h4 {
   }
   aside h4 {
     font: italic 300 1.2rem Ubuntu;
-    padding: 0;
+    padding: 1rem 0 1rem 0;
+  }
+  aside ol h5 {
+    font: 400 1rem/1.2 Ubuntu;
   }
   .space-ads-horizontal,
   .space-ads-vertical {

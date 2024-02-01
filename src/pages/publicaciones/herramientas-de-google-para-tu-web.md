@@ -7,7 +7,7 @@ description: "Cuando creamos nuestra web veremos que Google nos ofrece unas herr
 image:
   url: "../../blog/herramientas-de-google-para-tu-web.webp"
   alt: "Herramientas de Google para tu web"
-pubDate: 2020-08-31
+date: 2020-08-31
 lastBuildDate: 2020-08-31
 category: Web
 language: es-PE
