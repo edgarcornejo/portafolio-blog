@@ -3,11 +3,13 @@ layout: ../../layouts/LayoutBlog.astro
 title: Una web moderna para una Internet moderna
 author: Edgar Cornejo
 description: "Definitivamente si, Internet ha cambiado mucho y el gran cambio es desde donde accedemos a internet, básicamente ahora  todos acceden por medio de smartphones,  tablets y un sin fin de dispositivos. Por ello tus clientes ya no están en frente de una computadora. Si quieres llegar a ellos debes estar donde ellos estén."
-image:
-  url: "../../blog/web-moderna.jpg"
-  alt: "Una web moderna para una Internet moderna"
+image: {
+  url: "../../blog/web-moderna.jpg",
+  alt: "Una web moderna para una Internet moderna",
+}  
 date: 2015-10-06
 lastBuildDate: 2015-10-06
+draft: false
 category: Web
 language: es-PE
 tags: ["diseño web", "desarrollo web", "responsive web design", "web moderna"]

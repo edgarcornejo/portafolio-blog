@@ -3,11 +3,13 @@ layout: ../../layouts/LayoutBlog.astro
 title: Consejos y recursos para nuestra página web, imágenes
 author: Edgar Cornejo
 description: "Dicen que las imágenes valen más que mil palabras y es muy cierto en la mayoría de casos. Al muy importante sobre las imágenes en Internet es que pueden tener derechos de autor, estos son los tipos de imágenes que podemos utilizar o no en nuestra web."
-image:
-  url: "../../blog/imagenes-para-nuestra-pagina-web.png"
-  alt: "Consejos y recursos para nuestra página web, imágenes"
+image: {
+  url: "../../blog/imagenes-para-nuestra-pagina-web.png",
+  alt: "Consejos y recursos para nuestra página web, imágenes",
+}  
 date: 2015-10-30
 lastBuildDate: 2015-10-30
+draft: false
 category: Web
 language: es-PE
 tags: ["banco de fotos", "imágenes web", "recursos", "derechos de autor"]

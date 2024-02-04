@@ -3,11 +3,13 @@ layout: ../../layouts/LayoutBlog.astro
 title: Flat Design
 author: Edgar Cornejo
 description: "Es una tendencia de diseño que lleva un tiempo, básicamente trata que nos centremos mas en la información que quitar todas las distracciones visuales. La utilización es colores planos, centrarnos en el contenido textos e imágenes, organizando el contenido inteligentemente para que sea rápidamente asimilado e interpretado."
-image:
-  url: "../../blog/flat design.png"
-  alt: "Flat Design"
+image: {
+  url: "../../blog/flat design.png",
+  alt: "Flat Design",
+}  
 date: 2016-02-27
 lastBuildDate: 2016-02-27
+draft: false
 category: Web
 language: es-PE
 tags: ["diseño web", "desarrollo web", "flat design", "tendencia de diseño"]

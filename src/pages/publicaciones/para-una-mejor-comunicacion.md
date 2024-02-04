@@ -3,11 +3,13 @@ layout: ../../layouts/LayoutBlog.astro
 title: Para una mejor comunicación
 author: Edgar Cornejo
 description: "Si eres una persona que me ha enviado o piensas enviar un mensaje solicitando una cotización. Me parece correcto mencionarte lo siguiente. Para poder ofrecerte una cotización correcta y no un aproximado, es necesario que describas que es lo que quieres y para que lo piensas utilizar."
-image:
-  url: "../../blog/para-una-mejor-comunicacion.png"
-  alt: "Para una mejor comunicación"
+image: {
+  url: "../../blog/para-una-mejor-comunicacion.png",
+  alt: "Para una mejor comunicación",
+}  
 date: 2016-05-07
 lastBuildDate: 2016-05-07
+draft: false
 category: Web
 language: es-PE
 tags: ["diseño web", "desarrollo web", "hospedaje web", "hosting"]

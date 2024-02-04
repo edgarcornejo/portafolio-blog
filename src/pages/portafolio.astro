@@ -8,6 +8,7 @@ import AsideItemView from "../components/AsideItemView.astro";
 
 <Layout
     title="Portafolio - Edgar Cornejo, Diseñador gráfico, desarrolador Web front-end y Posicionamiento en Internet."
+    description="Trabajos realizados en las areas de diseño gráfico, desarrollo web front-end, SEO y proyectos propios."
 >
     <AsideMenuView>
         {asideItemsPor.map((aitem) => <AsideItemView {...aitem} />)}
@@ -806,12 +807,14 @@ import AsideItemView from "../components/AsideItemView.astro";
                                     Descripción: Maquetación y desarrollo de la pagina
                                     web de Minimarket Lucy.
                                 </p>
-                                <a
-                                    class="visitar"
-                                    href="https://www.lucy.edgarcornejo.com/"
-                                    target="_blank"
-                                    title="Minimarket Lucy">Minimarket Lucy</a
-                                >
+                                <p class="enlaces">
+                                    <a
+                                        href="https://www.lucy.edgarcornejo.com/"
+                                        target="_blank"
+                                        title="Minimarket Lucy"
+                                        >Minimarket Lucy</a
+                                    >
+                                </p>
                             </div>
 
                             <div class="gallery-cell">
@@ -835,12 +838,13 @@ import AsideItemView from "../components/AsideItemView.astro";
                                     Descripción: Maquetación y desarrollo de la pagina
                                     web de Nave de papel.
                                 </p>
-                                <a
-                                    class="visitar"
-                                    href="https://www.navedepapel.edgarcornejo.com"
-                                    target="_blank"
-                                    title="Nave de papel">Nave de papel</a
-                                >
+                                <p class="enlaces">
+                                    <a
+                                        href="https://www.navedepapel.edgarcornejo.com"
+                                        target="_blank"
+                                        title="Nave de papel">Nave de papel</a
+                                    >
+                                </p>
                             </div>
 
                             <div class="gallery-cell">
@@ -861,12 +865,13 @@ import AsideItemView from "../components/AsideItemView.astro";
                                     fotos de autoría de Edgar Cornejo para Fotos
                                     Gratis.
                                 </p>
-                                <a
-                                    class="visitar"
-                                    href="https://www.fotos.edgarcornejo.com"
-                                    target="_blank"
-                                    title="Fotos Gratis">Fotos Gratis</a
-                                >
+                                <p class="enlaces">
+                                    <a
+                                        href="https://www.fotos.edgarcornejo.com"
+                                        target="_blank"
+                                        title="Fotos Gratis">Fotos Gratis</a
+                                    >
+                                </p>
                             </div>
 
                             <div class="gallery-cell">
@@ -889,13 +894,15 @@ import AsideItemView from "../components/AsideItemView.astro";
                                     Descripción: Diseño y desarrollo de página web
                                     para Minilink Soluciones
                                 </p>
-                                <a
-                                    class="visitar"
-                                    href="https://www.minilink.edgarcornejo.com"
-                                    target="_blank"
-                                    title="Minilink Soluciones"
-                                    >Minilink Soluciones</a
-                                >
+                                <p class="enlaces">
+                                    <a
+                                        class="visitar"
+                                        href="https://www.minilink.edgarcornejo.com"
+                                        target="_blank"
+                                        title="Minilink Soluciones"
+                                        >Minilink Soluciones</a
+                                    >
+                                </p>
                             </div>
 
                             <div class="gallery-cell">
@@ -917,12 +924,13 @@ import AsideItemView from "../components/AsideItemView.astro";
                                     Descripción: Mejoramiento de posicionamiento
                                     con marketing de contenido.
                                 </p>
-                                <a
-                                    class="visitar"
-                                    href="https://renovadesign.blogspot.com"
-                                    target="_blank"
-                                    title="Renova Design">Renova Design</a
-                                >
+                                <p class="enlaces">
+                                    <a
+                                        href="https://renovadesign.blogspot.com"
+                                        target="_blank"
+                                        title="Renova Design">Renova Design</a
+                                    >
+                                </p>
                             </div>
                         </div>
                     </article>
@@ -931,25 +939,6 @@ import AsideItemView from "../components/AsideItemView.astro";
         </main>
     </div>
 </Layout>
-
-<style lang="stylus" is:global>
-    /* Selector  Menu Principal */
-    label + ul li:nth-child(3)
-        border-top solid 8px rgb(103, 61, 230)
-        a
-            opacity 0.2
-    
-    /* Responsive Design */
-    @media screen and (max-width:1920px)
-        label + ul li:nth-child(3)
-            border-top solid 5px rgb(61, 188, 230)
-
-    @media screen and (max-width:768px)
-        label + ul li:nth-child(3)
-            border-top solid 1px rgb(61, 188, 230)
-            a
-                opacity 1   
-</style>
 
 <style lang="stylus">
     /* Portafolio */

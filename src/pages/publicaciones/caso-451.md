@@ -3,11 +3,13 @@ layout: ../../layouts/LayoutBlog.astro
 title: Caso 451
 author: Edgar Cornejo
 description: "Miércoles 17 de Julio del 2019, caso 451, señora Leonor Campos. Se logro cerrar el caso, pero aun me queda una minúscula dudad. El caso se cerró perfectamente, criminal capturado, objeto del robo recuperado, razón del crimen, robo; y ningún dato suelto."
-image:
-  url: "../../blog/caso-451.jpg"
-  alt: "Caso 451"
+image: {
+  url: "../../blog/caso-451.jpg",
+  alt: "Caso 451",
+}  
 date: 2020-04-04
 lastBuildDate: 2020-04-07
+draft: false
 category: Cuento
 language: es-PE
 tags: ["cuento", "caso 451", "suspenso"]

@@ -3,11 +3,13 @@ layout: ../../layouts/LayoutBlog.astro
 title: Acerca de los precios
 author: Edgar Cornejo
 description: "Quise crear esto post para daros una de idea del costo de los servicios que ofrezco , primero que todo quiere empezar diciendo que no es lo mismo trabajar en una oficina o tu casa, yo soy independiente y todavía no genero el dinero para alquilar una oficina."
-image:
-  url: "../../blog/acerca-de-los-precios.png"
-  alt: "Acerca de los precios"
+image: {
+  url: "../../blog/acerca-de-los-precios.png",
+  alt: "Acerca de los precios",
+}  
 date: 2017-06-17
 lastBuildDate: 2017-06-17
+draft: false
 category: Comunicación
 language: es-PE
 tags: ["comunicación", "servicios", "trabajo", "independiente"]

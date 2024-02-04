@@ -3,11 +3,13 @@ layout: ../../layouts/LayoutBlog.astro
 title: Adobe Edge Inspect
 author: Edgar Cornejo
 description: "Como en toda profesión siempre es importante contar con las herramientas adecuadas, que nos puedan ayudar a aumentar las características del trabajo final y reducir el tiempo de trabajo. Hoy les presentare una herramienta que recién empiezo a utilizar, no es un herramienta nueva y posiblemente ya muchos han escuchado pero no probado."
-image:
-  url: "../../blog/adobe-edge-inspect.png"
-  alt: "Adobe Edge Inspect"
+image: {
+  url: "../../blog/adobe-edge-inspect.png",
+  alt: "Adobe Edge Inspect",
+}  
 date: 2015-09-21
 lastBuildDate: 2015-09-21
+draft: false
 category: Web
 language: es-PE
 tags: ["adobe edge inspect", "desarrollo web", "herramienta", "diseño web", "responsive design"]

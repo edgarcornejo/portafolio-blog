@@ -3,11 +3,13 @@ layout: ../../layouts/LayoutBlog.astro
 title: Optimiza tus imágenes para la web fácilmente
 author: Edgar Cornejo
 description: "Una de las herramientas que necesitamos diseñadores y desarrolladores web es la de optimizar imágenes sin perder mucha calidad de ellas. Una pregunta obvia seria por que optimizar las imágenes. Un factor para que una web gane posicionamiento y cargue rápido, es la de optimizar nuestras imágenes para que pesen lo menos posible sin perder calidad."
-image:
-  url: "../../blog/riot.jpg"
-  alt: "Optimiza tus imágenes para la web fácilmente"
+image: {
+  url: "../../blog/riot.jpg",
+  alt: "Optimiza tus imágenes para la web fácilmente",
+}  
 date: 2015-09-23
 lastBuildDate: 2015-09-23
+draft: false
 category: Tips
 language: es-PE
 tags: ["comprimir imágenes", "imágenes web", "optimizar imágenes", "SEO", "web"]

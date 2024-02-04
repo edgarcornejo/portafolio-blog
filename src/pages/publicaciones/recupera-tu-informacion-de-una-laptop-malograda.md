@@ -3,11 +3,13 @@ layout: ../../layouts/LayoutBlog.astro
 title: Recupera tu información de una laptop malograda
 author: Edgar Cornejo
 description: "Los accidentes te sorprenden en el día menos pensado y a veces pueden arruinarte un proyecto, tarea importante o peor aún. Imaginemos la siguiente situación: Tenemos toda nuestra información  en una laptop que utilizamos a diario y se nos olvidó guardar una copia o hacer un backup y de la nada o por un accidente tu laptop se malogra o se rompe. "
-image:
-  url: "../../blog/recupera-tu-informacion-de-una-laptop-malograda.webp"
-  alt: "Recupera tu información de una laptop malograda"
+image: {
+  url: "../../blog/recupera-tu-informacion-de-una-laptop-malograda.webp",
+  alt: "Recupera tu información de una laptop malograda",
+}  
 date: 2020-10-12
 lastBuildDate: 2020-10-12
+draft: false
 category: Hardware
 language: es-PE
 tags: ["laptop malograda", "HDD", "recuperar información", "hardware"]

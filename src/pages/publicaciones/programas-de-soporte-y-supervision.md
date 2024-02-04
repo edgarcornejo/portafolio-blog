@@ -3,11 +3,13 @@ layout: ../../layouts/LayoutBlog.astro
 title: Programas de soporte y supervisión
 author: Edgar Cornejo
 description: "Hoy les recomendare dos programas que te pueden ayudar a dar soporte  tus clientes o ayudar a tu familia, ejemplo un familiar te pide que le ayudes o enseñes a realizar una tarea en  su PC/laptop o smartphone/tableta Android."
-image:
-  url: "../../blog/programas-de-soporte-y-supervision.webp"
-  alt: "Programas de soporte y supervisión"
+image: {
+  url: "../../blog/programas-de-soporte-y-supervision.webp",
+  alt: "Programas de soporte y supervisión",
+}  
 date: 2020-08-10
 lastBuildDate: 2020-08-10
+draft: false
 category: Web
 language: es-PE
 tags: ["parsecgaming", "teamviewer", "soporte", "supervision", "remoto"]

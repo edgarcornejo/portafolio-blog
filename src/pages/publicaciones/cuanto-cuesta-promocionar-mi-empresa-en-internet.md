@@ -3,11 +3,13 @@ layout: ../../layouts/LayoutBlog.astro
 title: Cuánto cuesta promocionar mi empresa en Internet
 author: Edgar Cornejo
 description: "Promocionar o publicar tu empresa en Internet se ha vuelto en un tema común para personas con empresas consolidadas como nuevas, pymes o corporaciones que buscan nuevos clientes, formas de comunicarse con sus clientes y aumentar ganancias."
-image:
-  url: "../../blog/cuanto-cuesta-promocionar-mi-empresa-en-internet.png"
-  alt: "Cuánto cuesta promocionar mi empresa en Internet"
+image: {
+  url: "../../blog/cuanto-cuesta-promocionar-mi-empresa-en-internet.png",
+  alt: "Cuánto cuesta promocionar mi empresa en Internet",
+}  
 date: 2015-10-22
 lastBuildDate: 2015-10-22
+draft: false
 category: Web
 language: es-PE
 tags: ["SEM", "internet", "promocionar", "costo de publicidad en internet"]

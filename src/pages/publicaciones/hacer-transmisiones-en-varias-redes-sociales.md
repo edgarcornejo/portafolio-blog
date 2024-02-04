@@ -3,11 +3,13 @@ layout: ../../layouts/LayoutBlog.astro
 title: Hacer transmisiones en varias redes sociales
 author: Edgar Cornejo
 description: "ay que iniciar instalando Streamlabs OBS este software tiene una versión gratuita y de pago, utilizaremos el gratuito, una ves instalado necesitaremos una plataforma para retransmitir en varias redes sociales, creamos una cuenta en Restream ya que es la que utilizaremos."
-image:
-  url: "../../blog/hacer-transmisiones-en-varias-redes-sociales.webp"
-  alt: "Hacer transmisiones en varias redes sociales"
+image: {
+  url: "../../blog/hacer-transmisiones-en-varias-redes-sociales.webp",
+  alt: "Hacer transmisiones en varias redes sociales",
+}  
 date: 2020-06-29
 lastBuildDate: 2020-06-29
+draft: false
 category: Tips
 language: es-PE
 tags: ["streaming", "transmisión", "OBS", "redes sociales"]

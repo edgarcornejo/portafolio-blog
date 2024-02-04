@@ -2,16 +2,20 @@
 import Layout from "../layouts/Layout.astro";
 import "../styles/layout.css";
 import HgroupView from "../components/HgroupView.astro";
-import hgroup from "../data/hgroupData";
 import CallView from "../components/CallView.astro";
-import call from "../data/callData";
+import ListPosts from "../components/ListPosts.astro";
+import { formatBlogPosts } from "../js/utils";
+
+const posts = await Astro.glob("./publicaciones/*.md");
+const formattedPosts = formatBlogPosts(posts);
 ---
 
 <Layout
-	title="Edgar Cornejo - Diseñador gráfico, desarrolador Web front-end y Posicionamiento en Internet, diseñador freelance"
+	title="Edgar Cornejo - Diseñador Gráfico, Desarrolador Web front-end y Posicionamiento en Internet, diseñador freelance"
+	description="Mi nombre es Edgar Cornejo ofrezco los servicios de diseño gráfico, desarrollo web front-end y posicionamiento en Internet."
 >
-	{hgroup.map((h) => <HgroupView {...h} />)}
-	{call.map((c) => <CallView {...c} />)}
+	<HgroupView />
+	<CallView />
 
 	<div class="main-content">
 		<main>
@@ -54,77 +58,65 @@ import call from "../data/callData";
 
 						<div class="marcas-container">
 							<figure>
-								<img
-									src="/img/portafolio/fotosgratislogo.png"
-									loading="lazy"
-									alt="Fotos Gratis"
-								/>
-
-								<figcaption>
-									<a
-										href="https://www.fotos.edgarcornejo.com"
-										title="Fotos Gratis"
-										target="_blank"
-									>
-										Fotos Gratis
-									</a>
-								</figcaption>
+								<a
+									href="https://www.fotos.edgarcornejo.com"
+									title="Fotos Gratis"
+									target="_blank"
+								>
+									<img
+										src="/img/portafolio/fotosgratislogo.png"
+										loading="lazy"
+										alt="Fotos Gratis"
+									/>
+									<figcaption>Fotos Gratis</figcaption>
+								</a>
 							</figure>
 
 							<figure>
-								<img
-									src="/img/portafolio/minilink-soluciones.png"
-									loading="lazy"
-									class="desaturar"
-									alt="Minilink Soluciones"
-								/>
-
-								<figcaption>
-									<a
-										href="https://www.minilink.edgarcornejo.com"
-										title="Minilink Soluciones"
-										target="_blank"
-									>
-										Minilink
-									</a>
-								</figcaption>
+								<a
+									href="https://www.minilink.edgarcornejo.com"
+									title="Minilink Soluciones"
+									target="_blank"
+								>
+									<img
+										src="/img/portafolio/minilink-soluciones.png"
+										loading="lazy"
+										class="desaturar"
+										alt="Minilink Soluciones"
+									/>
+									<figcaption>Minilink</figcaption>
+								</a>
 							</figure>
 
 							<figure>
-								<img
-									src="/img/portafolio/naves-de-papel.png"
-									loading="lazy"
-									alt="Nave de Papel"
-								/>
-
-								<figcaption>
-									<a
-										href="https://www.navedepapel.edgarcornejo.com"
-										title="Nave de Papel"
-										target="_blank"
-									>
-										Nave de Papel
-									</a>
-								</figcaption>
+								<a
+									href="https://www.navedepapel.edgarcornejo.com"
+									title="Nave de Papel"
+									target="_blank"
+								>
+									<img
+										src="/img/portafolio/naves-de-papel.png"
+										loading="lazy"
+										alt="Nave de Papel"
+									/>
+									<figcaption>Nave de Papel</figcaption>
+								</a>
 							</figure>
 
 							<figure>
-								<img
-									src="/img/portafolio/renova-design-logotipo.png"
-									loading="lazy"
-									class="desaturar"
-									alt="Renova Design"
-								/>
-
-								<figcaption>
-									<a
-										href="https://renovadesign.blogspot.pe"
-										title="Renova Design"
-										target="_blank"
-									>
-										Renova Design
-									</a>
-								</figcaption>
+								<a
+									href="https://renovadesign.blogspot.pe"
+									title="Renova Design"
+									target="_blank"
+								>
+									<img
+										src="/img/portafolio/renova-design-logotipo.png"
+										loading="lazy"
+										class="desaturar"
+										alt="Renova Design"
+									/>
+									<figcaption>Renova Design</figcaption>
+								</a>
 							</figure>
 						</div>
 					</article>
@@ -145,40 +137,18 @@ import call from "../data/callData";
 						</p>
 
 						<p class="enlaces">
-							<a
-								href="publicaciones/que-necesito-para-mi-primera-web"
-								class="anin-rapido"
-								title="Que necesito para mi primera web"
-							>
-								Que necesito para mi primera web
-							</a>
+							{
+								formattedPosts.map((apost: any, index: any) => {
+									return index < 4 ? (
+										<ListPosts key={index} post={apost} />
+									) : null;
+								})
+							}
 
 							<a
-								href="publicaciones/como-elegir-un-buen-hosting"
+								href="publicaciones/"
 								class="anin-rapido"
-								title="Como elegir un buen hosting"
-							>
-								Como elegir un buen hosting
-							</a>
-
-							<a
-								href="publicaciones/mi-primer-dominio"
-								class="anin-rapido"
-								title="Mi primer dominio"
-							>
-								Mi primer dominio
-							</a>
-
-							<a
-								href="publicaciones/el-servicio-de-desarrollo-front-end"
-								class="anin-rapido"
-								title="El servicio de Desarrollo fron-end"
-							>
-								El servicio de Desarrollo front-end
-							</a>
-
-							<a href="publicaciones/" class="anin-rapido"
-								>Ver más</a
+								title="Ver más">Ver más</a
 							>
 						</p>
 					</article>
@@ -337,46 +307,32 @@ import call from "../data/callData";
 	</div>
 </Layout>
 
-<style lang="stylus" is:global>
-    /* Selector  Menu Principal */
-    label + ul li:nth-child(1)
-        border-top solid 8px rgb(103, 61, 230)
-        a
-            opacity 0.2
-    
-    /* Responsive Design */
-    @media screen and (max-width:1920px)
-        label + ul li:nth-child(1)
-            border-top solid 5px rgb(61, 188, 230)
-
-    @media screen and (max-width:768px)
-        label + ul li:nth-child(1)
-            border-top solid 1px rgb(61, 188, 230)
-            a
-                opacity 1   
-</style>
-
 <style lang="stylus">
 	/* Marcas */
 	.marcas-container
 		display flex
 		flex-wrap wrap
 		figure
-			display flex
-			flex-direction column
-			align-items center
-			justify-content center
-			gap 1rem 0
 			width 25%
-			img
-				max-height 100px
-				width auto/9
-				filter grayscale(100%)
 			&:hover img
 				filter grayscale(0%)
 				opacity 1
-			.desaturar
-				opacity 0.3
+		a
+			display flex
+			flex-direction column
+			align-items center
+			gap 1rem 0
+		img
+			max-width 180px
+			filter grayscale(100%)
+		figcaption
+			font 500 2rem Ubuntu
+			letter-spacing 1pt
+			text-transform uppercase
+
+	/* Para marcas de color negro */
+	.desaturar
+		opacity 0.4
 
 	/* Contacto */
 	#social
@@ -424,6 +380,11 @@ import call from "../data/callData";
 
 	/* Responsive Design */	
 	@media screen and (max-width:1920px)
+		/* Marcas */
+		.marcas-container
+			figcaption
+				font 500 1.4rem Ubuntu
+
 		/* Contacto */
 		#social
 			gap 1rem
@@ -432,13 +393,22 @@ import call from "../data/callData";
 				&:hover
 					transform scale3d(1.2, 1.2, 1)
 
+	@media screen and (max-width:1440px)
+		/* Marcas */
+		.marcas-container
+			img
+				max-width 100px
+			figcaption
+				font 500 1rem Ubuntu
+
 	@media screen and (max-width:1024px)
 		.marcas-container
-			figure
-				img
-					filter grayscale(0%)
-				.desaturar
-					opacity 1
+			img
+				max-width 80px
+				filter grayscale(0%)
+
+		.desaturar
+			opacity 1
 
 	@media screen and (max-width:620px)
 		.marcas-container

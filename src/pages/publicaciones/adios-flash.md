@@ -3,11 +3,13 @@ layout: ../../layouts/LayoutBlog.astro
 title: Adiós Flash
 author: Edgar Cornejo
 description: "Flash esta siendo abandonado ya que ahora hay mejores tecnologías como HTML5 y CSS3. Y este no es el único motivo para cambiarlo, esta el hecho que últimamente hay muchos virus que se están esparciendo por esta tecnología. Mencionar que muchos dispositivos móviles no utilizan esta tecnología ni pretenden hacerlo y por tanto tu web no se vera en ellos."
-image:
-  url: "../../blog/adios-flash.png"
-  alt: "Adiós Flash"
+image: {
+  url: "../../blog/adios-flash.png",
+  alt: "Adiós Flash",
+}  
 date: 2015-12-09
 lastBuildDate: 2015-12-09
+draft: false
 category: Web
 language: es-PE
 tags: ["diseño web", "desarrollo web", "chrome", "HTML5 y CSS3", "navegador"]

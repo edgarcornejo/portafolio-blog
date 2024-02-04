@@ -3,11 +3,13 @@ layout: ../../layouts/LayoutBlog.astro
 title: El servicio de Desarrollo Web front-end
 author: Edgar Cornejo
 description: "Cuando un cliente se contacta conmigo, me pregunta por el servicio de diseño de paginas web, normalmente piensan que puedo hacer toda una web compleja con funciones especificas. Cuando de habla de desarrollo web fron-end, se debe mencionar que esto solo abarca la parte visual, la arquitectura de la información y el modo que el cliente se navegara en la web."
-image:
-  url: "../../blog/servicio-desarrollo-web-frontend.png"
-  alt: "El servicio de Desarrollo Web front-end"
+image: {
+  url: "../../blog/servicio-desarrollo-web-frontend.png",
+  alt: "El servicio de Desarrollo Web front-end",
+}
 date: 2015-12-04
 lastBuildDate: 2015-12-04
+draft: false
 category: Web
 language: es-PE
 tags: ["diseño web", "desarrollo web", "pagina web estática"]

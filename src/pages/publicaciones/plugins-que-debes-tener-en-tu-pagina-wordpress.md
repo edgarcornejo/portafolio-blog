@@ -3,11 +3,13 @@ layout: ../../layouts/LayoutBlog.astro
 title: Plugins que debes tener en tu página WordPress
 author: Edgar Cornejo
 description: "Te recomiendo que solo instales los plugins que necesites, ya que estos pueden traerte muchos problemas, si no los utilizas es mejor borrarlos. Recuerda que los plugins se actualizan constantemente y los que no, pueden representar un agujero de seguridad. Antes de instalarlo revisa calificaciones, comentarios y compatibilidad."
-image:
-  url: "../../blog/plugins-que-debes-tener-en-tu-pagina-wordpress.webp"
-  alt: "Plugins que debes tener en tu página WordPress"
+image: {
+  url: "../../blog/plugins-que-debes-tener-en-tu-pagina-wordpress.webp",
+  alt: "Plugins que debes tener en tu página WordPress",
+}  
 date: 2020-08-17
 lastBuildDate: 2020-08-17
+draft: false
 category: Web
 language: es-PE
 tags: ["plugins", "desarrollo web", "WordPress"]

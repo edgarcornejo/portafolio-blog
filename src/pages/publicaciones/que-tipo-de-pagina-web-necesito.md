@@ -3,11 +3,13 @@ layout: ../../layouts/LayoutBlog.astro
 title: Qué tipo de página web necesito
 author: Edgar Cornejo
 description: "Hoy voy a mencionarles los tipos de web que conozco, tal vez sea lo que necesitan para su empresa. La separación que hago es según lo que queremos obtener al momento de invertir en una página web."
-image:
-  url: "../../blog/que-tipo-de-pagina-web-necesito.jpg"
-  alt: "Qué tipo de página web necesito"
+image: {
+  url: "../../blog/que-tipo-de-pagina-web-necesito.jpg",
+  alt: "Qué tipo de página web necesito",
+}  
 date: 2019-03-05
 lastBuildDate: 2019-03-05
+draft: false
 category: Web
 language: es-PE
 tags: ["diseño web", "desarrollo web", "tipos de web"]

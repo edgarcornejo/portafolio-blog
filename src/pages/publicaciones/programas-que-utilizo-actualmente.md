@@ -3,11 +3,13 @@ layout: ../../layouts/LayoutBlog.astro
 title: Programas que utilizo actualmente
 author: Edgar Cornejo
 description: "He utilizado varios programas que ayudan en mi trabajo a diario, con el tiempo han aparecido varios programas y los he ido remplazando por los que me ofrecían mejores features.  La mayoría son gratuitos o te permiten utilizarlos ilimitadamente, te recomiendo que los pruebes si no lo has hecho aún."
-image:
-  url: "../../blog/programas-que-utilizo-actualmente.webp"
-  alt: "Programas que utilizo actualmente"
+image: {
+  url: "../../blog/programas-que-utilizo-actualmente.webp",
+  alt: "Programas que utilizo actualmente",
+}  
 date: 2020-09-28
 lastBuildDate: 2020-09-28
+draft: false
 category: Programas
 language: es-PE
 tags: ["programas", "software", "windows", "servicios"]

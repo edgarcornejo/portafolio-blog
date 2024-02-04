@@ -3,11 +3,13 @@ layout: ../../layouts/LayoutBlog.astro
 title: Contratar a un diseñador gráfico o a un desarrollador web
 author: Edgar Cornejo
 description: "La elección del profesional es muy importante por ello quisiera recomendar que siempre vean su portafolio y las recomendaciones de las personas con las que ya ha trabajado. Y una entrevista previa siempre es necesaria."
-image:
-  url: "../../blog/disenador-o-desarrollador.png"
-  alt: "Contratar a un diseñador gráfico o a un desarrollador web"
+image: {
+  url: "../../blog/disenador-o-desarrollador.png",
+  alt: "Contratar a un diseñador gráfico o a un desarrollador web",
+}  
 date: 2015-09-29
 lastBuildDate: 2015-09-29
+draft: false
 category: Tips
 language: es-PE
 tags: ["diseño web", "desarrollo web", "contratar", "servicios"]

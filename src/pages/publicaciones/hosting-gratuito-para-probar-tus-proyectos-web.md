@@ -3,11 +3,13 @@ layout: ../../layouts/LayoutBlog.astro
 title: Hosting gratuito para probar tus proyectos Web
 author: Edgar Cornejo
 description: "Cuando inicie en el desarrollo web, una de las preguntas que tenía en mi cabeza es, como hago ahora para ver mi web en Internet, ahora es algo que hago continuamente, pero en ese tiempo tenía muchas dudas, por ello hoy te mostraré cómo hacerlo."
-image:
-  url: "../../blog/000webhost-web.jpg"
-  alt: "Hosting gratuito para probar tus proyectos Web"
+image: {
+  url: "../../blog/000webhost-web.jpg",
+  alt: "Hosting gratuito para probar tus proyectos Web",
+}  
 date: 2020-09-07
 lastBuildDate: 2020-09-07
+draft: false
 category: Web
 language: es-PE
 tags: ["hosting gratuita", "proyecto web", "hospedaje web", "subir web a internet"]

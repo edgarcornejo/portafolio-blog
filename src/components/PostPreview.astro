@@ -12,14 +12,13 @@ const { post } = Astro.props;
         <figure>
             <img
                 src={post.frontmatter.image.url}
-                alt={post.frontmatter.alt}
+                alt={post.frontmatter.image.alt}
                 loading="lazy"
             />
             <figcaption>
-                <time
-                    >Publicado el: <br />{
-                        formatDate(post.frontmatter.date)
-                    }</time
+                Publicado el: <br />
+                <time datetime={formatDate(post.frontmatter.date)}
+                    ><strong>{formatDate(post.frontmatter.date)}</strong></time
                 >
             </figcaption>
         </figure>
@@ -27,6 +26,7 @@ const { post } = Astro.props;
             <p>
                 {post.frontmatter.description.slice(0, 220)}...
             </p>
+            <p>Categoría: <strong>{post.frontmatter.category}</strong></p>
         </div>
     </a>
 </article>
@@ -38,6 +38,9 @@ const { post } = Astro.props;
         a
             display flex
             flex-wrap wrap
+            color rgb(61, 188, 230)
+            &:hover
+                color rgb(8, 12, 63)
         h2
             margin 0
             font 500 3rem/1 Ubuntu
@@ -56,10 +59,11 @@ const { post } = Astro.props;
         figcaption
             padding 0
             font 500 1.4rem/1.2 Ubuntu
-        time
             color rgb(8, 12, 63)
         div
             width 60%
+        strong
+            font-weight 700
         p
             font 300 1.8rem/1.2 Ubuntu
             color rgb(8, 12, 63)

@@ -3,11 +3,13 @@ layout: ../../layouts/LayoutBlog.astro
 title: Prepros una herramienta todo en uno
 author: Edgar Cornejo
 description: "Cuando utilizamos una herramienta de desarrollo web, tenemos muchas opciones, una que personalmente me ayuda mucho es Prepros. Es una herramienta muy útil y completa con funciones que utilizas a diario. Personalmente lo estoy utilizando para compilar Stylus, tener una vista previa de la web con auto recarga del navegador y estoy probando su función de subir páginas web por FTP, ya que mi hosting no soporta Git."
-image:
-  url: "../../blog/prepros-una-herramienta-todo-en-uno.webp"
-  alt: "Prepros una herramienta todo en uno"
+image: {
+  url: "../../blog/prepros-una-herramienta-todo-en-uno.webp",
+  alt: "Prepros una herramienta todo en uno",
+}  
 date: 2020-11-30
 lastBuildDate: 2020-11-30
+draft: false
 category: Programas
 language: es-PE
 tags: ["programas", "herramienta todo en uno", "Prepros", "software de desarrollo"]

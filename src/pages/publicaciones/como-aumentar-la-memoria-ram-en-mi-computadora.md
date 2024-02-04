@@ -3,11 +3,13 @@ layout: ../../layouts/LayoutBlog.astro
 title: Como aumentar la memoria RAM en mi computadora
 author: Edgar Cornejo
 description: "Con el pasar del tiempo el consumo de memoria RAM ha ido aumentando, me acuerdo que lo mínimo que te pedían para poder utilizar tu PC/portátil era 1 GB, ahora como mínimo debe tener unos 8 GB de RAM para que puedas utilizar sin problema. Actualmente mi portátil tiene unos 4 GB de RAM y sufre cuando tengo varias pestañas de Chrome abiertas o utilizo el Adobe XD. "
-image:
-  url: "../../blog/como-aumentar-la-memoria-ram-en-mi-computadora.webp"
-  alt: "Como aumentar la memoria RAM en mi computadora"
+image: {
+  url: "../../blog/como-aumentar-la-memoria-ram-en-mi-computadora.webp",
+  alt: "Como aumentar la memoria RAM en mi computadora",
+}  
 date: 2020-11-09
 lastBuildDate: 2020-11-09
+draft: false
 category: Hardware
 language: es-PE
 tags: ["memoria RAM", "computadora", "mejorar laptop", "portátil"]

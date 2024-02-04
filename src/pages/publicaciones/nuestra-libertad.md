@@ -3,11 +3,13 @@ layout: ../../layouts/LayoutBlog.astro
 title: Nuestra libertad
 author: Edgar Cornejo
 description: "Con el pasar del tiempo muchas cosas han cambiado, desde las políticas hasta las más simples como nuestras formas de comunicarnos y los medios. Ahora es cuando toma más importancia la palabra privacidad que antes no le damos mucha importancia."
-image:
-  url: "../../blog/nuestra-libertad.png"
-  alt: "Nuestra libertad"
+image: {
+  url: "../../blog/nuestra-libertad.png",
+  alt: "Nuestra libertad",
+}  
 date: 2015-10-26
 lastBuildDate: 2015-10-26
+draft: false
 category: Tips
 language: es-PE
 tags: ["derechos", "nuestra libertad", "privacidad", "TPP"]

@@ -1,16 +1,36 @@
 ---
+import Layout from "../layouts/Layout.astro";
+import "../styles/layout.css";
 import PostPreview from "../components/PostPreview.astro";
-import LayoutBlog from "../layouts/LayoutBlog.astro";
 import { formatBlogPosts } from "../js/utils";
 
 const posts = await Astro.glob("./publicaciones/*.md");
-const formattedPosts = formatBlogPosts(posts, {
-    limit: 6,
-});
+const formattedPosts = formatBlogPosts(posts);
 ---
 
-<LayoutBlog
+<Layout
     title="Publicaciones - Blog de diseño, desarrollo, técnologia, seo, marketing online y trucos"
+    description="Blog de diseño, desarrollo, técnologia, seo, marketing online y trucos."
 >
-    {formattedPosts.map((apost: any) => <PostPreview post={apost} />)}
-</LayoutBlog>
+    <div class="main-content">
+        <header>
+            <h1>Publicaciones</h1>
+            <h2>
+                Blog de diseño, desarrollo, técnologia, seo, marketing online y
+                trucos
+            </h2>
+        </header>
+
+        <main>
+            <div class="wrapper-post">
+                {
+                    formattedPosts.map((apost: any, index: any) => {
+                        return index < 8 ? (
+                            <PostPreview key={index} post={apost} />
+                        ) : null;
+                    })
+                }
+            </div>
+        </main>
+    </div>
+</Layout>

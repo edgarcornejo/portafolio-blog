@@ -3,11 +3,13 @@ layout: ../../layouts/LayoutBlog.astro
 title: Publicidad y promociones falsas
 author: Edgar Cornejo
 description: "Caer en engaños que se esconden como publicidad o promociones es muy fácil ya muchas de las redes sociales lo permiten y para cuando son detectadas ya es muy tarde por que cayeron muchas personas. Estos engaños les sirven a estos ladrones para capturar tus datos por medio de formularios en paginas que se parecen a las oficiales."
-image:
-  url: "../../blog/publicidad-y-promociones-falsas.webp"
-  alt: "Publicidad y promociones falsas"
+image: {
+  url: "../../blog/publicidad-y-promociones-falsas.webp",
+  alt: "Publicidad y promociones falsas",
+}  
 date: 2020-07-20
 lastBuildDate: 2020-07-20
+draft: false
 category: Web
 language: es-PE
 tags: ["engaños en internet", "promociones falsas", "publicidad falsa", "robo de datos"]

@@ -3,11 +3,13 @@ layout: ../../layouts/LayoutBlog.astro
 title: Touch Detective Mushroom Garden
 author: Edgar Cornejo
 description: "Personalmente en mi opinión es mejor tener un hosting que se encuentre cerca de ti, cualquier cambio, tramite será mucho más fácil. No profundizaremos mucho ya que es un tema extenso, pero seguro que te podrá ayudar a hacer una buena elección."
-image:
-  url: "../../blog/mushroom-garden.jpg"
-  alt: "Touch Detective Mushroom Garden"
+image: {
+  url: "../../blog/mushroom-garden.jpg",
+  alt: "Touch Detective Mushroom Garden",
+}  
 date: 2015-09-13
 lastBuildDate: 2015-09-13
+draft: false
 category: Game
 language: es-PE
 tags: ["android", "game mobile", "mushroom garden", "tamagochi"]

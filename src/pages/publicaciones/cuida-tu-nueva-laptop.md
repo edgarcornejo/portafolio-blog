@@ -3,11 +3,13 @@ layout: ../../layouts/LayoutBlog.astro
 title: Cuida tu nueva laptop
 author: Edgar Cornejo
 description: "Cuando compramos una laptop, esperamos que nos dure bastante tiempo. Para que esto sea así, primero debemos saber que cosas son las que se malogran primero y qué cuidados debemos tener. Algo que debemos tener en cuenta es que las partes movibles de un portátil, pueden presentar problemas con el pasar de los años como el teclado, mousepad y bisagras."
-image:
-  url: "../../blog/cuida-tu-nueva-laptop.webp"
-  alt: "Cuida tu nueva laptop"
+image: {
+  url: "../../blog/cuida-tu-nueva-laptop.webp",
+  alt: "Cuida tu nueva laptop",
+}  
 date: 2020-11-02
 lastBuildDate: 2020-11-02
+draft: false
 category: Hardware
 language: es-PE
 tags: ["computadora", "laptop", "portátil", "cuidados"]

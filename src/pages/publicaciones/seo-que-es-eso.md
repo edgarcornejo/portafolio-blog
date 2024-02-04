@@ -3,11 +3,13 @@ layout: ../../layouts/LayoutBlog.astro
 title: SEO que es eso
 author: Edgar Cornejo
 description: "El primer resultado que me muestra es la pagina que tiene mas contenido con la palabras que hice la búsqueda  Con eso concretamos que la mejor forma de hacer SEO es crear contenido con las palabras con las que queremos salir primero."
-image:
-  url: "../../blog/seo-que-es-eso.png"
-  alt: "SEO que es eso"
+image: {
+  url: "../../blog/seo-que-es-eso.png",
+  alt: "SEO que es eso",
+}  
 date: 2015-09-14
 lastBuildDate: 2015-09-14
+draft: false
 category: Web
 language: es-PE
 tags: ["motores de búsqueda", "SEO", "Search Engine Optimization", "métricas"]

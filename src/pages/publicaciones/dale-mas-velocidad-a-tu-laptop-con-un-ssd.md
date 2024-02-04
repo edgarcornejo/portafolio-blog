@@ -3,11 +3,13 @@ layout: ../../layouts/LayoutBlog.astro
 title: Dale más velocidad a tu laptop con un SSD
 author: Edgar Cornejo
 description: "Con el tiempo la tecnología de almacenamiento ha ido mejorando, pero la mayoría no le damos mucha atención a esto, pero de lo que si nos damos cuenta, es de lo molesto que es cuando nuestras laptops se hacen cada vez más lentas."
-image:
-  url: "../../blog/kignston-ssd.jpg"
-  alt: "Dale más velocidad a tu laptop con un SSD"
+image: {
+  url: "../../blog/kignston-ssd.jpg",
+  alt: "Dale más velocidad a tu laptop con un SSD",
+}  
 date: 2020-09-21
 lastBuildDate: 2020-09-21
+draft: false
 category: Hardware
 language: es-PE
 tags: ["SSD", "HDD", "almacenamiento", "Kignston", "PC", "laptop", "hardware"]

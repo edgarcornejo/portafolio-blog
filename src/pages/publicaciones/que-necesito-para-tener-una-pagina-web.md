@@ -3,11 +3,13 @@ layout: ../../layouts/LayoutBlog.astro
 title: Qué necesito para tener una página web
 author: Edgar Cornejo
 description: "Los conceptos con los que hay que familiarizarnos son los siguientes: Dominio, Hosting y Diseño y desarrollo web. Dominio: Es el nombre/dirección que llevara tu página web ejemplo www.edgarcornejo.com, los precios de están alrededor de $13.00 dólares al año."
-image:
-  url: "../../blog/como-eleguir-un-buen-hosting.png"
-  alt: "Qué necesito para tener una página web"
+image: {
+  url: "../../blog/como-eleguir-un-buen-hosting.png",
+  alt: "Qué necesito para tener una página web",
+}  
 date: 2016-02-27
 lastBuildDate: 2016-02-27
+draft: false
 category: Web
 language: es-PE
 tags: ["diseño web", "desarrollo web", "hospedaje web", "hosting"]

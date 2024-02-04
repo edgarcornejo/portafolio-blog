@@ -3,11 +3,13 @@ layout: ../../layouts/LayoutBlog.astro
 title: Mejorar publicaciones de Blogger
 author: Edgar Cornejo
 description: "Con el tiempo muchas personas saben que para mejorar nuestra visibilidad en la web es crear contenido y por ello crean un blog ligado a su marca o también uno personal. Ahora podemos encontrar un sin fin de blogs para un tema en especifico, tanto así que para mejorar nuestra posición en la web tenemos que tener publicaciones continuas de hasta uno al día."
-image:
-  url: "../../blog/mejorar-publicaciones-de-blogger.jpg"
-  alt: "Mejorar publicaciones de Blogger"
+image: {
+  url: "../../blog/mejorar-publicaciones-de-blogger.jpg",
+  alt: "Mejorar publicaciones de Blogger",
+}  
 date: 2015-09-19
 lastBuildDate: 2015-09-19
+draft: false
 category: Web
 language: es-PE
 tags: ["blog", "CMS", "crear contenido", "SEO", "publicaciones"]

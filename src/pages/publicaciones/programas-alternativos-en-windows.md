@@ -3,11 +3,13 @@ layout: ../../layouts/LayoutBlog.astro
 title: Programas alternativos en Windows
 author: Edgar Cornejo
 description: "Todos los días utilizamos varios programas que nos ayudan a hacer nuestros tareas, programas que sin lugar a duda utilizan la mayoría de personas que nos rodean, desde el trabajo o centro de estudios. Alguna vez te haz preguntado si existen otras opciones a los programas que utilizas, ya sea por el precio o características que necesitas."
-image:
-  url: "../../blog/programas-alternativos-en-windows.webp"
-  alt: "Programas alternativos en Windows"
+image: {
+  url: "../../blog/programas-alternativos-en-windows.webp",
+  alt: "Programas alternativos en Windows",
+}  
 date: 2020-07-27
 lastBuildDate: 2020-07-27
+draft: false
 category: Web
 language: es-PE
 tags: ["programas alternativos", "windows", "software"]

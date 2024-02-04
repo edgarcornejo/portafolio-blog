@@ -3,11 +3,13 @@ layout: ../../layouts/LayoutBlog.astro
 title: Jugando con Illustrator
 author: Edgar Cornejo
 description: "El programa de utilizo como ya sabrán es el Adobe Illustrator, es uno de mis preferidos, las versión que he utilizado son el CS5 y CS6. El potencial de este programa es inmenso especialmente para ilustración, yo no soy ilustrador, mayormente lo utilizo para digitalizar logotipos después de bocetarlos."
-image:
-  url: "../../blog/jugando-con-illustrator.png"
-  alt: "Jugando con Illustrator"
+image: {
+  url: "../../blog/jugando-con-illustrator.png",
+  alt: "Jugando con Illustrator",
+}  
 date: 2015-11-20
 lastBuildDate: 2015-11-20
+draft: false
 category: Diseño
 language: es-PE
 tags: ["jugando con illustrator", "vectorizaciones", "programa de diseño", "serie de videos"]

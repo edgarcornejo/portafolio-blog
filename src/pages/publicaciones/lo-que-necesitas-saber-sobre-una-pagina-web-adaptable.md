@@ -3,11 +3,13 @@ layout: ../../layouts/LayoutBlog.astro
 title: Lo que necesitas saber sobre una página web adaptable
 author: Edgar Cornejo
 description: "Ahora todos ya sabemos que es web adaptable y han cambiado su theme de WordPress por uno adaptable o han contratado a un desarrollador para hacer que su web sea adaptable; debido a que Google ahora hará que sea un factor de SEO."
-image:
-  url: "../../blog/Lo-que-necesitas-saber-sobre-una-página-web-adaptable.png"
-  alt: "Lo que necesitas saber sobre una página web adaptable"
+image: {
+  url: "../../blog/Lo-que-necesitas-saber-sobre-una-página-web-adaptable.png",
+  alt: "Lo que necesitas saber sobre una página web adaptable",
+}  
 date: 2015-11-10
 lastBuildDate: 2015-11-10
+draft: false
 category: Web
 language: es-PE
 tags: ["web adaptable", "responsive design", "SEO", "página web"]

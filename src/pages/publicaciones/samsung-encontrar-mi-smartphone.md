@@ -3,11 +3,13 @@ layout: ../../layouts/LayoutBlog.astro
 title: Encontrar mi smartphone
 author: Edgar Cornejo
 description: "Hace unos días me dio curiosidad saber que servicios tengo al ser usuario Samsung tengo un Samsung Galaxy Y y bueno al entrar a la pagina oficial y loguearme vi unos servicios muy buenos como Find my mobile - Encontrar Mi Móvil. Se trata de un servicio que te permite encontrar tu smartphone y no solo eso también."
-image:
-  url: "../../blog/find-my-mobile.png"
-  alt: "Encontrar mi smartphone"
+image: {
+  url: "../../blog/find-my-mobile.png",
+  alt: "Encontrar mi smartphone",
+}  
 date: 2015-09-14
 lastBuildDate: 2015-09-14
+draft: false
 category: Tips
 language: es-PE
 tags: ["bloquear celular", "encontrar mi móvil", "find my mobile", "teléfono perdido"]

@@ -3,11 +3,13 @@ layout: ../../layouts/LayoutBlog.astro
 title: PicPick todo en una herramienta de diseño
 author: Edgar Cornejo
 description: "Siguiendo con el tema de las herramientas, hoy les presento PicPick una herramienta muy útil y bastante fácil de utilizar por ello es uno de mis favoritos. Si te dedicas tanto al diseño gráfico en forma digital o al diseño web esta herramienta es indispensable."
-image:
-  url: "../../blog/picpick.jpg"
-  alt: "PicPick todo en una herramienta de diseño"
+image: {
+  url: "../../blog/picpick.jpg",
+  alt: "PicPick todo en una herramienta de diseño",
+}  
 date: 2015-09-25
 lastBuildDate: 2015-09-25
+draft: false
 category: Tips
 language: es-PE
 tags: ["herramienta", "PicPick", "editor de imágenes", "captura de pantalla", "programa"]

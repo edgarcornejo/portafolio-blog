@@ -1,18 +1,15 @@
----
-import type { Hgroup } from "../types/types";
-
-interface Props extends Hgroup {}
-
-const { subtitle, urldesign, design, urlweb, web } = Astro.props;
----
-
 <header>
   <hgroup>
-    <h2 itemprop="name">{subtitle}</h2>
+    <h2 itemprop="name">Edgar Cornejo</h2>
     <h1 itemprop="jobTitle">
-      Soy
-      <a href={urldesign} title={design}>{design}</a> y<br />
-      <a href={urlweb} title={web}>{web}</a>
+      <p>
+        Soy
+        <a href="designer/" title="Diseñador Gráfico">Diseñador Gráfico</a> y <br
+        />
+        <a href="frontend-developer/" title="Desarrollador Web front-end"
+          >Desarrollador Web front-end</a
+        >
+      </p>
     </h1>
   </hgroup>
 </header>

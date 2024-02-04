@@ -7,7 +7,7 @@ const { title, url } = Astro.props;
 ---
 
 <li>
-    <a href={url} title={title} class="anin-rapido">{title}</a>
+    <a href={url} title={title} class="nav-li">{title}</a>
 </li>
 
 <style lang="stylus">
@@ -15,27 +15,30 @@ const { title, url } = Astro.props;
         display flex
         height 80px
         width 100%
-        a
-            align-self center
-            color eSkyBlue
-            padding-left 1.5rem
-            text-transform uppercase
-            letter-spacing 2pt
-            font 700 2.2rem Ubuntu
-            &:hover
-                color eBlue
+        
+    a
+        align-self center
+        color rgb(61, 188, 230)
+        padding-left 1.5rem
+        text-transform uppercase
+        letter-spacing 2pt
+        font 700 2.2rem Ubuntu
+        &:hover
+            color rgb(8, 12, 63)
     
     /* Responsive Design */
     @media screen and (max-width:2560px)
         li
             height 60px
-            a
-                font 700 1.4rem Ubuntu
+
+        a
+            font 700 1.4rem Ubuntu
 
     /* Responsive Design */
     @media screen and (max-width:1920px)
         li
             height 40px
-            a
-                font 700 1rem Ubuntu
+
+        a
+            font 700 1rem Ubuntu
 </style>

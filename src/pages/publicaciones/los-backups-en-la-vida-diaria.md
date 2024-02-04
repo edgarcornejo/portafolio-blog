@@ -3,11 +3,13 @@ layout: ../../layouts/LayoutBlog.astro
 title: Los backups en la vida diaria
 author: Edgar Cornejo
 description: "Primero que todo un buen backup se debe de hacer en más de 3 lugares, en un HDD/SSD externo, en la nube, en un USB que no utilices y en el HDD/SSD interno de tu PC/laptop, además de ello puedes grabar la información en un DVD."
-image:
-  url: "../../blog/los-backups-en-la-vida-diaria.webp"
-  alt: "Los backups en la vida diaria"
+image: {
+  url: "../../blog/los-backups-en-la-vida-diaria.webp",
+  alt: "Los backups en la vida diaria",
+}  
 date: 2020-10-05
 lastBuildDate: 2020-10-05
+draft: false
 category: Hardware
 language: es-PE
 tags: ["backup", "copia de seguridad", "información de respaldo", "seguridad"]

@@ -3,11 +3,13 @@ layout: ../../layouts/LayoutBlog.astro
 title: Consejos y recursos para nuestra página web, gifs animados y vídeos
 author: Edgar Cornejo
 description: "La mejor forma de obtener estos recursos es crearlos uno mismo, este recurso se vuelve único y  personalizado a los que necesitas exactamente, pero requiere de más tiempo y presupuesto. Una alternativa es obtenerlo en bancos de video o gifs. "
-image:
-  url: "../../blog/Consejos-y-recursos-para-nuestra-página-web-gifs-animados-y-videos.png"
-  alt: "Consejos y recursos para nuestra página web, gifs animados y vídeos"
+image: {
+  url: "../../blog/Consejos-y-recursos-para-nuestra-página-web-gifs-animados-y-videos.png",
+  alt: "Consejos y recursos para nuestra página web, gifs animados y vídeos",
+}  
 date: 2015-11-06
 lastBuildDate: 2015-11-06
+draft: false
 category: Web
 language: es-PE
 tags: ["videos", "vimeo", "youtube", "recursos"]

@@ -3,11 +3,13 @@ layout: ../../layouts/LayoutBlog.astro
 title: Compras en Internet
 author: Edgar Cornejo
 description: "Hace algunos años, las compras en Internet eran muy bajas, pocas personas lo hacían, por el tema de seguridad, con el problema de ser engañados y que roben nuestro dinero. Pero este miedo, se va despejando a medida que nos informamos mejor del tema."
-image:
-  url: "../../blog/compras-en-internet.webp"
-  alt: "Compras en Internet"
+image: {
+  url: "../../blog/compras-en-internet.webp",
+  alt: "Compras en Internet",
+}  
 date: 2020-10-19
 lastBuildDate: 2020-10-19
+draft: false
 category: Tips
 language: es-PE
 tags: ["comprar por internet", "tiendas online", "seguridad"]

@@ -3,11 +3,13 @@ layout: ../../layouts/LayoutBlog.astro
 title: Enfócate en vender beneficios no características
 author: Edgar Cornejo
 description: "Me dejo muy en claro no solo acerca del tema si no también acerca del rol de Community Manager y como ahora se está distorsionado su rol, aprendiendo cosas muy importantes pero dejan de lado lo más importante generar el interés de compra, después de todo ya sea cualquier estrategia que elijamos su fin en generar ventas."
-image:
-  url: "../../blog/enfocate-en-vender-beneficios-no-caracteristicas.jpg"
-  alt: "Enfócate en vender beneficios no características"
+image: {
+  url: "../../blog/enfocate-en-vender-beneficios-no-caracteristicas.jpg",
+  alt: "Enfócate en vender beneficios no características",
+}
 date: 2015-09-18
 lastBuildDate: 2015-09-18
+draft: false
 category: Marketing
 language: es-PE
 tags: ["marketing", "consejo", "propuesta de valor", "vender beneficios"]

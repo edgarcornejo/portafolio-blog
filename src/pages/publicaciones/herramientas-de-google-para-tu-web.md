@@ -4,11 +4,13 @@ title: Herramientas de Google para tu web
 author: Edgar Cornejo
 description: "Cuando creamos nuestra web veremos que Google nos ofrece unas herramientas que ayudarán a la medición y análisis para que esta se indexe mejor e identificar fallas en nuestra web. Ambas herramientas requieren que cuente con una cuenta de Gmail.
 "
-image:
-  url: "../../blog/herramientas-de-google-para-tu-web.webp"
-  alt: "Herramientas de Google para tu web"
+image: {
+  url: "../../blog/herramientas-de-google-para-tu-web.webp",
+  alt: "Herramientas de Google para tu web",
+}  
 date: 2020-08-31
 lastBuildDate: 2020-08-31
+draft: false
 category: Web
 language: es-PE
 tags: ["Google Analytics", "Google Search", "Herramientas de Google"]

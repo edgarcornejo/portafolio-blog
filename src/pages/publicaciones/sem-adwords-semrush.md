@@ -3,11 +3,13 @@ layout: ../../layouts/LayoutBlog.astro
 title: SEM, Adwords y SEMrush
 author: Edgar Cornejo
 description: "SEM de las siglas en ingles de Search Engine Marketing y en español Marketing en Buscadores Web. Una técnica para el aumento de visibilidad en los motores de búsqueda (Google y mas) mediante pagos por campañas. Básicamente anuncios en los resultados de búsqueda."
-image:
-  url: "../../blog/sem-adwords-semrush.png"
-  alt: "SEM, Adwords y SEMrush"
+image: {
+  url: "../../blog/sem-adwords-semrush.png",
+  alt: "SEM, Adwords y SEMrush",
+}  
 date: 2015-08-28
 lastBuildDate: 2015-08-28
+draft: false
 category: Web
 language: es-PE
 tags: ["AdWords", "SEM", "SEMrush", "marketing online"]

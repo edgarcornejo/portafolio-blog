@@ -3,11 +3,13 @@ layout: ../../layouts/LayoutBlog.astro
 title: Realmente necesito una página web
 author: Edgar Cornejo
 description: "Puede optar por otros medios como una fan page en Facebook o un blog en Blogger, estas opciones son gratuitas y le permitirán probar si su negocio funcionaria bien en Internet. Las redes sociales serian una buena opción para tener mas conexión con sus clientes y obtener criticas y recomendaciones."
-image:
-  url: "../../blog/realmente-necesito-una-pagina-web.png"
-  alt: "Realmente necesito una página web"
+image: {
+  url: "../../blog/realmente-necesito-una-pagina-web.png",
+  alt: "Realmente necesito una página web",
+}  
 date: 2015-10-20
 lastBuildDate: 2015-10-20
+draft: false
 category: Web
 language: es-PE
 tags: ["diseño web", "pagina web", "internet"]

@@ -3,11 +3,13 @@ layout: ../../layouts/LayoutBlog.astro
 title: Música y sonido de fondo para tus proyectos
 author: Edgar Cornejo
 description: "No importa si es un presentación, sitio web, video, película, publicidad, televisión, radio, aplicación el sonido siempre le da un buen toque ya sea como sonido de fondo (soundtrack - banda sonora), música, efecto de sonido nos hace sentir una emoción, que es muy importante para comunicar mediante nuestro proyecto digital."
-image:
-  url: "../../blog/sonido-para-proyectos-digitales.png"
-  alt: "Música y sonido de fondo para tus proyectos"
+image: {
+  url: "../../blog/sonido-para-proyectos-digitales.png",
+  alt: "Música y sonido de fondo para tus proyectos",
+}  
 date: 2015-10-02
 lastBuildDate: 2015-10-02
+draft: false
 category: Web
 language: es-PE
 tags: ["sonido y música", "sonido de fondo", "recursos", "proyectos"]

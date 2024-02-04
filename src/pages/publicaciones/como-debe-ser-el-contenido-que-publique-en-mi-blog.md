@@ -3,11 +3,13 @@ layout: ../../layouts/LayoutBlog.astro
 title: Como debe ser el contenido que publique en mi blog
 author: Edgar Cornejo
 description: "Contenido que invite a la conversación: Un lector cuando termina de leer tu post, puede tener más preguntar pero también puede aportar más información del tema. Recuerda crear un contenido responsable e investiga bien del tema."
-image:
-  url: "../../blog/como-debe-ser-el-contenido-que-publique-en-mi-blog.png"
-  alt: "Como debe ser el contenido que publique en mi blog"
+image: {
+  url: "../../blog/como-debe-ser-el-contenido-que-publique-en-mi-blog.png",
+  alt: "Como debe ser el contenido que publique en mi blog",
+}  
 date: 2015-10-24
 lastBuildDate: 2015-10-24
+draft: false
 category: Web
 language: es-PE
 tags: ["contenido", "publicaciones", "blog", "marketing de contenido"]

@@ -1,27 +1,26 @@
 ---
-import LogoView from "../components/LogoView.astro";
 import "../styles/reset.css";
-import logo from "../data/logoData";
+import LogoView from "../components/LogoView.astro";
 import MainMenuView from "../components/MainMenuView.astro";
-import MenuItemView from "../components/MenuItemView.astro";
-import menuItems from "../data/menuItemsData";
+import Footer from "../components/Footer.astro";
 
 interface Props {
-	title: string;
+	title?: string;
+	description?: string;
+	keywords?: string;
 }
 
-const { title } = Astro.props;
+const {
+	title = "Edgar Cornejo, Diseñador Gráfico y desarrollador Web Front-end",
+	description = "Mi nombre es Edgar Cornejo ofrezco los servicios de diseño gráfico, desarrollo web front-end y posicionamiento en Internet.",
+	keywords = "diseño web, desarrollo de páginas web, diseñador gráfico, maquetador web, elaboración de páginas web, desarrollo web profesional",
+} = Astro.props;
 ---
 
 <!doctype html>
 <html lang="es">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta
-			name="keywords"
-			content="desarrollo de paginas web, diseñador gráfico, maquetador web, elaboración de paginas web, desarrollo web profesional"
-		/>
 		<meta
 			name="viewport"
 			content="width=device-width, initial-scale=1, maximum-scale=1"
@@ -41,10 +40,13 @@ const { title } = Astro.props;
 		/>
 
 		<meta name="generator" content={Astro.generator} />
+
 		<title>{title}</title>
+		<meta name="description" content={description} />
+		<meta name="keywords" content={keywords} />
 
 		<meta name="distribution" content="global" />
-		<meta name="author" content="Edgar Cornejo Cahuana" />
+		<meta name="author" content="Edgar Cornejo" />
 		<meta name="designer" content="Edgar Cornejo" />
 		<meta property="fb:page_id" content="394466673993640" />
 		<meta property="fb:admins" content="100000001685554" />
@@ -53,7 +55,7 @@ const { title } = Astro.props;
 		<meta property="og:url" content="https://www.edgarcornejo.com" />
 		<meta
 			property="og:image"
-			content="https://www.edgarcornejo.com/img/edgarcornejo.png"
+			content="https://www.edgarcornejo.com/img/edgarcornejo.svg"
 		/>
 		<meta property="og:site_name" content="edgarcornejo.com" />
 		<meta
@@ -73,7 +75,7 @@ const { title } = Astro.props;
 		<meta name="twitter:creator" content="@devcornejo" />
 		<meta
 			name="twitter:image"
-			content="https://www.edgarcornejo.com/img/edgarcornejo.png"
+			content="https://www.edgarcornejo.com/img/edgarcornejo.svg"
 		/>
 		<meta name="twitter:domain" content="https://www.edgarcornejo.com/" />
 
@@ -84,7 +86,7 @@ const { title } = Astro.props;
 				"name": "Edgar Cornejo",
 				"email": "info@edgarcornejo.com",
 				"url": "https://www.edgarcornejo.com",
-				"logo": "https://www.edgarcornejo.com/img/edgarcornejo.png",
+				"logo": "https://www.edgarcornejo.com/img/edgarcornejo.svg",
 				"contactPoint": [
 					{
 						"@type": "ContactPoint",
@@ -120,39 +122,12 @@ const { title } = Astro.props;
 	</head>
 
 	<body itemscope itemtype="http://data-vocabulary.org/Person">
-		{logo.map((img) => <LogoView {...img} />)}
-		<MainMenuView>
-			{menuItems.map((item) => <MenuItemView {...item} />)}
-		</MainMenuView>
+		<LogoView />
+
+		<MainMenuView />
 
 		<slot />
 
-		<footer>
-			<p>
-				Copyright ©
-				<a href="https://www.edgarcornejo.com/" title="Edgar Cornejo">
-					Edgar Cornejo
-				</a>
-				All Rights Reserved.
-			</p>
-		</footer>
+		<Footer />
 	</body>
 </html>
-
-<style lang="stylus">
-	/* Pie */
-	footer
-		font-size 1.2rem
-		height auto
-		margin 0 auto
-		padding 2rem 0 2rem 0
-		text-align right
-		max-width 1920px
-		width 90%
-
-	/* Responsive Design */
-	@media screen and (max-width:1366px)
-		footer
-			font-size 1rem
-			max-width 1024px
-</style>

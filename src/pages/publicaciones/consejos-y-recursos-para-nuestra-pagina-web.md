@@ -3,11 +3,13 @@ layout: ../../layouts/LayoutBlog.astro
 title: Consejos y recursos para nuestra página web
 author: Edgar Cornejo
 description: "Con las experiencias en algunos trabajos, es importante contar con la información que tendrá una página web antes de empezar a diseñarla. Ya que la extensión del contenido puede hacer variar el diseño de la web."
-image:
-  url: "../../blog/Consejos-y-recursos-para-nuestra-página-web.png"
-  alt: "Consejos y recursos para nuestra página web"
+image: {
+  url: "../../blog/Consejos-y-recursos-para-nuestra-página-web.png",
+  alt: "Consejos y recursos para nuestra página web",
+}
 date: 2015-10-28
 lastBuildDate: 2015-10-28
+draft: false
 category: Web
 language: es-PE
 tags: ["recursos web", "bancos de contenido", "gestión de contenido"]

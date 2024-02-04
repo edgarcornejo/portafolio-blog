@@ -3,11 +3,13 @@ layout: ../../layouts/LayoutBlog.astro
 title: Programas con aplicaciones de terceros
 author: Edgar Cornejo
 description: "Hay programas muy útiles que actualmente hay en el mercado, programas que nos ayudan en nuestro trabajo y nos hacen la vida más fácil. Lamentablemente, tenemos programas que son de paga y muchas veces muy caros o programas gratuitos pero lamentablemente su único modo de ganar dinero es por medio de software de terceros en sus instaladores."
-image:
-  url: "../../blog/programas-con-aplicaciones-de-terceros.webp"
-  alt: "Programas con aplicaciones de terceros"
+image: {
+  url: "../../blog/programas-con-aplicaciones-de-terceros.webp",
+  alt: "Programas con aplicaciones de terceros",
+}  
 date: 2020-10-26
 lastBuildDate: 2020-10-26
+draft: false
 category: Programas
 language: es-PE
 tags: ["programas", "aplicaciones de terceros", "PUA", "windows"]

@@ -3,11 +3,13 @@ layout: ../../layouts/LayoutBlog.astro
 title: Una página web adaptable para vencerlas a todas
 author: Edgar Cornejo
 description: "Ahora es cuando cobra más valor que una página que se adapte a diferentes tipos de pantalla, debido al último anuncio de Google respecto a este tema. A partir del 21 de abril del 2015 las páginas que no cuenten con una versión móvil serán penalizadas, haciendo que páginas de la competencia estén por encina de páginas web sin versión móvil."
-image:
-  url: "../../blog/una-pagina-web-adaptable-para-vencerlas-a-todas.png"
-  alt: "Una página web adaptable para vencerlas a todas"
+image: {
+  url: "../../blog/una-pagina-web-adaptable-para-vencerlas-a-todas.png",
+  alt: "Una página web adaptable para vencerlas a todas",
+}  
 date: 2015-10-24
 lastBuildDate: 2015-10-24
+draft: false
 category: Web
 language: es-PE
 tags: ["diseño web", "desarrollo web", "responsive design", "adaptable"]

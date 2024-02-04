@@ -3,11 +3,13 @@ layout: ../../layouts/LayoutBlog.astro
 title: ROI, CPM y CPC Las inversiones regresan con un buen análisis
 author: Edgar Cornejo
 description: "Personalmente en mi opinión es mejor tener un hosting que se encuentre cerca de ti, cualquier cambio, tramite será mucho más fácil. No profundizaremos mucho ya que es un tema extenso, pero seguro que te podrá ayudar a hacer una buena elección."
-image:
-  url: "../../blog/roi-cpm-cpc.png"
-  alt: "ROI, CPM y CPC"
+image: {
+  url: "../../blog/roi-cpm-cpc.png",
+  alt: "ROI, CPM y CPC",
+}  
 date: 2015-09-01
 lastBuildDate: 2015-09-01
+draft: false
 category: Web
 language: es-PE
 tags: ["CPC", "CPM", "marketing por internet", "retorno de la inversión", "ROI"]

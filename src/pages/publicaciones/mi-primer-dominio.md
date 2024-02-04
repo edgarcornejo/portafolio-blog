@@ -3,11 +3,13 @@ layout: ../../layouts/LayoutBlog.astro
 title: Mi primer dominio
 author: Edgar Cornejo
 description: "Uno de los primeros pasos para tener una página web es tener un dominio. Normalmente siempre se opta por poner el nombre de la empresa, como veras en Internet mayoritariamente se hace esto."
-image:
-  url: "../../blog/mi-primer-dominio.png"
-  alt: "Mi primer Dominio"
+image: {
+  url: "../../blog/mi-primer-dominio.png",
+  alt: "Mi primer Dominio",
+}  
 date: 2015-07-19
 lastBuildDate: 2015-07-19
+draft: false
 category: Web
 language: es-PE
 tags: ["dominio web", "mi primer dominio", "nombre de empresa", "registrar un dominio"]

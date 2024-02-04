@@ -3,11 +3,13 @@ layout: ../../layouts/LayoutBlog.astro
 title: Google PageSpeed
 author: Edgar Cornejo
 description: "Uno de los factores más importantes para hacer SEO en nuestra web, además de generar buen contenido es el de la velocidad de carga de nuestra web. Lo primero es tener buenas prácticas para desarrollar una web."
-image:
-  url: "../../blog/google-pagespeed-insights.png"
-  alt: "Google PageSpeed"
+image: {
+  url: "../../blog/google-pagespeed-insights.png",
+  alt: "Google PageSpeed",
+}  
 date: 2015-09-16
 lastBuildDate: 2015-09-16
+draft: false
 category: Web
 language: es-PE
 tags: ["carga rápida web", "google pagespeed", "SEO", "web rápida"]

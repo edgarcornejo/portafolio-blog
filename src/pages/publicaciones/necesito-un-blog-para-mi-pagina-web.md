@@ -3,11 +3,13 @@ layout: ../../layouts/LayoutBlog.astro
 title: Necesito un blog para mi página web
 author: Edgar Cornejo
 description: "Al igual que una página web un blog necesita de un continuo cuidado. La verdad es que te puede ayudar a ganar más cliente pero, si no estás invirtiendo tu tiempo en el fallaras en el intento. No hay un número mágico de cuantos post debes estar publicando. Pero debes ser constante en el tiempo que le inviertas 1 vez a la semana 2 o 3, pero debes ser constante."
-image:
-  url: "../../blog/blog-para-mi-web.png"
-  alt: "Necesito un blog para mi página web"
+image: {
+  url: "../../blog/blog-para-mi-web.png",
+  alt: "Necesito un blog para mi página web",
+}  
 date: 2015-10-09
 lastBuildDate: 2015-10-09
+draft: false
 category: Web
 language: es-PE
 tags: ["marketing de contenido", "publicaciones", "contenido", "blog"]

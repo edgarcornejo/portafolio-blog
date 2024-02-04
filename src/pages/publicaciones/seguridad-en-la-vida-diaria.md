@@ -3,11 +3,13 @@ layout: ../../layouts/LayoutBlog.astro
 title: Seguridad en la vida diaria
 author: Edgar Cornejo
 description: "Vivimos una vida que casi se repite diariamente tanto así que dejamos pasar cosas que antes nos llamaban la atención drásticamente. Escuchamos de fraudes, trampas y delitos que personas comunes sufren pero seguramente nunca nos sucederá a nosotros; entonces llega el día que en que nos volvemos parte de las estadísticas y de las noticias, una víctima más."
-image:
-  url: "../../blog/seguridad-en-la-vida-diaria.png"
-  alt: "Seguridad en la vida diaria"
+image: {
+  url: "../../blog/seguridad-en-la-vida-diaria.png",
+  alt: "Seguridad en la vida diaria",
+}  
 date: 2015-07-29
 lastBuildDate: 2015-07-29
+draft: false
 category: Seguridad
 language: es-PE
 tags: ["fraude telefónico", "llamadas falsas", "seguridad en la vida diaria", "pishing", "suplantación"]

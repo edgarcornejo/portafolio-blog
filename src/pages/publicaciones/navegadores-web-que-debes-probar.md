@@ -3,11 +3,13 @@ layout: ../../layouts/LayoutBlog.astro
 title: Navegadores web que debes probar
 author: Edgar Cornejo
 description: "Hablando más técnicamente, es un programa que interpreta a través de un motor de renderizado un lenguaje (HTML, CSS, JS) y lo representa de manera visual e interactiva. Cada navegador tiene su propio motor o comparten el mismo."
-image:
-  url: "../../blog/navegadores-web-que-debes-probar.webp"
-  alt: "Navegadores web que debes probar"
+image: {
+  url: "../../blog/navegadores-web-que-debes-probar.webp",
+  alt: "Navegadores web que debes probar",
+}  
 date: 2020-09-14
 lastBuildDate: 2020-09-14
+draft: false
 category: Programas
 language: es-PE
 tags: ["navegador web", "motor de renderizado", "windows", "programa"]

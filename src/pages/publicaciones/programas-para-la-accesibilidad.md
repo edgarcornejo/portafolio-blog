@@ -3,11 +3,13 @@ layout: ../../layouts/LayoutBlog.astro
 title: Programas para la accesibilidad
 author: Edgar Cornejo
 description: "Cuando navegamos por Internet lo hacemos sin darnos cuenta, pero para otras personas esto no es igual de fácil, de hecho es casi imposible. Imagínate que no puedas utiliza uno de tus sentidos o no funcione al 100%, esto cambia totalmente tu forma de interactuar con personas o maquinas. Una realidad para cientos de personas con discapacidades."
-image:
-  url: "../../blog/programas-para-la-accesibilidad.webp"
-  alt: "Programas para la accesibilidad"
+image: {
+  url: "../../blog/programas-para-la-accesibilidad.webp",
+  alt: "Programas para la accesibilidad",
+}  
 date: 2020-07-13
 lastBuildDate: 2020-07-13
+draft: false
 category: Programas
 language: es-PE
 tags: ["accesibilidad", "discapacidad", "recursos", "web"]

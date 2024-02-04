@@ -1,34 +1,98 @@
+---
+import menuItems from "../data/menuItemsData";
+---
+
 <input type="checkbox" id="open" class="menu-checkbox" />
 <nav>
 	<label for="open" class="menu-open"></label>
 	<ul>
-		<slot />
+		{
+			menuItems.map((item) => (
+				<li>
+					<a href={item.url} title={item.title} class="nav-li">
+						{item.title}
+					</a>
+				</li>
+			))
+		}
 	</ul>
 </nav>
 
+<script>
+	import "../js/nav.js";
+</script>
+
 <style lang="stylus">
+	/* checkbox para menu responsive */
+	.menu-checkbox
+		display none
+
 	/* Menu */ 
 	nav
 		width 90%
 		max-width 1920px
 		margin 0 auto
 		animation callme 1s ease-in-out both
-		ul
-			width 100%
-			display flex
-			justify-content flex-end
-			align-items flex-end
-			height auto
 
-	.menu-checkbox
-		display none
+	ul
+		width 100%
+		display flex
+		justify-content flex-end
+		align-items flex-end
+		height auto
 
-	/* Responsive Design */
+	li
+		width 20%
+		position relative
+		animation titulo2 .5s ease-in-out both
+		display flex
+		justify-content center
+		align-items center
+		height 100px
+
+	a
+		cursor pointer
+		color rgb(8, 12, 63)
+		text-transform uppercase
+		letter-spacing 2pt
+		font 700 2rem Ubuntu
+		&:hover
+			color rgb(61, 188, 230)
+
+	/* Estilo enlace actual */
+	.li-current
+		color rgb(230, 61, 103)
+
+    /* Responsive Design */
+    @media screen and (max-width:1920px)
+		li
+			max-width 260px
+
+		a
+			font 700 1.4rem Ubuntu
+    
+    @media screen and (max-width:1440px)
+		li
+			max-width 220px
+
+		a
+			font 700 1rem Ubuntu
+
+    @media screen and (max-width:1366px)
+		li
+			height 60px
+			max-width 180px
+
+		a
+			letter-spacing 1pt
+
 	@media screen and (max-width:1024px)
-		nav
-			ul
-				justify-content center
-				align-items center
+		ul
+			justify-content center
+			align-items center
+			
+		li
+			max-width auto
 
 	@media screen and (max-width:768px)
 		nav
@@ -36,9 +100,18 @@
 			height auto
 			display flex
 			justify-content center
-			ul
-				display none
-				height auto
+
+		ul
+			display none
+			height auto
+
+		li
+			width 100%
+			max-width 100%
+			line-height 3rem
+			border-top solid 1px rgb(61, 188, 230)
+			&:first-child
+				border 0
 		
 		.menu-open
 			user-select none
@@ -57,5 +130,4 @@
 				background-size 60% !important
 			ul
 				display block
-
 </style>

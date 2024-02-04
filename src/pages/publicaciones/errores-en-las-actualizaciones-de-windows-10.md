@@ -3,11 +3,13 @@ layout: ../../layouts/LayoutBlog.astro
 title: Errores en las actualizaciones de Windows 10
 author: Edgar Cornejo
 description: "Soy usuario de Windows 10 desde el 2018 y sigo las noticias y publicaciones de diversos medios sobre este sistema operativo. Uno de los puntos a discusión a menudo son los errores que se muestran con cada actualización de Windows 10. "
-image:
-  url: "../../blog/errores-en-las-actualizaciones-de-windows-10.webp"
-  alt: "Errores en las actualizaciones de Windows 10"
+image: {
+  url: "../../blog/errores-en-las-actualizaciones-de-windows-10.webp",
+  alt: "Errores en las actualizaciones de Windows 10",
+}
 date: 2020-11-23
 lastBuildDate: 2020-11-23
+draft: false
 category: Tips
 language: es-PE
 tags: ["errores en las actualizaciones", "windows 10", "problemas con windows 10", "windows update"]

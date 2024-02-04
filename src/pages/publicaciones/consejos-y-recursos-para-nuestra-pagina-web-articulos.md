@@ -3,11 +3,13 @@ layout: ../../layouts/LayoutBlog.astro
 title: Consejos y recursos para nuestra página web, artículos
 author: Edgar Cornejo
 description: "El contenido es muy importante para una página web, frases como “El contenido es el rey” nos lo recuerda pero no se trata de crear artículos en cantidad y sin valor, si no de crear algo que ayuda a los lectores y que sea fácil de entender y seguir los pasos."
-image:
-  url: "../../blog/Consejos-y-recursos-para-nuestra-página-web-artículos.png"
-  alt: "Consejos y recursos para nuestra página web, artículos"
+image: {
+  url: "../../blog/Consejos-y-recursos-para-nuestra-página-web-artículos.png",
+  alt: "Consejos y recursos para nuestra página web, artículos",
+}  
 date: 2015-11-02
 lastBuildDate: 2015-11-02
+draft: false
 category: Web
 language: es-PE
 tags: ["artículos", "marketing de contenido", "escribir", "recursos"]

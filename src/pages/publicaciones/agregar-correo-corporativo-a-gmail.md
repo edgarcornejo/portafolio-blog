@@ -3,11 +3,13 @@ layout: ../../layouts/LayoutBlog.astro
 title: Agregar correo corporativo a Gmail
 author: Edgar Cornejo
 description: "Importar tus emails de correos corporativos en tu cuenta de Gmail es muy fácil, empecemos. Antes de empezar a configurar la importación de emails necesitamos recopilar la siguiente información."
-image:
-  url: "../../blog/informacion-de-correo.jpg"
-  alt: "Agregar correo corporativo a Gmail"
+image: {
+  url: "../../blog/informacion-de-correo.jpg",
+  alt: "Agregar correo corporativo a Gmail",
+}  
 date: 2016-06-15
 lastBuildDate: 2016-06-15
+draft: false
 category: Web
 language: es-PE
 tags: ["gmail", "correo corporativo", "importar correos", "importar emails"]

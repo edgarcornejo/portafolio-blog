@@ -3,11 +3,13 @@ layout: ../../layouts/LayoutBlog.astro
 title: Tarjetas de presentación digitales para su empresa
 author: Edgar Cornejo
 description: "Normalmente las comunicaciones con los clientes se hacen por distintos medios, pero cuando las comunicación son importantes o serías, un correo electrónico es lo correcto. Dar una imagen profesional en las comunicaciones con los clientes o socios es importante. Por ello se debe dar una imagen correcta."
-image:
-  url: "../../blog/firma-en-gmail.png"
-  alt: "Tarjetas de presentación digitales para su empresa"
+image: {
+  url: "../../blog/firma-en-gmail.png",
+  alt: "Tarjetas de presentación digitales para su empresa",
+}  
 date: 2020-04-20
 lastBuildDate: 2020-04-20
+draft: false
 category: Diseño
 language: es-PE
 tags: ["firma digital", "Gmail", "tarjeta de presentación", "correo"]

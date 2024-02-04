@@ -3,11 +3,13 @@ layout: ../../layouts/LayoutBlog.astro
 title: Software para dar clases online
 author: Edgar Cornejo
 description: "Una de las necesidades que se requieren actualmente son las de un software para poder dar clases en linea a estudiantes y no sabemos por donde comenzar, vamos a empezar con una lista de las características que estos deben tener."
-image:
-  url: "../../blog/software-para-dar-clases-online.jpg"
-  alt: "Software para dar clases online"
+image: {
+  url: "../../blog/software-para-dar-clases-online.jpg",
+  alt: "Software para dar clases online",
+}  
 date: 2020-06-22
 lastBuildDate: 2020-06-22
+draft: false
 category: Programas
 language: es-PE
 tags: ["programa", "software", "clases online", "LMS"]

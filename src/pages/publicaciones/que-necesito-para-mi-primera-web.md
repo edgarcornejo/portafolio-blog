@@ -3,11 +3,13 @@ layout: ../../layouts/LayoutBlog.astro
 title: Que necesito para mi primera web
 author: Edgar Cornejo
 description: "Primero redacte y busque la información que ira dentro de la web, esto será el contenido. Después haga la compra del hosting y dominio y por ultimo comuníquese con una agencia de profesional que haga páginas web."
-image:
-  url: "../../blog/que-necesito-para-mi-primera-web.png"
-  alt: "Que necesito para mi primera web"
+image: {
+  url: "../../blog/que-necesito-para-mi-primera-web.png",
+  alt: "Que necesito para mi primera web",
+}  
 date: 2015-07-28
 lastBuildDate: 2015-07-28
+draft: false
 category: Web
 language: es-PE
 tags: ["contenido web", "dominio web", "hospedaje web", "hosting", "primera web"]

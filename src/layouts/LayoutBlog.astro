@@ -1,35 +1,43 @@
 ---
-import LogoView from "../components/LogoView.astro";
 import "../styles/reset.css";
 import "../styles/layoutblog.css";
-import logo from "../data/logoData";
+import { formatBlogPosts, formatDate } from "../js/utils";
+import LogoView from "../components/LogoView.astro";
 import MainMenuView from "../components/MainMenuView.astro";
-import MenuItemView from "../components/MenuItemView.astro";
-import menuItems from "../data/menuItemsData";
 import ListPosts from "../components/ListPosts.astro";
-import { formatBlogPosts } from "../js/utils";
+import Footer from "../components/Footer.astro";
 
 interface Props {
     title: string;
+    description: string;
+    keywords: string;
+    author: string;
+    image: string;
+    category: string;
+    date: string;
+    url: any;
 }
 
-const { title, frontmatter } = Astro.props;
+const {
+    frontmatter,
+    title = frontmatter.title,
+    description = frontmatter.description,
+    keywords = frontmatter.tags,
+    author = frontmatter.author,
+    image = frontmatter.image.url,
+    category = frontmatter.category,
+    date = frontmatter.date,
+    url = window.location,
+} = Astro.props;
 
 const allPosts = await Astro.glob("../pages/publicaciones/*.md");
-const formattedPosts = formatBlogPosts(allPosts, {
-    limit: 10,
-});
+const formattedPosts = formatBlogPosts(allPosts);
 ---
 
 <!doctype html>
 <html lang="es">
     <head>
         <meta charset="UTF-8" />
-        <meta name="description" content="Astro description" />
-        <meta
-            name="keywords"
-            content="desarrollo de paginas web, diseñador gráfico, maquetador web, elaboración de paginas web, desarrollo web profesional"
-        />
         <meta
             name="viewport"
             content="width=device-width, initial-scale=1, maximum-scale=1"
@@ -49,21 +57,26 @@ const formattedPosts = formatBlogPosts(allPosts, {
         />
 
         <meta name="generator" content={Astro.generator} />
-        <title>{frontmatter?.title ?? title}</title>
+
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta name="keywords" content={keywords} />
 
         <meta name="distribution" content="global" />
-        <meta name="author" content="Edgar Cornejo Cahuana" />
-        <meta name="designer" content="Edgar Cornejo" />
+        <meta name="author" content={author} />
+        <meta name="designer" content={author} />
         <meta property="fb:page_id" content="394466673993640" />
         <meta property="fb:admins" content="100000001685554" />
-        <meta property="og:title" content="edgarcornejo.com" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.edgarcornejo.com" />
+
+        <meta property="og:title" content={title} />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content={url} />
+        <meta property="og:image" content={image} />
         <meta
-            property="og:image"
-            content="https://www.edgarcornejo.com/img/edgarcornejo.png"
+            property="og:site_name"
+            content="edgarcornejo.com/publicaciones/"
         />
-        <meta property="og:site_name" content="edgarcornejo.com" />
+
         <meta
             name="google-site-verification"
             content="tepZV8pXm5w4Dq1SGa9KJml6qC2Ojq0dLlvHRBAAllQ"
@@ -128,18 +141,8 @@ const formattedPosts = formatBlogPosts(allPosts, {
     </head>
 
     <body itemscope itemtype="http://data-vocabulary.org/Person">
-        {logo.map((img) => <LogoView {...img} />)}
-        <MainMenuView>
-            {menuItems.map((item) => <MenuItemView {...item} />)}
-        </MainMenuView>
-
-        <header class="header-page">
-            <h1>Publicaciones</h1>
-            <h2>
-                Blog de diseño, desarrollo, técnologia, seo, marketing online y
-                trucos
-            </h2>
-        </header>
+        <LogoView />
+        <MainMenuView />
 
         <div class="space-ads-horizontal"></div>
 
@@ -150,66 +153,42 @@ const formattedPosts = formatBlogPosts(allPosts, {
                 </article>
             </main>
             <aside>
+                <h4>Informacion de la publicación</h4>
+                <div class="info-post">
+                    <img src={image} alt={title} />
+                    <p>Autor: {author}</p>
+                    <p>Categoría: <strong>{category}</strong></p>
+                    <p>
+                        Fecha de Publicación: <time datetime={date}
+                            >{formatDate(date)}</time
+                        >
+                    </p>
+                    <p>
+                        Tags: {
+                            keywords.map((tag: any, index: any) => {
+                                return index < 20 ? <span>{tag}, </span> : null;
+                            })
+                        }
+                    </p>
+                </div>
+
                 <h4>Publicidad</h4>
                 <div class="space-ads-vertical"></div>
                 <h4>Publicaciones</h4>
-                <ol class="post-container">
+                <p class="post-list-container">
                     {
-                        formattedPosts.map((lipost: any) => (
-                            <ListPosts post={lipost} />
-                        ))
+                        formattedPosts.map((apost: any, index: any) => {
+                            return index < 10 ? (
+                                <ListPosts key={index} post={apost} />
+                            ) : null;
+                        })
                     }
-                </ol>
+                </p>
             </aside>
         </section>
 
         <div class="space-ads-horizontal"></div>
 
-        <footer>
-            <p>
-                Copyright ©
-                <a href="https://www.edgarcornejo.com/" title="Edgar Cornejo">
-                    Edgar Cornejo
-                </a>
-                All Rights Reserved.
-            </p>
-        </footer>
+        <Footer />
     </body>
 </html>
-
-<style lang="stylus" is:global>
-    /* Selector  Menu Principal */
-    label + ul li:nth-child(4)
-        border-top solid 8px rgb(103, 61, 230)
-        a
-            opacity 0.2
-    
-    /* Responsive Design */
-    @media screen and (max-width:1920px)
-        label + ul li:nth-child(4)
-            border-top solid 5px rgb(61, 188, 230)
-
-    @media screen and (max-width:768px)
-        label + ul li:nth-child(4)
-            border-top solid 1px rgb(61, 188, 230)
-            a
-                opacity 1   
-</style>
-
-<style lang="stylus">
-	/* Pie */
-	footer
-		font-size 1.2rem
-		height auto
-		margin 0 auto
-		padding 2rem 0 2rem 0
-		text-align right
-		max-width 1920px
-		width 90%
-
-	/* Responsive Design */
-	@media screen and (max-width:1366px)
-		footer
-			font-size 1rem
-			max-width 1024px
-</style>

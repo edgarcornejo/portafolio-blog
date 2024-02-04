@@ -8,6 +8,7 @@ import AsideItemView from "../components/AsideItemView.astro";
 
 <Layout
     title="Presentación - Edgar Cornejo, Diseñador gráfico, desarrolador Web front-end y Posicionamiento en Internet."
+    description="Soy diseñador gráfico, desarrollador web frontend y realizó análisis de posicionamiento en buscadores SEO, soy autodidacta y me gusta la tecnología. Vivo en Arequipa - Perú."
 >
     <AsideMenuView>
         {asideItemsPre.map((aitem) => <AsideItemView {...aitem} />)}
@@ -330,22 +331,3 @@ import AsideItemView from "../components/AsideItemView.astro";
         </main>
     </div>
 </Layout>
-
-<style lang="stylus" is:global>
-    /* Selector  Menu Principal */
-    label + ul li:nth-child(2)
-        border-top solid 8px rgb(103, 61, 230)
-        a
-            opacity 0.2
-    
-    /* Responsive Design */
-    @media screen and (max-width:1920px)
-        label + ul li:nth-child(2)
-            border-top solid 5px rgb(61, 188, 230)
-
-    @media screen and (max-width:768px)
-        label + ul li:nth-child(2)
-            border-top solid 1px rgb(61, 188, 230)
-            a
-                opacity 1   
-</style>

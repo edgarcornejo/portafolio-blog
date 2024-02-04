@@ -1,14 +1,6 @@
----
-import type { LinkImg } from "../types/types";
-
-interface Props extends LinkImg {}
-
-const { title, url, img } = Astro.props;
----
-
 <div>
-    <a href={url} title={title}>
-        <img itemprop="logo" src={img} alt={title} />
+    <a href="/" title="Edgar Cornejo">
+        <img itemprop="logo" src="/img/edgarcornejo.svg" alt="Edgar Cornejo" />
     </a>
 </div>
 

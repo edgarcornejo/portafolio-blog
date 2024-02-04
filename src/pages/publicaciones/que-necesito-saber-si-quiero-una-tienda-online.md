@@ -3,11 +3,13 @@ layout: ../../layouts/LayoutBlog.astro
 title: Que necesito saber si quiero una tienda online
 author: Edgar Cornejo
 description: "El programa que se encargara de recibir las ventas como un cajero del supermercado, administrar los clientes, guardar los datos de las ventas, configuración de promociones, stock de productos, los precios, envíos y un sin un fin de funciones; a la vez de un panel de administración donde se agregan productos sus imágenes y características."
-image:
-  url: "../../blog/que-necesito-saber-si-quiero-una-tienda-online.png"
-  alt: "Que necesito saber si quiero una tienda online"
+image: {
+  url: "../../blog/que-necesito-saber-si-quiero-una-tienda-online.png",
+  alt: "Que necesito saber si quiero una tienda online",
+}  
 date: 2015-10-12
 lastBuildDate: 2015-10-12
+draft: false
 category: Web
 language: es-PE
 tags: ["carrito de compras", "tienda online", "e-commerce", "ventas online"]

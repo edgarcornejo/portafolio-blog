@@ -3,11 +3,13 @@ layout: ../../layouts/LayoutBlog.astro
 title: Consejos y recursos para nuestra página web, audio y música
 author: Edgar Cornejo
 description: "Sin duda los sonidos nos comunican mucha información en poco tiempo, música o grabación de voz. Estos recursos los podemos utilizar en el contenido de nuestra página web; para citar una cita hablada, una canción, o grabación de voz."
-image:
-  url: "../../blog/recursos-de-audio-y-musica.png"
-  alt: "Consejos y recursos para nuestra página web, audio y música"
+image: {
+  url: "../../blog/recursos-de-audio-y-musica.png",
+  alt: "Consejos y recursos para nuestra página web, audio y música",
+}  
 date: 2015-11-04
 lastBuildDate: 2015-11-04
+draft: false
 category: Web
 language: es-PE
 tags: ["audio y música", "sonidos paa web", "recursos"]

@@ -3,11 +3,13 @@ layout: ../../layouts/LayoutBlog.astro
 title: Como elegir un buen hosting
 author: Edgar Cornejo
 description: "Personalmente en mi opinión es mejor tener un hosting que se encuentre cerca de ti, cualquier cambio, tramite será mucho más fácil. No profundizaremos mucho ya que es un tema extenso, pero seguro que te podrá ayudar a hacer una buena elección."
-image:
-  url: "../../blog/como-eleguir-un-buen-hosting.png"
-  alt: "Como elegir un buen hosting"
+image: {
+  url: "../../blog/como-eleguir-un-buen-hosting.png",
+  alt: "Como elegir un buen hosting",
+}  
 date: 2015-08-14
 lastBuildDate: 2015-08-14
+draft: false
 category: Web
 language: es-PE
 tags: ["diseño web", "desarrollo web", "hospedaje web", "hosting"]

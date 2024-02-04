@@ -15,7 +15,7 @@ const menuItems: Link[] = [
     },
     {
         title: "Publicaciones",
-        url: "/publicaciones/"
+        url: "/publicaciones"
     },
     {
         title: "Contacto",
