@@ -1,7 +1,7 @@
 ---
 import "../styles/reset.css";
 import "../styles/layoutblog.css";
-import { formatBlogPosts, formatDate } from "../js/utils";
+import { formatBlogPosts, formatDate, slugify } from "../js/utils";
 import LogoView from "../components/LogoView.astro";
 import MainMenuView from "../components/MainMenuView.astro";
 import ListPosts from "../components/ListPosts.astro";
@@ -153,22 +153,28 @@ const formattedPosts = formatBlogPosts(allPosts);
                 </article>
             </main>
             <aside>
-                <h4>Informacion de la publicación</h4>
+                <h4>Información de la publicación</h4>
                 <div class="info-post">
                     <img src={image} alt={title} />
-                    <p>Autor: {author}</p>
-                    <p>Categoría: <strong>{category}</strong></p>
+                    <p>
+                        Autor: <a
+                            href={`/author/${slugify(author)}/`}
+                            title={author}>{author}</a
+                        >
+                    </p>
+                    <p>
+                        Categoría: <a
+                            href={`/category/${slugify(category)}/`}
+                            title={category}>{category}</a
+                        >
+                    </p>
                     <p>
                         Fecha de Publicación: <time datetime={date}
                             >{formatDate(date)}</time
                         >
                     </p>
                     <p>
-                        Tags: {
-                            keywords.map((tag: any, index: any) => {
-                                return index < 20 ? <span>{tag}, </span> : null;
-                            })
-                        }
+                        Tags: {keywords.map((tag: any) => <span>{tag}, </span>)}
                     </p>
                 </div>
 

@@ -4,8 +4,8 @@ import "../styles/layout.css";
 import PostPreview from "../components/PostPreview.astro";
 import { formatBlogPosts } from "../js/utils";
 
-const posts = await Astro.glob("./publicaciones/*.md");
-const formattedPosts = formatBlogPosts(posts);
+const allPosts = await Astro.glob("./publicaciones/*.md");
+const formattedPosts = formatBlogPosts(allPosts);
 ---
 
 <Layout
@@ -24,11 +24,9 @@ const formattedPosts = formatBlogPosts(posts);
         <main>
             <div class="wrapper-post">
                 {
-                    formattedPosts.map((apost: any, index: any) => {
-                        return index < 8 ? (
-                            <PostPreview key={index} post={apost} />
-                        ) : null;
-                    })
+                    formattedPosts.map((apost: any) => (
+                        <PostPreview post={apost} />
+                    ))
                 }
             </div>
         </main>

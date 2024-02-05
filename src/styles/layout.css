@@ -161,6 +161,9 @@ article article a {
   .main-content > header h1 {
     font: italic 300 5rem Ubuntu;
   }
+  .main-content > header h2 {
+    font: 300 2.6rem/1 Ubuntu;
+  }
   article article .text-big {
     font: 300 2.4rem/1.4 Ubuntu;
   }
@@ -197,6 +200,9 @@ article article a {
   .main-content > header h1 {
     font: 300 3.8rem Ubuntu;
   }
+  .main-content > header h2 {
+    font: 300 1.8rem/1 Ubuntu;
+  }
   article article .text-big {
     font: 300 2rem/1.4 Ubuntu;
   }
@@ -228,6 +234,9 @@ article article a {
   }
   .main-content > header h1 {
     font: italic 300 3rem Ubuntu;
+  }
+  .main-content > header h2 {
+    font: 300 1.4rem/1 Ubuntu;
   }
   section article article {
     padding-top: 1rem;
