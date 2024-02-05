@@ -134,6 +134,33 @@ article
         align-self center
         width 240px
 
+/* Pagination de Publicaciones */
+.pagination
+    width 100%
+    height auto
+    display flex
+    flex-wrap wrap
+    justify-content center
+    align-items center
+    gap 0 2rem
+    padding 1rem 0 1rem 0
+    a
+        outline solid 3px eGray
+        border-radius 3px
+        padding 1rem
+        display flex
+        justify-content center
+        align-items center
+        gap 0 1rem
+        text-wrap nowrap
+        font-weight 700
+        &:hover
+            outline solid 4px eGray
+            &:nth-child(odd)
+                transform translatex(-.4rem)
+            &:nth-child(even)
+                transform translatex(.4rem)
+
 /* Responsive Design */
 @media screen and (max-width:2560px)
     /* Estilos de enlaces de contacto */

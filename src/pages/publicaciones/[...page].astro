@@ -1,0 +1,40 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/layout.css";
+import PostPreview from "../../components/PostPreview.astro";
+import { formatBlogPosts } from "../../js/utils";
+import Pagination from "../../components/Pagination.astro";
+
+export async function getStaticPaths({ paginate }) {
+    const allPosts = await Astro.glob("./*.md");
+    const formattedPosts = formatBlogPosts(allPosts);
+
+    return paginate(formattedPosts, {
+        pageSize: 5,
+    });
+}
+
+const { page } = Astro.props;
+---
+
+<Layout
+    title="Publicaciones - Blog de diseño, desarrollo, tecnología, seo, marketing online y trucos"
+    description="Blog de diseño, desarrollo, tecnología, seo, marketing online y trucos."
+>
+    <div class="main-content">
+        <header>
+            <h1>Publicaciones</h1>
+            <h2>
+                Blog de diseño, desarrollo, tecnología, seo, marketing online y
+                trucos
+            </h2>
+        </header>
+        <Pagination prevURL={page.url.prev} nextURL={page.url.next} />
+        <main>
+            <div class="wrapper-post">
+                {page.data.map((post: any) => <PostPreview post={post} />)}
+            </div>
+        </main>
+        <Pagination prevURL={page.url.prev} nextURL={page.url.next} />
+    </div>
+</Layout>
