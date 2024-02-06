@@ -40,6 +40,7 @@ section {
 /* Article Contenedor */
 /* Headers de Articles */
 /* Subtitulo H3 */
+/* Subtitulo H4 */
 }
 section article {
   display: flex;
@@ -65,6 +66,10 @@ section header h2 {
 section h3 {
   font: 400 4.2rem/1 Ubuntu;
   color: #3dbce6;
+}
+section h4 {
+  font: 400 1.6rem/1 Ubuntu;
+  padding: 1rem 0 1rem 0;
 }
 /* Estilos de Parrafos en article*/
 article article .text-big {
@@ -117,7 +122,43 @@ article article a {
   padding: 2rem;
   width: 100%;
 }
+/* Navegación por página */
+/* Páginas presentación y portafolio */
+.navigator {
+  position: fixed;
+  margin-top: 6rem;
+  left: 60px;
+}
+.navigator ol {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+.navigator li {
+  display: flex;
+  height: 80px;
+  width: 100%;
+}
+.navigator a {
+  align-self: center;
+  color: #3dbce6;
+  padding-left: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2pt;
+  font: 700 2.2rem Ubuntu;
+}
+.navigator a:hover {
+  color: #080c3f;
+}
 /* Responsive Design */
+@media screen and (max-width: 2560px) {
+  .navigator li {
+    height: 60px;
+  }
+  .navigator a {
+    font: 700 1.4rem Ubuntu;
+  }
+}
 @media screen and (max-width: 1920px) {
   .main-content {
     width: 70%;
@@ -151,6 +192,12 @@ article article a {
   }
   .aside-bottom {
     padding: 1.4rem;
+  }
+  .navigator li {
+    height: 40px;
+  }
+  .navigator a {
+    font: 700 1rem Ubuntu;
   }
 }
 @media screen and (max-width: 1440px) {
@@ -252,6 +299,9 @@ article article a {
   }
   section header h2 {
     text-align: left;
+  }
+  .navigator {
+    display: none;
   }
 }
 @media screen and (max-width: 480px) {

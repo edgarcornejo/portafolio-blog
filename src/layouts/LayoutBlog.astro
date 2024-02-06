@@ -1,13 +1,14 @@
 ---
 import "../styles/reset.css";
 import "../styles/layoutblog.css";
-import { formatDate, slugify } from "../js/utils";
+import { formatDate, formatBlogPosts, slugify } from "../js/utils";
 import LogoView from "../components/LogoView.astro";
 import MainMenuView from "../components/MainMenuView.astro";
 import AdsArea from "../components/AdsArea.astro";
 import CategoryCloud from "../components/CategoryCloud.astro";
 import ListPosts from "../components/ListPosts.astro";
 import Footer from "../components/Footer.astro";
+import RelatedPost from "../components/RelatedPost.astro";
 
 interface Props {
     title: string;
@@ -31,6 +32,20 @@ const {
     date = frontmatter.date,
     url = window.location,
 } = Astro.props;
+
+/* Related Post */
+const allPosts = await Astro.glob("../pages/publicaciones/*.md");
+const formattedPosts = formatBlogPosts(allPosts, {
+    sortByDate: false,
+});
+
+const relatedPost = formattedPosts
+    .filter(
+        (post: any) =>
+            post.frontmatter.category === category &&
+            post.frontmatter.title !== title,
+    )
+    .slice(0, 1);
 ---
 
 <!doctype html>
@@ -179,14 +194,13 @@ const {
                     </p>
                 </div>
 
-                <h4>Publicidad</h4>
                 <AdsArea />
 
-                <h4>Categorias</h4>
                 <CategoryCloud />
 
-                <h4>Publicaciones</h4>
                 <ListPosts />
+
+                <RelatedPost {relatedPost} />
             </aside>
         </section>
 

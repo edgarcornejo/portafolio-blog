@@ -1,27 +1,24 @@
 ---
-import { formatBlogPosts } from "../js/utils";
-
-const allPosts = await Astro.glob("../pages/publicaciones/*.md");
-const formattedPosts = formatBlogPosts(allPosts);
+import { formatDate } from "../js/utils";
+const { relatedPost } = Astro.props;
 ---
 
-<h4>Últimas publicaciones</h4>
-<div>
-	{
-		formattedPosts.map((post: any, index: any) => {
-			return index < 8 ? (
-				<a
-					href={post.url}
-					title={post.frontmatter.title}
-					class="anin-rapido"
-				>
-					{post.frontmatter.title}
-				</a>
-			) : null;
-		})
-	}
-	<a href="publicaciones/" class="anin-rapido" title="Ver más">Ver más</a>
-</div>
+<h4>Publicaciones relacionadas</h4>
+{
+	relatedPost.map((post) => (
+		<div>
+			<a href={post.url}>
+				{post.frontmatter.title}
+				<span>
+					{post.frontmatter.author} •
+					<time datetime={formatDate(post.frontmatter.date)}>
+						{formatDate(post.frontmatter.date)}
+					</time>
+				</span>
+			</a>
+		</div>
+	))
+}
 
 <style lang="stylus">
 	/* Contenedor de Publicaciones */
@@ -34,6 +31,9 @@ const formattedPosts = formatBlogPosts(allPosts);
 		gap 1rem
 
 	a
+		display flex
+		flex-flow column wrap
+		gap 1rem
 		background rgb(103, 61, 230)
 		color #FFF
 		text-transform uppercase
@@ -44,10 +44,10 @@ const formattedPosts = formatBlogPosts(allPosts);
 		text-align center
 		&:hover
 			background rgb(8, 12, 63)
-		&:last-child
-			background rgb(230, 61, 103)
-			&:hover
-				background rgb(8, 12, 63)
+
+	span
+		font 300 1.2rem Ubuntu
+		opacity .7
 	
 	/* Responsive Design */
 	@media screen and (max-width:2560px)

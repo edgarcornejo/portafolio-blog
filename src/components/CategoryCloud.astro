@@ -19,6 +19,7 @@ const processedCats = allCategories.reduce((acc, category) => {
 const { showCount } = Astro.props;
 ---
 
+<h4>Categorias</h4>
 <div>
     {
         Object.entries(processedCats).map(([key, val]) => (

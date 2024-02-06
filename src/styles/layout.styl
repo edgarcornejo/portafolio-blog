@@ -64,6 +64,10 @@ section
     h3
         font 400 4.2rem/1 Ubuntu
         color eSkyBlue
+    /* Subtitulo H4 */
+    h4
+        font 400 1.6rem/1 Ubuntu
+        padding 1rem 0 1rem 0
     
 /* Estilos de Parrafos en article*/
 article
@@ -114,7 +118,41 @@ article
     padding 2rem
     width 100%
 
+/* Navegación por página */
+/* Páginas presentación y portafolio */
+.navigator
+    position fixed
+    margin-top 6rem
+    left 60px
+    ol
+        height auto
+        display flex
+        flex-direction column
+    li
+        display flex
+        height 80px
+        width 100%
+    a
+        align-self center
+        color rgb(61, 188, 230)
+        padding-left 1.5rem
+        text-transform uppercase
+        letter-spacing 2pt
+        font 700 2.2rem Ubuntu
+        &:hover
+            color rgb(8, 12, 63)
+
 /* Responsive Design */
+@media screen and (max-width:2560px)
+    /* Navegación por página */
+    /* Páginas presentación y portafolio */
+    .navigator
+        li
+            height 60px
+
+        a
+            font 700 1.4rem Ubuntu
+
 @media screen and (max-width:1920px)
     /* Contenedor principal de página */
     .main-content
@@ -157,6 +195,15 @@ article
 
     .aside-bottom
         padding 1.4rem
+    
+    /* Navegación por página */
+    /* Páginas presentación y portafolio */
+    .navigator
+        li
+            height 40px
+
+        a
+            font 700 1rem Ubuntu
 
 @media screen and (max-width:1440px)
     /* Contenedor principal de página */
@@ -273,6 +320,11 @@ article
             /* Subtitulo H2 */
             h2
                 text-align left
+
+    /* Navegación por página */
+    /* Páginas presentación y portafolio */
+    .navigator
+        display none
 
 @media screen and (max-width:480px)
     /* Contenedor de uls */

@@ -1,18 +1,26 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import "../styles/layout.css";
-import AsideMenuView from "../components/AsideMenuView.astro";
-import asideItemsPor from "../data/asideItemsPorData";
-import AsideItemView from "../components/AsideItemView.astro";
 ---
 
 <Layout
     title="Portafolio - Edgar Cornejo, Diseñador gráfico, desarrolador Web front-end y Posicionamiento en Internet."
     description="Trabajos realizados en las areas de diseño gráfico, desarrollo web front-end, SEO y proyectos propios."
 >
-    <AsideMenuView>
-        {asideItemsPor.map((aitem) => <AsideItemView {...aitem} />)}
-    </AsideMenuView>
+    <aside>
+        <nav class="navigator">
+            <ol>
+                <li><a href="#design" title="Diseño">Diseño</a></li>
+                <li>
+                    <a href="#web" title="Desarrollo Web">Desarrollo Web</a>
+                </li>
+                <li><a href="#seo" title="SEO">SEO</a></li>
+                <li>
+                    <a href="#propios" title="Propios">Propios</a>
+                </li>
+            </ol>
+        </nav>
+    </aside>
 
     <div class="main-content">
         <header>
