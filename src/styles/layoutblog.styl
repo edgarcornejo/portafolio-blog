@@ -1,14 +1,4 @@
 /* Layout Blog */
-/* Espacio de publicidad */
-.space-ads-horizontal
-    padding 2rem
-    margin 4rem auto
-    max-width 1920px
-
-.space-ads-vertical
-    padding 2rem
-    margin 2rem auto
-
 /* Contenedor de página */
 .wrapper-content
     width 90%
@@ -28,9 +18,10 @@ aside
     padding 2rem
     h4
         font italic 300 2.4rem Ubuntu
-        padding 1rem 1rem 1rem 1rem
+        padding 1rem
+    div
+        margin-bottom 1rem
     .info-post
-        padding-bottom 1rem
         p
             font 300 2rem/1.4 Ubuntu
             padding 1rem 1rem 1rem 1rem
@@ -39,16 +30,7 @@ aside
             font-weight 700
         span
             font-style italic
-
-.post-list-container
-    display flex
-    flex-flow column wrap
-    gap 1.2rem 0
-    a
-        font 500 1.8rem/1.2 Ubuntu
-        color rgb(103, 61, 230)
-        &:hover
-            color rgb(8, 12, 63)
+            hyphens none
 
 /* Post solo*/
 .wrapper-post
@@ -90,7 +72,11 @@ aside
         max-width 1024px
     figcaption
         padding-top 1rem
-        font italic 300 2rem/1.2 Ubuntu
+        font 500 2rem/1.2 Ubuntu
+    a
+        display inline
+        color rgb(103, 61, 230)
+
     /* Container Iframe */
     .wrapper-iframe
         margin-top 2rem
@@ -140,6 +126,10 @@ aside
         padding 1.4rem
         h4
             font italic 300 1.8rem Ubuntu
+        .info-post
+            p
+                font 300 1.4rem/1.4 Ubuntu
+                padding 0.5rem
     
     /* Espacio de publicidad */
     .space-ads-horizontal, .space-ads-vertical
@@ -197,7 +187,17 @@ aside
         li
             font 300 1.2rem/1.4 Ubuntu
 
+@media screen and (max-width:1366px)
+    aside
+        .info-post
+            p
+                font 300 1rem/1.4 Ubuntu
+
 @media screen and (max-width:1024px)
+    /* Contenedor de página */
+    .wrapper-content
+        flex-direction column
+
     /* Cabecera de página */
     .header-page
         padding-top 3rem
@@ -210,7 +210,7 @@ aside
     
     /* Informacion y Publicidad */
     aside
-        display none
+        width 100%
 
     /* Post solo*/
     .wrapper-post

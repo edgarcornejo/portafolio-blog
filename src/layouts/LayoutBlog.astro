@@ -1,9 +1,11 @@
 ---
 import "../styles/reset.css";
 import "../styles/layoutblog.css";
-import { formatBlogPosts, formatDate, slugify } from "../js/utils";
+import { formatDate, slugify } from "../js/utils";
 import LogoView from "../components/LogoView.astro";
 import MainMenuView from "../components/MainMenuView.astro";
+import AdsArea from "../components/AdsArea.astro";
+import CategoryCloud from "../components/CategoryCloud.astro";
 import ListPosts from "../components/ListPosts.astro";
 import Footer from "../components/Footer.astro";
 
@@ -29,9 +31,6 @@ const {
     date = frontmatter.date,
     url = window.location,
 } = Astro.props;
-
-const allPosts = await Astro.glob("../pages/publicaciones/*.md");
-const formattedPosts = formatBlogPosts(allPosts);
 ---
 
 <!doctype html>
@@ -144,7 +143,7 @@ const formattedPosts = formatBlogPosts(allPosts);
         <LogoView />
         <MainMenuView />
 
-        <div class="space-ads-horizontal"></div>
+        <AdsArea />
 
         <section class="wrapper-content">
             <main>
@@ -169,32 +168,29 @@ const formattedPosts = formatBlogPosts(allPosts);
                         >
                     </p>
                     <p>
-                        Fecha de Publicación: <time datetime={date}
+                        Fecha de publicación: <time datetime={date}
                             >{formatDate(date)}</time
                         >
                     </p>
                     <p>
-                        Tags: {keywords.map((tag: any) => <span>{tag}, </span>)}
+                        Etiquetas: {
+                            keywords.map((tag: any) => <span>{tag}, </span>)
+                        }
                     </p>
                 </div>
 
                 <h4>Publicidad</h4>
-                <div class="space-ads-vertical"></div>
+                <AdsArea />
+
+                <h4>Categorias</h4>
+                <CategoryCloud />
+
                 <h4>Publicaciones</h4>
-                <p class="post-list-container">
-                    {
-                        formattedPosts.map((apost: any, index: any) => {
-                            return index < 10 ? (
-                                <ListPosts key={index} post={apost} />
-                            ) : null;
-                        })
-                    }
-                </p>
+                <ListPosts />
             </aside>
         </section>
 
-        <div class="space-ads-horizontal"></div>
-
+        <AdsArea />
         <Footer />
     </body>
 </html>

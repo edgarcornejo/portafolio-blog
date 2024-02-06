@@ -1,0 +1,68 @@
+---
+import { formatBlogPosts, slugify } from "../js/utils";
+
+const allPosts = await Astro.glob("../pages/publicaciones/*.md");
+const formattedPost = formatBlogPosts(allPosts);
+const allCategories = formattedPost
+    .map((cat) => cat.frontmatter.category.toLowerCase())
+    .flat();
+
+const processedCats = allCategories.reduce((acc, category) => {
+    const value = acc[category] || 0;
+
+    return {
+        ...acc,
+        [category]: value + 1,
+    };
+}, {});
+
+const { showCount } = Astro.props;
+---
+
+<div>
+    {
+        Object.entries(processedCats).map(([key, val]) => (
+            <a href={`/category/${slugify(key)}/`} title={key}>
+                {key} {showCount && `${val}`}
+            </a>
+        ))
+    }
+</div>
+
+<style lang="stylus">
+    /* Categorias del Blog */
+    div
+        width 100%
+        display flex
+        flex-wrap wrap
+        justify-content flex-start
+        align-items center
+        gap 1rem
+
+    a
+        background rgb(103, 61, 230)
+        color #FFF
+        text-transform uppercase
+        padding 1.4rem
+        border-radius 6px
+        transition all .1s ease-in-out
+        font 500 1.8rem Ubuntu
+        &:hover
+            background rgb(8, 12, 63)
+
+    b
+        font 700 2.4rem Ubuntu
+
+    /* Responsive Design */
+    @media screen and (max-width:2560px)
+        a
+            padding 1.2rem
+            font 500 1.4rem Ubuntu
+
+    @media screen and (max-width:1920px)
+        a
+            border-radius 4px
+            padding .8rem
+            font 500 1rem Ubuntu
+
+</style>

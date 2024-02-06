@@ -1,14 +1,4 @@
 /* Layout Blog */
-/* Espacio de publicidad */
-.space-ads-horizontal {
-  padding: 2rem;
-  margin: 4rem auto;
-  max-width: 1920px;
-}
-.space-ads-vertical {
-  padding: 2rem;
-  margin: 2rem auto;
-}
 /* Contenedor de página */
 .wrapper-content {
   width: 90%;
@@ -29,10 +19,10 @@ aside {
 }
 aside h4 {
   font: italic 300 2.4rem Ubuntu;
-  padding: 1rem 1rem 1rem 1rem;
+  padding: 1rem;
 }
-aside .info-post {
-  padding-bottom: 1rem;
+aside div {
+  margin-bottom: 1rem;
 }
 aside .info-post p {
   font: 300 2rem/1.4 Ubuntu;
@@ -45,18 +35,7 @@ aside .info-post time {
 }
 aside .info-post span {
   font-style: italic;
-}
-.post-list-container {
-  display: flex;
-  flex-flow: column wrap;
-  gap: 1.2rem 0;
-}
-.post-list-container a {
-  font: 500 1.8rem/1.2 Ubuntu;
-  color: #673de6;
-}
-.post-list-container a:hover {
-  color: #080c3f;
+  hyphens: none;
 }
 /* Post solo*/
 .wrapper-post {
@@ -108,7 +87,11 @@ aside .info-post span {
 }
 .wrapper-post figcaption {
   padding-top: 1rem;
-  font: italic 300 2rem/1.2 Ubuntu;
+  font: 500 2rem/1.2 Ubuntu;
+}
+.wrapper-post a {
+  display: inline;
+  color: #673de6;
 }
 .wrapper-post .wrapper-iframe {
   margin-top: 2rem;
@@ -156,6 +139,10 @@ aside .info-post span {
   }
   aside h4 {
     font: italic 300 1.8rem Ubuntu;
+  }
+  aside .info-post p {
+    font: 300 1.4rem/1.4 Ubuntu;
+    padding: 0.5rem;
   }
   .space-ads-horizontal,
   .space-ads-vertical {
@@ -218,7 +205,15 @@ aside .info-post span {
     font: 300 1.2rem/1.4 Ubuntu;
   }
 }
+@media screen and (max-width: 1366px) {
+  aside .info-post p {
+    font: 300 1rem/1.4 Ubuntu;
+  }
+}
 @media screen and (max-width: 1024px) {
+  .wrapper-content {
+    flex-direction: column;
+  }
   .header-page {
     padding-top: 3rem;
 /* Titulo de página H1 */
@@ -231,7 +226,7 @@ aside .info-post span {
     font: 300 1.6rem/1 Ubuntu;
   }
   aside {
-    display: none;
+    width: 100%;
   }
   .wrapper-post img {
     width: 50%;

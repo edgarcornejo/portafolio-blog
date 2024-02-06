@@ -5,7 +5,7 @@ import menuItems from "../data/menuItemsData";
 <input type="checkbox" id="open" class="menu-checkbox" />
 <nav>
 	<label for="open" class="menu-open"></label>
-	<ul>
+	<menu>
 		{
 			menuItems.map((item) => (
 				<li>
@@ -15,7 +15,7 @@ import menuItems from "../data/menuItemsData";
 				</li>
 			))
 		}
-	</ul>
+	</menu>
 </nav>
 
 <script>
@@ -34,7 +34,7 @@ import menuItems from "../data/menuItemsData";
 		margin 0 auto
 		animation callme 1s ease-in-out both
 
-	ul
+	menu
 		width 100%
 		display flex
 		justify-content flex-end
@@ -87,7 +87,7 @@ import menuItems from "../data/menuItemsData";
 			letter-spacing 1pt
 
 	@media screen and (max-width:1024px)
-		ul
+		menu
 			justify-content center
 			align-items center
 			
@@ -101,7 +101,7 @@ import menuItems from "../data/menuItemsData";
 			display flex
 			justify-content center
 
-		ul
+		menu
 			display none
 			height auto
 
@@ -128,6 +128,6 @@ import menuItems from "../data/menuItemsData";
 			.menu-open
 				background url(/img/icon-close.svg) no-repeat center !important
 				background-size 60% !important
-			ul
+			menu
 				display block
 </style>

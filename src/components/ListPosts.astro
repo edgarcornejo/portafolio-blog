@@ -1,20 +1,62 @@
 ---
-import { formatDate } from "../js/utils";
+import { formatBlogPosts } from "../js/utils";
 
-const { post } = Astro.props;
+const allPosts = await Astro.glob("../pages/publicaciones/*.md");
+const formattedPosts = formatBlogPosts(allPosts);
 ---
 
-<a href={post.url} title={post.frontmatter.title} class="anin-rapido"
-	>{post.frontmatter.title}</a
->
-<time class="ocultar-time" datetime={formatDate(post.frontmatter.date)}
-	>Publicado el: {formatDate(post.frontmatter.date)}</time
->
+<div>
+	{
+		formattedPosts.map((post: any, index: any) => {
+			return index < 8 ? (
+				<a
+					href={post.url}
+					title={post.frontmatter.title}
+					class="anin-rapido"
+				>
+					{post.frontmatter.title}
+				</a>
+			) : null;
+		})
+	}
+	<a href="publicaciones/" class="anin-rapido" title="Ver más">Ver más</a>
+</div>
 
 <style lang="stylus">
-    /* Ocultar time */
-	.ocultar-time
-		display none
-		font-size 0
-		visibility hidden
+	/* Contenedor de Publicaciones */
+	div
+		width 100%
+		display flex
+		flex-wrap wrap
+		justify-content flex-start
+		align-items center
+		gap 1rem
+
+	a
+		background rgb(103, 61, 230)
+		color #FFF
+		text-transform uppercase
+		padding 1.4rem
+		border-radius 6px
+		transition all .1s ease-in-out
+		font 500 1.8rem Ubuntu
+		text-align center
+		&:hover
+			background rgb(8, 12, 63)
+		&:last-child
+			background rgb(230, 61, 103)
+			&:hover
+				background rgb(8, 12, 63)
+	
+	/* Responsive Design */
+	@media screen and (max-width:2560px)
+		a
+			padding 1.2rem
+			font 500 1.4rem Ubuntu
+
+	@media screen and (max-width:1920px)
+		a
+			border-radius 4px
+			padding .8rem
+			font 500 1rem Ubuntu
 </style>
