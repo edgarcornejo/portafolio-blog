@@ -1,0 +1,119 @@
+<header id="main-header">
+  <div id="logo"></div>
+  <hgroup>
+    <h1>
+      <a
+        class="name-title"
+        href="/designer/"
+        title="Diseñador Gráfico Edgar Cornejo"
+        >Diseñador Gráfico Edgar Cornejo</a
+      >
+    </h1>
+  </hgroup>
+</header>
+
+<script>
+  import "../../js/sensitive.js";
+</script>
+
+<style lang="stylus">
+  /* Colores */
+  hardWhite = #FFFFFF
+  greenLiquid = #A0EAEB
+  greenPastel = #6AC8C7
+  greenMate = #0FAAA7
+  greenPure = #0D8796
+  hardGreen = #054d56
+
+  /* Cebecera principal */
+  #main-header
+    width 100%
+    height auto
+    display flex
+    align-items center
+    flex-wrap wrap
+    position fixed
+    border-top 8px solid greenMate
+    hgroup
+      padding-left 3vw
+    h1
+      font-size 1.2vw
+      font-weight 800
+      letter-spacing .5pt
+      text-transform uppercase
+      animation appear .5s ease-in both
+      animation-delay 1s
+    a
+      color greenPure
+
+  /* Animacion */
+  .name-title
+    transition all 0.2s ease-out
+    color greenPure
+    &.scroll
+      color transparent !important
+
+  /* Logotipo */
+  #logo
+    background url(../designer/edgarcornejo.svg) no-repeat 50% 45% greenMate
+    background-size 40%
+    height 8vh
+    max-height 180px
+    width 12vw
+    max-width 500px
+    animation ltor 1s ease-in-out
+    position relative
+    z-index 1
+    &:after
+      display block
+      content ''
+      position relative
+      left 99.9%
+      width 0
+      height 0
+      border-top 8vh solid greenMate
+      border-right 2vw solid transparent
+
+  /* Responsive Design */
+  @media screen and (max-width:1366px)
+    #main-header
+      border-top 5px solid greenMate
+      h1
+        font-size 1.2rem
+
+    #logo
+      background url(../designer/edgarcornejo.svg) no-repeat 50% 35% greenMate
+      background-size 30%
+      min-height 60px
+      max-height 60px
+      max-width 180px
+      &:after
+        border-top 60px solid greenMate
+
+  @media screen and (max-width:768px)
+    #main-header
+      width 100%
+      position static
+      flex-direction column
+      hgroup
+        padding-left 0
+        text-align center
+      h1
+        padding 1rem 0 1rem 0
+    
+    .name-title
+      &.scroll
+        color greenPure !important
+    
+    #logo
+      background url(../designer/edgarcornejo.svg) no-repeat 50% 45% greenMate
+      background-size 12%
+      width 100%
+      min-height 100px
+      max-width 100%
+      animation ltor 1s ease-in-out
+      position static
+      &:after
+        display none
+
+</style>

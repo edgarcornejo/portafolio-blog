@@ -1,5 +1,13 @@
 /* Variables */
 /* Colores */
+/* Estilos de Body */
+body {
+  background: #fff;
+  font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+  color: #080c3f;
+  background: linear-gradient(90deg, #fff 20px, transparent 1%) center, linear-gradient(#fff 20px, transparent 1%) center, #bfeee7;
+  background-size: 22px 22px;
+}
 /* Contenedor principal de página */
 .main-content {
   width: 90%;
@@ -150,6 +158,10 @@ article article a {
 .navigator a:hover {
   color: #080c3f;
 }
+/* Animaciones */
+/* Logotipo principal */
+/* Menu y callme */
+/* H1 y H2 */
 /* Responsive Design */
 @media screen and (max-width: 2560px) {
   .navigator li {
@@ -307,5 +319,157 @@ article article a {
 @media screen and (max-width: 480px) {
   .wrapper-ul div {
     max-width: 100%;
+  }
+}
+@-moz-keyframes logo {
+  from {
+    opacity: 0;
+    left: -100px;
+  }
+  to {
+    opacity: 1;
+    left: 80px;
+  }
+}
+@-webkit-keyframes logo {
+  from {
+    opacity: 0;
+    left: -100px;
+  }
+  to {
+    opacity: 1;
+    left: 80px;
+  }
+}
+@-o-keyframes logo {
+  from {
+    opacity: 0;
+    left: -100px;
+  }
+  to {
+    opacity: 1;
+    left: 80px;
+  }
+}
+@keyframes logo {
+  from {
+    opacity: 0;
+    left: -100px;
+  }
+  to {
+    opacity: 1;
+    left: 80px;
+  }
+}
+@-moz-keyframes callme {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes callme {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-o-keyframes callme {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes callme {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes titulo1 {
+  from {
+    opacity: 0;
+    bottom: 100px;
+  }
+  to {
+    opacity: 1;
+    bottom: 0;
+  }
+}
+@-webkit-keyframes titulo1 {
+  from {
+    opacity: 0;
+    bottom: 100px;
+  }
+  to {
+    opacity: 1;
+    bottom: 0;
+  }
+}
+@-o-keyframes titulo1 {
+  from {
+    opacity: 0;
+    bottom: 100px;
+  }
+  to {
+    opacity: 1;
+    bottom: 0;
+  }
+}
+@keyframes titulo1 {
+  from {
+    opacity: 0;
+    bottom: 100px;
+  }
+  to {
+    opacity: 1;
+    bottom: 0;
+  }
+}
+@-moz-keyframes titulo2 {
+  from {
+    opacity: 0;
+    bottom: 50px;
+  }
+  to {
+    opacity: 1;
+    bottom: 0;
+  }
+}
+@-webkit-keyframes titulo2 {
+  from {
+    opacity: 0;
+    bottom: 50px;
+  }
+  to {
+    opacity: 1;
+    bottom: 0;
+  }
+}
+@-o-keyframes titulo2 {
+  from {
+    opacity: 0;
+    bottom: 50px;
+  }
+  to {
+    opacity: 1;
+    bottom: 0;
+  }
+}
+@keyframes titulo2 {
+  from {
+    opacity: 0;
+    bottom: 50px;
+  }
+  to {
+    opacity: 1;
+    bottom: 0;
   }
 }

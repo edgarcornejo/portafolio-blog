@@ -1,0 +1,197 @@
+/* Colores */
+hardWhite = #FFFFFF
+greenLiquid = #A0EAEB
+greenPastel = #6AC8C7
+greenMate = #0FAAA7
+greenPure = #0D8796
+hardGreen = #054d56
+
+/* Body */
+body
+  font-size 16px
+  width 100%
+  color hardWhite
+  font-size 16px
+  font-family 'Open Sans',Helvetica,Arial,sans-serif
+  background-color hardWhite
+
+/* Seleccion */
+::selection
+  background greenLiquid
+  text-shadow none
+
+/*
+ * A better looking default horizontal rule
+ */
+hr
+  display block
+  height 1px
+  border 0
+  border-top 1px solid hardGreen
+  margin 1em 0
+  padding 0
+
+/* Enlaces */
+a
+  color greenPure
+  text-decoration none
+  &:hover
+    color hardGreen
+
+/* Animaciones */
+/* Logotipo */
+@keyframes ltor
+  0%
+    left -230px
+  100%
+    left 0
+
+/* Titulo H1 */
+@keyframes appear
+  0%
+    opacity 0
+  100%
+    opacity 100%
+
+/* Botonera social footer */
+@keyframes rtol
+  0%
+    right 0
+  100%
+    right -650px
+
+/* Contenedor de articulos */
+.wrapper-article
+  min-height 100vh
+  padding 20vh 0 20vh 0
+  /* Estilos para wrapper impares */
+  &:nth-child(odd)
+    background greenPure
+    color hardWhite
+    background-size 32px 32px
+    background-image repeating-linear-gradient(to right, rgba(5, 77, 86, .5), rgba(5, 77, 86, .5) 2px, greenPure 2px, greenPure)
+    .wrap-txt
+      opacity 0.8
+  /* Estilos para wrapper pares */
+  &:nth-child(even)
+    background-size 32px 32px
+    background-image repeating-linear-gradient(to right, rgba(160, 234, 235, .5), rgba(160, 234, 235, .5) 2px, hardWhite 2px, hardWhite)
+    figure
+      justify-content flex-end
+      border-bottom dashed 2px greenMate
+    header
+      color hardGreen
+      justify-content flex-end
+    .wrap-txt
+      align-items flex-end
+      color greenPure
+      text-align right
+      border-right solid 6px greenPure
+      padding-right 2rem
+  
+  /* Ariticulos */
+  article
+    width 90%
+    max-width 1920px
+    margin 0 auto
+    display flex
+    flex-direction column
+    gap 1rem 0
+
+  /* Imagen de Articulo */  
+  figure
+    margin 0 auto
+    width 100%
+    display flex
+    justify-content flex-start
+    border-bottom dashed 2px hardWhite
+    img
+      max-width 40%
+    figcaption
+      color transparent
+      font-size 0
+      display none
+
+  /* Header de article H2*/
+  header
+    width 100%
+    margin 0 auto
+    display flex
+    justify-content flex-start
+    padding-top 6rem
+    h2
+      font-family 'DM Serif Display'
+      font-size max(6vw, 6vw)
+      font-weight 800
+      line-height 90%
+      letter-spacing 3pt
+
+  /* Contenedor de texto de article */
+  .wrap-txt
+    width 100%
+    margin 2rem auto
+    display flex
+    justify-content flex-start
+    flex-direction column
+    gap 1rem
+    border-left solid 6px hardWhite
+    padding-left 2rem
+    p
+      font-size 3em
+      font-weight 500
+      line-height 140%
+      font-style italic
+      hyphens none
+    strong
+      font-weight 600
+
+/* Lista de servicios */
+#list-services
+  display flex
+  justify-content center
+  flex-wrap wrap
+  gap 2rem 2rem
+  padding-top 2rem
+
+.item-services
+  min-width 180px
+  div
+    margin 0 auto
+    width 100px
+    height 100px
+    background-image url(../designer/iconos-servicios.svg)
+    background-repeat no-repeat
+    border-radius 25%
+    transition all 0.1s ease-out
+    &:hover
+      transform scale(1.1)
+  &:nth-of-type(2) div
+    background-position center -124.42px
+  &:nth-of-type(3) div
+    background-position center -249px
+  &:nth-of-type(4) div
+    background-position center -373px
+  &:nth-of-type(5) div
+    background-position center -497px
+  &:nth-of-type(6) div
+    background-position center -622px
+  &:nth-of-type(7) div
+    background-position center -747px
+  &:nth-of-type(8) div
+    background-position center -871px
+  &:nth-of-type(9) div
+    background-position center -995px
+  &:nth-of-type(10) div
+    background-position center -1119px
+  /* Titulo del serivicio */
+  h3
+    font-size 200%
+    font-weight 800
+    color greenPastel
+    line-height 1.4
+    padding-top 1rem
+    text-align center
+    text-transform uppercase
+
+/* Responsive Design 
+@media screen and (max-width:1440px)*/

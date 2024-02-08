@@ -1,0 +1,252 @@
+<input type="checkbox" id="menu" class="input-menu" />
+<footer id="main-footer">
+  <div id="logo-footer"></div>
+
+  <nav id="nav-footer">
+    <label for="menu" class="open-menu"></label>
+    <ul>
+      <li>
+        <a href="/designer/recomendacion" title="Recomendaciones"
+          >Recomendaciones</a
+        >
+      </li>
+      <li>
+        <a href="/publicaciones/" title="Blog Edgar">Blog Edgar</a>
+      </li>
+    </ul>
+  </nav>
+
+  <div id="social-footer">
+    <a
+      href="https://www.behance.net/edgarcornejo"
+      title="Behance"
+      target="_blank">Behance</a
+    >
+    <a
+      href="https://www.linkedin.com/in/edgar-cornejo-cahuana-97415048/"
+      title="LinkedIn"
+      target="_blank">LinkedIn</a
+    >
+    <a
+      href="https://instagram.com/devcornejo/"
+      title="Instagram"
+      target="_blank">Instagram</a
+    >
+    <a
+      href="https://www.youtube.com/user/devcornejo"
+      title="YouTube"
+      target="_blank">YouTube</a
+    >
+    <a
+      href="https://www.facebook.com/edgarcornejopage/"
+      title="Facebook"
+      target="_blank">Facebook</a
+    >
+    <a href="https://twitter.com/devcornejo" title="Twitter" target="_blank"
+      >Twitter</a
+    >
+  </div>
+</footer>
+
+<style lang="stylus">
+  /* Colores */
+  hardWhite = #FFFFFF
+  greenLiquid = #A0EAEB
+  greenPastel = #6AC8C7
+  greenMate = #0FAAA7
+  greenPure = #0D8796
+  hardGreen = #054d56
+
+  /* Footer */
+  #main-footer
+    width 100%
+    height auto
+    display flex
+    align-items center
+    flex-wrap wrap
+    border-bottom 8px solid greenMate
+
+  #logo-footer
+    background url(../designer/edgarcornejo.svg) no-repeat 50% 55% greenMate
+    background-size 40%
+    height 8vh
+    max-height 180px
+    width 12vw
+    max-width 500px
+    &:after
+      display block
+      content ''
+      position relative
+      left 99.9%
+      width 0
+      height 0
+      border-bottom 8vh solid greenMate
+      border-right 2vw solid transparent
+
+  /* Nav Footer */
+  #nav-footer
+    padding-left 2vw
+    display flex
+    align-items center
+    .open-menu
+      user-select none
+      cursor pointer
+      width 48px
+      height 48px
+      display block
+      background url("../designer/icon-hamburger.svg") no-repeat center
+      background-size 100%
+    ul
+      display none
+      padding-left 1vw
+    li
+      text-transform uppercase
+    a
+      font-size 2rem
+      font-weight 600
+      color greenPure
+      transition all 0.2s ease-out
+      &:hover
+        color hardGreen
+
+  .input-menu
+    display none
+    &:checked ~ #main-footer
+      .open-menu
+        background url("../designer/icon-close.svg") no-repeat center !important
+        background-size 100% !important
+      ul
+        display flex
+        flex-direction column
+        gap 1.4rem
+      a
+        display block
+
+  /* Botonera Social Footer */
+  #social-footer
+    background greenMate
+    position fixed
+    bottom 0
+    display flex
+    align-items center
+    justify-content space-around
+    flex-wrap wrap
+    animation rtol 1s ease-out both
+    animation-delay 2s
+    height 8vh
+    max-height 180px
+    width 20vw
+    gap 1rem
+    &:hover
+      right 0 !important
+    &:before
+      display block
+      content ''
+      position relative
+      width 0
+      left -8.5%
+      height 0
+      border-bottom 8vh solid greenMate
+      border-left 2vh solid transparent
+    a
+      background url(../designer/icon-social.svg) no-repeat greenPastel
+      background-size cover
+      width 48px
+      height 48px
+      border-radius 3px
+      text-indent 100%
+      white-space nowrap
+      overflow hidden
+      transition all 0.2s ease-out
+      transform scale(1.4)
+      &:hover
+        background-color greenPure
+      &:nth-child(1)
+        background-position 0 0
+      &:nth-child(2)
+        background-position -48px 0
+      &:nth-child(3)
+        background-position -96px 0
+      &:nth-child(4)
+        background-position -144px 0
+      &:nth-child(5)
+        background-position -195px 0
+      &:nth-child(6)
+        background-position -240px 0
+
+  /* Responsive Design */
+  @media screen and (max-width:1366px)
+    #main-footer
+      border-bottom 5px solid greenMate
+    
+    #logo-footer
+      background url(../designer/edgarcornejo.svg) no-repeat 50% 60% greenMate
+      background-size 30%
+      min-height 60px
+      max-height 60px
+      max-width 180px
+      &:after
+        border-bottom 60px solid greenMate
+    
+    #social-footer
+      height 60px
+      right -340px
+      gap 8px
+      &:before
+        border-bottom 60px solid greenMate
+      a
+        transform scale(70%)
+
+    @keyframes rtol
+      0%
+        right 0
+      100%
+        right -340px
+    
+  @media screen and (max-width:1024px)
+    #social-footer
+      right 0
+      animation none
+
+  @media screen and (max-width:940px)
+    #logo-footer
+      min-height 80px
+      max-height auto
+      width 100%
+      max-width 100%
+      margin 0 auto
+      background-size 10%
+      &:after
+        display none
+    
+    #nav-footer
+      padding-left 0
+      width 100%
+      margin 0 auto
+      padding-top 1rem
+      padding-bottom 2rem
+      ul
+        padding-top 1rem
+        display block
+        margin 0 auto
+        width 100%
+        padding-left 0
+        text-align center
+        li
+          line-height 3rem
+    
+    .open-menu
+      display none !important
+
+    #social-footer
+      position static
+      justify-content space-around
+      width 100%
+      height auto
+      padding 2rem 0 2rem 0
+      &:before
+        display none
+      a
+        transform scale(100%)
+
+</style>
