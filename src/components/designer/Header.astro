@@ -1,15 +1,31 @@
-<header id="main-header">
+<header>
   <div id="logo"></div>
-  <hgroup>
-    <h1>
-      <a
-        class="name-title"
-        href="/designer/"
-        title="Diseñador Gráfico Edgar Cornejo"
-        >Diseñador Gráfico Edgar Cornejo</a
-      >
-    </h1>
-  </hgroup>
+
+  <a
+    class="name-title"
+    href="/designer/"
+    title="Diseñador Gráfico Edgar Cornejo"
+    ><h1>Diseñador Gráfico Edgar Cornejo</h1></a
+  >
+
+  <input type="checkbox" id="menu" class="input-menu" value="menu" />
+  <nav>
+    <label for="menu" class="open-menu material-symbols-sharp">menu</label>
+    <label for="menu" class="closed-menu material-symbols-sharp">close</label>
+    <menu>
+      <li>
+        <a href="/designer/" title="Inicio">Inicio</a>
+      </li>
+      <li>
+        <a href="/designer/recomendacion" title="Recomendaciones"
+          >Recomendaciones</a
+        >
+      </li>
+      <li>
+        <a href="/publicaciones/" title="Blog Edgar">Blog Edgar</a>
+      </li>
+    </menu>
+  </nav>
 </header>
 
 <script>
@@ -26,44 +42,25 @@
   hardGreen = #054d56
 
   /* Cebecera principal */
-  #main-header
+  header
     width 100%
-    height auto
     display flex
     align-items center
+    justify-content space-between
     flex-wrap wrap
     position fixed
-    border-top 8px solid greenMate
-    hgroup
-      padding-left 3vw
-    h1
-      font-size 1.2vw
-      font-weight 800
-      letter-spacing .5pt
-      text-transform uppercase
-      animation appear .5s ease-in both
-      animation-delay 1s
-    a
-      color greenPure
-
-  /* Animacion */
-  .name-title
-    transition all 0.2s ease-out
-    color greenPure
-    &.scroll
-      color transparent !important
-
+    border-top 1vh solid greenMate
+    z-index 1
+  
   /* Logotipo */
   #logo
-    background url(../designer/edgarcornejo.svg) no-repeat 50% 45% greenMate
+    background url(../designer/edgarcornejo.svg) no-repeat 50% 44% greenMate
     background-size 40%
     height 8vh
-    max-height 180px
     width 12vw
-    max-width 500px
-    animation ltor 1s ease-in-out
+    animation lefttoright 1s ease-in
     position relative
-    z-index 1
+    top -1vh
     &:after
       display block
       content ''
@@ -73,47 +70,177 @@
       height 0
       border-top 8vh solid greenMate
       border-right 2vw solid transparent
+  
+  /* Logotipo */
+  @keyframes lefttoright
+    0%
+      left -230px
+    100%
+      left 0
+  
+  /* Título de página */
+  .name-title
+    flex-grow 2
 
-  /* Responsive Design */
-  @media screen and (max-width:1366px)
-    #main-header
-      border-top 5px solid greenMate
-      h1
-        font-size 1.2rem
+  h1
+    padding-left 3vw
+    animation aparecer .5s ease-in both
+    font-size 1.2vw
+    font-weight 700
+    letter-spacing .5pt
+    text-transform uppercase
+    animation-delay 1s
+  
+  /* Animacion de parecer H1 */
+  @keyframes aparecer
+    0%
+      opacity 0
+    100%
+      opacity 100%
 
+  /* Animacion cuando bajamos H1 */
+  .name-title
+    transition all 0.2s ease-out
+    color greenPure
+    &.scroll
+      color transparent !important
+
+  /* Nav Header */
+  nav
+    display flex
+    align-items center
+    padding-right 3vw
+    .open-menu
+      user-select none
+      cursor pointer
+      display block
+      color hardGreen
+      font-size 5rem
+      background rgba(255, 255, 255, 0.4)
+      border-radius 5px
+    .closed-menu
+      display none
+      color hardGreen
+      font-size 5rem
+      background rgba(255, 255, 255, 0.4)
+    menu
+      display none
+      padding-left 2rem
+    a
+      font-size 3rem
+      font-weight 700
+      color hardGreen
+      transition all 0.2s ease-out
+      padding 2rem
+      border-bottom dashed 2px greenMate
+      &:hover
+        background greenLiquid
+        border-radius 5px
+
+  .input-menu
+    display none
+    &:checked ~ nav
+      .open-menu
+        display none
+      .closed-menu
+        user-select none
+        cursor pointer
+        display block
+      menu
+        display flex
+        flex-direction column
+        gap 1rem
+        position absolute
+        top 0
+        height 100vh
+        right 6vw
+        text-align right
+        background hardWhite
+        padding 2rem
+
+  /* Responsive Design */ 
+  @media screen and (max-width:2560px)
     #logo
-      background url(../designer/edgarcornejo.svg) no-repeat 50% 35% greenMate
-      background-size 30%
-      min-height 60px
-      max-height 60px
-      max-width 180px
       &:after
-        border-top 60px solid greenMate
+        left 99.7%
+    
+    /* Título de página */
+    h1
+      letter-spacing -1pt
+    
+    /* Nav Header */
+    nav
+      .open-menu,.closed-menu
+        font-size 4rem
+      a
+        font-size 2em
+        padding 1rem
 
+  @media screen and (max-width:1920px)
+    /* Nav Header */
+    nav
+      .open-menu,.closed-menu
+        font-size 3rem
+      a
+        font-size 1em
+        padding .5rem
+
+  @media screen and (max-width:1366px)
+    /* Título de página */
+    h1
+      font-size 1.4vw
+      letter-spacing normal
+
+  @media screen and (max-width:1366px)
+    .input-menu
+      &:checked ~ nav
+        menu
+          right 8vw
+  
   @media screen and (max-width:768px)
-    #main-header
-      width 100%
+    /* Cebecera principal */
+    header
       position static
-      flex-direction column
-      hgroup
-        padding-left 0
-        text-align center
-      h1
-        padding 1rem 0 1rem 0
-    
-    .name-title
-      &.scroll
-        color greenPure !important
-    
+      justify-content center
+      border 0
+
+    /* Logotipo */
     #logo
-      background url(../designer/edgarcornejo.svg) no-repeat 50% 45% greenMate
-      background-size 12%
-      width 100%
-      min-height 100px
-      max-width 100%
-      animation ltor 1s ease-in-out
+      background-size 10%
+      height 9vh
       position static
+      width 100%
       &:after
         display none
 
+    /* Título de página */
+    .name-title
+      flex-grow 1
+
+    h1
+      padding 1.6rem 0 1.6rem 0
+      font-size 4vw
+      text-align center
+
+    /* Nav Header */
+    nav
+      width 100%
+      justify-content center
+      padding-right 0
+      flex-direction column
+      menu
+        padding-left 0
+        a
+          font-size 3vw
+
+    .input-menu
+      &:checked ~ nav
+        menu
+          position static
+          height auto
+          text-align center
+          height auto
+          right 0
+          background transparent
+          padding 1rem 0 1rem 0
 </style>

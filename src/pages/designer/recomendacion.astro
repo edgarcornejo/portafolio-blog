@@ -1,155 +1,120 @@
 ---
 import LayoutDesigner from "../../layouts/LayoutDesigner.astro";
+import "../../styles/layoutdesigner.css";
 ---
 
 <LayoutDesigner
   title="Recomendación Diseñador Gráfico Edgar Cornejo designer graphic diseño gráfico freelance - Arequipa, Perú"
   url="/designer/recomendacion"
 >
-  <section id="sub-contain">
+  <section class="wrapper-article">
     <article>
-      <div class="brave"></div>
+      <figure>
+        <img src="/designer/brave-logotype-dark.svg" alt="Brave" />
+        <figcaption>Brave</figcaption>
+      </figure>
+
       <header>
         <h2>Brave</h2>
-        <a href="https://brave.com/" title="Sitio web de Brave" target="_blank"
-          >Sitio web de Brave</a
-        >
       </header>
 
-      <blockquote cite="https://brave.com/">
-        Much more than a browser, Brave is a new way of thinking about how the
-        web works. Brave is open source and built by a team of privacy focused,
-        performance oriented pioneers of the web.
-      </blockquote>
+      <div class="wrap-txt">
+        <blockquote cite="https://brave.com/">
+          Much more than a browser, Brave is a new way of thinking about how the
+          web works. Brave is open source and built by a team of privacy
+          focused, performance oriented pioneers of the web.
+        </blockquote>
+        <p>
+          <a
+            href="https://brave.com/"
+            title="Sitio web de Brave"
+            target="_blank">Sitio web de Brave</a
+          >
+        </p>
+      </div>
     </article>
+  </section>
 
+  <section class="wrapper-article">
     <article>
+      <figure>
+        <img src="/designer/mamp.png" alt="MAMP" />
+        <figcaption>MAMP</figcaption>
+      </figure>
+
       <header>
         <h2>MAMP</h2>
-        <a
-          href="https://www.mamp.info/en/"
-          title="Sitio web de MAMP"
-          target="_blank">Sitio web de MAMP</a
-        >
       </header>
 
-      <blockquote cite="https://www.mamp.info/en/">
-        MAMP is a free, local server environment that can be installed under
-        macOS and Windows with just a few clicks. MAMP provides them with all
-        the tools they need to run WordPress on their desktop PC for testing or
-        development purposes, for example. It doesn't matter if you prefer
-        Apache or Nginx or if you want to work with PHP, Python, Perl or Ruby.
-      </blockquote>
-      <div class="mamp"></div>
+      <div class="wrap-txt">
+        <blockquote cite="https://www.mamp.info/en/">
+          MAMP is a free, local server environment that can be installed under
+          macOS and Windows with just a few clicks. MAMP provides them with all
+          the tools they need to run WordPress on their desktop PC for testing
+          or development purposes, for example. It doesn't matter if you prefer
+          Apache or Nginx or if you want to work with PHP, Python, Perl or Ruby.
+        </blockquote>
+        <p>
+          <a
+            href="https://www.mamp.info/en/"
+            title="Sitio web de MAMP"
+            target="_blank">Sitio web de MAMP</a
+          >
+        </p>
+      </div>
     </article>
+  </section>
 
+  <section class="wrapper-article">
     <article>
-      <div class="prepros"></div>
+      <figure>
+        <img src="/designer/prepros.png" alt="Prepros" />
+        <figcaption>Prepros</figcaption>
+      </figure>
+
       <header>
         <h2>Prepros</h2>
-        <a
-          href="https://prepros.io/"
-          title="Sitio web de Prepros"
-          target="_blank">Sitio web de Prepros</a
-        >
       </header>
 
-      <blockquote cite="https://prepros.io/">
-        Compile Sass, Less, Stylus, Jade, CoffeeScript on Mac, Windows & Linux
-        with Live Browser Reload.
-      </blockquote>
+      <div class="wrap-txt">
+        <blockquote cite="https://prepros.io/">
+          Compile Sass, Less, Stylus, Jade, CoffeeScript on Mac, Windows & Linux
+          with Live Browser Reload.
+        </blockquote>
+        <p>
+          <a
+            href="https://prepros.io/"
+            title="Sitio web de Prepros"
+            target="_blank">Sitio web de Prepros</a
+          >
+        </p>
+      </div>
     </article>
+  </section>
 
+  <section class="wrapper-article">
     <article>
+      <figure>
+        <img src="/designer/restream.png" alt="Restream" />
+        <figcaption>Restream</figcaption>
+      </figure>
+
       <header>
         <h2>Restream</h2>
-        <a
-          href="https://restream.io/join/XB8r5"
-          title="Sitio web de Restream"
-          target="_blank">Sitio web de Restream</a
-        >
       </header>
 
-      <blockquote cite="https://restream.io/">
-        Restream allows you to broadcast live video to 30+ social networks at
-        the same time.
-      </blockquote>
-      <div class="restream"></div>
+      <div class="wrap-txt">
+        <blockquote cite="https://restream.io/">
+          Restream allows you to broadcast live video to 30+ social networks at
+          the same time.
+        </blockquote>
+        <p>
+          <a
+            href="https://restream.io/join/XB8r5"
+            title="Sitio web de Restream"
+            target="_blank">Sitio web de Restream</a>
+        </p>
+      </div>
     </article>
   </section>
 </LayoutDesigner>
-
-<style lang="stylus">
-  /* Colores */
-  hardWhite = #FFFFFF
-  greenLiquid = #A0EAEB
-  greenPastel = #6AC8C7
-  greenMate = #0FAAA7
-  greenPure = #0D8796
-  hardGreen = #054d56
-
-  /* Pagina de Recomendación */
-  #sub-contain
-    width 90%
-    max-width 1920px
-    margin 0 auto
-    padding 10rem 0 6rem 0
-    display flex
-    flex-direction column
-    gap 100px
-    article
-      background greenPastel
-      border-radius 5px
-      display grid
-      grid-template-columns 30% 70%
-      &:nth-child(even)
-        grid-template-columns 70% 30%
-    div
-      grid-row-start 1
-      grid-row-end 3
-      background-size 50%
-      background-color greenMate
-    header
-      grid-row-start 1
-      grid-row-end 2
-      font-size 1.8rem
-      padding 50px 0 20px 0
-      width 90%
-      margin 0 auto
-      h2
-        font-size 3rem
-        font-weight 600
-      a
-        display inline-block
-        margin-top 1rem
-        background greenPure
-        border-radius 3px
-        color hardWhite
-        padding 1rem
-        font-size 1rem
-    blockquote
-      grid-row-start 2
-      grid-row-end 3
-      font-size 1.3rem
-      padding 10px 0 50px 0
-      width 90%
-      display block
-      margin 0 auto
-
-  .brave
-    background url("../designer/brave-logotype-dark.svg") no-repeat center
-
-  .mamp
-    background url("../designer/mamp.png") no-repeat center
-
-  .prepros
-    background url("../designer/prepros.png") no-repeat center
-
-  .restream
-    background url("../designer/restream.png") no-repeat center
-
-  /* Responsive Design */
-  @media screen and (max-width:768px)
-    #sub-contain
-      padding 4rem 0 4rem 0
-</style>

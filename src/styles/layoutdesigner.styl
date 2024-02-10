@@ -8,12 +8,16 @@ hardGreen = #054d56
 
 /* Body */
 body
+  background hardWhite
+  background-image repeating-linear-gradient(to right, rgba(160, 234, 235, .5), rgba(160, 234, 235, .5) 2px, hardWhite 2px, hardWhite)
+  background-size 32px 32px
   font-size 16px
   width 100%
   color hardWhite
   font-size 16px
   font-family 'Open Sans',Helvetica,Arial,sans-serif
   background-color hardWhite
+  z-index 0
 
 /* Seleccion */
 ::selection
@@ -38,28 +42,6 @@ a
   &:hover
     color hardGreen
 
-/* Animaciones */
-/* Logotipo */
-@keyframes ltor
-  0%
-    left -230px
-  100%
-    left 0
-
-/* Titulo H1 */
-@keyframes appear
-  0%
-    opacity 0
-  100%
-    opacity 100%
-
-/* Botonera social footer */
-@keyframes rtol
-  0%
-    right 0
-  100%
-    right -650px
-
 /* Contenedor de articulos */
 .wrapper-article
   min-height 100vh
@@ -74,8 +56,6 @@ a
       opacity 0.8
   /* Estilos para wrapper pares */
   &:nth-child(even)
-    background-size 32px 32px
-    background-image repeating-linear-gradient(to right, rgba(160, 234, 235, .5), rgba(160, 234, 235, .5) 2px, hardWhite 2px, hardWhite)
     figure
       justify-content flex-end
       border-bottom dashed 2px greenMate
@@ -88,6 +68,9 @@ a
       text-align right
       border-right solid 6px greenPure
       padding-right 2rem
+      a
+        color greenPure
+        border-bottom dashed 2px greenMate
   
   /* Ariticulos */
   article
@@ -106,7 +89,7 @@ a
     justify-content flex-start
     border-bottom dashed 2px hardWhite
     img
-      max-width 40%
+      max-width 20%
     figcaption
       color transparent
       font-size 0
@@ -136,7 +119,7 @@ a
     gap 1rem
     border-left solid 6px hardWhite
     padding-left 2rem
-    p
+    p, blockquote
       font-size 3em
       font-weight 500
       line-height 140%
@@ -144,6 +127,9 @@ a
       hyphens none
     strong
       font-weight 600
+    a
+      color hardWhite
+      border-bottom dashed 2px hardWhite
 
 /* Lista de servicios */
 #list-services
@@ -193,5 +179,78 @@ a
     text-align center
     text-transform uppercase
 
-/* Responsive Design 
-@media screen and (max-width:1440px)*/
+/* Responsive Design */
+@media screen and (max-width:2560px)
+  /* Contenedor de articulos */
+  .wrapper-article
+    /* Imagen de Articulo */  
+    figure
+      img
+        max-width 20%
+
+    /* Contenedor de texto de article */
+    .wrap-txt
+      p, blockquote
+        font-size 2em
+        max-width 1366px
+
+@media screen and (max-width:1440px)
+  /* Contenedor de articulos */
+  .wrapper-article
+    /* Contenedor de texto de article */
+    .wrap-txt
+      p, blockquote
+        font-size 1.4em
+        max-width 1024px
+
+  .item-services
+    h3
+      font-size 120%
+      font-weight 600
+
+@media screen and (max-width:1366px)
+  /* Contenedor de articulos */
+  .wrapper-article
+    /* Header de article H2*/
+    header
+      padding-top 2rem
+    /* Contenedor de texto de article */
+    .wrap-txt
+      margin 1rem auto
+
+@media screen and (max-width:1024px)
+  /* Contenedor de articulos */
+  .wrapper-article
+    padding 14vh 0 14vh 0
+    &:nth-child(even)
+      figure
+        justify-content center
+      header
+        justify-content center
+      .wrap-txt
+        justify-content center
+        border 0
+        padding 0
+        text-align left
+    /* Imagen de Articulo */  
+    figure
+      justify-content center
+      padding 1rem
+      img
+        max-width 40%
+    /* Header de article H2*/
+    header
+      justify-content center
+      h2
+        font-size max(9vw, 9vw)
+    /* Contenedor de texto de article */
+    .wrap-txt
+      justify-content center
+      border 0
+      padding 0
+
+@media screen and (max-width:768px)
+  /* Contenedor de articulos */
+  .wrapper-article
+    min-height auto
+    padding 10vh 0 10vh 0
