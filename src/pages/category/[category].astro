@@ -1,6 +1,5 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import "../../styles/layout.css";
 import { formatBlogPosts, slugify } from "../../js/utils";
 import PostPreview from "../../components/PostPreview.astro";
 
@@ -68,3 +67,11 @@ const catPosts = formattedPosts.filter(
         </main>
     </div>
 </Layout>
+
+<style lang="stylus">
+    .wrapper-post
+        padding 2vh 0 2vh 0
+        display flex
+        flex-wrap wrap
+        gap 1.4vh
+</style>

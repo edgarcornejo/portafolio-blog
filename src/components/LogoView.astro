@@ -1,42 +1,48 @@
 <div>
-    <a href="/" title="Edgar Cornejo">
-        <img itemprop="logo" src="/img/edgarcornejo.svg" alt="Edgar Cornejo" />
-    </a>
+	<a href="/" title="Edgar Cornejo">
+		<img itemprop="logo" src="/img/edgarcornejo.svg" alt="Edgar Cornejo" />
+	</a>
 </div>
 
 <style lang="stylus">
-    /* Estilos de paginas segundarias */
-    /* Logo */
-    div
-        max-width 3840px
-        margin 0 auto
+	/* Estilos de paginas segundarias */
+	/* Logo */
+	div
+		max-width 3840px
+		width 100%
+		margin 0 auto
+		display flex
 
-    img
-        z-index 1
-        height auto
-        left 120px
-        max-width 110px
-        position fixed
-        top 44px
-        width auto/9
-        animation logo .5s ease-in-out both
-    
-    /* Responsive Design */
-    @media screen and (max-width:1366px)
-        img
-            max-width 80px
+	img
+		z-index 1
+		height auto
+		left 2vw
+		max-width 4vw
+		position fixed
+		top 2vh
+		animation logo .5s ease-in-out both
+	
+	/* Animaciones */
+	/* Logotipo principal */
+	@keyframes logo
+		from
+			opacity 0
+			left -100px
+		to
+			opacity 1
+			left 80px
+	
+	/* Responsive Design */
+	@media screen and (max-width:1024px)
+		div
+			justify-content center
+			padding 3rem 0 2rem 0
 
-    @media screen and (max-width:1024px)
-        div
-            display flex
-            justify-content center
-            width 100%
-            height auto
-            padding 3rem 0 2rem 0
-
-        img
-            height auto
-            width 110px
-            position static
-
+		img
+			max-width 8vw
+			position static
+	
+	@media screen and (max-width:768px)
+		img
+			max-width 12vw
 </style>

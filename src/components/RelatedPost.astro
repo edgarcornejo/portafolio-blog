@@ -36,28 +36,25 @@ const { relatedPost } = Astro.props;
 		gap 1rem
 		background rgb(103, 61, 230)
 		color #FFF
-		text-transform uppercase
-		padding 1.4rem
-		border-radius 6px
+		padding 1vw
+		line-height 120%
+		border-radius 0.2vw
 		transition all .1s ease-in-out
-		font 500 1.8rem Ubuntu
+		font-size 1vw
 		text-align center
 		&:hover
 			background rgb(8, 12, 63)
 
 	span
-		font 300 1.2rem Ubuntu
+		font-size 0.8vw
 		opacity .7
 	
 	/* Responsive Design */
-	@media screen and (max-width:2560px)
+	@media screen and (max-width:1024px)
 		a
-			padding 1.2rem
-			font 500 1.4rem Ubuntu
-
-	@media screen and (max-width:1920px)
-		a
-			border-radius 4px
-			padding .8rem
-			font 500 1rem Ubuntu
+			padding 1rem
+			font-size 1em
+			
+		span
+			font-size 0.8em
 </style>

@@ -9,109 +9,151 @@ eGray = rgb(191, 238, 231)
 
 /* Estilos de Body */
 body
-    background rgb(255, 255, 255)
-    font-family 'Ubuntu',Helvetica,Arial,sans-serif
-    color rgb(8, 12, 63)
-    background linear-gradient(90deg, rgb(255, 255, 255) 20px, transparent 1%) center, linear-gradient(rgb(255, 255, 255) 20px, transparent 1%) center, rgb(191, 238, 231)
+    font-size 16px
+    background eWhite
+    font-family 'Outfit', Helvetica, Arial, sans-serif
+    color eBlueDeep
+    background linear-gradient(90deg, eWhite 20px, transparent 1%) center, linear-gradient(eWhite 20px, transparent 1%) center, eGray
     background-size 22px 22px
 
 /* Contenedor principal de página */
 .main-content
-    width 90%
-    max-width 1920px
-    margin 2rem auto
-    /* Cabecera de página */
+    width 100%
+    padding 2vh 0 2vh 0
+    /* Contenedor de sections*/
+    main
+        width 90%
+        max-width 1920px
+        margin 0 auto
+
+/* Navegación por página */
+/* Páginas presentación y portafolio */
+.navigator
+    position fixed
+    margin-top 6vh
+    left 2vw
+    ol
+        display flex
+        flex-direction column
+    li
+        display flex
+        height 4vh
+    a
+        align-self center
+        color eSkyBlue
+        text-transform uppercase
+        letter-spacing 1pt
+        font-size 1vw
+        font-weight 600
+        &:hover
+            color rgb(8, 12, 63)
+
+.main-content
+    /* Primera cabecera de página */
     & > header 
         display flex
         flex-direction column
-        justify-content flex-end
-        align-items center
-        width 100%
-        padding 10rem 0 6rem 0
+        gap 1rem 0
+        text-align center
+        padding 8vh 0 4vh 0
+        background radial-gradient(circle, transparent 20%, eWhite 20%, eWhite 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, eWhite 20%, eWhite 80%, transparent 80%, transparent) 25px 25px, linear-gradient(eSkyBlue 2px, transparent 2px) 0 -1px, linear-gradient(90deg, eSkyBlue 2px, eWhite 2px) -1px 0
+        background-size 50px 50px, 50px 50px, 25px 25px, 25px 25px
         /* Titulo de página H1 */
         h1 
-            font italic 300 8rem Ubuntu
+            font-size 4vw
+            font-weight 600
             color eRed
+            line-height 140%
+        /* Solo en la página de Publicaciones */
         h2
-            font 300 4rem/1 Ubuntu
-            letter-spacing -1pt
-            color eSkyBlue
-
-/* Contenedor de sections*/
-main
-    width 100%
-    margin 0 auto
-    display flex
-    flex-direction column
-    justify-content center
+            font-size 2vw
+            font-weight 300
+            line-height 140%
 
 /* Estilos de sections */
 section
     width 100%
-    padding-bottom 10rem
     /* Article Contenedor */
     article
         display flex
         flex-direction column
+        padding 2vh 0 2vh 0
         /* Article para parrafos */
         article
-            padding-top 6rem
             align-self center
             width 90%
     /* Headers de Articles */
     header
-        border-bottom 8px solid eRed
-        padding 2rem
-        /* Subtitulo H2 */
-        h2
-            font 700 4.6rem/1 Ubuntu
-            text-align right
-            letter-spacing -1pt
-            color eSkyBlue
+        border-bottom solid .4vh eGray
+        padding 1vw
+    /* Subtitulo H2 */
+    h2
+        font-size 2vw
+        line-height 140%
+        font-weight 500
+        text-align right
+        color eSkyBlue
     /* Subtitulo H3 */
     h3
-        font 400 4.2rem/1 Ubuntu
+        font-size 1.6vw
+        font-weight 500
         color eSkyBlue
+        line-height 140%
     /* Subtitulo H4 */
     h4
-        font 400 1.6rem/1 Ubuntu
+        font-size 1.4vw
+        font-weight 500
         padding 1rem 0 1rem 0
+        line-height 140%
+        color eSkyBlue
     
 /* Estilos de Parrafos en article*/
 article
     article
-        /* Parrafo Grande */
-        .text-big
-            font 400 3.2rem/1.4 Ubuntu
-            letter-spacing 1pt
         /* Parrafo General */
         p
-            padding 2rem 0 6rem 0
-            font 300 3rem/1.4 Ubuntu
+            padding 2vh 0 4vh 0
+            font-size 1.2vw
+            line-height 140%
+            hyphens none
+            font-weight 300
+        /* Parrafo Grande */
+        .text-big
+            font-size 1.4vw
+            font-weight 400
         /* Listas */
         ul
-            padding 2rem 0 4rem 0
+            padding 2vh 0 4vh 0
         li
-            font 300 3rem/1.6 Ubuntu
+            font-size 1.2vw
+            line-height 160%
+            font-weight 300
             list-style disc inside
+        /* Color de enlaces */
         a
-            color eSkyBlue
+            color eBlue
+            font-weight 400
+            border-bottom dashed 0.2vh eBlue
+            &:hover
+                color eBlueDeep
 
 /* Enlaces  */
 .enlaces
     display flex
     flex-wrap wrap
-    gap 1rem 1rem
+    gap 1rem
     a
-        padding 1.6rem
-        outline solid 2px eSkyBlue
-        border-radius 6px
+        padding 1vw
+        border-radius 0.2vw
+        border 0
         transition all .1s ease-in-out
-        font 400 3rem Ubuntu
+        font-size 1.2vw
+        font-weight 400
+        color #FFF
+        background eBlue
         &:hover
             color #FFF
             background eBlueDeep
-            outline transparent
 
 /* Contenedor de uls */
 .wrapper-ul
@@ -123,253 +165,101 @@ article
         max-width 45%
 
 .aside-bottom
-    padding 2rem
+    padding 2vh 0 2vh 0
     width 100%
 
-/* Navegación por página */
-/* Páginas presentación y portafolio */
-.navigator
-    position fixed
-    margin-top 6rem
-    left 60px
-    ol
-        height auto
-        display flex
-        flex-direction column
-    li
-        display flex
-        height 80px
-        width 100%
-    a
-        align-self center
-        color rgb(61, 188, 230)
-        padding-left 1.5rem
-        text-transform uppercase
-        letter-spacing 2pt
-        font 700 2.2rem Ubuntu
-        &:hover
-            color rgb(8, 12, 63)
-
-/* Animaciones */
-/* Logotipo principal */
-@keyframes logo
-    from
-        opacity 0
-        left -100px
-    to
-        opacity 1
-        left 80px
-
-/* Menu y callme */
-@keyframes callme
-    from
-        opacity 0
-    to
-        opacity 1
-
-/* H1 y H2 */
-@keyframes titulo1
-    from
-        opacity 0
-        bottom 100px
-    to
-        opacity 1
-        bottom 0
-
-@keyframes titulo2
-    from
-        opacity 0
-        bottom 50px
-    to
-        opacity 1
-        bottom 0
-
 /* Responsive Design */
-@media screen and (max-width:2560px)
-    /* Navegación por página */
-    /* Páginas presentación y portafolio */
-    .navigator
-        li
-            height 60px
-
-        a
-            font 700 1.4rem Ubuntu
-
 @media screen and (max-width:1920px)
+    .main-content
+        /* Primera cabecera de página */
+        & > header 
+            background radial-gradient(circle, transparent 20%, eWhite 20%, eWhite 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, eWhite 20%, eWhite 80%, transparent 80%, transparent) 25px 25px, linear-gradient(eSkyBlue 1.4px, transparent 1.4px) 0 -1px, linear-gradient(90deg, eSkyBlue 1.4px, eWhite 1.4px) -1px 0
+            background-size 50px 50px, 50px 50px, 25px 25px, 25px 25px
+
     /* Contenedor principal de página */
     .main-content
-        width 70%
-        & > header
-            padding 6rem 0 4rem 0
-            h1
-                font italic 300 5rem Ubuntu
-            h2
-                font 300 2.6rem/1 Ubuntu
-
-    /* Estilos de Parrafos en article*/
-    article
-        article
-            /* Parrafo Grande */
-            .text-big
-                font 300 2.4rem/1.4 Ubuntu
-            /* Parrafo General */
-            p
-                font 300 2.2rem/1.4 Ubuntu
-            /* Listas */
-            ul
-                li
-                    font 300 2.2rem/1.6 Ubuntu
-
-    /* Enlaces  */
-    .enlaces
-        a
-            font 400 2.2rem Ubuntu
-
-    /* Estilos de sections */
-    section
-        /* Headers de Articles */
-        header
-            h2
-                font 700 3.6rem Ubuntu
-        /* Subtitulo H3 */
-        h3
-            font 400 3.2rem Ubuntu
-
-    .aside-bottom
-        padding 1.4rem
-    
-    /* Navegación por página */
-    /* Páginas presentación y portafolio */
-    .navigator
-        li
-            height 40px
-
-        a
-            font 700 1rem Ubuntu
-
-@media screen and (max-width:1440px)
-    /* Contenedor principal de página */
-    .main-content
-        width 60%
-        & > header
-            padding 2rem 0 4rem 0
-            h1
-                font 300 3.8rem Ubuntu
-            h2
-                font 300 1.8rem/1 Ubuntu
-
-    /* Estilos de Parrafos en article*/
-    article
-        article
-            /* Parrafo Grande */
-            .text-big
-                font 300 2rem/1.4 Ubuntu
-            /* Parrafo General */
-            p
-                padding 2rem 0 2rem 0
-                font 300 1.6rem/1.2 Ubuntu
-            /* Listas */
-            ul
-                li
-                    font 300 1.6rem/1.4 Ubuntu
-
-    /* Enlaces  */
-    .enlaces
-        a
-            padding 1rem
-            font 400 1.6rem Ubuntu
-
-    /* Estilos de sections */
-    section
-        /* Headers de Articles */
-        header
-            border-bottom solid 5px eRed
-            padding 1.6rem
-            h2
-                font 700 2.6rem Ubuntu
-        /* Subtitulo H3 */
-        h3
-            font 400 2.2rem Ubuntu
-
-    .aside-bottom
-        padding 1rem
-
-@media screen and (max-width:1366px)
-    /* Contenedor principal de página */
-    .main-content
-        & > header
-            padding 2rem 0 4rem 0
-            h1
-                font italic 300 3rem Ubuntu
-            h2
-                font 300 1.4rem/1 Ubuntu
-    
-    /* Estilos de sections */
-    section
-        /* Article Contenedor */
-        article
-            /* Article para parrafos */
-            article
-                padding-top 1rem
-
-    /* Estilos de Parrafos en article*/
-    article
-        article
-            /* Parrafo Grande */
-            .text-big
-                font 300 1.4rem Ubuntu
-                letter-spacing 0
-            /* Parrafo General */
-            p
-                padding 2rem 0 2rem 0
-                font 300 1rem/1.2 Ubuntu
-            /* Listas */
-            ul
-                li
-                    font 300 1rem/1.4 Ubuntu
-
-    /* Enlaces  */
-    .enlaces
-        a
-            font 400 1rem Ubuntu
-
-    /* Estilos de sections */
-    section
-        padding-bottom 2rem
-        /* Headers de Articles */
-        header
-            border-bottom 2px solid eRed
-            padding 1.4rem
-            h2
-                font 700 2rem Ubuntu
-        /* Subtitulo H3 */
-        h3
-            font 400 1.6rem Ubuntu
+        /* Contenedor de sections*/
+        main
+            width 70%
 
 @media screen and (max-width:1024px)
+    /* Navegación por página */
+    /* Páginas presentación y portafolio */
+    .navigator
+        position static
+        display flex
+        justify-content center
+        margin 0
+        margin-top 2vh
+        ol
+            width 100%
+            flex-direction row
+            justify-content space-around
+        a
+            font-size 1em
+
+    .main-content
+        & > header 
+            padding 12vh 0 6vh 0
+            /* Titulo de página H1 */
+            h1 
+                font-size 6vw
+    
     /* Contenedor principal de página */
     .main-content
-        width 90%
-        & > header
-            padding 2rem 0 2rem 0
-            justify-content center
-                
-        /* Estilos de sections */
+        /* Contenedor de sections*/
+        main
+            width 90%
+    
+    /* Estilos de sections */
     section
-        /* Headers de Articles */
-        header
-            border-right 0
-            /* Subtitulo H2 */
-            h2
-                text-align left
+        /* Subtitulo H2 */
+        h2
+            font-size 4vw
+        /* Subtitulo H3 */
+        h3
+            font-size 3vw
+        /* Subtitulo H4 */
+        h4
+            font-size 2.6vw
 
+    /* Estilos de Parrafos en article*/
+    article
+        article
+            /* Parrafo General */
+            p
+                font-size 1em
+            /* Parrafo Grande */
+            .text-big
+                font-size 1.2em
+            li
+                font-size 1.2em
+
+@media screen and (max-width:768px)
     /* Navegación por página */
     /* Páginas presentación y portafolio */
     .navigator
         display none
-
-@media screen and (max-width:480px)
+    
+    /* Estilos de sections */
+    section
+        /* Subtitulo H2 */
+        h2
+            font-size 2em
+        /* Subtitulo H3 */
+        h3
+            font-size 1.6em
+        /* Subtitulo H4 */
+        h4
+            font-size 1.2em
+    
     /* Contenedor de uls */
     .wrapper-ul
         div
             max-width 100%
+    
+    /* Enlaces  */
+    .enlaces
+        a
+            padding 1rem
+            font-size 1em

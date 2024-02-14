@@ -1,6 +1,5 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import "../styles/layout.css";
 import HgroupView from "../components/HgroupView.astro";
 import CallView from "../components/CallView.astro";
 import ListPosts from "../components/ListPosts.astro";
@@ -25,14 +24,12 @@ import InfoContact from "../components/InfoContact.astro";
 
 					<article>
 						<p>
-							Tener una firma de correo es importante para
-							nuestras comunicaciones con clientes o
-							colaboradores. Obtén la tuya ahora.<br /><br /> Comunicate
-							a
+							Tener una firma de correo es importante para nuestras
+							comunicaciones con clientes o colaboradores. Obtén la tuya ahora.<br
+							/><br /> Comunicate a
 							<a
 								href="mailto:info@edgarcornejo.com"
-								title="info@edgarcornejo.com"
-								>info@edgarcornejo.com</a
+								title="info@edgarcornejo.com">info@edgarcornejo.com</a
 							>
 						</p>
 					</article>
@@ -47,11 +44,10 @@ import InfoContact from "../components/InfoContact.astro";
 
 					<article>
 						<p>
-							Te recomiendo algunas páginas que te puedan
-							interesar como: Agregarte en un directorio de
-							profesionales y empresas, si necesitas recursos
-							fotográficos, si te gustan las naves hechas de papel
-							o enterarte de noticias de tecnología.
+							Te recomiendo algunas páginas que te puedan interesar como:
+							Agregarte en un directorio de profesionales y empresas, si
+							necesitas recursos fotográficos, si te gustan las naves hechas de
+							papel o enterarte de noticias de tecnología.
 						</p>
 
 						<div class="marcas-container">
@@ -129,9 +125,9 @@ import InfoContact from "../components/InfoContact.astro";
 
 					<article>
 						<p>
-							Me gusta compartir lo que conozco, si tienes alguna
-							duda posiblemente tengo algunas recomendaciones que
-							hago en estas publicaciones.
+							Me gusta compartir lo que conozco, si tienes alguna duda
+							posiblemente tengo algunas recomendaciones que hago en estas
+							publicaciones.
 						</p>
 
 						<ListPosts />
@@ -181,12 +177,15 @@ import InfoContact from "../components/InfoContact.astro";
 			display flex
 			flex-direction column
 			align-items center
+			border 0
 			gap 1rem 0
 		img
 			max-width 180px
 			filter grayscale(80%)
 		figcaption
-			font 500 2rem Ubuntu
+			line-height 120%
+			font-size 2em
+			font-weight 500
 			letter-spacing 1pt
 			text-transform uppercase
 
@@ -199,7 +198,7 @@ import InfoContact from "../components/InfoContact.astro";
 		/* Marcas */
 		.marcas-container
 			figcaption
-				font 500 1.4rem Ubuntu
+				font-size 1.4em
 
 	@media screen and (max-width:1440px)
 		/* Marcas */
@@ -207,7 +206,7 @@ import InfoContact from "../components/InfoContact.astro";
 			img
 				max-width 100px
 			figcaption
-				font 500 1rem Ubuntu
+				font-size 1em
 
 	@media screen and (max-width:1024px)
 		.marcas-container

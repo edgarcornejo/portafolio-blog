@@ -1,41 +1,61 @@
+/* Variables */
+/* Colores */
+/* Estilos de Body */
+body {
+  font-size: 16px;
+  background: #fff;
+  font-family: 'Outfit', Helvetica, Arial, sans-serif;
+  color: #080c3f;
+  background: linear-gradient(90deg, #fff 20px, transparent 1%) center, linear-gradient(#fff 20px, transparent 1%) center, #bfeee7;
+  background-size: 22px 22px;
+}
 /* Layout Blog */
-/* Contenedor de página */
-.wrapper-content {
+.content-blog {
   width: 90%;
   max-width: 1920px;
   margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  padding: 10rem 0 10rem 0;
+  padding: 8vh 0 2vh 0;
 }
+.wrapper-content {
+  display: flex;
+  justify-content: space-between;
 /* Contenido */
-main {
-  width: 100%;
+/* Informacion y Publicidad */
+}
+.wrapper-content main {
+  width: 70%;
+}
+.wrapper-content aside {
+  width: 25%;
 }
 /* Informacion y Publicidad */
-aside {
-  width: 30%;
-  padding: 2rem;
-}
 aside h4 {
-  font: italic 300 2.4rem Ubuntu;
-  padding: 1rem;
+  font-size: 1.2vw;
+  line-height: 100%;
+  padding-bottom: 2vh;
 }
 aside div {
-  margin-bottom: 1rem;
+  margin-bottom: 4vh;
 }
 aside .info-post p {
-  font: 300 2rem/1.4 Ubuntu;
-  padding: 1rem 1rem 1rem 1rem;
+  font-size: 1vw;
+  line-height: 140%;
 }
 aside .info-post strong,
 aside .info-post time {
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 600;
 }
 aside .info-post span {
   font-style: italic;
   hyphens: none;
+}
+aside .info-post a {
+  color: #673de6;
+  font-weight: 500;
+}
+aside .info-post a:hover {
+  color: #080c3f;
 }
 /* Post solo*/
 .wrapper-post {
@@ -44,22 +64,25 @@ aside .info-post span {
 /* Container Iframe */
 }
 .wrapper-post h1 {
-  font: 500 5rem/1.2 Ubuntu;
-  margin-bottom: 4rem;
-  padding-bottom: 1rem;
   width: 100%;
-  border-bottom: solid 4px #e63d67;
+  font-size: 2vw;
+  line-height: 120%;
+  margin-bottom: 2vh;
+  padding-bottom: 1vh;
+  border-bottom: solid 0.4vh #bfeee7;
 }
 .wrapper-post h2 {
-  font: 400 4rem/1.2 Ubuntu;
-  margin-bottom: 2rem;
-  padding: 4rem 0 1rem 0;
   width: 100%;
-  border-bottom: solid 4px #e63d67;
+  font-size: 1.6vw;
+  line-height: 120%;
+  margin-bottom: 2vh;
+  padding: 2vh 0 1vh 0;
+  border-bottom: solid 0.4vh #bfeee7;
 }
 .wrapper-post p {
-  font: 300 3rem/1.2 Ubuntu;
-  padding: 1rem 0 1rem 0;
+  font-size: 1vw;
+  line-height: 140%;
+  padding: 1vh 0 1vh 0;
 }
 .wrapper-post ul {
   display: flex;
@@ -68,7 +91,8 @@ aside .info-post span {
 }
 .wrapper-post li {
   list-style: disc inside;
-  font: 300 3rem/1.4 Ubuntu;
+  line-height: 160%;
+  font-size: 1.2vw;
 }
 .wrapper-post li::marker {
   color: #e63d67;
@@ -77,24 +101,28 @@ aside .info-post span {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2rem 0 2rem 0;
+  padding: 2vh 0 2vh 0;
   width: 100%;
 }
 .wrapper-post img {
   width: auto/9;
   height: auto;
-  max-width: 1024px;
+  max-width: 30vw;
 }
 .wrapper-post figcaption {
-  padding-top: 1rem;
-  font: 500 2rem/1.2 Ubuntu;
+  padding-top: 1vh;
+  font-size: 1vw;
 }
 .wrapper-post a {
-  display: inline;
   color: #673de6;
+  display: inline;
+  font-weight: 400;
+}
+.wrapper-post a:hover {
+  color: #080c3f;
 }
 .wrapper-post .wrapper-iframe {
-  margin-top: 2rem;
+  margin-top: 2vh;
   position: relative;
   overflow: hidden;
   width: 100%;
@@ -109,131 +137,4 @@ aside .info-post span {
   width: 100%;
   height: 100%;
 }
-/* Responsive Design */
-@media screen and (max-width: 2560px) {
-  .wrapper-post h1 {
-    font: 500 4rem/1.2 Ubuntu;
-  }
-  .wrapper-post h2 {
-    font: 400 3rem/1.2 Ubuntu;
-  }
-  .wrapper-post p {
-    font: 300 2.2rem/1.2 Ubuntu;
-  }
-  .wrapper-post li {
-    font: 300 2.2rem/1.4 Ubuntu;
-  }
-}
-@media screen and (max-width: 1920px) {
-  .header-page h1 {
-    font: italic 300 5rem Ubuntu;
-  }
-  .header-page h2 {
-    font: 300 3rem/1 Ubuntu;
-  }
-  .wrapper-content {
-    padding: 0;
-  }
-  aside {
-    padding: 1.4rem;
-  }
-  aside h4 {
-    font: italic 300 1.8rem Ubuntu;
-  }
-  aside .info-post p {
-    font: 300 1.4rem/1.4 Ubuntu;
-    padding: 0.5rem;
-  }
-  .space-ads-horizontal,
-  .space-ads-vertical {
-    padding: 1.4rem;
-  }
-  .wrapper-post h1 {
-    font: 500 3rem/1.2 Ubuntu;
-  }
-  .wrapper-post h2 {
-    font: 400 2.6rem/1.2 Ubuntu;
-  }
-  .wrapper-post p {
-    font: 300 1.8rem/1.2 Ubuntu;
-  }
-  .wrapper-post li {
-    font: 300 1.8rem/1.4 Ubuntu;
-  }
-  .wrapper-post figcaption {
-    font: italic 300 1rem/1.2 Ubuntu;
-  }
-}
-@media screen and (max-width: 1440px) {
-  .header-page {
-    padding-top: 4rem;
-/* Titulo de página H1 */
-/* Descripcion de página H2 */
-  }
-  .header-page h1 {
-    font: italic 300 4rem Ubuntu;
-  }
-  .header-page h2 {
-    font: 300 2.2rem/1 Ubuntu;
-  }
-  aside {
-    padding: 1rem;
-  }
-  aside h4 {
-    font: italic 300 1.2rem Ubuntu;
-    padding: 1rem 0 1rem 0;
-  }
-  .post-list-container a {
-    font: 400 1rem/1.2 Ubuntu;
-  }
-  .space-ads-horizontal,
-  .space-ads-vertical {
-    padding: 1.2rem;
-  }
-  .wrapper-post h1 {
-    font: 500 2rem/1.2 Ubuntu;
-    border-bottom: solid 1px #e63d67;
-  }
-  .wrapper-post h2 {
-    font: 400 1.6rem/1.2 Ubuntu;
-    border-bottom: solid 1px #e63d67;
-  }
-  .wrapper-post p {
-    font: 300 1.2rem/1.2 Ubuntu;
-  }
-  .wrapper-post li {
-    font: 300 1.2rem/1.4 Ubuntu;
-  }
-}
-@media screen and (max-width: 1366px) {
-  aside .info-post p {
-    font: 300 1rem/1.4 Ubuntu;
-  }
-}
-@media screen and (max-width: 1024px) {
-  .wrapper-content {
-    flex-direction: column;
-  }
-  .header-page {
-    padding-top: 3rem;
-/* Titulo de página H1 */
-/* Descripcion de página H2 */
-  }
-  .header-page h1 {
-    font: italic 300 2.2rem Ubuntu;
-  }
-  .header-page h2 {
-    font: 300 1.6rem/1 Ubuntu;
-  }
-  aside {
-    width: 100%;
-  }
-  .wrapper-post img {
-    width: 50%;
-  }
-}
-@media screen and (max-width: 768px) {
-  .wrapper-post img {
-    width: 90%;
-  }
-}
+/* Responsive design */

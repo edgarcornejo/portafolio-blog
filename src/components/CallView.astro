@@ -1,68 +1,64 @@
 <div class="bottom-call">
-    <div>
-        <a class="anin-rapido" href="tel:+51974795622" title="Llámame">
-            Llámame
-        </a>
-    </div>
+	<div>
+		<a class="anin-rapido" href="tel:+51974795622" title="Llámame"> Llámame</a>
+	</div>
 </div>
 
 <style lang="stylus">
-    .bottom-call
-        display flex
-        justify-content center
-        width 100%
-        animation callme 1s ease-in-out both
-        animation-delay 2s
-        background rgb(61, 188, 230)
-        div
-            display flex
-            justify-content flex-end
-            width 100%
-            max-width 1920px
-            transform skew(-12deg)
+	eRed = rgb(230, 61, 103)
+	eSkyBlue = rgb(61, 188, 230)
+	eBlue = rgb(103, 61, 230)
+	eBlueDeep = rgb(8, 12, 63)
+	eWhite = rgb(255, 255, 255)
+	eGray = rgb(191, 238, 231)
 
-    a
-        position relative
-        top -4rem
-        padding 2.2rem
-        border-radius 6px
-        background rgb(61, 188, 230)
-        font 700 2.6rem Ubuntu
-        color rgb(255, 255, 255)
-        text-transform uppercase
-        letter-spacing 2pt
-        &:hover
-            top -4.2rem
-            background rgb(103, 61, 230)
+	.bottom-call
+		display flex
+		justify-content center
+		width 100%
+		animation callme 1s ease-in-out both
+		animation-delay 2s
+		background eSkyBlue
+		div
+			display flex
+			justify-content flex-end
+			width 90%
+			max-width 1920px
+			transform skew(-12deg)
+
+	a
+		position relative
+		top -3vh
+		padding 1vw
+		border-radius 6px
+		background eSkyBlue
+		font-weight 600
+		font-size 1vw
+		color eWhite
+		text-transform uppercase
+		letter-spacing 1pt
+		&:hover
+			top -3.2vh
+			background eBlue
+
+	/* Animaciones */
+	/* callme */
+	@keyframes callme
+			from
+					opacity 0
+			to
+					opacity 1
     
-    /*Responie Design*/
-    @media screen and (max-width:1920px)
-        .bottom-call
-            div 
-                width 90%
-    
-    @media screen and (max-width:1440px)
-        a
-            top -2.6rem
-            font 500 1.8rem Ubuntu
-            &:hover
-                top -2.8rem
-        
-    @media screen and (max-width:1366px)
-        a
-            top -1.8rem
-            padding 1.6rem
-            font 500 1.2rem Ubuntu
-            &:hover
-                top -1.6rem
-    
-    @media screen and (max-width:1024px)
-        .bottom-call
-            div
-                justify-content center
-        
-        a
-            top -1.8rem
-            padding 1.4rem
-            font 500 1.2rem Ubuntu
+	/*Responie Design*/				
+	@media screen and (max-width:1024px)
+		.bottom-call
+			div
+				justify-content center
+				transform skew(0)
+
+		a
+			border-radius 3px
+			font-size 1em
+			padding 1rem
+
 </style>

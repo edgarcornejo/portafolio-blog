@@ -31,6 +31,12 @@ const { showCount } = Astro.props;
 </div>
 
 <style lang="stylus">
+    h4
+        font-size 1vw
+        font-weight 500
+        padding 1rem 0 1rem 0
+        line-height 140%
+
     /* Categorias del Blog */
     div
         width 100%
@@ -44,26 +50,21 @@ const { showCount } = Astro.props;
         background rgb(103, 61, 230)
         color #FFF
         text-transform uppercase
-        padding 1.4rem
-        border-radius 6px
+        padding 1vw
+        border-radius 0.2vw
         transition all .1s ease-in-out
-        font 500 1.8rem Ubuntu
+        font-size 1vw
+        line-height 120%
+        font-weight 400
         &:hover
             background rgb(8, 12, 63)
 
-    b
-        font 700 2.4rem Ubuntu
-
     /* Responsive Design */
-    @media screen and (max-width:2560px)
+    @media screen and (max-width:1024px)
+        h4
+            font-size 1em
         a
-            padding 1.2rem
-            font 500 1.4rem Ubuntu
-
-    @media screen and (max-width:1920px)
-        a
-            border-radius 4px
-            padding .8rem
-            font 500 1rem Ubuntu
+            font-size 1em
+            padding 1rem
 
 </style>

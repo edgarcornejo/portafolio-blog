@@ -1,31 +1,30 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import "../styles/layout.css";
 ---
 
 <Layout
     title="Portafolio - Edgar Cornejo, Diseñador gráfico, desarrolador Web front-end y Posicionamiento en Internet."
     description="Trabajos realizados en las areas de diseño gráfico, desarrollo web front-end, SEO y proyectos propios."
 >
-    <aside>
-        <nav class="navigator">
-            <ol>
-                <li><a href="#design" title="Diseño">Diseño</a></li>
-                <li>
-                    <a href="#web" title="Desarrollo Web">Desarrollo Web</a>
-                </li>
-                <li><a href="#seo" title="SEO">SEO</a></li>
-                <li>
-                    <a href="#propios" title="Propios">Propios</a>
-                </li>
-            </ol>
-        </nav>
-    </aside>
-
     <div class="main-content">
         <header>
             <h1>Portafolio</h1>
         </header>
+
+        <aside>
+            <nav class="navigator">
+                <ol>
+                    <li><a href="#design" title="Diseño">Diseño</a></li>
+                    <li>
+                        <a href="#web" title="Desarrollo Web">Desarrollo Web</a>
+                    </li>
+                    <li><a href="#seo" title="SEO">SEO</a></li>
+                    <li>
+                        <a href="#propios" title="Propios">Propios</a>
+                    </li>
+                </ol>
+            </nav>
+        </aside>
 
         <main>
             <section id="design">
@@ -959,10 +958,10 @@ import "../styles/layout.css";
 
     .gallery-cell
         width 30%
-        padding 3rem
-        border-radius 10px
+        padding 1vw
+        border-radius 0.2vw
         transition all .1s ease-in-out
-        outline solid 3px rgb(191, 238, 231)
+        outline solid 0.1vw rgb(191, 238, 231)
         &:hover
             img
                 transform scale(1.2)
@@ -979,38 +978,23 @@ import "../styles/layout.css";
             transition all .1s ease-in-out
         /* Title Gallery */
         h3
-            font 500 2.6rem Ubuntu
+            font-size 1.2vw
+            hyphens none
             text-align center
-        /* Description Gallery */
-        p
-            font 300 1.8rem/1.2 Ubuntu
 
     /* Responsive Design */
-    @media screen and (max-width:1920px)
+    @media screen and (max-width:1024px)
         .gallery-cell
-            /* Title Gallery */
-            h3
-                font 500 1.6rem Ubuntu
-            /* Description Gallery */
-            p
-                font 300 1rem/1.2 Ubuntu
-    
-    @media screen and (max-width:1440px)
-        .gallery-cell
-            padding 1rem
-            /* Title Gallery */
-            h3
-                font 500 1.2rem Ubuntu
-    
-    @media screen and (max-width:768px)
-        .gallery-cell
-            width 48%
             img
                 filter grayscale(0)
+            h3
+                font-size 1.8vw
+
 
     @media screen and (max-width:768px)
         .gallery-cell
             width 100%
-
-
+            h3
+                font-size 1.4em
+            
 </style>

@@ -29,7 +29,7 @@
     </li>
 
     <li>
-      <strong>Facebook</strong>
+      <strong>Facebook:</strong>
       <a
         href="https://www.facebook.com/edgarcornejopage"
         target="_blank"
@@ -45,7 +45,7 @@
 <style lang="stylus">
   ul
     width 100%
-    margin 2rem 0 2rem 0
+    margin 2vh 0 2vh 0
 
   address
     display flex
@@ -58,48 +58,29 @@
     gap 0 2rem
 
   strong
-    font 500 3rem Ubuntu
+    font-weight 500
     align-self center
-    width 240px
+    width 6vw
 
   a
     background rgb(103, 61, 230)
     color #FFF
-    padding 1.6rem
-    border-radius 6px
+    padding 0.6vw
+    border-radius 0.2vw
     transition all .1s ease-in-out
-    font 400 3rem Ubuntu
+    font-weight 400
+    font-style normal
     &:hover
+      color #FFF
       background rgb(8, 12, 63)
 
   /* Responsive Design */
-  @media screen and (max-width:1920px)
+  @media screen and (max-width:1024px)
     strong
-      font 500 2rem Ubuntu
-      width 160px
-
-    a
-      padding 1rem
-      font 400 2rem Ubuntu
-
-  @media screen and (max-width:1440px)
-    strong
-      font 500 1.4rem Ubuntu
       width 100px
 
     a
-      font 400 1.4rem Ubuntu
-
-  @media screen and (max-width:1366px)
-    ul
-      margin 1rem 0 1rem 0
-    
-    strong
-      font 500 1rem Ubuntu
-      width 80px
-
-    a
-      font 400 1rem Ubuntu
+      padding 1rem
 
   @media screen and (max-width:420px)
     li

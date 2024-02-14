@@ -2,119 +2,163 @@
 /* Colores */
 /* Estilos de Body */
 body {
+  font-size: 16px;
   background: #fff;
-  font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+  font-family: 'Outfit', Helvetica, Arial, sans-serif;
   color: #080c3f;
   background: linear-gradient(90deg, #fff 20px, transparent 1%) center, linear-gradient(#fff 20px, transparent 1%) center, #bfeee7;
   background-size: 22px 22px;
 }
 /* Contenedor principal de página */
 .main-content {
+  width: 100%;
+  padding: 2vh 0 2vh 0;
+/* Contenedor de sections*/
+}
+.main-content main {
   width: 90%;
   max-width: 1920px;
-  margin: 2rem auto;
-/* Cabecera de página */
+  margin: 0 auto;
+}
+/* Navegación por página */
+/* Páginas presentación y portafolio */
+.navigator {
+  position: fixed;
+  margin-top: 6vh;
+  left: 2vw;
+}
+.navigator ol {
+  display: flex;
+  flex-direction: column;
+}
+.navigator li {
+  display: flex;
+  height: 4vh;
+}
+.navigator a {
+  align-self: center;
+  color: #3dbce6;
+  text-transform: uppercase;
+  letter-spacing: 1pt;
+  font-size: 1vw;
+  font-weight: 600;
+}
+.navigator a:hover {
+  color: #080c3f;
 }
 .main-content > header {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  width: 100%;
-  padding: 10rem 0 6rem 0;
+  gap: 1rem 0;
+  text-align: center;
+  padding: 8vh 0 4vh 0;
+  background: radial-gradient(circle, transparent 20%, #fff 20%, #fff 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #fff 20%, #fff 80%, transparent 80%, transparent) 25px 25px, linear-gradient(#3dbce6 2px, transparent 2px) 0 -1px, linear-gradient(90deg, #3dbce6 2px, #fff 2px) -1px 0;
+  background-size: 50px 50px, 50px 50px, 25px 25px, 25px 25px;
 /* Titulo de página H1 */
+/* Solo en la página de Publicaciones */
 }
 .main-content > header h1 {
-  font: italic 300 8rem Ubuntu;
+  font-size: 4vw;
+  font-weight: 600;
   color: #e63d67;
+  line-height: 140%;
 }
 .main-content > header h2 {
-  font: 300 4rem/1 Ubuntu;
-  letter-spacing: -1pt;
-  color: #3dbce6;
-}
-/* Contenedor de sections*/
-main {
-  width: 100%;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  font-size: 2vw;
+  font-weight: 300;
+  line-height: 140%;
 }
 /* Estilos de sections */
 section {
   width: 100%;
-  padding-bottom: 10rem;
 /* Article Contenedor */
 /* Headers de Articles */
+/* Subtitulo H2 */
 /* Subtitulo H3 */
 /* Subtitulo H4 */
 }
 section article {
   display: flex;
   flex-direction: column;
+  padding: 2vh 0 2vh 0;
 /* Article para parrafos */
 }
 section article article {
-  padding-top: 6rem;
   align-self: center;
   width: 90%;
 }
 section header {
-  border-bottom: 8px solid #e63d67;
-  padding: 2rem;
-/* Subtitulo H2 */
+  border-bottom: solid 0.4vh #bfeee7;
+  padding: 1vw;
 }
-section header h2 {
-  font: 700 4.6rem/1 Ubuntu;
+section h2 {
+  font-size: 2vw;
+  line-height: 140%;
+  font-weight: 500;
   text-align: right;
-  letter-spacing: -1pt;
   color: #3dbce6;
 }
 section h3 {
-  font: 400 4.2rem/1 Ubuntu;
+  font-size: 1.6vw;
+  font-weight: 500;
   color: #3dbce6;
+  line-height: 140%;
 }
 section h4 {
-  font: 400 1.6rem/1 Ubuntu;
+  font-size: 1.4vw;
+  font-weight: 500;
   padding: 1rem 0 1rem 0;
+  line-height: 140%;
+  color: #3dbce6;
 }
 /* Estilos de Parrafos en article*/
-article article .text-big {
-  font: 400 3.2rem/1.4 Ubuntu;
-  letter-spacing: 1pt;
-}
 article article p {
-  padding: 2rem 0 6rem 0;
-  font: 300 3rem/1.4 Ubuntu;
+  padding: 2vh 0 4vh 0;
+  font-size: 1.2vw;
+  line-height: 140%;
+  hyphens: none;
+  font-weight: 300;
+}
+article article .text-big {
+  font-size: 1.4vw;
+  font-weight: 400;
 }
 article article ul {
-  padding: 2rem 0 4rem 0;
+  padding: 2vh 0 4vh 0;
 }
 article article li {
-  font: 300 3rem/1.6 Ubuntu;
+  font-size: 1.2vw;
+  line-height: 160%;
+  font-weight: 300;
   list-style: disc inside;
 }
 article article a {
-  color: #3dbce6;
+  color: #673de6;
+  font-weight: 400;
+  border-bottom: dashed 0.2vh #673de6;
+}
+article article a:hover {
+  color: #080c3f;
 }
 /* Enlaces  */
 .enlaces {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem 1rem;
+  gap: 1rem;
 }
 .enlaces a {
-  padding: 1.6rem;
-  outline: solid 2px #3dbce6;
-  border-radius: 6px;
+  padding: 1vw;
+  border-radius: 0.2vw;
+  border: 0;
   transition: all 0.1s ease-in-out;
-  font: 400 3rem Ubuntu;
+  font-size: 1.2vw;
+  font-weight: 400;
+  color: #fff;
+  background: #673de6;
 }
 .enlaces a:hover {
   color: #fff;
   background: #080c3f;
-  outline: transparent;
 }
 /* Contenedor de uls */
 .wrapper-ul {
@@ -127,349 +171,82 @@ article article a {
   max-width: 45%;
 }
 .aside-bottom {
-  padding: 2rem;
+  padding: 2vh 0 2vh 0;
   width: 100%;
 }
-/* Navegación por página */
-/* Páginas presentación y portafolio */
-.navigator {
-  position: fixed;
-  margin-top: 6rem;
-  left: 60px;
-}
-.navigator ol {
-  height: auto;
-  display: flex;
-  flex-direction: column;
-}
-.navigator li {
-  display: flex;
-  height: 80px;
-  width: 100%;
-}
-.navigator a {
-  align-self: center;
-  color: #3dbce6;
-  padding-left: 1.5rem;
-  text-transform: uppercase;
-  letter-spacing: 2pt;
-  font: 700 2.2rem Ubuntu;
-}
-.navigator a:hover {
-  color: #080c3f;
-}
-/* Animaciones */
-/* Logotipo principal */
-/* Menu y callme */
-/* H1 y H2 */
 /* Responsive Design */
-@media screen and (max-width: 2560px) {
-  .navigator li {
-    height: 60px;
-  }
-  .navigator a {
-    font: 700 1.4rem Ubuntu;
-  }
-}
 @media screen and (max-width: 1920px) {
-  .main-content {
+  .main-content > header {
+    background: radial-gradient(circle, transparent 20%, #fff 20%, #fff 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #fff 20%, #fff 80%, transparent 80%, transparent) 25px 25px, linear-gradient(#3dbce6 1.4px, transparent 1.4px) 0 -1px, linear-gradient(90deg, #3dbce6 1.4px, #fff 1.4px) -1px 0;
+    background-size: 50px 50px, 50px 50px, 25px 25px, 25px 25px;
+  }
+  .main-content main {
     width: 70%;
-  }
-  .main-content > header {
-    padding: 6rem 0 4rem 0;
-  }
-  .main-content > header h1 {
-    font: italic 300 5rem Ubuntu;
-  }
-  .main-content > header h2 {
-    font: 300 2.6rem/1 Ubuntu;
-  }
-  article article .text-big {
-    font: 300 2.4rem/1.4 Ubuntu;
-  }
-  article article p {
-    font: 300 2.2rem/1.4 Ubuntu;
-  }
-  article article ul li {
-    font: 300 2.2rem/1.6 Ubuntu;
-  }
-  .enlaces a {
-    font: 400 2.2rem Ubuntu;
-  }
-  section header h2 {
-    font: 700 3.6rem Ubuntu;
-  }
-  section h3 {
-    font: 400 3.2rem Ubuntu;
-  }
-  .aside-bottom {
-    padding: 1.4rem;
-  }
-  .navigator li {
-    height: 40px;
-  }
-  .navigator a {
-    font: 700 1rem Ubuntu;
-  }
-}
-@media screen and (max-width: 1440px) {
-  .main-content {
-    width: 60%;
-  }
-  .main-content > header {
-    padding: 2rem 0 4rem 0;
-  }
-  .main-content > header h1 {
-    font: 300 3.8rem Ubuntu;
-  }
-  .main-content > header h2 {
-    font: 300 1.8rem/1 Ubuntu;
-  }
-  article article .text-big {
-    font: 300 2rem/1.4 Ubuntu;
-  }
-  article article p {
-    padding: 2rem 0 2rem 0;
-    font: 300 1.6rem/1.2 Ubuntu;
-  }
-  article article ul li {
-    font: 300 1.6rem/1.4 Ubuntu;
-  }
-  .enlaces a {
-    padding: 1rem;
-    font: 400 1.6rem Ubuntu;
-  }
-  section header {
-    border-bottom: solid 5px #e63d67;
-    padding: 1.6rem;
-  }
-  section header h2 {
-    font: 700 2.6rem Ubuntu;
-  }
-  section h3 {
-    font: 400 2.2rem Ubuntu;
-  }
-  .aside-bottom {
-    padding: 1rem;
-  }
-}
-@media screen and (max-width: 1366px) {
-  .main-content > header {
-    padding: 2rem 0 4rem 0;
-  }
-  .main-content > header h1 {
-    font: italic 300 3rem Ubuntu;
-  }
-  .main-content > header h2 {
-    font: 300 1.4rem/1 Ubuntu;
-  }
-  section article article {
-    padding-top: 1rem;
-  }
-  article article .text-big {
-    font: 300 1.4rem Ubuntu;
-    letter-spacing: 0;
-  }
-  article article p {
-    padding: 2rem 0 2rem 0;
-    font: 300 1rem/1.2 Ubuntu;
-  }
-  article article ul li {
-    font: 300 1rem/1.4 Ubuntu;
-  }
-  .enlaces a {
-    font: 400 1rem Ubuntu;
-  }
-  section {
-    padding-bottom: 2rem;
-/* Headers de Articles */
-/* Subtitulo H3 */
-  }
-  section header {
-    border-bottom: 2px solid #e63d67;
-    padding: 1.4rem;
-  }
-  section header h2 {
-    font: 700 2rem Ubuntu;
-  }
-  section h3 {
-    font: 400 1.6rem Ubuntu;
   }
 }
 @media screen and (max-width: 1024px) {
-  .main-content {
-    width: 90%;
-/* Estilos de sections */
+  .navigator {
+    position: static;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    margin-top: 2vh;
+  }
+  .navigator ol {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .navigator a {
+    font-size: 1em;
   }
   .main-content > header {
-    padding: 2rem 0 2rem 0;
-    justify-content: center;
+    padding: 12vh 0 6vh 0;
+/* Titulo de página H1 */
   }
-  section header {
-    border-right: 0;
-/* Subtitulo H2 */
+  .main-content > header h1 {
+    font-size: 6vw;
   }
-  section header h2 {
-    text-align: left;
+  .main-content main {
+    width: 90%;
   }
+  section h2 {
+    font-size: 4vw;
+  }
+  section h3 {
+    font-size: 3vw;
+  }
+  section h4 {
+    font-size: 2.6vw;
+  }
+  article article p {
+    font-size: 1em;
+  }
+  article article .text-big {
+    font-size: 1.2em;
+  }
+  article article li {
+    font-size: 1.2em;
+  }
+}
+@media screen and (max-width: 768px) {
   .navigator {
     display: none;
   }
-}
-@media screen and (max-width: 480px) {
+  section h2 {
+    font-size: 2em;
+  }
+  section h3 {
+    font-size: 1.6em;
+  }
+  section h4 {
+    font-size: 1.2em;
+  }
   .wrapper-ul div {
     max-width: 100%;
   }
-}
-@-moz-keyframes logo {
-  from {
-    opacity: 0;
-    left: -100px;
-  }
-  to {
-    opacity: 1;
-    left: 80px;
-  }
-}
-@-webkit-keyframes logo {
-  from {
-    opacity: 0;
-    left: -100px;
-  }
-  to {
-    opacity: 1;
-    left: 80px;
-  }
-}
-@-o-keyframes logo {
-  from {
-    opacity: 0;
-    left: -100px;
-  }
-  to {
-    opacity: 1;
-    left: 80px;
-  }
-}
-@keyframes logo {
-  from {
-    opacity: 0;
-    left: -100px;
-  }
-  to {
-    opacity: 1;
-    left: 80px;
-  }
-}
-@-moz-keyframes callme {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@-webkit-keyframes callme {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@-o-keyframes callme {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes callme {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@-moz-keyframes titulo1 {
-  from {
-    opacity: 0;
-    bottom: 100px;
-  }
-  to {
-    opacity: 1;
-    bottom: 0;
-  }
-}
-@-webkit-keyframes titulo1 {
-  from {
-    opacity: 0;
-    bottom: 100px;
-  }
-  to {
-    opacity: 1;
-    bottom: 0;
-  }
-}
-@-o-keyframes titulo1 {
-  from {
-    opacity: 0;
-    bottom: 100px;
-  }
-  to {
-    opacity: 1;
-    bottom: 0;
-  }
-}
-@keyframes titulo1 {
-  from {
-    opacity: 0;
-    bottom: 100px;
-  }
-  to {
-    opacity: 1;
-    bottom: 0;
-  }
-}
-@-moz-keyframes titulo2 {
-  from {
-    opacity: 0;
-    bottom: 50px;
-  }
-  to {
-    opacity: 1;
-    bottom: 0;
-  }
-}
-@-webkit-keyframes titulo2 {
-  from {
-    opacity: 0;
-    bottom: 50px;
-  }
-  to {
-    opacity: 1;
-    bottom: 0;
-  }
-}
-@-o-keyframes titulo2 {
-  from {
-    opacity: 0;
-    bottom: 50px;
-  }
-  to {
-    opacity: 1;
-    bottom: 0;
-  }
-}
-@keyframes titulo2 {
-  from {
-    opacity: 0;
-    bottom: 50px;
-  }
-  to {
-    opacity: 1;
-    bottom: 0;
+  .enlaces a {
+    padding: 1rem;
+    font-size: 1em;
   }
 }

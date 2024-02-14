@@ -10,11 +10,7 @@ const formattedPosts = formatBlogPosts(allPosts);
 	{
 		formattedPosts.map((post: any, index: any) => {
 			return index < 8 ? (
-				<a
-					href={post.url}
-					title={post.frontmatter.title}
-					class="anin-rapido"
-				>
+				<a href={post.url} title={post.frontmatter.title} class="anin-rapido">
 					{post.frontmatter.title}
 				</a>
 			) : null;
@@ -36,13 +32,16 @@ const formattedPosts = formatBlogPosts(allPosts);
 	a
 		background rgb(103, 61, 230)
 		color #FFF
-		text-transform uppercase
-		padding 1.4rem
-		border-radius 6px
+		padding 1vw
+		border-radius 0.2vw
+		border 0
 		transition all .1s ease-in-out
-		font 500 1.8rem Ubuntu
+		font-size 1vw
+		font-weight 400
+		line-height 120%
 		text-align center
 		&:hover
+			color #FFF
 			background rgb(8, 12, 63)
 		&:last-child
 			background rgb(230, 61, 103)
@@ -50,14 +49,8 @@ const formattedPosts = formatBlogPosts(allPosts);
 				background rgb(8, 12, 63)
 	
 	/* Responsive Design */
-	@media screen and (max-width:2560px)
-		a
-			padding 1.2rem
-			font 500 1.4rem Ubuntu
-
 	@media screen and (max-width:1920px)
 		a
-			border-radius 4px
-			padding .8rem
-			font 500 1rem Ubuntu
+			font-size 1em
+			padding 1rem
 </style>

@@ -2,7 +2,6 @@
 import "../styles/reset.css";
 import "../styles/layoutblog.css";
 import { formatDate, formatBlogPosts, slugify } from "../js/utils";
-import LogoView from "../components/LogoView.astro";
 import MainMenuView from "../components/MainMenuView.astro";
 import AdsArea from "../components/AdsArea.astro";
 import CategoryCloud from "../components/CategoryCloud.astro";
@@ -11,134 +10,131 @@ import Footer from "../components/Footer.astro";
 import RelatedPost from "../components/RelatedPost.astro";
 
 interface Props {
-    title: string;
-    description: string;
-    keywords: string;
-    author: string;
-    image: string;
-    category: string;
-    date: string;
-    url: any;
+	title: string;
+	description: string;
+	keywords: string;
+	author: string;
+	image: string;
+	category: string;
+	date: string;
+	url: any;
 }
 
 const {
-    frontmatter,
-    title = frontmatter.title,
-    description = frontmatter.description,
-    keywords = frontmatter.tags,
-    author = frontmatter.author,
-    image = frontmatter.image.url,
-    category = frontmatter.category,
-    date = frontmatter.date,
-    url = window.location,
+	frontmatter,
+	title = frontmatter.title,
+	description = frontmatter.description,
+	keywords = frontmatter.tags,
+	author = frontmatter.author,
+	image = frontmatter.image.url,
+	category = frontmatter.category,
+	date = frontmatter.date,
+	url = window.location,
 } = Astro.props;
 
 /* Related Post */
 const allPosts = await Astro.glob("../pages/publicaciones/*.md");
 const formattedPosts = formatBlogPosts(allPosts, {
-    sortByDate: false,
+	sortByDate: false,
 });
 
 const relatedPost = formattedPosts
-    .filter(
-        (post: any) =>
-            post.frontmatter.category === category &&
-            post.frontmatter.title !== title,
-    )
-    .slice(0, 1);
+	.filter(
+		(post: any) =>
+			post.frontmatter.category === category &&
+			post.frontmatter.title !== title,
+	)
+	.slice(0, 1);
 ---
 
 <!doctype html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8" />
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, maximum-scale=1"
-        />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <link
-            rel="apple-touch-icon"
-            sizes="144x144"
-            href="/apple-touch-icon.png"
-        />
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, maximum-scale=1"
+		/>
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon.png" />
 
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,500&display=swap"
-            rel="stylesheet"
-        />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+		/>
 
-        <meta name="generator" content={Astro.generator} />
+		<meta name="generator" content={Astro.generator} />
 
-        <title>{title}</title>
-        <meta name="description" content={description} />
-        <meta name="keywords" content={keywords} />
+		<title>{title}</title>
+		<meta name="description" content={description} />
+		<meta name="keywords" content={keywords} />
 
-        <meta name="distribution" content="global" />
-        <meta name="author" content={author} />
-        <meta name="designer" content={author} />
-        <meta property="fb:page_id" content="394466673993640" />
-        <meta property="fb:admins" content="100000001685554" />
+		<meta name="distribution" content="global" />
+		<meta name="author" content={author} />
+		<meta name="designer" content={author} />
+		<meta property="fb:page_id" content="394466673993640" />
+		<meta property="fb:admins" content="100000001685554" />
 
-        <meta property="og:title" content={title} />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content={url} />
-        <meta property="og:image" content={image} />
-        <meta
-            property="og:site_name"
-            content="edgarcornejo.com/publicaciones/"
-        />
+		<meta property="og:title" content={title} />
+		<meta property="og:type" content="article" />
+		<meta property="og:url" content={url} />
+		<meta property="og:image" content={image} />
+		<meta property="og:site_name" content="edgarcornejo.com/publicaciones/" />
 
-        <meta
-            name="google-site-verification"
-            content="tepZV8pXm5w4Dq1SGa9KJml6qC2Ojq0dLlvHRBAAllQ"
-        />
-        <meta name="msvalidate.01" content="7E5549D4E71D0C4A0620EA0367533CD9" />
+		<meta
+			name="google-site-verification"
+			content="tepZV8pXm5w4Dq1SGa9KJml6qC2Ojq0dLlvHRBAAllQ"
+		/>
+		<meta name="msvalidate.01" content="7E5549D4E71D0C4A0620EA0367533CD9" />
 
-        <!--Twitter Card-->
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:site" content="@devcornejo" />
-        <meta name="twitter:title" content="Edgar Cornejo" />
-        <meta
-            name="twitter:description"
-            content="Mi nombre es Edgar Cornejo ofrezco los servicios de diseño gráfico, desarrollo web front-end y posicionamiento en Internet."
-        />
-        <meta name="twitter:creator" content="@devcornejo" />
-        <meta
-            name="twitter:image"
-            content="https://www.edgarcornejo.com/img/edgarcornejo.png"
-        />
-        <meta name="twitter:domain" content="https://www.edgarcornejo.com/" />
+		<!--Twitter Card-->
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:site" content="@devcornejo" />
+		<meta name="twitter:title" content="Edgar Cornejo" />
+		<meta
+			name="twitter:description"
+			content="Mi nombre es Edgar Cornejo ofrezco los servicios de diseño gráfico, desarrollo web front-end y posicionamiento en Internet."
+		/>
+		<meta name="twitter:creator" content="@devcornejo" />
+		<meta
+			name="twitter:image"
+			content="https://www.edgarcornejo.com/img/edgarcornejo.png"
+		/>
+		<meta name="twitter:domain" content="https://www.edgarcornejo.com/" />
 
-        <script type="application/ld+json">
-            {
-                "@context": "http://schema.org",
-                "@type": "Organization",
-                "name": "Edgar Cornejo",
-                "email": "info@edgarcornejo.com",
-                "url": "https://www.edgarcornejo.com",
-                "logo": "https://www.edgarcornejo.com/img/edgarcornejo.png",
-                "contactPoint": [
-                    {
-                        "@type": "ContactPoint",
-                        "telephone": "+51-974795622",
-                        "contactType": "customer support"
-                    }
-                ],
-                "sameAs": [
-                    "https://www.facebook.com/devcornejo",
-                    "https://github.com/edgarcornejo",
-                    "https://twitter.com/devcornejo",
-                    "https://www.youtube.com/user/devcornejo",
-                    "http://pinterest.com/Edgarcornejo/",
-                    "https://www.linkedin.com/pub/edgar-cornejo-cahuana/48/150/974"
-                ]
-            }
-        </script>
+		<script type="application/ld+json">
+			{
+				"@context": "http://schema.org",
+				"@type": "Organization",
+				"name": "Edgar Cornejo",
+				"email": "info@edgarcornejo.com",
+				"url": "https://www.edgarcornejo.com",
+				"logo": "https://www.edgarcornejo.com/img/edgarcornejo.png",
+				"contactPoint": [
+					{
+						"@type": "ContactPoint",
+						"telephone": "+51-974795622",
+						"contactType": "customer support"
+					}
+				],
+				"sameAs": [
+					"https://www.facebook.com/devcornejo",
+					"https://github.com/edgarcornejo",
+					"https://twitter.com/devcornejo",
+					"https://www.youtube.com/user/devcornejo",
+					"http://pinterest.com/Edgarcornejo/",
+					"https://www.linkedin.com/pub/edgar-cornejo-cahuana/48/150/974"
+				]
+			}
+		</script>
 
-        <!-- Google tag (gtag.js) 
+		<!-- Google tag (gtag.js) 
 		<script
 			async
 			src="https://www.googletagmanager.com/gtag/js?id=G-PRJWX26WVF"
@@ -152,59 +148,57 @@ const relatedPost = formattedPosts
 
 			gtag("config", "G-PRJWX26WVF");
 		</script>-->
-    </head>
+	</head>
 
-    <body itemscope itemtype="http://data-vocabulary.org/Person">
-        <LogoView />
-        <MainMenuView />
+	<body itemscope itemtype="http://data-vocabulary.org/Person">
+		<MainMenuView />
 
-        <AdsArea />
+		<div class="content-blog">
+			<AdsArea />
 
-        <section class="wrapper-content">
-            <main>
-                <article class="wrapper-post">
-                    <slot />
-                </article>
-            </main>
-            <aside>
-                <h4>Información de la publicación</h4>
-                <div class="info-post">
-                    <img src={image} alt={title} />
-                    <p>
-                        Autor: <a
-                            href={`/author/${slugify(author)}/`}
-                            title={author}>{author}</a
-                        >
-                    </p>
-                    <p>
-                        Categoría: <a
-                            href={`/category/${slugify(category)}/`}
-                            title={category}>{category}</a
-                        >
-                    </p>
-                    <p>
-                        Fecha de publicación: <time datetime={date}
-                            >{formatDate(date)}</time
-                        >
-                    </p>
-                    <p>
-                        Etiquetas: {
-                            keywords.map((tag: any) => <span>{tag}, </span>)
-                        }
-                    </p>
-                </div>
+			<section class="wrapper-content">
+				<main>
+					<article class="wrapper-post">
+						<slot />
+					</article>
+				</main>
+				<aside>
+					<h4>Información de la publicación</h4>
+					<div class="info-post">
+						<img src={image} alt={title} />
+						<p>
+							Autor: <a href={`/author/${slugify(author)}/`} title={author}
+								>{author}</a
+							>
+						</p>
+						<p>
+							Categoría: <a
+								href={`/category/${slugify(category)}/`}
+								title={category}>{category}</a
+							>
+						</p>
+						<p>
+							Fecha de publicación: <time datetime={date}
+								>{formatDate(date)}</time
+							>
+						</p>
+						<p>
+							Etiquetas: {keywords.map((tag: any) => <span>{tag}, </span>)}
+						</p>
+					</div>
 
-                <AdsArea />
+					<AdsArea />
 
-                <CategoryCloud />
+					<CategoryCloud />
 
-                <ListPosts />
+					<ListPosts />
 
-                <RelatedPost {relatedPost} />
-            </aside>
-        </section>
+					<RelatedPost {relatedPost} />
+				</aside>
+			</section>
+			<AdsArea />
+		</div>
 
-        <AdsArea />
-        <Footer />
-    </body>
+		<Footer />
+	</body>
 </html>
