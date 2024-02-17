@@ -42,6 +42,9 @@ body {
   letter-spacing: 1pt;
   font-size: 1vw;
   font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 .navigator a:hover {
   color: #080c3f;

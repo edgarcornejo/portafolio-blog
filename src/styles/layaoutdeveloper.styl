@@ -1,0 +1,486 @@
+/* Colors */
+devWhite = #FFFFFF
+devGrey =#7B7B7B
+devLightGrey =#C4C4C4
+devGrape =#5B0DBE
+devOrange = #FFA500
+
+::-webkit-scrollbar
+  width 1.1rem
+::-webkit-scrollbar-track
+  border-radius 0.2rem
+::-webkit-scrollbar-thumb
+  background devGrape
+  border-radius 0.2rem
+
+body
+  color devGrape
+  font-size 16px
+  background devWhite
+  font-family "Roboto", Helvetica, sans-serif
+
+/* Cabecera principal */
+#main-header
+  width 100%
+  background linear-gradient(-45deg, rgba(205,38,252,1) 0%, rgba(140,62,244,1) 53%, rgba(145,132,250,1) 100%), url("../developer/top-back.jpg")
+  background-size cover
+  background-position 0 center
+  background-repeat no-repeat
+  background-blend-mode multiply
+  color devWhite
+  &:after
+    content ""
+    width 100%
+    display block
+    position relative
+    bottom -2.9vh
+    border-top 3vh solid devGrape
+    border-left 3vh solid transparent
+
+/* Envoltura de logo, nav y contact */
+#wrapper-logo-nav-contact-title
+  width 90%
+  max-width 1920px
+  margin 0 auto
+  padding 2vh 0 4vh 0
+  display flex
+  flex-wrap wrap
+  align-items center
+  justify-content space-between
+
+/* Logotipo en Header */
+#logo
+  width 10%
+  display flex
+  align-items center
+  img
+    width 3vw
+    position relative
+    animation logo .5s ease-in
+
+/* Animation logo */
+@keyframes logo
+  0%
+    left -100px
+    opacity 0
+  100%
+    left 0
+
+/* Menu en Header*/
+nav
+  display flex
+  align-items center
+  width 60%
+  animation menu .3s ease-in both
+  animation-delay .5s
+  .open-menu, .closed-menu
+    user-select none
+    cursor pointer
+    display block
+    font-size 4em
+  .closed-menu
+    display none
+  menu
+    display none
+  li
+    width 25%
+    text-align center
+  a
+    font-size 1vw
+    font-weight 400
+    color devWhite
+    &:hover
+      font-weight 500
+      color inherit
+
+.input-menu
+  display none
+  &:checked ~ nav
+    .open-menu
+      display none
+    .closed-menu
+      display block
+    menu
+      display flex
+      width 100%
+  
+/* Animation Menu */
+@keyframes menu
+  0%
+    opacity 0
+  100%
+    opacity 100%
+
+/* Contacto en Header */
+#contact
+  justify-content flex-end
+  width 30%
+  display flex
+  gap 1rem
+  a
+    color devWhite
+    background devOrange
+    display flex
+    justify-content center
+    align-items center
+    padding 1rem
+    border-radius 0.2vw
+    transition all 0.2s ease-in-out
+    position relative
+    &:hover
+      background devGrape
+    &:first-child
+      animation contacto .5s ease-in both
+      animation-delay 1s
+    &:last-child
+      animation contacto .5s ease-in both
+      animation-delay .8s
+  span
+    font-size 3em
+
+/* Animation Contact */
+@keyframes contacto
+  0%
+    transform rotate(-90deg)
+    opacity 0
+    left -200px
+  100%
+    transform rotate(0deg)
+    opacity 100%
+    left 0
+
+/* Envoltura de H1 y H2*/
+#wrapper-title
+  width 100%
+  display flex
+  flex-direction column
+  padding-top 8vh
+  width 80%
+  h1
+    font-family 'Titillium Web'
+    font-weight 700
+    font-size 3vw
+    position relative
+    animation ttob .5s ease-in both
+    animation-delay 1.2s
+    line-height 120%
+  h2
+    font-size 2vw
+    font-family 'Roboto'
+    font-weight 100
+    position relative
+    animation ttob .5s ease-in both
+    animation-delay 1s
+    line-height 120%
+
+/* Animation Titulo*/
+@keyframes ttob
+  0%
+    opacity 0
+    top -100px
+  100%
+    opacity 100%
+    top 0
+
+/* Main Section*/
+#wrapper-articles
+  margin 0 auto
+  article
+    min-height 100vh
+    display flex
+    align-items center
+    &:nth-child(even)
+      justify-content flex-end
+      text-align left
+    &:nth-child(odd)
+      text-align right
+
+.wrap-article
+  width 60%
+  padding 6vw
+  backdrop-filter blur(6px)
+  border-radius 0.4vw
+  h2
+    font-family 'Titillium Web'
+    font-size 5vw
+    font-weight 700
+    line-height 100%
+    color devGrape
+  h3
+    font-family 'Titillium Web'
+    font-size 3vw
+    font-weight 400
+    line-height 120%
+    padding-bottom 2rem
+    color devOrange
+  p
+    font-size 1vw
+    font-weight 400
+    max-width 1024px
+    line-height 120%
+    display inline-block
+    hyphens none
+    strong
+      font-weight 500
+
+.bot-call
+  background devGrape
+  display inline-block
+  font-size 1vw
+  color devWhite
+  padding 1vw
+  font-weight 400
+  transition all .1s ease-in-out
+  &:hover
+    color devGrape
+    background devOrange
+
+/*background article*/
+#wrapper-articles
+  article
+    &:nth-child(1)
+      background url("../developer/iam.webp") no-repeat
+      background-size contain
+      background-position 120% 50%
+    &:nth-child(2)
+      background url("../developer/services.webp") no-repeat
+      background-size contain
+      background-size 40% 120%
+    &:nth-child(3)
+      background url("../developer/contact.webp") no-repeat
+      background-size contain
+      background-position 120% 50%
+
+footer
+  position relative
+  padding 6vh 0 6vh 0
+  background devGrape
+  color devWhite
+  &:before
+    border-radius 50%
+    content ""
+    display block
+    position absolute
+    top -2vw
+    right 2vw
+    width 4vw
+    height 4vw
+    background url("../developer/edgarcornejo.svg") no-repeat center center devOrange
+    background-size 70%
+
+#wrapper-uls-footer
+  margin 0 auto
+  width 90%
+  max-width 1920px
+  display flex
+  flex-wrap wrap
+  justify-content space-around
+
+.ul-footer
+  width 30%
+  display flex
+  flex-direction column
+  gap 1vw
+  ul
+    display flex
+    flex-wrap wrap
+  h3
+    font-family 'Titillium Web'
+    font-size 1.4vw
+    text-align right
+    line-height 120%
+    color devOrange
+    font-weight 600
+    border-bottom solid 0.1vh devOrange
+    padding 1vh
+    margin-bottom 1vh
+  li
+    margin 1vh
+  a
+    font-size 1vw
+    font-weight 300
+    line-height 100%
+    color devWhite
+    outline solid 0.1vh devWhite
+    padding 1vh
+    border-radius 0.2vh
+    display inline-block
+    hyphens none
+    &:hover
+      font-weight 400
+      color devGrape
+      background devOrange
+      outline 0
+
+#copyright
+  margin-top 2vh
+  width 100%
+  font-size 1vw
+  text-align right
+  
+/* Responsive Design */
+@media screen and (max-width:1920px)
+  /* Logotipo en Header */
+  #logo
+    img
+      width 4vw
+
+  /* Menu en Header*/
+  nav
+    .open-menu, .closed-menu
+        font-size 3em
+  
+  /* Contacto en Header */
+  #contact
+    span
+      font-size 2em
+
+@media screen and (max-width:1024px)
+  /* Cabecera principal */
+  #main-header
+    &:after
+      display none
+  
+  /* Envoltura de logo, nav y contact */
+  #wrapper-logo-nav-contact-title
+    padding 2vh 0 6vh 0
+
+  /* Logotipo en Header */
+  #logo
+    img
+      width 6vw
+  
+  /* Menu en Header*/
+  nav
+    a
+      font-size 1.4em
+
+  /* Contacto en Header */
+  #contact
+    span
+      font-size 1.2em
+
+  /* Envoltura de H1 y H2*/
+  #wrapper-title
+    h1
+      font-size 6vw
+    h2
+      font-size 4vw
+    
+  /* Main Section*/
+  #wrapper-articles
+    article
+      min-height auto
+      &:nth-child(even)
+        justify-content flex-start
+        text-align left
+      &:nth-child(odd)
+        text-align left
+      
+  .wrap-article
+    width 90%
+    margin 0 auto
+    color devWhite
+    h2
+      color devWhite
+    p
+      font-size 1em
+
+  .bot-call
+    font-size 1em
+
+  /*background article*/
+  #wrapper-articles
+    article
+      &:nth-child(1)
+        background-size cover
+        background-position center center
+      &:nth-child(2)
+        background-size cover
+        background-position center center
+      &:nth-child(3)
+        background-size cover
+        background-position center center
+
+  .ul-footer
+    a
+      font-size 1em
+
+  #copyright
+    font-size 1em
+
+@media screen and (max-width:768px)
+  /* Envoltura de logo, nav y contact */
+  #wrapper-logo-nav-contact-title
+    padding 2rem 0 2rem 0
+    justify-content flex-start
+    gap 2rem
+
+  /* Logotipo en Header */
+  #logo
+    width 100%
+    justify-content center
+    order 1
+    img
+      width 10vw
+
+  /* Menu en Header*/
+  nav
+    width 100%
+    justify-content center
+    flex-direction column
+    order 4
+    flex-grow 2
+    li
+      width 100%
+    a
+      text-transform uppercase
+  
+  .input-menu
+    &:checked ~ nav
+      menu
+        display flex
+        flex-direction column
+        width 100%
+        padding-top 1rem
+        gap 2rem
+
+  /* Contacto en Header */
+  #contact
+    position absolute
+    order 2
+    top 4vh
+    right 4vw
+
+  /* Envoltura de H1 y H2*/
+  #wrapper-title
+    padding-top 2vh
+    justify-content center
+    text-align center
+    order 3
+    flex-grow 2
+
+  .wrap-article
+    padding 4rem 0 4rem 0
+    h2
+      font-size 2em
+    h3
+      font-size 1.6em
+
+  footer
+    &:before
+      display none
+
+  #wrapper-uls-footer
+    flex-direction column
+    justify-content center
+
+  .ul-footer
+    width 100%
+    ul
+      justify-content center
+      padding-bottom 1rem
+    h3
+      font-size 1.6em
+      text-align center
+

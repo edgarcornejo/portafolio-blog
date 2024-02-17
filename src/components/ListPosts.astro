@@ -16,7 +16,9 @@ const formattedPosts = formatBlogPosts(allPosts);
 			) : null;
 		})
 	}
-	<a href="publicaciones/" class="anin-rapido" title="Ver más">Ver más</a>
+	<a href="publicaciones/" class="anin-rapido" title="Ver más"
+		><span class="material-symbols-sharp">feed</span> Ver más</a
+	>
 </div>
 
 <style lang="stylus">
@@ -40,6 +42,9 @@ const formattedPosts = formatBlogPosts(allPosts);
 		font-weight 400
 		line-height 120%
 		text-align center
+		display flex
+		align-items center
+		gap 1rem
 		&:hover
 			color #FFF
 			background rgb(8, 12, 63)

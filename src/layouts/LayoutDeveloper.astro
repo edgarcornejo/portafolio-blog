@@ -1,21 +1,5 @@
 ---
 import "../styles/reset.css";
-import Header from "../components/designer/Header.astro";
-import Footer from "../components/designer/Footer.astro";
-
-/* SEO */
-interface Props {
-  title?: string;
-  description?: string;
-  keywords?: string;
-  url?: any;
-}
-const {
-  title = "Diseñador Gráfico Edgar Cornejo, designer graphic, diseño gráfico, freelance, diseño de logotipo",
-  description = "Es un gusto saludarte y darte la bienvenida a mi web de diseñador gráfico, estoy aquí para ofrecerte mis servicios.",
-  keywords = "diseñador gráfico, diseñador web, graphic designer, freelance, diseño de logotipos, afiches",
-  url = window.location,
-} = Astro.props;
 ---
 
 <!doctype html>
@@ -32,38 +16,46 @@ const {
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400;700&display=swap"
       rel="stylesheet"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
-
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
+
     <meta name="generator" content={Astro.generator} />
 
-    <title>{title}</title>
-    <meta name="description" content={description} />
-    <meta name="keywords" content={keywords} />
+    <title>
+      Desarrollador Web Frontend Edgar Cornejo frontend developer, diseñador web
+      freelance, paginas web
+    </title>
+    <meta
+      name="description"
+      content="Desarrollo, diseño y maqueto experiencias para usuarios digitales, que transmiten el mensaje correcto de un producto o servicio. Orientó todos mis proyectos al posicionamiento en Internet y su rentabilidad."
+    />
+    <meta
+      name="keywords"
+      content="paginas web, WordPress, desarrollador web, Front end developer, diseñador web, freelance"
+    />
 
     <meta name="distribution" content="global" />
     <meta name="author" content="Edgar Cornejo" />
     <meta name="designer" content="Edgar Cornejo" />
     <meta property="fb:page_id" content="394466673993640" />
     <meta property="fb:admins" content="100000001685554" />
-
-    <!-- OpenGraf -->
-    <meta property="og:title" content={title} />
+    <meta property="og:title" content="edgarcornejo.com" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content={url} />
-    <meta property="og:image" content="/edgarcornejo.svg" />
-    <meta property="og:site_name" content="Edgar Cornejo Designer" />
-
-    <!-- Verificación -->
+    <meta property="og:url" content="https://www.edgarcornejo.com" />
+    <meta
+      property="og:image"
+      content="https://www.edgarcornejo.com/img/edgarcornejo.svg"
+    />
+    <meta property="og:site_name" content="edgarcornejo.com" />
     <meta
       name="google-site-verification"
       content="tepZV8pXm5w4Dq1SGa9KJml6qC2Ojq0dLlvHRBAAllQ"
@@ -73,14 +65,17 @@ const {
     <!--Twitter Card-->
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@devcornejo" />
-    <meta name="twitter:title" content={title} />
-    <meta name="twitter:description" content={description} />
-    <meta name="twitter:creator" content="@devcornejo" />
-    <meta name="twitter:image" content="/edgarcornejo.svg" />
+    <meta name="twitter:title" content="Edgar Cornejo" />
     <meta
-      name="twitter:domain"
-      content="https://www.edgarcornejo.com/desiner/"
+      name="twitter:description"
+      content="Mi nombre es Edgar Cornejo ofrezco los servicios de diseño gráfico, desarrollo web front-end y posicionamiento en Internet."
     />
+    <meta name="twitter:creator" content="@devcornejo" />
+    <meta
+      name="twitter:image"
+      content="https://www.edgarcornejo.com/img/edgarcornejo.svg"
+    />
+    <meta name="twitter:domain" content="https://www.edgarcornejo.com/" />
 
     <script type="application/ld+json">
       {
@@ -89,7 +84,7 @@ const {
         "name": "Edgar Cornejo",
         "email": "info@edgarcornejo.com",
         "url": "https://www.edgarcornejo.com",
-        "logo": "https://www.edgarcornejo.com/edgarcornejo.svg",
+        "logo": "https://www.edgarcornejo.com/img/edgarcornejo.svg",
         "contactPoint": [
           {
             "@type": "ContactPoint",
@@ -98,10 +93,8 @@ const {
           }
         ],
         "sameAs": [
-          "https://www.instagram.com/devcornejo/",
           "https://www.facebook.com/devcornejo",
           "https://github.com/edgarcornejo",
-          "https://www.behance.net/edgarcornejo",
           "https://twitter.com/devcornejo",
           "https://www.youtube.com/user/devcornejo",
           "http://pinterest.com/Edgarcornejo/",
@@ -109,10 +102,6 @@ const {
         ]
       }
     </script>
-
-    <script
-      src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-    ></script>
 
     <!-- Google tag (gtag.js) 
 		<script
@@ -131,21 +120,6 @@ const {
   </head>
 
   <body>
-    <main id="main-content">
-      <Header />
-
-      <slot />
-
-      <Footer />
-    </main>
+    <slot />
   </body>
 </html>
-
-<style lang="stylus">
-  /* Contenedor principal */
-  #main-content
-    width 100%
-    height auto
-    margin 0 auto
-
-</style>
