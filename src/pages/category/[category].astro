@@ -50,7 +50,7 @@ const { name } = Astro.props;
 const allPost = await Astro.glob("../publicaciones/*.md");
 const formattedPosts = formatBlogPosts(allPost);
 const catPosts = formattedPosts.filter(
-    (post) => slugify(post.frontmatter.category) === category,
+    (post: any) => slugify(post.frontmatter.category) === category,
 );
 ---
 
@@ -62,7 +62,7 @@ const catPosts = formattedPosts.filter(
 
         <main>
             <div class="wrapper-post">
-                {catPosts.map((apost) => <PostPreview post={apost} />)}
+                {catPosts.map((apost: any) => <PostPreview post={apost} />)}
             </div>
         </main>
     </div>

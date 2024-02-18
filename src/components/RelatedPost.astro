@@ -5,7 +5,7 @@ const { relatedPost } = Astro.props;
 
 <h4>Publicaciones relacionadas</h4>
 {
-	relatedPost.map((post) => (
+	relatedPost.map((post: any) => (
 		<div>
 			<a href={post.url}>
 				{post.frontmatter.title}

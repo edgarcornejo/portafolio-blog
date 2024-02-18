@@ -4,10 +4,10 @@ import { formatBlogPosts, slugify } from "../js/utils";
 const allPosts = await Astro.glob("../pages/publicaciones/*.md");
 const formattedPost = formatBlogPosts(allPosts);
 const allCategories = formattedPost
-    .map((cat) => cat.frontmatter.category.toLowerCase())
+    .map((cat: any) => cat.frontmatter.category.toLowerCase())
     .flat();
 
-const processedCats = allCategories.reduce((acc, category) => {
+const processedCats = allCategories.reduce((acc: any, category: any) => {
     const value = acc[category] || 0;
 
     return {

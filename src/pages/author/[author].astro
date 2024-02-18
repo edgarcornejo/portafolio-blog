@@ -9,12 +9,12 @@ export async function getStaticPaths() {
     const formattedPosts = formatBlogPosts(allPost);
     const allAuthors = [
         ...new Set(
-            formattedPosts.map((post) => post.frontmatter.author).flat(),
+            formattedPosts.map((post: any) => post.frontmatter.author).flat(),
         ),
     ];
     return allAuthors.map((author) => {
         const authorPosts = formattedPosts.filter(
-            (post) => post.frontmatter.author === author,
+            (post: any) => post.frontmatter.author === author,
         );
         return {
             params: { author: slugify(author) },
@@ -38,7 +38,7 @@ const { posts, authorName } = Astro.props;
 
         <main>
             <div class="wrapper-post">
-                {posts.map((apost) => <PostPreview post={apost} />)}
+                {posts.map((apost: any) => <PostPreview post={apost} />)}
             </div>
         </main>
     </div>

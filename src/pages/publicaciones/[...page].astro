@@ -6,7 +6,12 @@ import Pagination from "../../components/Pagination.astro";
 import CategoryCloud from "../../components/CategoryCloud.astro";
 import AdsArea from "../../components/AdsArea.astro";
 
-export async function getStaticPaths({ paginate }) {
+interface Props {
+    title: string;
+    page: any;
+}
+
+export async function getStaticPaths({ paginate }: any) {
     const allPosts = await Astro.glob("./*.md");
     const formattedPosts = formatBlogPosts(allPosts);
 
