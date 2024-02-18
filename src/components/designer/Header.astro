@@ -57,19 +57,12 @@
     background url(../designer/edgarcornejo.svg) no-repeat 50% 44% greenMate
     background-size 40%
     height 8vh
+    min-height 3rem
     width 12vw
     animation lefttoright 1s ease-in
     position relative
+    border-radius 0 0 0.4vw 0
     top -1vh
-    &:after
-      display block
-      content ''
-      position relative
-      left 99.9%
-      width 0
-      height 0
-      border-top 8vh solid greenMate
-      border-right 2vw solid transparent
   
   /* Logotipo */
   @keyframes lefttoright
@@ -160,10 +153,6 @@
 
   /* Responsive Design */ 
   @media screen and (max-width:2560px)
-    #logo
-      &:after
-        left 99.7%
-    
     /* Título de página */
     h1
       letter-spacing -1pt
@@ -210,8 +199,6 @@
       height 9vh
       position static
       width 100%
-      &:after
-        display none
 
     /* Título de página */
     .name-title

@@ -57,34 +57,23 @@ const year = fecha.getFullYear();
   /* Footer */
   footer
     width 100%
+    height 8vh
     display flex
-    align-items center
+    align-items stretch
     justify-content space-between
     flex-wrap wrap
-    border-bottom 1vh solid greenMate
 
   #logo-footer
     background url(../designer/edgarcornejo.svg) no-repeat 50% 56% greenMate
     background-size 40%
-    height 8vh
     width 12vw
-    animation lefttoright 1s ease-in
-    position relative
-    bottom -1vh
-    &:after
-      display block
-      content ''
-      position relative
-      left 99.9%
-      width 0
-      height 0
-      border-bottom 8vh solid greenMate
-      border-right 2vw solid transparent
+    border-radius 0 0.4vw 0 0
 
   /* Texto de footer */
   p
     flex-grow 2
     color greenMate
+    align-self center
     small
       padding-left 3vw
       animation aparecer .5s ease-in both
@@ -99,29 +88,16 @@ const year = fecha.getFullYear();
     background greenMate
     display flex
     align-items center
-    width 16vw
-    height 8vh
-    position relative
-    bottom -1vh
+    justify-content center
+    width 14vw
     gap 2rem
-    &:before
-      display block
-      content ''
-      position relative
-      width 0
-      left -1vw
-      height 0
-      border-top 8vh solid greenMate
-      border-left 2vh solid transparent
+    border-radius 0.4vw 0 0 0
     a
       background url(../img/icon-social.svg) no-repeat greenPastel
       background-size cover
       width 48px
       height 48px
       border-radius 3px
-      text-indent 100%
-      white-space nowrap
-      overflow hidden
       font-size 0
       transition all 0.2s ease-out
       transform scale(1.4)
@@ -142,24 +118,22 @@ const year = fecha.getFullYear();
 
   /* Responsive Design */
   @media screen and (max-width:2560px)
-    #logo-footer
-      &:after
-        left 99.7%
-
     #social-footer
-      width 20vw
+      width 18vw
       gap 1.4rem
       a
         transform scale(1)
 
   @media screen and (max-width:1920px)
     #social-footer
-      width 24vw
+      width 22vw
+      padding 1rem
+      height auto
       gap 1rem
 
   @media screen and (max-width:1440px)
     #social-footer
-      width 30vw
+      width 28vw
 
   @media screen and (max-width:1366px)
     #social-footer
@@ -167,10 +141,12 @@ const year = fecha.getFullYear();
 
   @media screen and (max-width:1024px)
     footer
+      height auto
       justify-content center
       flex-direction column
 
     #logo-footer
+      height 80px
       order 3
       width 100%
       background-size 60px
@@ -192,9 +168,6 @@ const year = fecha.getFullYear();
       justify-content center
       flex-wrap wrap
       position static
-      padding 1rem
       height auto
-      &:before
-        display none
   
 </style>

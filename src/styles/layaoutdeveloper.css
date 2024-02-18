@@ -25,15 +25,6 @@ body {
   background-blend-mode: multiply;
   color: #fff;
 }
-#main-header:after {
-  content: "";
-  width: 100%;
-  display: block;
-  position: relative;
-  bottom: -2.9vh;
-  border-top: 3vh solid #5b0dbe;
-  border-left: 3vh solid transparent;
-}
 /* Envoltura de logo, nav y contact */
 #wrapper-logo-nav-contact-title {
   width: 90%;
