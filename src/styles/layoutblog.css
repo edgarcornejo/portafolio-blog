@@ -29,32 +29,32 @@ body {
   width: 25%;
 }
 /* Informacion y Publicidad */
-aside h4 {
+.aside-blog h4 {
   font-size: 1.2vw;
   line-height: 100%;
   padding-bottom: 2vh;
 }
-aside div {
+.aside-blog div {
   margin-bottom: 4vh;
 }
-aside .info-post p {
+.aside-blog .info-post p {
   font-size: 1vw;
   line-height: 140%;
 }
-aside .info-post strong,
-aside .info-post time {
+.aside-blog .info-post strong,
+.aside-blog .info-post time {
   text-transform: uppercase;
   font-weight: 600;
 }
-aside .info-post span {
+.aside-blog .info-post span {
   font-style: italic;
   hyphens: none;
 }
-aside .info-post a {
+.aside-blog .info-post a {
   color: #673de6;
   font-weight: 500;
 }
-aside .info-post a:hover {
+.aside-blog .info-post a:hover {
   color: #080c3f;
 }
 /* Post solo*/
@@ -138,3 +138,73 @@ aside .info-post a:hover {
   height: 100%;
 }
 /* Responsive design */
+@media screen and (max-width: 1024px) {
+  .content-blog {
+    padding: 4rem 0 2rem 0;
+  }
+  .wrapper-content {
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .wrapper-content main {
+    width: 100%;
+  }
+  .wrapper-content aside {
+    width: 100%;
+  }
+  .wrapper-post h1 {
+    font-size: 2em;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: solid 3px #bfeee7;
+  }
+  .wrapper-post h2 {
+    font-size: 1.6em;
+    margin-bottom: 2rem;
+    padding: 2rem 0 1rem 0;
+    border-bottom: solid 3px #bfeee7;
+  }
+  .wrapper-post p {
+    font-size: 1em;
+    padding: 1rem 0 1rem 0;
+  }
+  .wrapper-post li {
+    font-size: 1.2em;
+  }
+  .wrapper-post figure {
+    padding: 2rem 0 2rem 0;
+  }
+  .wrapper-post img {
+    max-width: 80%;
+  }
+  .wrapper-post figcaption {
+    padding-top: 1rem;
+    font-size: 1em;
+  }
+  .aside-blog {
+    background: #bfeee7;
+    padding: 1rem;
+  }
+  .aside-blog h4 {
+    text-align: center;
+    font-size: 1.2em;
+    padding-bottom: 2rem;
+  }
+  .aside-blog div {
+    margin-bottom: 3rem;
+  }
+  .aside-blog .info-post {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  .aside-blog .info-post img {
+    max-width: 50%;
+  }
+  .aside-blog .info-post p {
+    font-size: 1em;
+  }
+}

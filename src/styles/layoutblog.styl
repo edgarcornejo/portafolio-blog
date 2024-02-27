@@ -34,7 +34,7 @@ body
 		width 25%
 
 /* Informacion y Publicidad */
-aside
+.aside-blog
 	h4
 		font-size 1.2vw
 		line-height 100%
@@ -126,4 +126,63 @@ aside
 			height 100%
 
 /* Responsive design */
-//@media screen and (max-width:1024px)
+@media screen and (max-width:1024px)
+	/* Layout Blog */
+	.content-blog
+		padding 4rem 0 2rem 0
+
+	.wrapper-content
+		flex-direction column
+		justify-content center
+		gap 1rem
+		main
+			width 100%
+		aside
+			width 100%
+	
+	/* Post solo*/
+	.wrapper-post
+		h1
+			font-size 2em
+			margin-bottom 2rem
+			padding-bottom 1rem
+			border-bottom solid 3px eGray
+		h2
+			font-size 1.6em
+			margin-bottom 2rem
+			padding 2rem 0 1rem 0
+			border-bottom solid 3px eGray
+		p
+			font-size 1em
+			padding 1rem 0 1rem 0
+		li
+			font-size 1.2em
+		figure
+			padding 2rem 0 2rem 0
+		img
+			max-width 80%
+		figcaption
+			padding-top 1rem
+			font-size 1em
+
+	/* Informacion y Publicidad */
+	.aside-blog
+		background eGray
+		padding 1rem
+		h4
+			text-align center
+			font-size 1.2em
+			padding-bottom 2rem
+		div
+			margin-bottom 3rem
+		.info-post
+			display flex
+			flex-direction column
+			justify-content center
+			align-items center
+			gap 1rem
+			img
+				max-width 50%
+			p
+				font-size 1em
+

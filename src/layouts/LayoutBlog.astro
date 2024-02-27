@@ -186,7 +186,7 @@ const relatedPost = formattedPosts
 						<slot />
 					</article>
 				</main>
-				<aside>
+				<aside class="aside-blog">
 					<h4>Información de la publicación</h4>
 					<div class="info-post">
 						<img src={image} alt={title} />
@@ -210,8 +210,6 @@ const relatedPost = formattedPosts
 							Etiquetas: {keywords.map((tag: any) => <span>{tag}, </span>)}
 						</p>
 					</div>
-
-					<AdsArea />
 
 					<CategoryCloud />
 
