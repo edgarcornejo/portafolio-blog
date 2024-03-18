@@ -150,13 +150,6 @@ body {
 /* Configuramos la tipografía para toda la web */
 body {
   min-height: 100vh;
-  font-size: 100%;
-/* opcional */
-  line-height: 1.4em;
-/* opcional */
-  -webkit-hyphens: auto;
-  -ms-hyphens: auto;
-  hyphens: auto;
 /* opcional */
   font-smooth: always;
 /* opcional */
@@ -183,7 +176,6 @@ i,
 b,
 u,
 em {
-  font-size: 1em;
   font-weight: inherit;
   font-style: inherit;
   text-decoration: none;
@@ -206,15 +198,11 @@ button,
 label {
   font-family: inherit;
   font-size: inherit;
-  -webkit-hyphens: auto;
-  -ms-hyphens: auto;
   hyphens: auto;
   background-color: transparent;
   color: inherit;
   display: block;
 /* opcional */
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
 }
 /* Reseteamos las tablas */
@@ -229,16 +217,6 @@ svg {
   width: 100%;
   display: block;
   fill: currentColor;
-}
-/* Animación básica */
-.anin-rapido {
-  transition: all 0.1s ease-in-out;
-}
-.anin-normal {
-  transition: all 0.2s ease-in-out;
-}
-.anin-lento {
-  transition: all 0.3s ease-in-out;
 }
 /* Iconos */
 .material-symbols-sharp {

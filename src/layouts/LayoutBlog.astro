@@ -1,13 +1,14 @@
 ---
-import "../styles/reset.css";
-import "../styles/layoutblog.css";
+/* Importando Layout */
+import Layout from "./Layout.astro";
+
+/* importando componentes */
 import { formatDate, formatBlogPosts, slugify } from "../js/utils";
-import MainMenuView from "../components/MainMenuView.astro";
 import AdsArea from "../components/AdsArea.astro";
 import CategoryCloud from "../components/CategoryCloud.astro";
 import ListPosts from "../components/ListPosts.astro";
-import Footer from "../components/Footer.astro";
 import RelatedPost from "../components/RelatedPost.astro";
+
 
 interface Props {
 	title: string;
@@ -15,10 +16,12 @@ interface Props {
 	keywords: string;
 	author: string;
 	image: string;
+	imagealt: string;
 	category: string;
 	date: string;
 	url: any;
 	frontmatter: any;
+	type: string;
 }
 
 const {
@@ -28,9 +31,11 @@ const {
 	keywords = frontmatter.tags,
 	author = frontmatter.author,
 	image = frontmatter.image.url,
+	imagealt = frontmatter.image.alt,
 	category = frontmatter.category,
 	date = frontmatter.date,
 	url = window.location,
+	type = "article",
 } = Astro.props;
 
 /* Related Post */
@@ -48,179 +53,47 @@ const relatedPost = formattedPosts
 	.slice(0, 1);
 ---
 
-<!doctype html>
-<html lang="es">
-	<head>
-		<meta charset="UTF-8" />
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1, maximum-scale=1"
-		/>
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon.png" />
+<Layout {title} {description} {keywords} {author} {url} {image} {imagealt} {type}>
+	<main>
+		<AdsArea />
 
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap"
-			rel="stylesheet"
-		/>
-		<link
-			rel="stylesheet"
-			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-		/>
+		<section class="wrapper-content">
+			<article id="wrapper-post">
+				<slot />
+			</article>
 
-		<meta name="generator" content={Astro.generator} />
+			<aside class="aside-blog">
+				<h4>Información de la publicación</h4>
+				<div class="info-post">
+					<img src={image} alt={imagealt} />
+					<p>
+						Autor: <a href={`/author/${slugify(author)}/`} title={author}
+							>{author}</a
+						>
+					</p>
+					<p>
+						Categoría: <a
+							href={`/category/${slugify(category)}/`}
+							title={category}>{category}</a
+						>
+					</p>
+					<p>
+						Fecha de publicación: <time datetime={date}
+							>{formatDate(date)}</time
+						>
+					</p>
+					<p>
+						Etiquetas: {keywords.map((tag: any) => <span>{tag}, </span>)}
+					</p>
+				</div>
 
-		<title>{title}</title>
-		<meta name="description" content={description} />
-		<meta name="keywords" content={keywords} />
+				<CategoryCloud />
 
-		<meta name="distribution" content="global" />
-		<meta name="author" content={author} />
-		<meta name="designer" content={author} />
-		<meta property="fb:page_id" content="394466673993640" />
-		<meta property="fb:admins" content="100000001685554" />
+				<ListPosts />
 
-		<meta property="og:title" content={title} />
-		<meta property="og:type" content="article" />
-		<meta property="og:url" content={url} />
-		<meta property="og:image" content={image} />
-		<meta property="og:site_name" content="edgarcornejo.com/publicaciones/" />
-
-		<meta
-			name="google-site-verification"
-			content="tepZV8pXm5w4Dq1SGa9KJml6qC2Ojq0dLlvHRBAAllQ"
-		/>
-		<meta name="msvalidate.01" content="7E5549D4E71D0C4A0620EA0367533CD9" />
-
-		<!--Twitter Card-->
-		<meta name="twitter:card" content="summary" />
-		<meta name="twitter:site" content="@devcornejo" />
-		<meta name="twitter:title" content="Edgar Cornejo" />
-		<meta
-			name="twitter:description"
-			content="Mi nombre es Edgar Cornejo ofrezco los servicios de diseño gráfico, desarrollo web front-end y posicionamiento en Internet."
-		/>
-		<meta name="twitter:creator" content="@devcornejo" />
-		<meta
-			name="twitter:image"
-			content="https://www.edgarcornejo.com/img/edgarcornejo.png"
-		/>
-		<meta name="twitter:domain" content="https://www.edgarcornejo.com/" />
-
-		<script type="application/ld+json">
-			{
-				"@context": "http://schema.org",
-				"@type": "Organization",
-				"name": "Edgar Cornejo",
-				"email": "info@edgarcornejo.com",
-				"url": "https://www.edgarcornejo.com",
-				"logo": "https://www.edgarcornejo.com/img/edgarcornejo.png",
-				"contactPoint": [
-					{
-						"@type": "ContactPoint",
-						"telephone": "+51-974795622",
-						"contactType": "customer support"
-					}
-				],
-				"sameAs": [
-					"https://www.facebook.com/devcornejo",
-					"https://github.com/edgarcornejo",
-					"https://twitter.com/devcornejo",
-					"https://www.youtube.com/user/devcornejo",
-					"http://pinterest.com/Edgarcornejo/",
-					"https://www.linkedin.com/pub/edgar-cornejo-cahuana/48/150/974"
-				]
-			}
-		</script>
-
-		<!-- Google tag (gtag.js) -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-PRJWX26WVF"
-		></script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag() {
-				dataLayer.push(arguments);
-			}
-			gtag("js", new Date());
-
-			gtag("config", "G-PRJWX26WVF");
-		</script>
-
-		<script
-			async
-			src="https://fundingchoicesmessages.google.com/i/pub-5300846547834937?ers=1"
-			nonce="qH6JTle0Paus2llftQTivw"></script><script
-			nonce="qH6JTle0Paus2llftQTivw"
-		>
-			(function () {
-				function signalGooglefcPresent() {
-					if (!window.frames["googlefcPresent"]) {
-						if (document.body) {
-							const iframe = document.createElement("iframe");
-							iframe.style =
-								"width: 0; height: 0; border: none; z-index: -1000; left: -1000px; top: -1000px;";
-							iframe.style.display = "none";
-							iframe.name = "googlefcPresent";
-							document.body.appendChild(iframe);
-						} else {
-							setTimeout(signalGooglefcPresent, 0);
-						}
-					}
-				}
-				signalGooglefcPresent();
-			})();
-		</script>
-	</head>
-
-	<body itemscope itemtype="http://data-vocabulary.org/Person">
-		<MainMenuView />
-
-		<div class="content-blog">
-			<AdsArea />
-
-			<section class="wrapper-content">
-				<main>
-					<article class="wrapper-post">
-						<slot />
-					</article>
-				</main>
-				<aside class="aside-blog">
-					<h4>Información de la publicación</h4>
-					<div class="info-post">
-						<img src={image} alt={title} />
-						<p>
-							Autor: <a href={`/author/${slugify(author)}/`} title={author}
-								>{author}</a
-							>
-						</p>
-						<p>
-							Categoría: <a
-								href={`/category/${slugify(category)}/`}
-								title={category}>{category}</a
-							>
-						</p>
-						<p>
-							Fecha de publicación: <time datetime={date}
-								>{formatDate(date)}</time
-							>
-						</p>
-						<p>
-							Etiquetas: {keywords.map((tag: any) => <span>{tag}, </span>)}
-						</p>
-					</div>
-
-					<CategoryCloud />
-
-					<ListPosts />
-
-					<RelatedPost {relatedPost} />
-				</aside>
-			</section>
-			<AdsArea />
-		</div>
-
-		<Footer />
-	</body>
-</html>
+				<RelatedPost {relatedPost} />
+			</aside>
+		</section>
+		<AdsArea />
+	</main>
+</Layout>

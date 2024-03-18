@@ -6,7 +6,7 @@ const { relatedPost } = Astro.props;
 <h4>Publicaciones relacionadas</h4>
 {
 	relatedPost.map((post: any) => (
-		<div>
+		<div id="related-post">
 			<a href={post.url}>
 				{post.frontmatter.title}
 				<span>
@@ -19,42 +19,3 @@ const { relatedPost } = Astro.props;
 		</div>
 	))
 }
-
-<style lang="stylus">
-	/* Contenedor de Publicaciones */
-	div
-		width 100%
-		display flex
-		flex-wrap wrap
-		justify-content flex-start
-		align-items center
-		gap 1rem
-
-	a
-		display flex
-		flex-flow column wrap
-		gap 1rem
-		background rgb(103, 61, 230)
-		color #FFF
-		padding 1vw
-		line-height 120%
-		border-radius 0.2vw
-		transition all .1s ease-in-out
-		font-size 1vw
-		text-align center
-		&:hover
-			background rgb(8, 12, 63)
-
-	span
-		font-size 0.8vw
-		opacity .7
-	
-	/* Responsive Design */
-	@media screen and (max-width:1024px)
-		a
-			padding 1rem
-			font-size 1em
-			
-		span
-			font-size 0.8em
-</style>

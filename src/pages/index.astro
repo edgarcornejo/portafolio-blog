@@ -1,234 +1,156 @@
 ---
+/* Importando layoutss */
 import Layout from "../layouts/Layout.astro";
-import HgroupView from "../components/HgroupView.astro";
-import CallView from "../components/CallView.astro";
+
+/* Importando componentes */
 import ListPosts from "../components/ListPosts.astro";
 import IconSocial from "../components/IconSocial.astro";
 import InfoContact from "../components/InfoContact.astro";
+
+const {visible=true} = Astro.props;
 ---
 
-<Layout
-	title="Edgar Cornejo - Diseñador Gráfico, Desarrolador Web front-end y Posicionamiento en Internet, diseñador freelance"
-	description="Mi nombre es Edgar Cornejo ofrezco los servicios de diseño gráfico, desarrollo web front-end y posicionamiento en Internet."
->
-	<HgroupView />
-	<CallView />
+<Layout {visible}>
+	<main>
+		<section>
+			<article>
+				<header>
+					<h2>Firma</h2>
+				</header>
 
-	<div class="main-content">
-		<main>
-			<section>
 				<article>
-					<header>
-						<h2>Firma</h2>
-					</header>
+					<p class="text-big">
+						Tener una firma de correo es importante para nuestras
+						comunicaciones con clientes o colaboradores. Obtén la tuya ahora.<br
+						/><br /> Comunicate a
+						<a
+							href="mailto:info@edgarcornejo.com"
+							title="info@edgarcornejo.com">info@edgarcornejo.com</a
+						>
+					</p>
+				</article>
+			</article>
+		</section>
 
-					<article>
-						<p>
-							Tener una firma de correo es importante para nuestras
-							comunicaciones con clientes o colaboradores. Obtén la tuya ahora.<br
-							/><br /> Comunicate a
+		<section>
+			<article>
+				<header>
+					<h2>Marcas</h2>
+				</header>
+
+				<article>
+					<p>
+						Te recomiendo algunas páginas que te puedan interesar como:
+						Agregarte en un directorio de profesionales y empresas, si
+						necesitas recursos fotográficos, si te gustan las naves hechas de
+						papel o enterarte de noticias de tecnología.
+					</p>
+
+					<div class="marcas-container">
+						<figure>
 							<a
-								href="mailto:info@edgarcornejo.com"
-								title="info@edgarcornejo.com">info@edgarcornejo.com</a
+								href="https://www.fotos.edgarcornejo.com"
+								title="Fotos Gratis"
+								target="_blank"
 							>
-						</p>
-					</article>
-				</article>
-			</section>
+								<img
+									src="/img/portafolio/fotosgratislogo.png"
+									loading="lazy"
+									alt="Fotos Gratis"
+								/>
+								<figcaption>Fotos Gratis</figcaption>
+							</a>
+						</figure>
 
-			<section>
+						<figure>
+							<a
+								href="https://www.minilink.edgarcornejo.com"
+								title="Minilink Soluciones"
+								target="_blank"
+							>
+								<img
+									src="/img/portafolio/minilink-soluciones.png"
+									loading="lazy"
+									class="desaturar"
+									alt="Minilink Soluciones"
+								/>
+								<figcaption>Minilink</figcaption>
+							</a>
+						</figure>
+
+						<figure>
+							<a
+								href="https://www.navedepapel.edgarcornejo.com"
+								title="Nave de Papel"
+								target="_blank"
+							>
+								<img
+									src="/img/portafolio/naves-de-papel.png"
+									loading="lazy"
+									alt="Nave de Papel"
+								/>
+								<figcaption>Nave de Papel</figcaption>
+							</a>
+						</figure>
+
+						<figure>
+							<a
+								href="https://renovadesign.blogspot.pe"
+								title="Renova Design"
+								target="_blank"
+							>
+								<img
+									src="/img/portafolio/renova-design-logotipo.png"
+									loading="lazy"
+									class="desaturar"
+									alt="Renova Design"
+								/>
+								<figcaption>Renova Design</figcaption>
+							</a>
+						</figure>
+					</div>
+				</article>
+			</article>
+		</section>
+
+		<section>
+			<article>
+				<header>
+					<h2>Últimas publicaciones</h2>
+				</header>
+
 				<article>
-					<header>
-						<h2>Marcas</h2>
-					</header>
-
-					<article>
-						<p>
-							Te recomiendo algunas páginas que te puedan interesar como:
-							Agregarte en un directorio de profesionales y empresas, si
-							necesitas recursos fotográficos, si te gustan las naves hechas de
-							papel o enterarte de noticias de tecnología.
-						</p>
-
-						<div class="marcas-container">
-							<figure>
-								<a
-									href="https://www.fotos.edgarcornejo.com"
-									title="Fotos Gratis"
-									target="_blank"
-								>
-									<img
-										src="/img/portafolio/fotosgratislogo.png"
-										loading="lazy"
-										alt="Fotos Gratis"
-									/>
-									<figcaption>Fotos Gratis</figcaption>
-								</a>
-							</figure>
-
-							<figure>
-								<a
-									href="https://www.minilink.edgarcornejo.com"
-									title="Minilink Soluciones"
-									target="_blank"
-								>
-									<img
-										src="/img/portafolio/minilink-soluciones.png"
-										loading="lazy"
-										class="desaturar"
-										alt="Minilink Soluciones"
-									/>
-									<figcaption>Minilink</figcaption>
-								</a>
-							</figure>
-
-							<figure>
-								<a
-									href="https://www.navedepapel.edgarcornejo.com"
-									title="Nave de Papel"
-									target="_blank"
-								>
-									<img
-										src="/img/portafolio/naves-de-papel.png"
-										loading="lazy"
-										alt="Nave de Papel"
-									/>
-									<figcaption>Nave de Papel</figcaption>
-								</a>
-							</figure>
-
-							<figure>
-								<a
-									href="https://renovadesign.blogspot.pe"
-									title="Renova Design"
-									target="_blank"
-								>
-									<img
-										src="/img/portafolio/renova-design-logotipo.png"
-										loading="lazy"
-										class="desaturar"
-										alt="Renova Design"
-									/>
-									<figcaption>Renova Design</figcaption>
-								</a>
-							</figure>
-						</div>
-					</article>
+					<p>
+						Me gusta compartir lo que conozco, si tienes alguna duda
+						posiblemente tengo algunas recomendaciones que hago en estas
+						publicaciones.
+					</p>
 				</article>
-			</section>
+				
+				<ListPosts />
+			</article>
+		</section>
 
-			<section>
+		<section>
+			<article>
+				<header>
+					<h2>Contacto</h2>
+				</header>
+
 				<article>
-					<header>
-						<h2>Últimas publicaciones</h2>
-					</header>
-
-					<article>
-						<p>
-							Me gusta compartir lo que conozco, si tienes alguna duda
-							posiblemente tengo algunas recomendaciones que hago en estas
-							publicaciones.
-						</p>
-
-						<ListPosts />
-					</article>
+					<p>
+						Actualmente me encuentro en
+						<strong>Arequipa, Perú</strong>
+						.
+						<br />
+						Consultas o presupuestos, envía un correo a info@edgarcornejo.com
+					</p>
 				</article>
-			</section>
 
-			<section>
-				<article>
-					<header>
-						<h2>Contacto</h2>
-					</header>
+				<IconSocial />
 
-					<article>
-						<p>
-							Actualmente me encuentro en
-							<strong>Arequipa, Perú</strong>
-							.
-							<br />
-							Consultas o presupuestos, envía un correo a info@edgarcornejo.com
-						</p>
-
-						<IconSocial />
-
-						<InfoContact />
-					</article>
-				</article>
-			</section>
-		</main>
-	</div>
+				<InfoContact />
+			</article>
+		</section>
+	</main>
 </Layout>
-
-<style lang="stylus">
-	/* Marcas */
-	.marcas-container
-		width 100%
-		display flex
-		flex-wrap wrap
-		justify-content center
-		align-items center
-		figure
-			width 25%
-			&:hover img
-				filter grayscale(0%)
-				opacity 1
-		a
-			display flex
-			flex-direction column
-			align-items center
-			border 0
-			gap 1rem 0
-		img
-			max-width 180px
-			filter grayscale(80%)
-		figcaption
-			line-height 120%
-			font-size 2em
-			font-weight 500
-			letter-spacing 1pt
-			text-transform uppercase
-
-	/* Para marcas de color negro */
-	.desaturar
-		opacity 0.4
-
-	/* Responsive Design */	
-	@media screen and (max-width:1920px)
-		/* Marcas */
-		.marcas-container
-			figcaption
-				font-size 1.4em
-
-	@media screen and (max-width:1440px)
-		/* Marcas */
-		.marcas-container
-			img
-				max-width 100px
-			figcaption
-				font-size 1em
-
-	@media screen and (max-width:1024px)
-		.marcas-container
-			img
-				max-width 80px
-				filter grayscale(0%)
-
-		.desaturar
-			opacity 1
-
-	@media screen and (max-width:620px)
-		.marcas-container
-			flex-wrap wrap
-			figure
-				width 50%
-				margin-bottom 3rem
-
-	@media screen and (max-width:480px)
-		.marcas-container
-			figure
-				width 100%
-				margin-bottom 3rem
-				img
-					max-height 100px
-</style>

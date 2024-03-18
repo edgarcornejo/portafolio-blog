@@ -3,7 +3,12 @@
 
 # TEAM
 
-    Edgar Cornejo -- Desarrollador Web Front end -- devcornejo -- Arequipa, Arequipa, Perú
+    Edgar Cornejo
+    Desarrollador Web Front end
+    info@edgarcornejo.com
+    @devcornejo
+    Arequipa, Arequipa, Perú
+
 
 # THANKS
 
@@ -11,4 +16,6 @@
 
 # TECHNOLOGY COLOPHON
 
-    CSS3, HTML5, JS
+    CSS3, HTML5
+    Astro
+    Visual Studio Code, Prepros

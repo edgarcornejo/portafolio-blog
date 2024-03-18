@@ -2,65 +2,20 @@
 const { prevURL, nextURL } = Astro.props;
 ---
 
-<nav>
-    {
-        prevURL && (
-            <a href={prevURL} title="Atrás" class="anin-rapido">
-                <span class="material-symbols-sharp">arrow_back</span> Atrás
-            </a>
-        )
-    }
-    {
-        nextURL && (
-            <a href={nextURL} title="Siguiente" class="anin-rapido">
-                Siguiente{" "}
-                <span class="material-symbols-sharp">arrow_forward</span>
-            </a>
-        )
-    }
+<nav class="pagination">
+	{
+		prevURL && (
+			<a href={prevURL} title="Atrás" class="anin-rapido">
+				<span class="material-symbols-sharp">arrow_back</span> Atrás
+			</a>
+		)
+	}
+	{
+		nextURL && (
+			<a href={nextURL} title="Siguiente" class="anin-rapido">
+				Siguiente{" "}
+				<span class="material-symbols-sharp">arrow_forward</span>
+			</a>
+		)
+	}
 </nav>
-
-<style lang="stylus">
-    /* Pagination de Publicaciones */
-    nav
-        width 100%
-        height auto
-        display flex
-        flex-wrap wrap
-        justify-content center
-        align-items center
-        gap 0 2rem
-        padding 1rem 0 1rem 0
-
-    a
-        outline solid 3px rgb(191, 238, 231)
-        border-radius 0.2vw
-        padding 1vw
-        display flex
-        font-size 1vw
-        justify-content center
-        align-items center
-        gap 0 1rem
-        text-wrap nowrap
-        font-weight 700
-        &:hover
-            outline solid 4px rgb(191, 238, 231)
-            &:nth-child(odd)
-                transform translatex(-.4rem)
-            &:nth-child(even)
-                transform translatex(.4rem)
-    
-    span
-        font-size 1.4vw
-
-    /* Responsive Design */
-    @media screen and (max-width:1024px)
-        a
-            padding 1rem
-            font-size 1em
-        
-        span
-            font-size 1.2em
-
-
-</style>

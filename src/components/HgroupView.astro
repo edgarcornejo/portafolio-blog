@@ -1,98 +1,15 @@
-<header>
-  <div class="wrapper-h1-h2">
-    <h2 itemprop="name">Edgar Cornejo</h2>
-    <h1 itemprop="jobTitle">
-      <p>
-        Soy
-        <a href="designer/" title="Diseñador Gráfico">Diseñador Gráfico</a> y
-        <a href="desarrollador-web/" title="Desarrollador Web front-end"
-          >Desarrollador Web front-end</a
-        >
-      </p>
-    </h1>
-  </div>
-</header>
+---
+const {title, visible, blog, description} = Astro.props;
+---
 
-<style lang="stylus">
-  /* Colores */
-  eRed = rgb(230, 61, 103)
-  eSkyBlue = rgb(61, 188, 230)
-  eBlue = rgb(103, 61, 230)
-  eBlueDeep = rgb(8, 12, 63)
-  eWhite = rgb(255, 255, 255)
-  eGray = rgb(191, 238, 231)
-
-  header
-    height auto
-    padding 20vh 0 6vh 0
-    width 100%
-    background radial-gradient(circle, transparent 20%, eWhite 20%, eWhite 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, eWhite 20%, eWhite 80%, transparent 80%, transparent) 25px 25px, linear-gradient(eSkyBlue 2px, transparent 2px) 0 -1px, linear-gradient(90deg, eSkyBlue 2px, eWhite 2px) -1px 0
-    background-size 50px 50px, 50px 50px, 25px 25px, 25px 25px
-
-  .wrapper-h1-h2
-    margin 0 auto
-    width 90%
-    max-width 1920px
-    display flex
-    flex-flow column wrap
-
-  h2
-    color eBlueDeep
-    position relative
-    font-size 3.2vw
-    font-weight 800
-    line-height 120%
-    animation titulo1 1s ease-in-out both
-    text-transform uppercase
-    
-  h1
-    position relative
-    font-size 2vw
-    font-weight 300
-    line-height 120%
-    padding-top 1rem
-    animation titulo2 1s ease-in-out both
-    animation-delay 1s
-    word-spacing 2pt
-    hyphens none
-    a
-      border-bottom dashed 2px eBlue
-      &:hover
-        color eBlue
-  
-  /* Animaciones */
-  /* H1 y H2 */
-  @keyframes titulo1
-    from
-      opacity 0
-      bottom 100px
-    to
-      opacity 1
-      bottom 0
-
-  @keyframes titulo2
-    from
-      opacity 0
-      bottom 50px
-    to
-      opacity 1
-      bottom 0
-    
-  /* Responie Design */    
-  @media screen and (max-width:1024px)
-    header
-      padding 12vh 0 10vh 0
-
-    .wrapper-h1-h2
-      text-align center
-
-  @media screen and (max-width:768px)
-    h2
-      font-size 2.4em
-    
-    h1
-      font-size 1.6em
-      a
-        border-bottom dashed 1px eBlue
-
-</style>
+<header id="main-header">
+   <div class="wrapper-h1-h2">
+    {visible ? <h2 itemprop="name" class="title">{title}</h2>
+    <h1 itemprop="jobTitle" class="subtitle">
+      Soy
+      <a href="designer/" title="Diseñador Gráfico">Diseñador Gráfico</a> y
+      <a href="desarrollador-web/" title="Desarrollador Web front-end"
+        >Desarrollador Web front-end</a>
+    </h1> : <h1 class="title">{title} {blog && <h2 class="subtitle">{description}</h2>}</h1>}
+  </div> 
+</header> 

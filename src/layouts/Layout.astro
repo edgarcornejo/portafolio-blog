@@ -1,128 +1,43 @@
 ---
+/* Importando estilos */
 import "../styles/reset.css";
 import "../styles/layout.css";
+
+/* Importando componentes */
+import Head from "../layouts/Head.astro";
 import MainMenuView from "../components/MainMenuView.astro";
 import Footer from "../components/Footer.astro";
-
-interface Props {
-	title?: string;
-	description?: string;
-	keywords?: string;
-}
+import HgroupView from "../components/HgroupView.astro";
+import CallView from "../components/CallView.astro";
 
 const {
-	title = "Edgar Cornejo, Diseñador Gráfico y desarrollador Web Front-end",
+	title = "Edgar Cornejo",
 	description = "Mi nombre es Edgar Cornejo ofrezco los servicios de diseño gráfico, desarrollo web front-end y posicionamiento en Internet.",
 	keywords = "diseño web, desarrollo de páginas web, diseñador gráfico, maquetador web, elaboración de páginas web, desarrollo web profesional",
+	author,
+	url = "www.edgarcornejo.com",
+	image = "https://www.edgarcornejo.com/img/edgarcornejo.svg",
+	imagealt = "Logotipo Edgar Cornejo",
+	type = "Website",
+	visible,
+	blog,
 } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="es">
-	<head>
-		<meta charset="UTF-8" />
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1, maximum-scale=1"
-		/>
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon.png" />
-
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap"
-			rel="stylesheet"
-		/>
-		<link
-			rel="stylesheet"
-			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-		/>
-
-		<meta name="generator" content={Astro.generator} />
-
-		<title>{title}</title>
-		<meta name="description" content={description} />
-		<meta name="keywords" content={keywords} />
-
-		<meta name="distribution" content="global" />
-		<meta name="author" content="Edgar Cornejo" />
-		<meta name="designer" content="Edgar Cornejo" />
-		<meta property="fb:page_id" content="394466673993640" />
-		<meta property="fb:admins" content="100000001685554" />
-		<meta property="og:title" content="edgarcornejo.com" />
-		<meta property="og:type" content="website" />
-		<meta property="og:url" content="https://www.edgarcornejo.com" />
-		<meta
-			property="og:image"
-			content="https://www.edgarcornejo.com/img/edgarcornejo.svg"
-		/>
-		<meta property="og:site_name" content="edgarcornejo.com" />
-		<meta
-			name="google-site-verification"
-			content="tepZV8pXm5w4Dq1SGa9KJml6qC2Ojq0dLlvHRBAAllQ"
-		/>
-		<meta name="msvalidate.01" content="7E5549D4E71D0C4A0620EA0367533CD9" />
-
-		<!--Twitter Card-->
-		<meta name="twitter:card" content="summary" />
-		<meta name="twitter:site" content="@devcornejo" />
-		<meta name="twitter:title" content="Edgar Cornejo" />
-		<meta
-			name="twitter:description"
-			content="Mi nombre es Edgar Cornejo ofrezco los servicios de diseño gráfico, desarrollo web front-end y posicionamiento en Internet."
-		/>
-		<meta name="twitter:creator" content="@devcornejo" />
-		<meta
-			name="twitter:image"
-			content="https://www.edgarcornejo.com/img/edgarcornejo.svg"
-		/>
-		<meta name="twitter:domain" content="https://www.edgarcornejo.com/" />
-
-		<script type="application/ld+json">
-			{
-				"@context": "http://schema.org",
-				"@type": "Organization",
-				"name": "Edgar Cornejo",
-				"email": "info@edgarcornejo.com",
-				"url": "https://www.edgarcornejo.com",
-				"logo": "https://www.edgarcornejo.com/img/edgarcornejo.svg",
-				"contactPoint": [
-					{
-						"@type": "ContactPoint",
-						"telephone": "+51-974795622",
-						"contactType": "customer support"
-					}
-				],
-				"sameAs": [
-					"https://www.facebook.com/devcornejo",
-					"https://github.com/edgarcornejo",
-					"https://twitter.com/devcornejo",
-					"https://www.youtube.com/user/devcornejo",
-					"http://pinterest.com/Edgarcornejo/",
-					"https://www.linkedin.com/pub/edgar-cornejo-cahuana/48/150/974"
-				]
-			}
-		</script>
-
-		<!-- Google tag (gtag.js) -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-PRJWX26WVF"
-		></script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag() {
-				dataLayer.push(arguments);
-			}
-			gtag("js", new Date());
-
-			gtag("config", "G-PRJWX26WVF");
-		</script>
-	</head>
+	<Head {title} {description} {keywords} {author} {url} {image} {imagealt} {type}/>
 
 	<body itemscope itemtype="http://data-vocabulary.org/Person">
-		<MainMenuView />
+		<MainMenuView  />
 
-		<slot />
+		<HgroupView {title} {visible} {blog} {description}/>
+
+		<CallView/>
+
+		<div id="main-content">
+			<slot/>
+		</div>
 
 		<Footer />
 	</body>

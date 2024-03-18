@@ -4,67 +4,28 @@ import { formatBlogPosts, slugify } from "../js/utils";
 const allPosts = await Astro.glob("../pages/publicaciones/*.md");
 const formattedPost = formatBlogPosts(allPosts);
 const allCategories = formattedPost
-    .map((cat: any) => cat.frontmatter.category.toLowerCase())
-    .flat();
+	.map((cat: any) => cat.frontmatter.category.toLowerCase())
+	.flat();
 
 const processedCats = allCategories.reduce((acc: any, category: any) => {
-    const value = acc[category] || 0;
+	const value = acc[category] || 0;
 
-    return {
-        ...acc,
-        [category]: value + 1,
-    };
+	return {
+		...acc,
+		[category]: value + 1,
+	};
 }, {});
 
 const { showCount } = Astro.props;
 ---
 
-<h4>Categorias</h4>
-<div>
-    {
-        Object.entries(processedCats).map(([key, val]) => (
-            <a href={`/category/${slugify(key)}/`} title={key}>
-                {key} {showCount && `${val}`}
-            </a>
-        ))
-    }
+<h4>Categorias: </h4>
+<div class="category-cloud">
+	{
+		Object.entries(processedCats).map(([key, val]) => (
+			<a href={`/category/${slugify(key)}/`} title={key}>
+				{key} {showCount && `${val}`}
+			</a>
+		))
+	}
 </div>
-
-<style lang="stylus">
-    h4
-        font-size 1vw
-        font-weight 500
-        padding 1rem 0 1rem 0
-        line-height 140%
-
-    /* Categorias del Blog */
-    div
-        width 100%
-        display flex
-        flex-wrap wrap
-        justify-content flex-start
-        align-items center
-        gap 1rem
-
-    a
-        background rgb(103, 61, 230)
-        color #FFF
-        text-transform uppercase
-        padding 1vw
-        border-radius 0.2vw
-        transition all .1s ease-in-out
-        font-size 1vw
-        line-height 120%
-        font-weight 400
-        &:hover
-            background rgb(8, 12, 63)
-
-    /* Responsive Design */
-    @media screen and (max-width:1024px)
-        h4
-            font-size 1em
-        a
-            font-size 1em
-            padding 1rem
-
-</style>

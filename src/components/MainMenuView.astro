@@ -1,151 +1,23 @@
 ---
-import menuItems from "../data/menuItemsData";
+
 ---
 
 <input type="checkbox" id="menu" class="input-menu" />
-<nav>
+<nav id="main-menu">
 	<a href="/" title="Edgar Cornejo" class="logo">
 		<img itemprop="logo" src="/img/edgarcornejo.svg" alt="Edgar Cornejo" />
 	</a>
 	<label for="menu" class="open-menu material-symbols-sharp">menu</label>
 	<label for="menu" class="closed-menu material-symbols-sharp">close</label>
 	<menu>
-		{
-			menuItems.map((item) => (
-				<li>
-					<a href={item.url} title={item.title} class="nav-li">
-						{item.title}
-					</a>
-				</li>
-			))
-		}
+		<li><a href="/" title="Inicio" class="nav-li">Inicio</a></li>
+		<li><a href="/presentacion" title="Presentación" class="nav-li">Presentación</a></li>
+		<li><a href="/portafolio" title="Portafolio" class="nav-li">Portafolio</a></li>
+		<li><a href="/publicaciones/" title="Publicaciones" class="nav-li" data-astro-reload>Publicaciones</a></li>
+		<li><a href="/contacto" title="Contacto" class="nav-li">Contacto</a></li>
 	</menu>
 </nav>
 
 <script>
 	import "../js/nav.js";
 </script>
-
-<style lang="stylus">
-	eRed = rgb(230, 61, 103)
-	eSkyBlue = rgb(61, 188, 230)
-	eBlue = rgb(103, 61, 230)
-	eBlueDeep = rgb(8, 12, 63)
-	eWhite = rgb(255, 255, 255)
-	eGray = rgb(191, 238, 231)
-	/* checkbox para menu responsive */
-	.input-menu,.open-menu,.closed-menu
-		display none
-
-	/* Menu */
-	nav
-		display flex
-		align-items center
-		width 100%
-		margin 0 auto
-		animation bajarMenu 1s ease-in-out both
-		position fixed
-		background rgba(255, 255, 255, 0.8)
-		backdrop-filter blur(8px)
-		z-index 1
-		gap 1rem
-		padding 1vh 0 1vh 0
-	
-	.logo
-		height auto
-		display flex
-		justify-content center
-		width 20%
-	
-	img
-		height 3vh
-		width auto
-
-	menu
-		width 80%
-		display flex
-		justify-content space-around
-		align-items center
-		gap 1rem
-
-	li
-		animation titulo2 .5s ease-in-out both
-		display flex
-		justify-content center
-		align-items center
-		padding 2vh 0 2vh 0
-
-	a
-		cursor pointer
-		text-transform uppercase
-		letter-spacing 1pt
-		font-weight 500
-		font-size 1vw
-		&:hover
-			color eSkyBlue
-
-	.li-current
-		color eRed
-
-	/* Animación Menu */
-	@keyframes bajarMenu
-		from
-			opacity 0
-		to
-			opacity 1
-      
-	/* Responsive Design */
-	@media screen and (max-width:768px)
-		nav
-			padding 2vh 0 2vh 0
-		
-		.logo
-			width 100%
-
-		img
-			height 4vh
-
-		menu
-			display none
-
-		li
-			width 100%
-			display flex
-			justify-content center
-			align-items center
-			border-bottom solid 1px eSkyBlue
-		
-		a
-			font-size 1em
-		
-		.open-menu
-			user-select none
-			cursor pointer
-			display block
-			color eSkyBlue
-			font-size 3em
-			position fixed
-			right 4vw
-		
-		.closed-menu
-			user-select none
-			cursor pointer
-			color eSkyBlue
-			font-size 3em
-			position fixed
-			right 4vw
-		
-		.input-menu:checked ~ nav
-			.open-menu
-				display none
-			.closed-menu
-				display block
-			menu
-				display flex
-				width 100%
-				background eWhite
-				top 8vh
-				flex-direction column
-				position fixed
-
-</style>

@@ -1,268 +1,799 @@
+@charset "UTF-8"
+
 /* Variables */
 /* Colores */
 eRed = rgb(230, 61, 103)
 eSkyBlue = rgb(61, 188, 230)
 eBlue = rgb(103, 61, 230)
 eBlueDeep = rgb(8, 12, 63)
-eWhite = rgb(255, 255, 255)
+eWhite = #F2F2F2
 eGray = rgb(191, 238, 231)
+
+/* Medidas */
+gap1 = clamp(16px, 1vw, 1.1vw)
+gap2 = clamp(32px, 2vw, 2.1vw)
+
+padding1 = clamp(16px, 1vw, 1.1vw)
+padding2 = clamp(32px, 2vw, 2.1vw)
+padding4 = clamp(48px, 4vw, 4.1vw)
+
+margin2 = clamp(32px, 2vw, 2.1vw)
+margin4 = clamp(64px, 4vw, 4.1vw)
+
+border1 = solid clamp(1px, 0.1vw, 0.2vw) eBlue
+
+radius = clamp(3px, 0.2vw, 0.3vw)
+
+html
+	font-size 16px
 
 /* Estilos de Body */
 body
-    font-size 16px
-    background eWhite
-    font-family 'Outfit', Helvetica, Arial, sans-serif
-    color eBlueDeep
-    background linear-gradient(90deg, eWhite 20px, transparent 1%) center, linear-gradient(eWhite 20px, transparent 1%) center, eGray
-    background-size 22px 22px
+	font-size clamp(16px, 1vw, 1.1vw)
+	font-weight 400
+	line-height 140%
+	hyphens none
+	background eWhite
+	font-family 'Outfit', Helvetica, Arial, sans-serif
+	color eBlueDeep
+	background linear-gradient(90deg, eWhite 20px, transparent 1%) center, linear-gradient(eWhite 20px, transparent 1%) center, rgba(61, 188, 230, 0.4)
+	background-size 22px 22px
 
+/* Componente MainMenuView */
+.input-menu,.open-menu,.closed-menu
+	display none
+
+/* Menu */
+#main-menu
+	display flex
+	align-items center
+	width 100%
+	margin 0 auto
+	animation bajarMenu 1s ease-in-out both
+	position fixed
+	background rgba(255, 255, 255, 0.8)
+	backdrop-filter blur(8px)
+	z-index 1
+	padding padding1 0 padding1 0
+	.logo
+		height auto
+		display flex
+		justify-content center
+		width 20%
+		img
+			height 3vh
+			width auto
+	menu
+		width 80%
+		display flex
+		justify-content space-around
+		align-items center
+		gap gap1
+	li
+		animation titulo2 .5s ease-in-out both
+		display flex
+		justify-content center
+		align-items center
+		a
+			cursor pointer
+			text-transform uppercase
+			letter-spacing 1pt
+			font-weight 500
+			&:hover
+				color eSkyBlue
+
+.li-current
+	color eRed
+
+/* Animación Menu */
+@keyframes bajarMenu
+	from
+		opacity 0
+	to
+		opacity 1
+
+/* Componente HgroupView */
+#main-header
+	height auto
+	padding clamp(8rem, 10vw, 10.1vw) 0 clamp(5rem, 5vw, 5.1vw) 0
+	width 100%
+	background radial-gradient(circle, transparent 20%, eWhite 20%, eWhite 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, eWhite 20%, eWhite 80%, transparent 80%, transparent) 25px 25px, linear-gradient(rgba(61, 188, 230, 0.6) 2px, transparent 2px) 0 -1px, linear-gradient(90deg, rgba(61, 188, 230, 0.6) 2px, eWhite 2px) -1px 0
+	background-size 50px 50px, 50px 50px, 25px 25px, 25px 25px
+
+.wrapper-h1-h2
+	margin 0 auto
+	width 90%
+	max-width 1920px
+	display flex
+	flex-flow column wrap
+	align-items center
+	gap gap1
+	.title
+		color eRed
+		position relative
+		font-size clamp(2.4em, 3.2vw, 3.3vw)
+		line-height 100%
+		font-weight 800
+		animation titulo1 1s ease-in-out both
+		text-transform uppercase
+	.subtitle
+		position relative
+		font-size clamp(1.6em, 2vw, 2.1vw)
+		font-weight 300
+		line-height 140%
+		padding-top padding1
+		animation titulo2 1s ease-in-out both
+		animation-delay 1s
+	a
+		display inline
+		border-bottom border1
+		&:hover
+			color eBlue
+	
+/* Animaciones */
+/* H1 y H2 */
+@keyframes titulo1
+	from
+		opacity 0
+		bottom 100px
+	to
+		opacity 1
+		bottom 0
+
+@keyframes titulo2
+	from
+		opacity 0
+		bottom 50px
+	to
+		opacity 1
+		bottom 0
+
+/* Componente CallView */
+#bottom-call
+	display flex
+	justify-content center
+	width 100%
+	animation callme 1s ease-in-out both
+	animation-delay 2s
+	background eSkyBlue
+	div
+		display flex
+		justify-content flex-end
+		width 90%
+		max-width 1920px
+		transform skew(-12deg)
+	a
+		font-size clamp(1.2em, 1.2vw, 1.3vw)
+		position relative
+		top -3vh
+		padding padding1
+		border-radius radius
+		background eSkyBlue
+		font-weight 600
+		color eWhite
+		text-transform uppercase
+		letter-spacing 1pt
+		display flex
+		align-items center
+		gap gap1
+		transition all 0.2s ease-in-out
+		&:hover
+			top -3.2vh
+			background eBlue
+	span
+		font-size inherit
+
+/* Animaciones */
+/* callme */
+@keyframes callme
+	from
+		opacity 0
+	to
+		opacity 1
+		
 /* Contenedor principal de página */
-.main-content
-    width 100%
-    padding 2vh 0 2vh 0
-    /* Contenedor de sections*/
-    main
-        width 90%
-        max-width 1920px
-        margin 0 auto
+#main-content
+	width 100%
+	padding padding4 0 padding4 0
+	/* Contenedor de sections*/
+	main
+		width 90%
+		max-width 1920px
+		margin 0 auto
+	section
+		margin-bottom margin4
+	header
+		border-bottom border1
+		margin-bottom margin2
+		padding padding1
+		h2
+			font-size clamp(1.8em, 1.8vw, 1.9vw)
+			text-align right
+			color eSkyBlue
+			font-weight 500
+	h3
+		font-size clamp(1.6em, 1.6vw, 1.7vw)
+		line-height 120%
+		margin padding2 0 padding2 0
+	h4
+		font-size clamp(1.4em, 1.4vw, 1.5vw)
+		margin padding2 0 padding2 0
+	article
+		article
+			/* Parrafo General */
+			p
+				padding-bottom padding1
+				font-weight 300
+				a
+					color eBlue
+					transition all 0.2s ease-in-out
+					border-bottom border1
+					&:hover
+						color eBlueDeep
+			/* Parrafo Grande */
+			.text-big
+				font-size clamp(1.2em, 1.4vw, 1.5vw)
+			/* Listas */
+			ul
+				padding-bottom padding2
+			li
+				font-size clamp(1.2em, 1.4vw, 1.5vw)
+				line-height 160%
+				font-weight 300
+				list-style disc inside
+
+/* Marcas */
+.marcas-container
+	display flex
+	flex-wrap wrap
+	justify-content center
+	align-items center
+	padding-top padding2
+	gap gap2
+	figure
+		width 22%
+		&:hover img
+			filter grayscale(0%)
+			opacity 1
+	a
+		display flex
+		flex-direction column
+		align-items center
+		gap gap2
+	img
+		min-width 100px
+		width 4vw
+		max-width 180px
+		filter grayscale(80%)
+	figcaption
+		letter-spacing 1pt
+
+/* Para marcas de color negro */
+.desaturar
+	opacity 0.4
+
+/* Componente ListPosts */
+#list-posts
+	width 100%
+	display flex
+	flex-wrap wrap
+	justify-content flex-start
+	align-items center
+	gap gap1
+	a
+		background rgb(103, 61, 230)
+		color #FFF
+		padding padding1
+		border-radius radius
+		transition all 0.2s ease-in-out
+		text-align center
+		display flex
+		align-items center
+		gap gap1
+		&:hover
+			color #FFF
+			background rgb(8, 12, 63)
+		&:last-child
+			background rgb(230, 61, 103)
+			&:hover
+				background rgb(8, 12, 63)
+
+/* Componente IconSocial */
+#icon-social
+	width 100%
+	margin margin2 0 margin2 0
+	display flex
+	flex-wrap wrap
+	justify-content space-around
+	gap gap1
+	a
+		border-radius radius
+		color transparent
+		font-size 0
+		height 48px
+		text-indent -99999999px
+		transform scale(2)
+		width 48px
+		background url(/img/icon-social.svg) no-repeat rgb(103, 61, 230)
+		background-size auto 100%
+		&:nth-child(1)
+			background-position 0 0
+		&:nth-child(2)
+			background-position -48px 0
+		&:nth-child(3)
+			background-position -96px 0
+		&:nth-child(4)
+			background-position -143px 0
+		&:nth-child(5)
+			background-position -192px 0
+		&:nth-child(6)
+			background-position -242px 0
+		&:nth-child(7)
+			background-position -287px 0
+		&:nth-child(8)
+			background-position -336px 0
+		&:hover
+			background-color rgb(8, 12, 63)
+			transform scale3d(2.2, 2.2, 1)
+
+/* Enlaces  */
+.enlaces
+	display flex
+	flex-wrap wrap
+	gap gap1
+	a
+		padding padding1
+		border-radius radius
+		transition all 0.2s ease-in-out
+		font-weight 400
+		color eWhite !important
+		background eBlue
+		&:hover
+			background eBlueDeep
+
+/* componente InfoContact */
+.info-contact
+	width 100%
+	margin margin2 0 margin2 0
+	address
+		display flex
+		flex-direction column
+		gap gap1 0
+	li
+		display flex
+		flex-wrap wrap
+		gap 0 gap2
+	strong
+		font-weight 500
+		align-self center
+		width 6vw
+		min-width 100px
+	a
+		background eBlue
+		color eWhite
+		padding padding1
+		border-radius radius
+		transition all 0.2s ease-in-out
+		font-style normal
+		display flex
+		align-items center
+		gap gap1
+		&:hover
+			color #FFF
+			background rgb(8, 12, 63)
 
 /* Navegación por página */
 /* Páginas presentación y portafolio */
 .navigator
-    position fixed
-    margin-top 6vh
-    left 2vw
-    ol
-        display flex
-        flex-direction column
-    li
-        display flex
-        height 4vh
-    a
-        align-self center
-        color eSkyBlue
-        text-transform uppercase
-        letter-spacing 1pt
-        font-size 1vw
-        font-weight 600
-        display flex
-        align-items center
-        gap 1rem
-        &:hover
-            color rgb(8, 12, 63)
+	display flex
+	justify-content center
+	margin-bottom margin2
+	ol
+		width 100%
+		display flex
+		justify-content space-between
+	li
+		display flex
+		height 4vh
+	a
+		align-self center
+		color eSkyBlue
+		text-transform uppercase
+		letter-spacing 1pt
+		font-weight 600
+		display flex
+		align-items center
+		gap gap1
+		transition all 0.2s ease-in-out
+		&:hover
+			color rgb(8, 12, 63)
 
-.main-content
-    /* Primera cabecera de página */
-    & > header 
-        display flex
-        flex-direction column
-        gap 1rem 0
-        text-align center
-        padding 8vh 0 4vh 0
-        background radial-gradient(circle, transparent 20%, eWhite 20%, eWhite 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, eWhite 20%, eWhite 80%, transparent 80%, transparent) 25px 25px, linear-gradient(eSkyBlue 2px, transparent 2px) 0 -1px, linear-gradient(90deg, eSkyBlue 2px, eWhite 2px) -1px 0
-        background-size 50px 50px, 50px 50px, 25px 25px, 25px 25px
-        /* Titulo de página H1 */
-        h1 
-            font-size 4vw
-            font-weight 600
-            color eRed
-            line-height 140%
-        /* Solo en la página de Publicaciones */
-        h2
-            font-size 2vw
-            font-weight 300
-            line-height 140%
-
-/* Estilos de sections */
-section
-    width 100%
-    /* Article Contenedor */
-    article
-        display flex
-        flex-direction column
-        padding 2vh 0 2vh 0
-        /* Article para parrafos */
-        article
-            align-self center
-            width 90%
-    /* Headers de Articles */
-    header
-        border-bottom solid .4vh eGray
-        padding 1vw
-    /* Subtitulo H2 */
-    h2
-        font-size 2vw
-        line-height 140%
-        font-weight 500
-        text-align right
-        color eSkyBlue
-    /* Subtitulo H3 */
-    h3
-        font-size 1.6vw
-        font-weight 500
-        color eSkyBlue
-        line-height 140%
-    /* Subtitulo H4 */
-    h4
-        font-size 1.4vw
-        font-weight 500
-        padding 1rem 0 1rem 0
-        line-height 140%
-        color eSkyBlue
-    
-/* Estilos de Parrafos en article*/
-article
-    article
-        /* Parrafo General */
-        p
-            padding 2vh 0 4vh 0
-            font-size 1.2vw
-            line-height 140%
-            hyphens none
-            font-weight 300
-        /* Parrafo Grande */
-        .text-big
-            font-size 1.4vw
-            font-weight 400
-        /* Listas */
-        ul
-            padding 2vh 0 4vh 0
-        li
-            font-size 1.2vw
-            line-height 160%
-            font-weight 300
-            list-style disc inside
-        /* Color de enlaces */
-        a
-            color eBlue
-            font-weight 400
-            border-bottom dashed 0.2vh eBlue
-            &:hover
-                color eBlueDeep
-
-/* Enlaces  */
-.enlaces
-    display flex
-    flex-wrap wrap
-    gap 1rem
-    a
-        padding 1vw
-        border-radius 0.2vw
-        border 0
-        transition all .1s ease-in-out
-        font-size 1.2vw
-        font-weight 400
-        color #FFF
-        background eBlue
-        &:hover
-            color #FFF
-            background eBlueDeep
-
+/* Pagina de presentacion */
 /* Contenedor de uls */
 .wrapper-ul
-    display flex
-    flex-wrap wrap
-    justify-content space-between
-    width 100%
-    div
-        max-width 45%
+	display flex
+	flex-wrap wrap
+	justify-content space-between
+	width 100%
+	div
+		max-width 45%
+
+/* Pagina de portafolio*/
+.wrapper-gallery-work
+	display flex
+	flex-wrap wrap
+	justify-content space-between
+	width 100%
+	gap gap2
+
+.gallery-cell
+	width 30%
+	padding padding1
+	border-radius radius
+	outline border1
+	&:hover
+		img
+			transform scale(1.1)
+			filter grayscale(0)
+	figure
+		text-align center
+	figcaption
+		color transparent
+	img
+		height auto
+		width 100%
+		width auto/9
+		filter grayscale(1)
+		transition all 0.2s ease-in-out
+	h3
+		text-align center
+
+/* Componente AdsArea */
+.ads-area
+	margin margin2 0 margin2 0
+
+/* Componente Pagination */
+.pagination
+	width 100%
+	height auto
+	display flex
+	flex-wrap wrap
+	justify-content center
+	align-items center
+	gap 0 gap2
+	padding padding1 0 padding1 0
+	a
+		outline border1
+		border-radius radius
+		padding padding1
+		display flex
+		justify-content center
+		align-items center
+		gap 0 gap1
+		text-wrap nowrap
+		letter-spacing 1pt
+		&:hover
+			&:nth-child(odd)
+				transform translatex(-.4rem)
+			&:nth-child(even)
+				transform translatex(.4rem)
+	span
+		font-size clamp(16px, 1vw, 1.1vw)
+
+/* Pagina de Publicaciones */
+.wrapper-post
+	display flex
+	flex-wrap wrap
+	gap gap1
+	article
+		width 49%
+		padding gap1
+		a
+			display flex
+			flex-wrap wrap
+			justify-content space-between
+			color eBlue
+			&:hover
+				color eBlueDeep
+		h2
+			width 100%
+			font-size clamp(18px, 1.2vw, 1.3vw)
+			font-weight 500
+			padding-bottom padding1
+		figure
+			width 35%
+			display flex
+			flex-direction column
+			gap gap1
+		img
+			width 100%
+			height 12vh
+			object-fit cover
+		figcaption
+			color rgb(8, 12, 63)
+			font-weight 300
+		div
+			width 60%
+		p
+			color rgb(8, 12, 63)
+			font-weight 300
+		strong
+			font-weight 600
+
+/* Estilos de MD */
+#wrapper-post
+	h1
+		font-size clamp(22px, 1.6vw, 1.7vw)
+		padding padding1 0 padding1 0
+	h2
+		font-size clamp(20px, 1.4vw, 1.5vw)
+		padding padding1 0 padding1 0
+	h3
+		font-size clamp(18px, 1.2vw, 1.3vw)
+		padding padding1 0 padding1 0
+	p
+		padding-bottom padding1
+	ul
+		display flex
+		width 100%
+		flex-flow column wrap
+	li
+		list-style disc inside
+		&::marker
+			color eRed
+	figure
+		display flex
+		flex-direction column
+		align-items center
+		padding padding2 0 padding2 0
+		width 100%
+	img
+		width auto/9
+		height auto
+		max-width 30vw
+	figcaption
+		padding-top padding1
+	a
+		color eBlue
+		display inline
+		&:hover
+			color eBlueDeep
 
 .aside-bottom
-    padding 2vh 0 2vh 0
-    width 100%
+	padding padding2 0 padding2 0
+	width 100%
+
+/* Componente CategoryCloud */
+.category-cloud
+	width 100%
+	display flex
+	flex-wrap wrap
+	justify-content flex-start
+	align-items center
+	gap gap1
+	a
+		background eBlue
+		color eWhite
+		text-transform uppercase
+		padding padding1
+		border-radius radius
+		transition all 0.2s ease-in-out
+		&:hover
+			background rgb(8, 12, 63)
+
+/* Layout Blog */
+.wrapper-content
+	display flex
+	justify-content space-between
+	gap gap2
+	main
+		width 70%
+	aside
+		width 25%
+
+/* Container Iframe */
+.wrapper-iframe
+	margin-top 2vh
+	position relative
+	overflow hidden
+	width 100%
+	padding-top 56.25%
+	iframe
+		position absolute
+		top 0
+		left 0
+		bottom 0
+		right 0
+		width 100%
+		height 100%
+
+/* Informacion y Publicidad */
+.aside-blog
+	div
+		margin-bottom margin2
+	.info-post
+		img
+			margin-bottom margin2
+		strong, time
+			text-transform uppercase
+			font-weight 600
+		span
+			font-style italic
+		a
+			color eBlue
+			font-weight 500
+			&:hover
+					color eBlueDeep
+
+/* Componente RelatedPost */
+#related-post
+	width 100%
+	display flex
+	flex-wrap wrap
+	justify-content flex-start
+	align-items center
+	gap gap1
+	a
+		display flex
+		flex-flow column wrap
+		gap gap1
+		background eBlue
+		color #FFF
+		padding padding1
+		border-radius radius
+		transition all 0.2s ease-in-out
+		text-align center
+		&:hover
+			background eBlueDeep
+	span
+		font-size clamp(16px, 0.8vw, 0.9vw)
+		opacity .7
+
+/* Componente Footer */
+#footer
+	font-weight 500
+	height auto
+	margin 0 auto
+	padding padding2 0 padding2 0
+	text-align right
+	max-width 1920px
+	width 90%
 
 /* Responsive Design */
-@media screen and (max-width:1920px)
-    .main-content
-        /* Primera cabecera de página */
-        & > header 
-            background radial-gradient(circle, transparent 20%, eWhite 20%, eWhite 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, eWhite 20%, eWhite 80%, transparent 80%, transparent) 25px 25px, linear-gradient(eSkyBlue 1.4px, transparent 1.4px) 0 -1px, linear-gradient(90deg, eSkyBlue 1.4px, eWhite 1.4px) -1px 0
-            background-size 50px 50px, 50px 50px, 25px 25px, 25px 25px
-
-    /* Contenedor principal de página */
-    .main-content
-        /* Contenedor de sections*/
-        main
-            width 70%
+@media screen and (max-width:1920px)	
+	/* Componente IconSocial */
+	#icon-social
+		a
+			border-radius 0.2vw
+			transform scale(1)
+			&:hover
+				transform scale3d(1.2, 1.2, 1)
 
 @media screen and (max-width:1024px)
-    /* Navegación por página */
-    /* Páginas presentación y portafolio */
-    .navigator
-        position static
-        display flex
-        justify-content center
-        margin 0
-        margin-top 2vh
-        ol
-            width 100%
-            flex-direction row
-            justify-content space-around
-        a
-            font-size 1em
+	/* Componente CallView */
+	#bottom-call
+		div
+			justify-content center
 
-    .main-content
-        & > header 
-            padding 12vh 0 6vh 0
-            /* Titulo de página H1 */
-            h1 
-                font-size 6vw
-    
-    /* Contenedor principal de página */
-    .main-content
-        /* Contenedor de sections*/
-        main
-            width 90%
-    
-    /* Estilos de sections */
-    section
-        /* Subtitulo H2 */
-        h2
-            font-size 4vw
-        /* Subtitulo H3 */
-        h3
-            font-size 3vw
-        /* Subtitulo H4 */
-        h4
-            font-size 2.6vw
+	/* Contenedor principal de página */
+	#main-content
+		main
+			width 90%
+	
+	/* Portafolio */
+	/* Wrapper Gallery */
+	.gallery-cell
+		img
+			filter grayscale(0)
 
-    /* Estilos de Parrafos en article*/
-    article
-        article
-            /* Parrafo General */
-            p
-                font-size 1em
-            /* Parrafo Grande */
-            .text-big
-                font-size 1.2em
-            li
-                font-size 1.2em
+	/* Layout Blog */
+	.wrapper-content
+		flex-direction column
+		justify-content center
+		main
+			width 100%
+		aside
+			width 100%
+	
+	/* Informacion y Publicidad */
+	.aside-blog
+		background eGray
+		h4
+			text-align center
+		.info-post
+			display flex
+			flex-direction column
+			justify-content center
+			align-items center
+			img
+				max-width 50%
 
 @media screen and (max-width:768px)
-    /* Navegación por página */
-    /* Páginas presentación y portafolio */
-    .navigator
-        display none
-    
-    /* Estilos de sections */
-    section
-        /* Subtitulo H2 */
-        h2
-            font-size 2em
-        /* Subtitulo H3 */
-        h3
-            font-size 1.6em
-        /* Subtitulo H4 */
-        h4
-            font-size 1.2em
-    
-    /* Contenedor de uls */
-    .wrapper-ul
-        div
-            max-width 100%
-    
-    /* Enlaces  */
-    .enlaces
-        a
-            padding 1rem
-            font-size 1em
+	/* Componente MainMenuView */
+	#main-menu
+		.logo
+			width 100%
+			img
+				height 4vh
+		menu
+			display none
+		li
+			width 100%
+			display flex
+			justify-content center
+			align-items center
+			border-bottom solid 1px eSkyBlue
+			&:last-child
+				border 0
+			a
+				padding padding2
+		.open-menu, .closed-menu
+			user-select none
+			cursor pointer
+			display block
+			color eSkyBlue
+			font-size 3em
+			position fixed
+			right 4vw
+		.closed-menu
+			display none
+	
+	.input-menu:checked ~ #main-menu
+		.open-menu
+			display none
+		.closed-menu
+			display block
+		menu
+			display flex
+			width 100%
+			background eWhite
+			top 25vh
+			flex-direction column
+			position fixed
+	
+	/* Marcas */
+	.marcas-container
+		flex-direction column
+		figure
+			width 100%
+		a
+			flex-direction row-reverse
+			justify-content space-between
+
+	/* Navegación por página */
+	/* Páginas presentación y portafolio */
+	.navigator
+		display none
+	
+	/* Contenedor de uls */
+	.wrapper-ul
+		div
+			max-width 100%
+	
+	/* Portafolio */
+	/* Wrapper Gallery */
+	.gallery-cell
+		width 100%
+	
+	/* Pagina de Publicaciones */
+	.wrapper-post
+		article
+			width 100%
+			h2
+				text-align center
+			figcaption
+				text-align center
+			figure
+				width 100%
+			img
+				height auto
+			div
+				width 100%
+
+@media screen and (max-width:420px)
+	.info-contact
+		li
+			align-items start
+			flex-direction column
+		strong
+			align-self start

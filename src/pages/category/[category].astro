@@ -4,44 +4,44 @@ import { formatBlogPosts, slugify } from "../../js/utils";
 import PostPreview from "../../components/PostPreview.astro";
 
 export async function getStaticPaths() {
-    return [
-        {
-            params: { category: slugify("Diseño") },
-            props: { name: "Diseño" },
-        },
-        {
-            params: { category: slugify("Programas") },
-            props: { name: "Programas" },
-        },
-        {
-            params: { category: slugify("Hardware") },
-            props: { name: "Hardware" },
-        },
-        {
-            params: { category: slugify("Web") },
-            props: { name: "Web" },
-        },
-        {
-            params: { category: slugify("Tips") },
-            props: { name: "Tips" },
-        },
-        {
-            params: { category: slugify("Comunicación") },
-            props: { name: "Comunicación" },
-        },
-        {
-            params: { category: slugify("Cuento") },
-            props: { name: "Cuento" },
-        },
-        {
-            params: { category: slugify("Game") },
-            props: { name: "Game" },
-        },
-        {
-            params: { category: slugify("Marketing") },
-            props: { name: "Marketing" },
-        },
-    ];
+	return [
+		{
+			params: { category: slugify("Diseño") },
+			props: { name: "Diseño" },
+		},
+		{
+			params: { category: slugify("Programas") },
+			props: { name: "Programas" },
+		},
+		{
+			params: { category: slugify("Hardware") },
+			props: { name: "Hardware" },
+		},
+		{
+			params: { category: slugify("Web") },
+			props: { name: "Web" },
+		},
+		{
+			params: { category: slugify("Tips") },
+			props: { name: "Tips" },
+		},
+		{
+			params: { category: slugify("Comunicación") },
+			props: { name: "Comunicación" },
+		},
+		{
+			params: { category: slugify("Cuento") },
+			props: { name: "Cuento" },
+		},
+		{
+			params: { category: slugify("Game") },
+			props: { name: "Game" },
+		},
+		{
+			params: { category: slugify("Marketing") },
+			props: { name: "Marketing" },
+		},
+	];
 }
 
 const { category } = Astro.params;
@@ -50,28 +50,14 @@ const { name } = Astro.props;
 const allPost = await Astro.glob("../publicaciones/*.md");
 const formattedPosts = formatBlogPosts(allPost);
 const catPosts = formattedPosts.filter(
-    (post: any) => slugify(post.frontmatter.category) === category,
+	(post: any) => slugify(post.frontmatter.category) === category,
 );
 ---
 
 <Layout title={name}>
-    <div class="main-content">
-        <header>
-            <h1>Publicaciones sobre {name}</h1>
-        </header>
-
-        <main>
-            <div class="wrapper-post">
-                {catPosts.map((apost: any) => <PostPreview post={apost} />)}
-            </div>
-        </main>
-    </div>
+	<main>
+		<div class="wrapper-post">
+			{catPosts.map((apost: any) => <PostPreview post={apost} />)}
+		</div>
+	</main>
 </Layout>
-
-<style lang="stylus">
-    .wrapper-post
-        padding 2vh 0 2vh 0
-        display flex
-        flex-wrap wrap
-        gap 1.4vh
-</style>

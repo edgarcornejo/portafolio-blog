@@ -1,1 +1,0 @@
-import"https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js";window.dataLayer=window.dataLayer||[];function a(){dataLayer.push(arguments)}a("js",new Date);a("config","G-PRJWX26WVF");$(window).scroll(function(){$(this).scrollTop()<100?$(".name-title").removeClass("scroll"):$(".name-title").addClass("scroll")});

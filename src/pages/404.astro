@@ -1,36 +1,32 @@
 ---
+/* Importando layoutss */
+import Layout from "../layouts/Layout.astro";
+
+/* Importando componentes */
 import IconSocial from "../components/IconSocial.astro";
 import InfoContact from "../components/InfoContact.astro";
-import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout
-    title="Página no encontrada - Edgar Cornejo, Diseñador gráfico, desarrolador Web front-end y Posicionamiento en Internet."
-    description="La página que está intentando ver no existe, o actualmente no está disponible."
+	title="Página no encontrada"
+	description="La página que está intentando ver no existe, o actualmente no está disponible."
 >
-    <div class="main-content">
-        <header>
-            <h1>Página no encontrada</h1>
-        </header>
+	<main>
+		<section>
+			<article>
+				<header>
+					<h2>Error 404</h2>
+				</header>
 
-        <main>
-            <section id="design">
-                <article>
-                    <header>
-                        <h2>Error 404</h2>
-                    </header>
-
-                    <article>
-                        <p>
-                            La página que está intentando ver no existe, o
-                            actualmente no está disponible.
-                        </p>
-
-                        <IconSocial />
-                        <InfoContact />
-                    </article>
-                </article>
-            </section>
-        </main>
-    </div>
+				<article>
+					<p>
+						La página que está intentando ver no existe, o
+						actualmente no está disponible.
+					</p>
+				</article>
+				<IconSocial />
+				<InfoContact />
+			</article>
+		</section>
+	</main>
 </Layout>

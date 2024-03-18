@@ -1,0 +1,133 @@
+---
+const { title, description, keywords, type, url, image, imagealt, } = Astro.props;
+import { ViewTransitions } from "astro:transitions";
+---
+
+<head>
+	<meta charset="UTF-8" />
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="author" href="/humans.txt" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon.png" />
+  <meta name="generator" content={Astro.generator} />
+
+	<title>{title} - Diseñador gráfico, desarrollador Web Front-end y posicionamineto en Internet</title>
+
+	<!-- META -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="author" content="Edgar Cornejo" />
+	<meta name="description" content={description} />
+	<meta name="keywords" content={keywords} />
+	<meta name="distribution" content="global" />
+	<meta name="robots" content="Index,Follow" />
+  <meta name="copyright" content="© Edgar Cornejo" />
+	<meta name="designer" content="Edgar Cornejo" />
+
+	<!-- Open Graph -->
+	<meta property="og:title" content={title} />
+	<meta property="og:description" content={description} />
+	<meta property="og:image" content={image} />
+	<meta property="og:image:alt" content={imagealt} />
+	<meta property="og:url" content={url} />
+  <meta property="og:type" content={type} />
+  <meta property="og:site_name" content="edgarcornejo.com" />
+  <meta property="og:locale" content="es_PE" />
+
+	<!-- Facebook -->
+	<meta property="fb:page_id" content="394466673993640" />
+	<meta property="fb:admins" content="100000001685554" />
+	<meta property="og:title" content="edgarcornejo.com" />
+	<meta property="og:type" content={type} />
+	<meta property="og:url" content="https://www.edgarcornejo.com" />
+	
+	<!-- Verificaciones -->
+	<meta name="google-site-verification" content="tepZV8pXm5w4Dq1SGa9KJml6qC2Ojq0dLlvHRBAAllQ"/>
+	<meta name="msvalidate.01" content="7E5549D4E71D0C4A0620EA0367533CD9" />
+
+	<!--Twitter Card-->
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:site" content="@devcornejo" />
+	<meta name="twitter:title" content={title} />
+	<meta name="twitter:description" content={description} />
+	<meta name="twitter:creator" content="@devcornejo" />
+	<meta name="twitter:image" content={image} />
+	<meta name="twitter:domain" content="https://www.edgarcornejo.com/" />
+
+	<!-- Scheme -->
+	<script type="application/ld+json">
+		{
+			"@context": "http://schema.org",
+			"@type": "Organization",
+			"name": "Edgar Cornejo",
+			"email": "info@edgarcornejo.com",
+			"url": "https://www.edgarcornejo.com",
+			"logo": "https://www.edgarcornejo.com/img/edgarcornejo.svg",
+			"contactPoint": [
+				{
+					"@type": "ContactPoint",
+					"telephone": "+51-974795622",
+					"contactType": "customer support"
+				}
+			],
+			"sameAs": [
+				"https://www.facebook.com/devcornejo",
+				"https://github.com/edgarcornejo",
+				"https://twitter.com/devcornejo",
+				"https://www.youtube.com/user/devcornejo",
+				"http://pinterest.com/Edgarcornejo/",
+				"https://www.linkedin.com/pub/edgar-cornejo-cahuana/48/150/974"
+			]
+		}
+	</script>
+
+	<!-- importando fuentes -->
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap"
+		rel="stylesheet"
+	/>
+	<link
+		rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+	/>
+
+	<!-- Google tag (gtag.js) -->
+	<script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-PRJWX26WVF"></script>
+	<script type="text/partytown">
+		window.dataLayer = window.dataLayer || [];
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag("js", new Date());
+
+		gtag("config", "G-PRJWX26WVF");
+	</script>
+	<script
+	type="text/partytown"
+	async
+	src="https://fundingchoicesmessages.google.com/i/pub-5300846547834937?ers=1"
+	nonce="qH6JTle0Paus2llftQTivw">
+</script>
+<script type="text/partytown" nonce="qH6JTle0Paus2llftQTivw">
+	(function () {
+		function signalGooglefcPresent() {
+			if (!window.frames["googlefcPresent"]) {
+				if (document.body) {
+					const iframe = document.createElement("iframe");
+					iframe.style =
+						"width: 0; height: 0; border: none; z-index: -1000; left: -1000px; top: -1000px;";
+					iframe.style.display = "none";
+					iframe.name = "googlefcPresent";
+					document.body.appendChild(iframe);
+				} else {
+					setTimeout(signalGooglefcPresent, 0);
+				}
+			}
+		}
+			signalGooglefcPresent();
+	})();
+</script>
+
+	<ViewTransitions />
+</head>

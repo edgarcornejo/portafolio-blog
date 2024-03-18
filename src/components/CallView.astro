@@ -1,69 +1,10 @@
-<div class="bottom-call">
+---
+
+---
+
+<div id="bottom-call">
 	<div>
-		<a class="anin-rapido" href="tel:+51974795622" title="Llámame"
-			><span class="material-symbols-sharp">call</span> Llámame</a
-		>
+		<a href="https://wa.me/message/EEEHZULZQV5QG1" title="WhatsApp"
+			><span class="material-symbols-sharp">chat</span> WhatsApp</a>
 	</div>
 </div>
-
-<style lang="stylus">
-	eRed = rgb(230, 61, 103)
-	eSkyBlue = rgb(61, 188, 230)
-	eBlue = rgb(103, 61, 230)
-	eBlueDeep = rgb(8, 12, 63)
-	eWhite = rgb(255, 255, 255)
-	eGray = rgb(191, 238, 231)
-
-	.bottom-call
-		display flex
-		justify-content center
-		width 100%
-		animation callme 1s ease-in-out both
-		animation-delay 2s
-		background eSkyBlue
-		div
-			display flex
-			justify-content flex-end
-			width 90%
-			max-width 1920px
-			transform skew(-12deg)
-
-	a
-		position relative
-		top -3vh
-		padding 1vw
-		border-radius 6px
-		background eSkyBlue
-		font-weight 600
-		font-size 1vw
-		color eWhite
-		text-transform uppercase
-		letter-spacing 1pt
-		display flex
-		align-items center
-		gap 1rem
-		&:hover
-			top -3.2vh
-			background eBlue
-
-	/* Animaciones */
-	/* callme */
-	@keyframes callme
-			from
-					opacity 0
-			to
-					opacity 1
-    
-	/*Responie Design*/				
-	@media screen and (max-width:1024px)
-		.bottom-call
-			div
-				justify-content center
-				transform skew(0)
-
-		a
-			border-radius 3px
-			font-size 1em
-			padding 1rem
-
-</style>
