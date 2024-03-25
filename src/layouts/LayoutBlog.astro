@@ -67,23 +67,23 @@ const relatedPost = formattedPosts
 				<div class="info-post">
 					<img src={image} alt={imagealt} />
 					<p>
-						Autor: <a href={`/author/${slugify(author)}/`} title={author}
+						<strong>Autor:</strong> <a href={`/author/${slugify(author)}/`} title={author}
 							>{author}</a
 						>
 					</p>
 					<p>
-						Categoría: <a
+						<strong>Categoría:</strong> <a
 							href={`/category/${slugify(category)}/`}
 							title={category}>{category}</a
 						>
 					</p>
 					<p>
-						Fecha de publicación: <time datetime={date}
+						<strong>Fecha de publicación:</strong> <time datetime={date}
 							>{formatDate(date)}</time
 						>
 					</p>
 					<p>
-						Etiquetas: {keywords.map((tag: any) => <span>{tag}, </span>)}
+						<strong>Etiquetas:</strong> {keywords.map((tag: any) => <span>{tag}, </span>)}
 					</p>
 				</div>
 

@@ -84,16 +84,12 @@ import { ViewTransitions } from "astro:transitions";
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 	<link
+		rel="stylesheet"
 		href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap"
-		rel="stylesheet"
-	/>
-	<link
-		rel="stylesheet"
-		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
 	/>
 
 	<!-- Google tag (gtag.js) -->
-	<script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-PRJWX26WVF"></script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-PRJWX26WVF"></script>
 	<script type="text/partytown">
 		window.dataLayer = window.dataLayer || [];
 		function gtag() {
@@ -104,30 +100,29 @@ import { ViewTransitions } from "astro:transitions";
 		gtag("config", "G-PRJWX26WVF");
 	</script>
 	<script
-	type="text/partytown"
-	async
-	src="https://fundingchoicesmessages.google.com/i/pub-5300846547834937?ers=1"
-	nonce="qH6JTle0Paus2llftQTivw">
-</script>
-<script type="text/partytown" nonce="qH6JTle0Paus2llftQTivw">
-	(function () {
-		function signalGooglefcPresent() {
-			if (!window.frames["googlefcPresent"]) {
-				if (document.body) {
-					const iframe = document.createElement("iframe");
-					iframe.style =
-						"width: 0; height: 0; border: none; z-index: -1000; left: -1000px; top: -1000px;";
-					iframe.style.display = "none";
-					iframe.name = "googlefcPresent";
-					document.body.appendChild(iframe);
-				} else {
-					setTimeout(signalGooglefcPresent, 0);
+		async
+		src="https://fundingchoicesmessages.google.com/i/pub-5300846547834937?ers=1"
+		nonce="qH6JTle0Paus2llftQTivw">
+	</script>
+	<script type="text/partytown" nonce="qH6JTle0Paus2llftQTivw">
+		(function () {
+			function signalGooglefcPresent() {
+				if (!window.frames["googlefcPresent"]) {
+					if (document.body) {
+						const iframe = document.createElement("iframe");
+						iframe.style =
+							"width: 0; height: 0; border: none; z-index: -1000; left: -1000px; top: -1000px;";
+						iframe.style.display = "none";
+						iframe.name = "googlefcPresent";
+						document.body.appendChild(iframe);
+					} else {
+						setTimeout(signalGooglefcPresent, 0);
+					}
 				}
 			}
-		}
-			signalGooglefcPresent();
-	})();
-</script>
+				signalGooglefcPresent();
+		})();
+	</script>
 
 	<ViewTransitions />
 </head>

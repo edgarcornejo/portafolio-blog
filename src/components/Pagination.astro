@@ -6,15 +6,14 @@ const { prevURL, nextURL } = Astro.props;
 	{
 		prevURL && (
 			<a href={prevURL} title="Atrás" class="anin-rapido">
-				<span class="material-symbols-sharp">arrow_back</span> Atrás
+				Atrás
 			</a>
 		)
 	}
 	{
 		nextURL && (
 			<a href={nextURL} title="Siguiente" class="anin-rapido">
-				Siguiente{" "}
-				<span class="material-symbols-sharp">arrow_forward</span>
+				Siguiente
 			</a>
 		)
 	}
