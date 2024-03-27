@@ -10,8 +10,8 @@
 
   <input type="checkbox" id="menu" class="input-menu" />
   <nav>
-    <label for="menu" class="open-menu material-symbols-sharp">menu</label>
-    <label for="menu" class="closed-menu material-symbols-sharp">close</label>
+    <label for="menu" class="open-menu"><img src="/img/open-menu.svg" alt="Abrir menu"></label>
+    <label for="menu" class="closed-menu"><img src="/img/closed-menu.svg" alt="Cerrar menu"></label>
     <menu>
       <li>
         <a href="/designer/" title="Inicio">Inicio</a>
@@ -103,19 +103,20 @@
     display flex
     align-items center
     padding-right 3vw
-    .open-menu
+    .open-menu,.closed-menu
       user-select none
       cursor pointer
       display block
       color hardGreen
-      font-size 5rem
       background rgba(255, 255, 255, 0.4)
       border-radius 5px
+      img
+        min-width 48px
+        width 2vw
+        height auto
+        filter hue-rotate(280deg)
     .closed-menu
       display none
-      color hardGreen
-      font-size 5rem
-      background rgba(255, 255, 255, 0.4)
     menu
       display none
       padding-left 2rem

@@ -1,5 +1,8 @@
 ---
+/* importando layout */
 import LayoutDeveloper from "../../layouts/LayoutDeveloper.astro";
+
+/* importando estilos */
 import "../../styles/layaoutdeveloper.css";
 ---
 
@@ -18,10 +21,10 @@ import "../../styles/layaoutdeveloper.css";
 
         <input type="checkbox" id="menu" class="input-menu" />
         <nav>
-          <label for="menu" class="open-menu material-symbols-sharp">menu</label
+          <label for="menu" class="open-menu"><img src="/img/open-menu.svg" title="abrir menu"/></label
           >
-          <label for="menu" class="closed-menu material-symbols-sharp"
-            >close</label
+          <label for="menu" class="closed-menu"
+            ><img src="/img/closed-menu.svg" title="cerrar menu"/></label
           >
           <menu>
             <li>
@@ -34,11 +37,11 @@ import "../../styles/layaoutdeveloper.css";
         </nav>
 
         <div id="contact">
-          <a href="tel:+51974795622" title="+51 974 795 622"
-            ><span class="material-symbols-sharp">call</span></a
+          <a href="https://wa.me/message/EEEHZULZQV5QG1" title="WhatsApp"
+            >WhatsApp</a
           >
           <a href="mailto:info@edgarcornejo.com" title="info@edgarcornejo.com"
-            ><span class="material-symbols-sharp">mail</span></a
+            >Correo</a
           >
         </div>
 

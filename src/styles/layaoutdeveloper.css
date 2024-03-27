@@ -64,6 +64,13 @@ nav .closed-menu {
   display: block;
   font-size: 4em;
 }
+nav .open-menu img,
+nav .closed-menu img {
+  min-width: 48px;
+  width: 1vw;
+  height: auto;
+  filter: brightness(1000%);
+}
 nav .closed-menu {
   display: none;
 }
@@ -458,6 +465,9 @@ footer:before {
   .ul-footer h3 {
     font-size: 1.6em;
     text-align: center;
+  }
+  #contact {
+    display: none;
   }
 }
 @-moz-keyframes logo {
