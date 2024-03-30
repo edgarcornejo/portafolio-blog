@@ -7,7 +7,7 @@ import ListPosts from "../components/ListPosts.astro";
 import IconSocial from "../components/IconSocial.astro";
 import InfoContact from "../components/InfoContact.astro";
 
-const {visible=true} = Astro.props;
+const { visible = true } = Astro.props;
 ---
 
 <Layout {visible}>
@@ -20,12 +20,11 @@ const {visible=true} = Astro.props;
 
 				<article>
 					<p>
-						Tener una firma de correo es importante para nuestras
-						comunicaciones con clientes o colaboradores. Obtén la tuya ahora.<br
-						/><br /> Comunicate a
-						<a
-							href="mailto:info@edgarcornejo.com"
-							title="info@edgarcornejo.com">info@edgarcornejo.com</a
+						Tener una firma de correo es importante para nuestras comunicaciones
+						con clientes o colaboradores. Obtén la tuya ahora.<br /><br /> Comunicate
+						a
+						<a href="mailto:info@edgarcornejo.com" title="info@edgarcornejo.com"
+							>info@edgarcornejo.com</a
 						>
 					</p>
 				</article>
@@ -41,9 +40,9 @@ const {visible=true} = Astro.props;
 				<article>
 					<p>
 						Te recomiendo algunas páginas que te puedan interesar como:
-						Agregarte en un directorio de profesionales y empresas, si
-						necesitas recursos fotográficos, si te gustan las naves hechas de
-						papel o enterarte de noticias de tecnología.
+						Agregarte en un directorio de profesionales y empresas, si necesitas
+						recursos fotográficos, si te gustan las naves hechas de papel o
+						enterarte de noticias de tecnología.
 					</p>
 
 					<div class="marcas-container">
@@ -51,12 +50,11 @@ const {visible=true} = Astro.props;
 							<a
 								href="https://www.fotos.edgarcornejo.com"
 								title="Fotos Gratis"
-								target="_blank"
-							>
+								target="_blank">
 								<img
 									src="/img/portafolio/fotosgratislogo.png"
 									loading="lazy"
-									alt="Fotos Gratis"
+									alt="Letras F y G en mayúsculas con degradado"
 								/>
 								<figcaption>Fotos Gratis</figcaption>
 							</a>
@@ -66,13 +64,12 @@ const {visible=true} = Astro.props;
 							<a
 								href="https://www.minilink.edgarcornejo.com"
 								title="Minilink Soluciones"
-								target="_blank"
-							>
+								target="_blank">
 								<img
 									src="/img/portafolio/minilink-soluciones.png"
 									loading="lazy"
 									class="desaturar"
-									alt="Minilink Soluciones"
+									alt="M en mayúscula de color negro"
 								/>
 								<figcaption>Minilink</figcaption>
 							</a>
@@ -82,12 +79,11 @@ const {visible=true} = Astro.props;
 							<a
 								href="https://www.navedepapel.edgarcornejo.com"
 								title="Nave de Papel"
-								target="_blank"
-							>
+								target="_blank">
 								<img
 									src="/img/portafolio/naves-de-papel.png"
 									loading="lazy"
-									alt="Nave de Papel"
+									alt="heptágono anaranjado con icono de nave"
 								/>
 								<figcaption>Nave de Papel</figcaption>
 							</a>
@@ -97,13 +93,12 @@ const {visible=true} = Astro.props;
 							<a
 								href="https://renovadesign.blogspot.pe"
 								title="Renova Design"
-								target="_blank"
-							>
+								target="_blank">
 								<img
 									src="/img/portafolio/renova-design-logotipo.png"
 									loading="lazy"
 									class="desaturar"
-									alt="Renova Design"
+									alt="texto negro sin fondo"
 								/>
 								<figcaption>Renova Design</figcaption>
 							</a>
@@ -126,7 +121,7 @@ const {visible=true} = Astro.props;
 						publicaciones.
 					</p>
 				</article>
-				
+
 				<ListPosts />
 			</article>
 		</section>

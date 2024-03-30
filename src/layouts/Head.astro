@@ -1,16 +1,20 @@
 ---
-const { title, description, keywords, type, url, image, imagealt, } = Astro.props;
+const { title, description, keywords, type, url, image, imagealt } =
+	Astro.props;
 ---
 
 <head>
 	<meta charset="UTF-8" />
-  <link rel="manifest" href="/manifest.json" />
-  <link rel="author" href="/humans.txt" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon.png" />
-  <meta name="generator" content={Astro.generator} />
+	<link rel="manifest" href="/manifest.json" />
+	<link rel="author" href="/humans.txt" />
+	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+	<link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon.png" />
+	<meta name="generator" content={Astro.generator} />
 
-	<title>{title} - Diseñador gráfico, desarrollador Web Front-end y posicionamineto en Internet</title>
+	<title>
+		{title} - Diseñador gráfico, desarrollador Web Front-end y posicionamineto en
+		Internet
+	</title>
 
 	<!-- META -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -19,7 +23,7 @@ const { title, description, keywords, type, url, image, imagealt, } = Astro.prop
 	<meta name="keywords" content={keywords} />
 	<meta name="distribution" content="global" />
 	<meta name="robots" content="Index,Follow" />
-  <meta name="copyright" content="© Edgar Cornejo" />
+	<meta name="copyright" content="© Edgar Cornejo" />
 	<meta name="designer" content="Edgar Cornejo" />
 
 	<!-- Open Graph -->
@@ -28,9 +32,9 @@ const { title, description, keywords, type, url, image, imagealt, } = Astro.prop
 	<meta property="og:image" content={image} />
 	<meta property="og:image:alt" content={imagealt} />
 	<meta property="og:url" content={url} />
-  <meta property="og:type" content={type} />
-  <meta property="og:site_name" content="edgarcornejo.com" />
-  <meta property="og:locale" content="es_PE" />
+	<meta property="og:type" content={type} />
+	<meta property="og:site_name" content="edgarcornejo.com" />
+	<meta property="og:locale" content="es_PE" />
 
 	<!-- Facebook -->
 	<meta property="fb:page_id" content="394466673993640" />
@@ -38,9 +42,12 @@ const { title, description, keywords, type, url, image, imagealt, } = Astro.prop
 	<meta property="og:title" content="edgarcornejo.com" />
 	<meta property="og:type" content={type} />
 	<meta property="og:url" content="https://www.edgarcornejo.com" />
-	
+
 	<!-- Verificaciones -->
-	<meta name="google-site-verification" content="tepZV8pXm5w4Dq1SGa9KJml6qC2Ojq0dLlvHRBAAllQ"/>
+	<meta
+		name="google-site-verification"
+		content="tepZV8pXm5w4Dq1SGa9KJml6qC2Ojq0dLlvHRBAAllQ"
+	/>
 	<meta name="msvalidate.01" content="7E5549D4E71D0C4A0620EA0367533CD9" />
 
 	<!--Twitter Card-->
@@ -87,23 +94,26 @@ const { title, description, keywords, type, url, image, imagealt, } = Astro.prop
 		href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap"
 	/>
 
-	<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-PRJWX26WVF"></script>
+	<!-- Google Tag Manager -->
 	<script type="text/partytown">
-		window.dataLayer = window.dataLayer || [];
-		function gtag() {
-			dataLayer.push(arguments);
-		}
-		gtag("js", new Date());
-
-		gtag("config", "G-PRJWX26WVF");
+		(function (w, d, s, l, i) {
+			w[l] = w[l] || [];
+			w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+			var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s),
+				dl = l != "dataLayer" ? "&l=" + l : "";
+			j.async = true;
+			j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+			f.parentNode.insertBefore(j, f);
+		})(window, document, "script", "dataLayer", "GTM-WJ5Q3C8");
 	</script>
+	<!-- End Google Tag Manager -->
+
 	<script
 		async
 		src="https://fundingchoicesmessages.google.com/i/pub-5300846547834937?ers=1"
-		nonce="qH6JTle0Paus2llftQTivw">
-	</script>
-	<script type="text/partytown" nonce="qH6JTle0Paus2llftQTivw">
+		nonce="qH6JTle0Paus2llftQTivw"></script>
+	<script nonce="qH6JTle0Paus2llftQTivw">
 		(function () {
 			function signalGooglefcPresent() {
 				if (!window.frames["googlefcPresent"]) {
@@ -119,7 +129,7 @@ const { title, description, keywords, type, url, image, imagealt, } = Astro.prop
 					}
 				}
 			}
-				signalGooglefcPresent();
+			signalGooglefcPresent();
 		})();
 	</script>
 </head>
