@@ -1,6 +1,5 @@
 ---
 const { title, description, keywords, type, url, image, imagealt, } = Astro.props;
-import { ViewTransitions } from "astro:transitions";
 ---
 
 <head>
@@ -123,6 +122,4 @@ import { ViewTransitions } from "astro:transitions";
 				signalGooglefcPresent();
 		})();
 	</script>
-
-	<ViewTransitions />
 </head>

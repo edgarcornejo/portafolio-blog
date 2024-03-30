@@ -334,32 +334,20 @@ body {
 .info-contact {
   width: 100%;
   margin: clamp(32px, 2vw, 2.1vw) 0 clamp(32px, 2vw, 2.1vw) 0;
-}
-.info-contact address {
-  display: flex;
-  flex-direction: column;
-  gap: clamp(16px, 1vw, 1.1vw) 0;
-}
-.info-contact li {
   display: flex;
   flex-wrap: wrap;
-  gap: 0 clamp(32px, 2vw, 2.1vw);
+  justify-content: space-evenly;
+  gap: clamp(32px, 2vw, 2.1vw);
 }
 .info-contact strong {
   font-weight: 500;
   align-self: center;
-  width: 6vw;
-  min-width: 100px;
 }
 .info-contact a {
   background: rgba(0,0,0,0.1);
   padding: clamp(16px, 1vw, 1.1vw);
   border-radius: clamp(3px, 0.2vw, 0.3vw);
   transition: all 0.2s ease-in-out;
-  font-style: normal;
-  display: flex;
-  align-items: center;
-  gap: clamp(16px, 1vw, 1.1vw);
 }
 .info-contact a:hover {
   color: #f2f2f2;
