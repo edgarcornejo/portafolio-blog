@@ -194,8 +194,11 @@ body
 		width 90%
 		max-width 1920px
 		margin 0 auto
+		scroll-snap-type y proximity
+		scroll-padding-top padding1
 	section
-		margin-bottom margin4
+		margin-bottom clamp(64px, 10vh, 10.1vh)
+		scroll-snap-align start
 	header
 		margin-bottom margin2
 		h2
@@ -627,7 +630,7 @@ body
 	width 90%
 
 /* Responsive Design */
-@media screen and (max-width:1920px)	
+@media (max-width: 1920px)	
 	/* Componente IconSocial */
 	#icon-social
 		a
@@ -636,7 +639,7 @@ body
 			&:hover
 				transform scale3d(1.2, 1.2, 1)
 
-@media screen and (max-width:1024px)
+@media (max-width: 1024px)
 	/* Portafolio */
 	/* Wrapper Gallery */
 	.gallery-cell
@@ -665,7 +668,7 @@ body
 			img
 				max-width 50%
 
-@media screen and (max-width:768px)
+@media (max-width: 768px)	
 	/* Componente MainMenuView */
 	#main-menu
 		.logo
@@ -753,11 +756,3 @@ body
 				height auto
 			div
 				width 100%
-
-@media screen and (max-width:420px)
-	.info-contact
-		li
-			align-items start
-			flex-direction column
-		strong
-			align-self start

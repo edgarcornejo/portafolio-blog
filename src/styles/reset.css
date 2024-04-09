@@ -97,6 +97,7 @@ video {
 /* Reset Img */
 img {
   vertical-align: middle;
+  aspect-ratio: auto;
 }
 /* Evitamos problemas con las imagenes */
 img,
