@@ -36,6 +36,12 @@ a {
 a:hover {
   color: #054d56;
 }
+/* Contenedor principal */
+#main-content {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
 /* Contenedor de articulos */
 .wrapper-article {
   min-height: 100vh;

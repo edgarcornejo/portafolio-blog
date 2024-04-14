@@ -9,134 +9,113 @@ import Footer from "../components/designer/Footer.astro";
 
 /* SEO */
 interface Props {
-  title?: string;
-  description?: string;
-  keywords?: string;
-  url?: any;
+	title?: string;
+	description?: string;
+	keywords?: string;
+	url?: any;
 }
 const {
-  title = "Diseñador Gráfico Edgar Cornejo, designer graphic, diseño gráfico, freelance, diseño de logotipo",
-  description = "Es un gusto saludarte y darte la bienvenida a mi web de diseñador gráfico, estoy aquí para ofrecerte mis servicios.",
-  keywords = "diseñador gráfico, diseñador web, graphic designer, freelance, diseño de logotipos, afiches",
-  url = window.location,
+	title = "Diseñador Gráfico Edgar Cornejo, designer graphic, diseño gráfico, freelance, diseño de logotipo",
+	description = "Es un gusto saludarte y darte la bienvenida a mi web de diseñador gráfico, estoy aquí para ofrecerte mis servicios.",
+	keywords = "diseñador gráfico, diseñador web, graphic designer, freelance, diseño de logotipos, afiches",
+	url = window.location,
 } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, maximum-scale=1"
-    />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon.png" />
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, maximum-scale=1"
+		/>
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon.png" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
-      rel="stylesheet"
-    />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+			rel="stylesheet"
+		/>
 
-    <meta name="generator" content={Astro.generator} />
+		<meta name="generator" content={Astro.generator} />
 
-    <title>{title}</title>
-    <meta name="description" content={description} />
-    <meta name="keywords" content={keywords} />
+		<title>{title}</title>
+		<meta name="description" content={description} />
+		<meta name="keywords" content={keywords} />
 
-    <meta name="distribution" content="global" />
-    <meta name="author" content="Edgar Cornejo" />
-    <meta name="designer" content="Edgar Cornejo" />
-    <meta property="fb:page_id" content="394466673993640" />
-    <meta property="fb:admins" content="100000001685554" />
+		<meta name="distribution" content="global" />
+		<meta name="author" content="Edgar Cornejo" />
+		<meta name="designer" content="Edgar Cornejo" />
+		<meta property="fb:page_id" content="394466673993640" />
+		<meta property="fb:admins" content="100000001685554" />
 
-    <!-- OpenGraf -->
-    <meta property="og:title" content={title} />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content={url} />
-    <meta property="og:image" content="/edgarcornejo.svg" />
-    <meta property="og:site_name" content="Edgar Cornejo Designer" />
+		<!-- OpenGraf -->
+		<meta property="og:title" content={title} />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={url} />
+		<meta property="og:image" content="/edgarcornejo.svg" />
+		<meta property="og:site_name" content="Edgar Cornejo Designer" />
 
-    <!--Twitter Card-->
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="@devcornejo" />
-    <meta name="twitter:title" content={title} />
-    <meta name="twitter:description" content={description} />
-    <meta name="twitter:creator" content="@devcornejo" />
-    <meta name="twitter:image" content="/edgarcornejo.svg" />
-    <meta
-      name="twitter:domain"
-      content="https://www.edgarcornejo.com/desiner/"
-    />
+		<!--Twitter Card-->
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:site" content="@devcornejo" />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:creator" content="@devcornejo" />
+		<meta name="twitter:image" content="/edgarcornejo.svg" />
+		<meta
+			name="twitter:domain"
+			content="https://www.edgarcornejo.com/desiner/"
+		/>
 
-    <script type="application/ld+json">
-      {
-        "@context": "http://schema.org",
-        "@type": "Organization",
-        "name": "Edgar Cornejo",
-        "email": "info@edgarcornejo.com",
-        "url": "https://www.edgarcornejo.com",
-        "logo": "https://www.edgarcornejo.com/edgarcornejo.svg",
-        "contactPoint": [
-          {
-            "@type": "ContactPoint",
-            "telephone": "+51-974795622",
-            "contactType": "customer support"
-          }
-        ],
-        "sameAs": [
-          "https://www.instagram.com/devcornejo/",
-          "https://www.facebook.com/devcornejo",
-          "https://github.com/edgarcornejo",
-          "https://www.behance.net/edgarcornejo",
-          "https://twitter.com/devcornejo",
-          "https://www.youtube.com/user/devcornejo",
-          "http://pinterest.com/Edgarcornejo/",
-          "https://www.linkedin.com/pub/edgar-cornejo-cahuana/48/150/974"
-        ]
-      }
-    </script>
+		<script type="application/ld+json">
+			{
+				"@context": "http://schema.org",
+				"@type": "Organization",
+				"name": "Edgar Cornejo",
+				"email": "info@edgarcornejo.com",
+				"url": "https://www.edgarcornejo.com",
+				"logo": "https://www.edgarcornejo.com/edgarcornejo.svg",
+				"contactPoint": [
+					{
+						"@type": "ContactPoint",
+						"telephone": "+51-974795622",
+						"contactType": "customer support"
+					}
+				],
+				"sameAs": [
+					"https://www.instagram.com/devcornejo/",
+					"https://www.facebook.com/devcornejo",
+					"https://github.com/edgarcornejo",
+					"https://www.behance.net/edgarcornejo",
+					"https://twitter.com/devcornejo",
+					"https://www.youtube.com/user/devcornejo",
+					"http://pinterest.com/Edgarcornejo/",
+					"https://www.linkedin.com/pub/edgar-cornejo-cahuana/48/150/974"
+				]
+			}
+		</script>
 
-    <script async
-      src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-    ></script>
+		<script
+			async
+			src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+		></script>
+	</head>
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PRJWX26WVF"
-    ></script>
-    <script type="text/partytown" >
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
+	<body>
+		<main id="main-content">
+			<Header />
 
-      gtag("config", "G-PRJWX26WVF");
-    </script>
-  </head>
+			<slot />
 
-  <body>
-    <main id="main-content">
-      <Header />
-
-      <slot />
-
-      <Footer />
-    </main>
-  </body>
+			<Footer />
+		</main>
+	</body>
 </html>
-
-<style>
-  /* Contenedor principal */
-  #main-content {
-    width: 100%;
-    height: auto;
-    margin: 0 auto;
-  }
-</style>
