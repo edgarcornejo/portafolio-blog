@@ -2,7 +2,7 @@
 layout: ../../layouts/LayoutBlog.astro
 title: Limpieza de pantalla
 author: Edgar Cornejo
-description: "La limpieza de nuestras herramientas, es muy importante, para que estas funcionen correctamente y no duren un buen tiempo. En esta publicación te indicaré los cuidados que debes tener con la pantalla de tu laptop monitor."
+description: "La limpieza de nuestras herramientas, es muy importante, para que estas funcionen correctamente y no duren un buen tiempo. En esta publicación te indicaré los cuidados que debes tener con la pantalla de tu laptop o monitor."
 image:
   {
     url: "https://res.cloudinary.com/devox/image/upload/v1713809551/publicaciones/limpieza-de-pantalla-02_kh4lri.webp",
@@ -18,7 +18,7 @@ tags: ["hardware", "limpieza", "laptop", "monitor"]
 
 ## Como limpiar la pantalla de mi laptop monitor
 
-La limpieza de nuestras herramientas, es muy importante, para que estas funcionen correctamente y no duren un buen tiempo. En esta publicación te indicaré los cuidados que debes tener con la pantalla de tu laptop monitor.
+La limpieza de nuestras herramientas, es muy importante, para que estas funcionen correctamente y no duren un buen tiempo. En esta publicación te indicaré los cuidados que debes tener con la pantalla de tu laptop o monitor.
 
 <figure>
   <img src="https://res.cloudinary.com/devox/image/upload/v1713809551/publicaciones/limpieza-de-pantalla-02_kh4lri.webp" alt="Limpiando pantalla de laptop"/>
