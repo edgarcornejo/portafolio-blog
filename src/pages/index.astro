@@ -14,7 +14,7 @@ const { visible = true } = Astro.props;
 <Layout {visible}>
 	<main>
 		<section>
-			<article>
+			<!-- <article>
 				<header>
 					<h2>Firma</h2>
 				</header>
@@ -32,12 +32,12 @@ const { visible = true } = Astro.props;
 					</p>
 				</article>
 			</article>
-		</section>
+		</section>-->
 
 		<section>
 			<article>
 				<header>
-					<h2>Marcas</h2>
+					<h2>Proyectos</h2>
 				</header>
 
 				<article>
@@ -125,6 +125,7 @@ const { visible = true } = Astro.props;
 					</p>
 				</article>
 
+				<h3>Últimas publicaciones</h3>
 				<ListPosts />
 			</article>
 		</section>
@@ -138,16 +139,17 @@ const { visible = true } = Astro.props;
 				<article>
 					<p>
 						Actualmente me encuentro en
-						<strong>Arequipa, Perú</strong>
-						.
+						<strong>Arequipa, Perú</strong>.
 						<br />
 						Consultas o presupuestos, envía un correo a info@edgarcornejo.com
 					</p>
 				</article>
 
-				<IconSocial />
-
+				<h3>Enlaces</h3>
 				<InfoContact />
+
+				<h3>Redes Sociales</h3>
+				<IconSocial />
 			</article>
 		</section>
 	</main>

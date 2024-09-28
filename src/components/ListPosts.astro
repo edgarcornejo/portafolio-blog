@@ -5,8 +5,7 @@ const allPosts = await Astro.glob("../pages/publicaciones/*.md");
 const formattedPosts = formatBlogPosts(allPosts);
 ---
 
-<p>Últimas publicaciones</p>
-<div id="list-posts">
+<div class="lista-enlaces">
 	{
 		formattedPosts.map((post: any, index: any) => {
 			return index < 8 ? (
@@ -16,7 +15,5 @@ const formattedPosts = formatBlogPosts(allPosts);
 			) : null;
 		})
 	}
-	<a href="/publicaciones/" class="anin-rapido" title="Ver más"
-		>Ver más</a
-	>
+	<a href="/publicaciones/" class="anin-rapido ultimo-enlace" title="Ver más">Ver más</a>
 </div>

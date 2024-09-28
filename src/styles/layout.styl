@@ -2,25 +2,38 @@
 
 /* Variables */
 /* Colores */
+blueDev-50 = #d6d9fa
+blueDev-100 = #c4c8f8
+blueDev-200 = #9ba1f2
+blueDev-300 = #777fee
+blueDev-400 = #4e59e9
+blueDev-500 = #2a37e4
+blueDev-600 = #1925c7
+blueDev-700 = #141d9e
+blueDev-800 = #0f177a
+blueDev-900 = #0a0f51
+blueDev-950 = #080c3f
+
+eWhite = #F2F2F2
+
 eRed = #e63d67
 eSkyBlue = #3dbce6
 eBlue = #673de6
 eBlueDeep = #080c3f
-eWhite = #F2F2F2
 eGray = #bfeee7
 egray1 = rgba(0,0,0,0.1)
 egray3 = rgba(0,0,0,0.3)
 
 /* Estilos ScrollBar */
 ::-webkit-scrollbar
-  width 15px
+  width 16px
 
 ::-webkit-scrollbar-track
-  background rgb(191, 238, 231)
+  background blueDev-50
 
 ::-webkit-scrollbar-thumb
 	border-radius 5px
-	background gray
+	background blueDev-300
 
 /* Medidas */
 gap1 = clamp(16px, 1vw, 1.1vw)
@@ -33,7 +46,7 @@ padding4 = clamp(48px, 4vw, 4.1vw)
 margin2 = clamp(32px, 2vw, 2.1vw)
 margin4 = clamp(64px, 4vw, 4.1vw)
 
-border1 = solid clamp(1px, 0.1vw, 0.2vw) eBlueDeep
+border1 = solid clamp(1px, 0.1vw, 0.2vw) blueDev-950
 
 radius = clamp(3px, 0.2vw, 0.3vw)
 
@@ -47,14 +60,14 @@ p
 
 /* Estilos de Body */
 body
-	font-size clamp(16px, 1.1vw, 1.2vw)
+	font-size clamp(16px, 1.6vw, 1.7vw)
 	font-weight 400
 	line-height 140%
 	hyphens none
 	background eWhite
 	font-family 'Outfit', Helvetica, Arial, sans-serif
 	font-display swap
-	color eBlueDeep
+	color blueDev-900
 	background linear-gradient(90deg, eWhite 20px, transparent 1%) center, linear-gradient(eWhite 20px, transparent 1%) center, rgba(61, 188, 230, 0.4)
 	background-size 22px 22px
 
@@ -77,12 +90,13 @@ body
 		height auto
 		display flex
 		justify-content center
-		width 20%
+		width 15%
 		img
-			height 3vh
+			min-height 24px
+			max-height 48px
 			width auto
 	menu
-		width 80%
+		width 85%
 		display flex
 		justify-content space-around
 		align-items center
@@ -93,19 +107,22 @@ body
 		align-items center
 		a
 			cursor pointer
-			letter-spacing 1pt
+			letter-spacing 2pt
+			text-transform uppercase
+			font-weight 500
 			font-size clamp(16px, 1vw, 1.1vw)
+			color blueDev-600
 			&:hover
-				color eBlue
+				color blueDev-400
 
 /* estas en esta pagina*/
 .li-current
-	color eRed
+	color eRed !important
 
 /* Componente HgroupView */
 #main-header
 	height auto
-	padding clamp(128px, 10vw, 10.1vw) 0 clamp(80px, 2vw, 2.1vw) 0
+	padding clamp(128px, 8vw, 8.1vw) 0 clamp(80px, 3vw, 3.1vw) 0
 	width 100%
 
 .wrapper-h1-h2
@@ -117,22 +134,24 @@ body
 	gap gap1
 	.title
 		position relative
-		font-size clamp(38px, 5.2vw, 5.3vw)
+		font-size clamp(38px, 4.2vw, 4.3vw)
 		line-height 100%
-		font-weight 200
+		font-weight 300
 		animation titulo1 0.2s ease-in-out both
+		color blueDev-900
 	.subtitle
 		position relative
-		font-size clamp(24px, 1.8vw, 1.9vw)
-		font-weight 300
+		font-size clamp(24px, 2vw, 2.1vw)
+		font-weight 200
 		line-height 140%
 		animation titulo2 0.2s ease-in-out both
 		animation-delay 0.2s
+		color blueDev-800
 	a
 		display inline
 		border-bottom border1
 		&:hover
-			color eBlue
+			color blueDev-400
 	
 /* Animaciones */
 /* H1 y H2 */
@@ -163,20 +182,17 @@ body
 		justify-content flex-end
 		width 90%
 		max-width 1920px
-	p
-		font-weight 300
 	a
-		font-size clamp(16px, 1vw, 1.1vw)
 		padding padding1
 		border-radius radius
-		background egray1
+		background #25d366
+		color eWhite
 		font-weight 600
 		letter-spacing 1pt
 		gap gap1
 		transition all 0.2s ease-in-out
 		&:hover
-			color eWhite
-			background eBlueDeep
+			background #075e54
 
 /* Animaciones */
 /* callme */
@@ -204,12 +220,17 @@ body
 		margin-bottom margin2
 		h2
 			font-size clamp(28px, 1.8vw, 1.9vw)
-			font-weight 300
+			font-weight 800
+			letter-spacing 1pt
+			text-transform uppercase
+			opacity 0.4
 	h3
-		font-size clamp(24px, 1.4vw, 1.5vw)
+		font-size clamp(24px, 1.2vw, 1.3vw)
 		line-height 120%
-		font-weight 300
+		font-weight 400
 		margin padding2 0 padding2 0
+		text-transform uppercase
+		letter-spacing 1pt
 	h4
 		font-size clamp(20px, 1.2vw, 1.3vw)
 		margin padding2 0 padding2 0
@@ -221,12 +242,11 @@ body
 			ul
 				padding-bottom padding2
 			li
-				font-size clamp(18px, 1.2vw, 1.3vw)
 				line-height 160%
 				font-weight 300
 				list-style disc inside
 
-/* Marcas */
+/* Proyectos */
 .marcas-container
 	display flex
 	flex-wrap wrap
@@ -249,14 +269,14 @@ body
 		width 4vw
 		max-width 180px
 		filter grayscale(100%)
-	/* Para marcas de color negro */
+	/* Para logos de color negro */
 	.desaturar
 		opacity 0.4
 	figcaption
 		letter-spacing 1pt
 
-/* Componente ListPosts */
-#list-posts
+/* Componente ListPosts - IconSocial - CategoryCloud*/
+.lista-enlaces
 	width 100%
 	display flex
 	flex-wrap wrap
@@ -264,7 +284,8 @@ body
 	align-items center
 	gap gap1
 	a
-		background egray1
+		text-transform capitalize
+		border border1
 		padding padding1
 		border-radius radius
 		transition all 0.2s ease-in-out
@@ -274,66 +295,13 @@ body
 		gap gap1
 		&:hover
 			color eWhite
-			background eBlueDeep
-		&:last-child
-			background egray3
-			&:hover
-				color eWhite
-				background eBlueDeep
-
-/* Componente IconSocial */
-#icon-social
-	width 100%
-	margin margin2 0 margin2 0
-	display flex
-	flex-wrap wrap
-	justify-content space-around
-	gap gap1
-	a
-		border-radius radius
-		color transparent
-		font-size 0
-		height 48px
-		text-indent -99999999px
-		transform scale(2)
-		width 48px
-		background url(/img/icon-social.svg) no-repeat egray3
-		background-size auto 100%
-		&:nth-child(1)
-			background-position 0 0
-		&:nth-child(2)
-			background-position -48px 0
-		&:nth-child(3)
-			background-position -96px 0
-		&:nth-child(4)
-			background-position -143px 0
-		&:nth-child(5)
-			background-position -192px 0
-		&:nth-child(6)
-			background-position -242px 0
-		&:nth-child(7)
-			background-position -287px 0
-		&:nth-child(8)
-			background-position -336px 0
-		&:hover
-			background-color eBlueDeep
-			transform scale3d(2.2, 2.2, 1)
-
-/* conjunto de enlaces  */
-.enlaces
-	display flex
-	flex-wrap wrap
-	gap gap1
-	a
-		padding padding1
-		border-radius radius
-		transition all 0.2s ease-in-out
-		font-weight 400
-		background egray1
+			background blueDev-500
+	.ultimo-enlace
+		color eWhite
+		background blueDev-500
 		&:hover
 			color eWhite
-			opacity 1
-			background eBlueDeep
+			background blueDev-800
 
 /* componente InfoContact */
 .info-contact
@@ -341,21 +309,25 @@ body
 	margin margin2 0 margin2 0
 	display flex
 	flex-wrap wrap
-	justify-content space-evenly
+	justify-content space-between
 	gap gap2
 	strong
-		font-weight 500
-		align-self center
+		font-size clamp(16px, 1vw, 1.1vw)
+		text-transform uppercase
+		display block
+		margin-bottom padding1
 	li
 		list-style none
+	address
+		font-style normal
 	a
-		background egray1
+		border border1
 		padding padding1
 		border-radius radius
 		transition all 0.2s ease-in-out
 		&:hover
+			background blueDev-400
 			color eWhite
-			background eBlueDeep
 
 /* Navegación por página */
 /* Páginas presentación y portafolio */
@@ -376,16 +348,16 @@ body
 		font-weight 300
 		display flex
 		align-items center
-		background egray1
+		background blueDev-50
 		padding padding1
 		border-radius radius
 		gap gap1
 		transition all 0.2s ease-in-out
 		&:hover
 			color eWhite
-			background rgb(8, 12, 63)
+			background blueDev-300
 
-/* Pagina de presentacion */
+/* Página de presentacion */
 /* Contenedor de uls */
 .wrapper-ul
 	display flex
@@ -487,11 +459,14 @@ body
 		figcaption
 			color eBlueDeep
 			font-weight 300
+			font-size clamp(16px, 1vw, 1.1vw)
+			line-height 120%
 		div
 			width 60%
 		p
 			font-weight 300
 			font-size clamp(16px, 1vw, 1.1vw)
+			line-height 120%
 		strong
 			font-weight 500
 
@@ -539,24 +514,6 @@ body
 .aside-bottom
 	padding padding2 0 padding2 0
 	width 100%
-
-/* Componente CategoryCloud */
-.category-cloud
-	width 100%
-	display flex
-	flex-wrap wrap
-	justify-content flex-start
-	align-items center
-	gap gap1
-	a
-		background egray1
-		text-transform capitalize
-		padding padding1
-		border-radius radius
-		transition all 0.2s ease-in-out
-		&:hover
-			color eWhite
-			background eBlueDeep
 
 /* Layout Blog */
 .wrapper-content
@@ -631,6 +588,7 @@ body
 	text-align right
 	max-width 1920px
 	width 90%
+	font-size clamp(16px, 1vw, 1.1vw)
 
 /* Responsive Design */
 @media (max-width: 1920px)	
