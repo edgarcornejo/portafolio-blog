@@ -1,5 +1,5 @@
 ---
-/* Importando layoutss */
+/* Importando layouts */
 import Layout from "../layouts/Layout.astro";
 
 /* Importando componentes */
@@ -9,8 +9,7 @@ import InfoContact from "../components/InfoContact.astro";
 
 <Layout
 	title="Página no encontrada"
-	description="La página que está intentando ver no existe, o actualmente no está disponible."
->
+	description="La página que está intentando ver no existe, o actualmente no está disponible.">
 	<main>
 		<section>
 			<article>
@@ -18,13 +17,17 @@ import InfoContact from "../components/InfoContact.astro";
 					<h2>Error 404</h2>
 				</header>
 
-				<article>
+				<div class="parrafo">
 					<p>
-						La página que está intentando ver no existe, o
-						actualmente no está disponible.
+						La página que está intentando ver no existe, o actualmente no está
+						disponible.
 					</p>
-				</article>
+				</div>
+
+				<h3>Redes Sociales</h3>
 				<IconSocial />
+
+				<h3>Enlaces</h3>
 				<InfoContact />
 			</article>
 		</section>

@@ -1,5 +1,8 @@
 @charset "UTF-8"
 
+/* importando reset */
+@import "../styles/reset.styl";
+
 /* Variables */
 /* Colores */
 blueDev-50 = #d6d9fa
@@ -13,286 +16,154 @@ blueDev-700 = #141d9e
 blueDev-800 = #0f177a
 blueDev-900 = #0a0f51
 blueDev-950 = #080c3f
-
 eWhite = #F2F2F2
-
 eRed = #e63d67
-eSkyBlue = #3dbce6
-eBlue = #673de6
-eBlueDeep = #080c3f
-eGray = #bfeee7
-egray1 = rgba(0,0,0,0.1)
-egray3 = rgba(0,0,0,0.3)
+
+/* Medidas */
+onespace = clamp(16px, 1vw, 1.1vw)
+twospace = clamp(32px, 2vw, 2.1vw)
+thirdpace = clamp(48px, 3vw, 3.1vw)
+fourtspace = clamp(64px, 4vw, 4.1vw)
+
+thinline = solid clamp(1px, 0.1vw, 0.2vw)
+radius = clamp(3px, 0.2vw, 0.3vw)
 
 /* Estilos ScrollBar */
 ::-webkit-scrollbar
-  width 16px
+  width auto
 
 ::-webkit-scrollbar-track
   background blueDev-50
 
 ::-webkit-scrollbar-thumb
-	border-radius 5px
-	background blueDev-300
+	border-radius radius
+	background blueDev-800
 
-/* Medidas */
-gap1 = clamp(16px, 1vw, 1.1vw)
-gap2 = clamp(32px, 2vw, 2.1vw)
+/* Titulos */
+h1,h2,h3,h4,h5,h6
+	text-transform uppercase
+	line-height 120%
+	letter-spacing 1pt
+	padding onespace 0 onespace 0
+	margin-bottom onespace
 
-padding1 = clamp(16px, 1vw, 1.1vw)
-padding2 = clamp(32px, 2vw, 2.1vw)
-padding4 = clamp(48px, 4vw, 4.1vw)
+h1
+	font-size clamp(32px, 2vw, 2.1vw)
+	font-weight 900
+h2
+	font-size clamp(28px, 1.8vw, 1.9vw)
+	font-weight 800
+h3
+	font-size clamp(24px, 1.6vw, 1.7vw)
+	font-weight 700
+h4
+	font-size clamp(20px, 1.4vw, 1.5vw)
+	font-weight 600
+h5
+	font-size clamp(18px, 1.2vw, 1.3vw)
+	font-weight 500
+h6
+	font-size clamp(16px, 1vw, 1.1vw)
+	font-weight 400
 
-margin2 = clamp(32px, 2vw, 2.1vw)
-margin4 = clamp(64px, 4vw, 4.1vw)
+/* enlaces */
+a
+	transition all 0.2s ease-in-out
+	&:hover
+		color blueDev-500
 
-border1 = solid clamp(1px, 0.1vw, 0.2vw) blueDev-950
-
-radius = clamp(3px, 0.2vw, 0.3vw)
-
-/* enlace */
 p
 	a
 		transition all 0.2s ease-in-out
-		border-bottom border1
+		border-bottom thinline blueDev-950
 		&:hover
 			opacity 0.8
 
 /* Estilos de Body */
 body
-	font-size clamp(16px, 1.6vw, 1.7vw)
-	font-weight 400
-	line-height 140%
+	font-size clamp(16px, 1vw, 1.1vw)
+	font-weight 300
+	line-height 120%
 	hyphens none
 	background eWhite
 	font-family 'Outfit', Helvetica, Arial, sans-serif
 	font-display swap
-	color blueDev-900
+	color blueDev-950
 	background linear-gradient(90deg, eWhite 20px, transparent 1%) center, linear-gradient(eWhite 20px, transparent 1%) center, rgba(61, 188, 230, 0.4)
 	background-size 22px 22px
 
-/* Componente MainMenuView */
-.input-menu,.open-menu,.closed-menu
-	display none
+/* Estilos componente MainMenuView */
+@import "../styles/MainMenuView.styl"
 
-/* Menu */
-#main-menu
-	display flex
-	align-items center
-	width 100%
-	margin 0 auto
-	position fixed
-	background rgba(255, 255, 255, 0.8)
-	backdrop-filter blur(8px)
-	z-index 1
-	padding padding1 0 padding1 0
-	.logo
-		height auto
-		display flex
-		justify-content center
-		width 15%
-		img
-			min-height 24px
-			max-height 48px
-			width auto
-	menu
-		width 85%
-		display flex
-		justify-content space-around
-		align-items center
-		gap gap1
-	li
-		display flex
-		justify-content center
-		align-items center
-		a
-			cursor pointer
-			letter-spacing 2pt
-			text-transform uppercase
-			font-weight 500
-			font-size clamp(16px, 1vw, 1.1vw)
-			color blueDev-600
-			&:hover
-				color blueDev-400
+/* Estilos componente MainTitlesView */
+@import "../styles/MainTitlesView.styl";
 
-/* estas en esta pagina*/
-.li-current
-	color eRed !important
-
-/* Componente HgroupView */
-#main-header
-	height auto
-	padding clamp(128px, 8vw, 8.1vw) 0 clamp(80px, 3vw, 3.1vw) 0
-	width 100%
-
-.wrapper-h1-h2
-	margin 0 auto
-	width 90%
-	max-width 1920px
-	display flex
-	flex-flow column wrap
-	gap gap1
-	.title
-		position relative
-		font-size clamp(38px, 4.2vw, 4.3vw)
-		line-height 100%
-		font-weight 300
-		animation titulo1 0.2s ease-in-out both
-		color blueDev-900
-	.subtitle
-		position relative
-		font-size clamp(24px, 2vw, 2.1vw)
-		font-weight 200
-		line-height 140%
-		animation titulo2 0.2s ease-in-out both
-		animation-delay 0.2s
-		color blueDev-800
-	a
-		display inline
-		border-bottom border1
-		&:hover
-			color blueDev-400
-	
-/* Animaciones */
-/* H1 y H2 */
-@keyframes titulo1
-	from
-		opacity 0
-		bottom 100px
-	to
-		opacity 1
-		bottom 0
-
-@keyframes titulo2
-	from
-		opacity 0
-		bottom 50px
-	to
-		opacity 1
-		bottom 0
-
-/* Componente CallView */
-#bottom-call
-	display flex
-	justify-content center
-	width 100%
-	animation callme 0.2s ease-in-out both
-	div
-		display flex
-		justify-content flex-end
-		width 90%
-		max-width 1920px
-	a
-		padding padding1
-		border-radius radius
-		background #25d366
-		color eWhite
-		font-weight 600
-		letter-spacing 1pt
-		gap gap1
-		transition all 0.2s ease-in-out
-		&:hover
-			background #075e54
-
-/* Animaciones */
-/* callme */
-@keyframes callme
-	from
-		opacity 0
-	to
-		opacity 1
+/* Estilos componente CallView */
+@import "../styles/CallView.styl";
 		
-/* Contenedor principal de página */
+/* Contenedor principal de contenido */
 #main-content
 	width 100%
-	padding padding4 0 padding4 0
-	/* Contenedor de sections*/
-	main
-		width 90%
-		max-width 1920px
-		margin 0 auto
-		scroll-snap-type y proximity
-		scroll-padding-top padding1
-	section
-		margin-bottom clamp(64px, 10vh, 10.1vh)
-		scroll-snap-align start
-	header
-		margin-bottom margin2
-		h2
-			font-size clamp(28px, 1.8vw, 1.9vw)
-			font-weight 800
-			letter-spacing 1pt
-			text-transform uppercase
-			opacity 0.4
-	h3
-		font-size clamp(24px, 1.2vw, 1.3vw)
-		line-height 120%
-		font-weight 400
-		margin padding2 0 padding2 0
-		text-transform uppercase
-		letter-spacing 1pt
-	h4
-		font-size clamp(20px, 1.2vw, 1.3vw)
-		margin padding2 0 padding2 0
-	article
-		article
-			p
-				padding-bottom padding1
-				font-weight 300
-			ul
-				padding-bottom padding2
-			li
-				line-height 160%
-				font-weight 300
-				list-style disc inside
+	min-height 100vh
+	padding fourtspace 0 fourtspace 0
 
-/* Proyectos */
+main
+	scroll-snap-type y proximity
+	scroll-padding-top thirdpace
+	section
+		margin-bottom fourtspace
+		scroll-snap-align start
+		display flex
+		justify-content center
+	article
+		display flex
+		flex-direction column
+		width 90%
+	.parrafo
+		max-width 900px
+		margin-bottom twospace
+	p
+		padding-bottom onespace
+	strong
+		font-weight 600
+
+/* Proyectos en Index */
 .marcas-container
 	display flex
+	justify-content space-between
 	flex-wrap wrap
-	justify-content center
-	align-items center
-	padding-top padding2
-	gap gap2
-	figure
-		width 22%
+	padding-top twospace
+	a
 		&:hover img
 			filter grayscale(0%)
 			opacity 1
-	a
-		display flex
-		flex-direction column
-		align-items center
-		gap gap2
 	img
-		min-width 100px
-		width 4vw
-		max-width 180px
+		height auto
+		width 100%
+		min-width 48px
 		filter grayscale(100%)
 	/* Para logos de color negro */
 	.desaturar
 		opacity 0.4
-	figcaption
-		letter-spacing 1pt
 
-/* Componente ListPosts - IconSocial - CategoryCloud*/
+/* Estilos de componente ListPosts - InfoContact - IconSocial - CategoryCloud*/
+address
+	font-style normal
+	a
+		text-transform lowercase !important
+
 .lista-enlaces
 	width 100%
 	display flex
 	flex-wrap wrap
-	justify-content flex-start
-	align-items center
-	gap gap1
+	justify-content space-between
+	gap onespace
+	margin-bottom onespace
 	a
 		text-transform capitalize
-		border border1
-		padding padding1
+		border thinline blueDev-100
+		padding onespace
 		border-radius radius
-		transition all 0.2s ease-in-out
-		text-align center
-		display flex
-		align-items center
-		gap gap1
 		&:hover
 			color eWhite
 			background blueDev-500
@@ -303,69 +174,35 @@ body
 			color eWhite
 			background blueDev-800
 
-/* componente InfoContact */
-.info-contact
-	width 100%
-	margin margin2 0 margin2 0
-	display flex
-	flex-wrap wrap
-	justify-content space-between
-	gap gap2
-	strong
-		font-size clamp(16px, 1vw, 1.1vw)
-		text-transform uppercase
-		display block
-		margin-bottom padding1
-	li
-		list-style none
-	address
-		font-style normal
-	a
-		border border1
-		padding padding1
-		border-radius radius
-		transition all 0.2s ease-in-out
-		&:hover
-			background blueDev-400
-			color eWhite
+/* estilos componente FooterView */
+#footer
+	margin 0 auto
+	padding twospace 0 twospace 0
+	text-align right
+	width 90%
 
-/* Navegación por página */
-/* Páginas presentación y portafolio */
+/* Páginas presentación y portafolio
+ 	Navegación por página */
 .navigator
 	display flex
 	justify-content center
-	margin-bottom margin4
+	margin-bottom fourtspace
 	ol
-		width 100%
+		width 90%
 		display flex
 		justify-content space-between
-	li
-		display flex
-		height 4vh
-	a
-		align-self center
-		letter-spacing 1pt
-		font-weight 300
-		display flex
-		align-items center
-		background blueDev-50
-		padding padding1
-		border-radius radius
-		gap gap1
-		transition all 0.2s ease-in-out
-		&:hover
-			color eWhite
-			background blueDev-300
 
-/* Página de presentacion */
 /* Contenedor de uls */
 .wrapper-ul
 	display flex
 	flex-wrap wrap
 	justify-content space-between
-	width 100%
+	gap onespace
 	div
 		max-width 45%
+	li
+		line-height 160%
+		list-style disc inside
 
 /* Pagina de portafolio*/
 .wrapper-gallery-work
@@ -373,14 +210,15 @@ body
 	flex-wrap wrap
 	justify-content space-between
 	width 100%
-	gap gap2
+	gap twospace
 
 .gallery-cell
 	width 30%
-	padding padding1
+	padding 0 onespace 0 onespace
 	border-radius radius
-	outline border1
+	outline thinline blueDev-50
 	&:hover
+		background blueDev-50
 		img
 			transform scale(1.1)
 			filter grayscale(0)
@@ -395,14 +233,14 @@ body
 		transition all 0.2s ease-in-out
 	h3
 		text-align center
-	p
-		font-size clamp(18px, 1vw, 1.1vw)
 
-/* Componente AdsArea */
+/* Pagina de Publicaciones */
+/* estilos componente AdsArea */
 .ads-area
-	margin margin2 0 margin2 0
+	padding onespace
+	margin twospace 0 twospace 0
 
-/* Componente Pagination */
+/* estilos componente Pagination */
 .pagination
 	width 100%
 	height auto
@@ -410,84 +248,81 @@ body
 	flex-wrap wrap
 	justify-content center
 	align-items center
-	gap 0 gap2
-	padding padding1 0 padding1 0
+	gap 0 twospace
+	padding onespace 0 onespace 0
 	a
-		background egray1
+		background blueDev-50
 		border-radius radius
-		padding padding1
-		display flex
-		justify-content center
-		align-items center
-		gap 0 gap1
+		padding onespace
 		letter-spacing 1pt
 		&:hover
-			background eBlueDeep
+			background blueDev-950
 			color eWhite
 			&:nth-child(odd)
 				transform translatex(-.4rem)
 			&:nth-child(even)
 				transform translatex(.4rem)
 
-/* Pagina de Publicaciones */
 .wrapper-post
 	display flex
 	flex-wrap wrap
-	gap gap1
+	justify-content space-between
+	gap onespace
+	padding onespace 0 onespace 0
 	article
-		width 49%
-		padding gap1
-		a
-			display flex
-			flex-wrap wrap
-			justify-content space-between
-		h2
-			width 100%
-			font-size clamp(24px, 1.8vw, 1.9vw)
-			font-weight 300
-			line-height 100%
-			padding-bottom padding2
-		figure
-			width 35%
-			display flex
-			flex-direction column
-			gap gap1
-		img
-			width 100%
-			height 12vh
-			object-fit cover
-		figcaption
-			color eBlueDeep
-			font-weight 300
-			font-size clamp(16px, 1vw, 1.1vw)
-			line-height 120%
-		div
-			width 60%
-		p
-			font-weight 300
-			font-size clamp(16px, 1vw, 1.1vw)
-			line-height 120%
-		strong
-			font-weight 500
+		width 48%
+		padding onespace
+		outline thinline blueDev-50
+		border-radius radius
+		&:hover
+			background blueDev-50
+	a
+		display flex
+		flex-wrap wrap
+		justify-content space-between
+		gap onespace
+		&:hover
+			color inherit
+	h3
+		width 100%
+	figure
+		width 35%
+		display flex
+	figcaption
+		position absolute
+		background blueDev-950
+		border-radius 0 0 radius 0
+		color eWhite
+		padding onespace
+	img
+		width 100%
+		height 25vh
+		object-fit cover
+	div
+		width 60%
+
+.aside-bottom
+	padding twospace 0 twospace 0
+
+/* Layout Blog */
+.wrapper-content
+	width 90%
+	margin 0 auto
+	display flex
+	justify-content space-between
+	gap twospace
+	main
+		width 70%
+	aside
+		width 25%
 
 /* Estilos de MD */
 #wrapper-post
-	h1
-		font-size clamp(22px, 1.6vw, 1.7vw)
-		padding padding1 0 padding1 0
-	h2
-		font-size clamp(20px, 1.4vw, 1.5vw)
-		padding padding1 0 padding1 0
-	h3
-		font-size clamp(18px, 1.2vw, 1.3vw)
-		padding padding1 0 padding1 0
-	p
-		padding-bottom padding1
 	ul
 		display flex
 		width 100%
 		flex-flow column wrap
-		padding padding1 0 padding1 0
+		padding onespace 0 onespace 0
 	li
 		list-style disc inside
 		&::marker
@@ -496,34 +331,14 @@ body
 		display flex
 		flex-direction column
 		align-items center
-		padding padding2 0 padding2 0
+		padding twospace 0 twospace 0
 		width 100%
 	img
 		width auto/9
 		height auto
 		max-width 30vw
 	figcaption
-		padding-top padding1
-	a
-		display inline
-		transition all 0.2s ease-in-out
-		border-bottom border1
-		&:hover
-			opacity 0.8
-
-.aside-bottom
-	padding padding2 0 padding2 0
-	width 100%
-
-/* Layout Blog */
-.wrapper-content
-	display flex
-	justify-content space-between
-	gap gap2
-	main
-		width 70%
-	aside
-		width 25%
+		padding-top onespace
 
 /* Container Iframe */
 .wrapper-iframe
@@ -544,33 +359,25 @@ body
 /* Informacion y Publicidad */
 .aside-blog
 	div
-		margin-bottom margin2
+		margin-bottom twospace
 	.info-post
 		img
-			margin-bottom margin2
-		strong
-			font-weight 500
-		p
-			font-weight 300
-			font-size clamp(16px, 1vw, 1.1vw)
-			padding-bottom padding1
+			margin-bottom twospace
 
 /* Componente RelatedPost */
 #related-post
 	width 100%
 	display flex
 	flex-wrap wrap
-	justify-content flex-start
-	align-items center
-	gap gap1
+	gap onespace
+	padding onespace
 	a
 		display flex
 		flex-flow column wrap
-		gap gap1
-		background egray1
-		padding padding1
+		gap onespace
+		background blueDev-50
+		padding onespace
 		border-radius radius
-		transition all 0.2s ease-in-out
 		text-align center
 		&:hover
 			color eWhite
@@ -578,17 +385,6 @@ body
 	span
 		font-size clamp(16px, 0.8vw, 0.9vw)
 		opacity .7
-
-/* Componente Footer */
-#footer
-	font-weight 500
-	height auto
-	margin 0 auto
-	padding padding2 0 padding2 0
-	text-align right
-	max-width 1920px
-	width 90%
-	font-size clamp(16px, 1vw, 1.1vw)
 
 /* Responsive Design */
 @media (max-width: 1920px)	
@@ -618,7 +414,7 @@ body
 	
 	/* Informacion y Publicidad */
 	.aside-blog
-		background eGray
+		background blueDev-50
 		h4
 			text-align center
 		.info-post
@@ -629,51 +425,7 @@ body
 			img
 				max-width 50%
 
-@media (max-width: 768px)	
-	/* Componente MainMenuView */
-	#main-menu
-		.logo
-			width 100%
-			img
-				height 4vh
-		menu
-			display none
-		li
-			width 100%
-			display flex
-			justify-content center
-			align-items center
-			border-bottom solid 1px eSkyBlue
-			&:last-child
-				border 0
-			a
-				padding padding1
-		.open-menu, .closed-menu
-			user-select none
-			cursor pointer
-			display block
-			color eSkyBlue
-			position fixed
-			right 4vw
-			img
-				max-width 48px
-				height auto
-		.closed-menu
-			display none
-	
-	.input-menu:checked ~ #main-menu
-		.open-menu
-			display none
-		.closed-menu
-			display block
-		menu
-			display flex
-			width 100%
-			background eWhite
-			top 8vh
-			flex-direction column
-			position fixed
-	
+@media (max-width: 768px)
 	/* Marcas */
 	.marcas-container
 		figure

@@ -1,0 +1,82 @@
+.input-menu,.open-menu,.closed-menu
+	display none
+
+#main-menu
+	display flex
+	align-items center
+	width 100%
+	margin 0 auto
+	position fixed
+	background eWhite
+	border-bottom thinline blueDev-950
+	z-index 1
+	padding onespace 0 onespace 0
+	.logo
+		height auto
+		display flex
+		justify-content center
+		width 15%
+		img
+			min-height 24px
+			max-height 48px
+			width auto
+	menu
+		width 85%
+		display flex
+		justify-content space-around
+		align-items center
+		gap onespace
+	li
+		display flex
+		justify-content center
+		align-items center
+		a
+			cursor pointer
+			letter-spacing 2pt
+
+/* estas en esta pagina*/
+.li-current
+	color eRed
+	text-transform uppercase
+	font-weight 700
+
+@media (max-width: 768px)	
+	#main-menu
+		.logo
+			width 100%
+			img
+				height 4vh
+		menu
+			display none
+		li
+			width 100%
+			display flex
+			justify-content center
+			align-items center
+			border-bottom thinline blueDev-950
+			a
+				padding 1rem
+		.open-menu, .closed-menu
+			user-select none
+			cursor pointer
+			display block
+			position fixed
+			right 4vw
+			img
+				max-width 48px
+				height auto
+		.closed-menu
+			display none
+	
+	.input-menu:checked ~ #main-menu
+		.open-menu
+			display none
+		.closed-menu
+			display block
+		menu
+			display flex
+			width 100%
+			background eWhite
+			top 8vh
+			flex-direction column
+			position fixed

@@ -1,0 +1,46 @@
+#main-header
+	padding clamp(128px, 8vw, 8.1vw) 0 clamp(80px, 4vw, 4.1vw) 0
+	width 100%
+	display flex
+	justify-content center
+	background blueDev-950
+
+.wrapper-h1-h2
+	width 90%
+	display flex
+	flex-flow column wrap
+	color eWhite
+	.title
+		font-size clamp(32px, 2vw, 2.1vw)
+		position relative
+		animation titulo1 0.2s ease-in-out both
+		padding onespace 0 0 0
+	.subtitle
+		font-size clamp(28px, 1.8vw, 1.9vw)
+		position relative
+		font-weight 200
+		animation titulo2 0.2s ease-in-out both
+		animation-delay 0.2s
+	a
+		border-bottom thinline eWhite
+		&:hover
+			color eWhite
+			opacity 0.8
+	
+/* Animaciones */
+/* H1 y H2 */
+@keyframes titulo1
+	from
+		opacity 0
+		bottom 100px
+	to
+		opacity 1
+		bottom 0
+
+@keyframes titulo2
+	from
+		opacity 0
+		bottom 50px
+	to
+		opacity 1
+		bottom 0

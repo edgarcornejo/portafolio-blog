@@ -9,11 +9,11 @@ const formattedPosts = formatBlogPosts(allPosts);
 	{
 		formattedPosts.map((post: any, index: any) => {
 			return index < 8 ? (
-				<a href={post.url} title={post.frontmatter.title} class="anin-rapido">
+				<a href={post.url} title={post.frontmatter.title}>
 					{post.frontmatter.title}
 				</a>
 			) : null;
 		})
 	}
-	<a href="/publicaciones/" class="anin-rapido ultimo-enlace" title="Ver más">Ver más</a>
+	<a href="/publicaciones/" class="ultimo-enlace" title="Ver más">Ver más</a>
 </div>

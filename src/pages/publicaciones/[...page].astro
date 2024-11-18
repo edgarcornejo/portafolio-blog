@@ -23,28 +23,34 @@ export async function getStaticPaths({ paginate }: any) {
 	});
 }
 
-const { page, blog=true } = Astro.props;
+const { page, blog = true } = Astro.props;
 ---
 
 <Layout
-		title="Publicaciones"
-		description="Blog de diseño, desarrollo, tecnología, seo, marketing online y trucos." {blog}
->
+	title="Publicaciones"
+	description="Blog de diseño, desarrollo, tecnología, seo, marketing online y trucos."
+	{blog}>
 	<main>
-		<AdsArea />
+		<section>
+			<article>
+				<AdsArea />
 
-		<Pagination prevURL={page.url.prev} nextURL={page.url.next} />
+				<Pagination prevURL={page.url.prev} nextURL={page.url.next} />
 
-		<div class="wrapper-post">
-			{page.data.map((post: any) => <PostPreview post={post} />)}
-		</div>
+				<div class="wrapper-post">
+					{page.data.map((post: any) => <PostPreview post={post} />)}
+				</div>
 
-		<Pagination prevURL={page.url.prev} nextURL={page.url.next} />
+				<Pagination prevURL={page.url.prev} nextURL={page.url.next} />
 
-		<aside class="aside-bottom">
-			<CategoryCloud showCount={true} />
+				<aside class="aside-bottom">
+					<h4>Categorias:</h4>
 
-			<AdsArea />
-		</aside>
+					<CategoryCloud showCount={true} />
+
+					<AdsArea />
+				</aside>
+			</article>
+		</section>
 	</main>
 </Layout>

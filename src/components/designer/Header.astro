@@ -1,36 +1,43 @@
+---
+import Image from "astro/components/Image.astro";
+
+import localMenuOpen from "../../images/open-menu.svg";
+import localMenuClosed from "../../images/closed-menu.svg";
+---
+
 <header>
-  <div id="logo"></div>
+	<div id="logo"></div>
 
-  <a
-    class="name-title"
-    href="/designer/"
-    title="Diseñador Gráfico Edgar Cornejo"
-    ><h1>Diseñador Gráfico Edgar Cornejo</h1></a
-  >
+	<a
+		class="name-title"
+		href="/designer/"
+		title="Diseñador Gráfico Edgar Cornejo"
+		><h1>Diseñador Gráfico Edgar Cornejo</h1></a
+	>
 
-  <input type="checkbox" id="menu" class="input-menu" />
-  <nav>
-    <label for="menu" class="open-menu"><img src="/img/open-menu.svg" alt="Abrir menu"></label>
-    <label for="menu" class="closed-menu"><img src="/img/closed-menu.svg" alt="Cerrar menu"></label>
-    <menu>
-      <li>
-        <a href="/designer/" title="Inicio">Inicio</a>
-      </li>
-      <li>
-        <a href="/designer/recomendacion" title="Recomendaciones"
-          >Recomendaciones</a
-        >
-      </li>
-      <li>
-        <a href="/publicaciones/" title="Blog Edgar">Blog Edgar</a>
-      </li>
-    </menu>
-  </nav>
+	<input type="checkbox" id="menu" class="input-menu" />
+	<nav>
+		<label for="menu" class="open-menu"
+			><Image src={localMenuOpen} alt="Abrir menu" /></label
+		>
+		<label for="menu" class="closed-menu"
+			><Image src={localMenuClosed} alt="Cerrar menu" /></label
+		>
+		<menu>
+			<li>
+				<a href="/designer/" title="Inicio">Inicio</a>
+			</li>
+			<li>
+				<a href="/designer/recomendacion" title="Recomendaciones"
+					>Recomendaciones</a
+				>
+			</li>
+			<li>
+				<a href="/publicaciones/" title="Blog Edgar">Blog Edgar</a>
+			</li>
+		</menu>
+	</nav>
 </header>
-
-<script>
-  import "../../js/sensitive.js";
-</script>
 
 <style lang="stylus">
   /* Colores */

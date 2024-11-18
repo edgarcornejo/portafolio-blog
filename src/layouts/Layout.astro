@@ -1,13 +1,12 @@
 ---
 /* Importando estilos */
-import "../styles/reset.css";
 import "../styles/layout.css";
 
 /* Importando componentes */
 import Head from "../layouts/Head.astro";
 import MainMenuView from "../components/MainMenuView.astro";
-import Footer from "../components/Footer.astro";
-import HgroupView from "../components/HgroupView.astro";
+import MainTitlesView from "../components/MainTitlesView.astro";
+import FooterView from "../components/FooterView.astro";
 import CallView from "../components/CallView.astro";
 
 const {
@@ -24,7 +23,6 @@ const {
 } = Astro.props;
 ---
 
-<!doctype html>
 <html lang="es">
 	<Head
 		{title}
@@ -40,7 +38,7 @@ const {
 	<body itemscope itemtype="http://data-vocabulary.org/Person">
 		<MainMenuView />
 
-		<HgroupView {title} {visible} {blog} {description} />
+		<MainTitlesView {title} {visible} {blog} {description} />
 
 		<CallView />
 
@@ -48,6 +46,6 @@ const {
 			<slot />
 		</div>
 
-		<Footer />
+		<FooterView />
 	</body>
 </html>

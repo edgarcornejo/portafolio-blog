@@ -9,7 +9,6 @@ import CategoryCloud from "../components/CategoryCloud.astro";
 import ListPosts from "../components/ListPosts.astro";
 import RelatedPost from "../components/RelatedPost.astro";
 
-
 interface Props {
 	title: string;
 	description: string;
@@ -47,18 +46,24 @@ const formattedPosts = formatBlogPosts(allPosts, {
 const relatedPost = formattedPosts
 	.filter(
 		(post: any) =>
-			post.frontmatter.category === category &&
-			post.frontmatter.title !== title,
+			post.frontmatter.category === category && post.frontmatter.title !== title
 	)
 	.slice(0, 1);
 ---
 
-<Layout {title} {description} {keywords} {author} {url} {image} {imagealt} {type}>
+<Layout
+	{title}
+	{description}
+	{keywords}
+	{author}
+	{url}
+	{image}
+	{imagealt}
+	{type}>
 	<main>
-		<AdsArea />
-
 		<section class="wrapper-content">
 			<article id="wrapper-post">
+				<AdsArea />
 				<slot />
 			</article>
 
@@ -67,31 +72,32 @@ const relatedPost = formattedPosts
 				<div class="info-post">
 					<img src={image} alt={imagealt} />
 					<p>
-						<strong>Autor:</strong> <a href={`/author/${slugify(author)}/`} title={author}
-							>{author}</a
+						<strong>Autor:</strong>
+						<a href={`/author/${slugify(author)}/`} title={author}>{author}</a>
+					</p>
+					<p>
+						<strong>Categoría:</strong>
+						<a href={`/category/${slugify(category)}/`} title={category}
+							>{category}</a
 						>
 					</p>
 					<p>
-						<strong>Categoría:</strong> <a
-							href={`/category/${slugify(category)}/`}
-							title={category}>{category}</a
-						>
+						<strong>Fecha de publicación:</strong>
+						<time datetime={date}>{formatDate(date)}</time>
 					</p>
 					<p>
-						<strong>Fecha de publicación:</strong> <time datetime={date}
-							>{formatDate(date)}</time
-						>
-					</p>
-					<p>
-						<strong>Etiquetas:</strong> {keywords.map((tag: any) => <span>{tag}, </span>)}
+						<strong>Etiquetas:</strong>
+						{keywords.map((tag: any) => <span>{tag}, </span>)}
 					</p>
 				</div>
 
+				<RelatedPost {relatedPost} />
+
+				<h4>Categorías</h4>
 				<CategoryCloud />
 
+				<h4>Publicaciones</h4>
 				<ListPosts />
-
-				<RelatedPost {relatedPost} />
 			</aside>
 		</section>
 		<AdsArea />

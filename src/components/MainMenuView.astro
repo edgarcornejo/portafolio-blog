@@ -1,22 +1,24 @@
 ---
+import { Image } from "astro:assets";
 
+import localLogoEdgarColor from "../images/edgarcornejo.svg";
+import localMenuOpen from "../images/open-menu.svg";
+import localMenuClosed from "../images/closed-menu.svg";
 ---
 
 <input type="checkbox" id="menu" class="input-menu" />
 <nav id="main-menu">
 	<a href="/" title="Edgar Cornejo" class="logo">
-		<img
-			itemprop="logo"
-			src="/img/edgarcornejo.svg"
-			alt="logotipo edgar cornejo"
-		/>
+		<Image itemprop="logo" src={localLogoEdgarColor} alt="Logo Edgar" />
 	</a>
-	<label for="menu" class="open-menu"
-		><img src="/img/open-menu.svg" alt="Abrir menu" /></label
-	>
-	<label for="menu" class="closed-menu"
-		><img src="/img/closed-menu.svg" alt="Cerrar menu" /></label
-	>
+
+	<label for="menu" class="open-menu">
+		<Image src={localMenuOpen} alt="Abrir menu" />
+	</label>
+	<label for="menu" class="closed-menu">
+		<Image src={localMenuClosed} alt="Cerrar menu" />
+	</label>
+
 	<menu>
 		<li><a href="/" title="Inicio" class="nav-li">Inicio</a></li>
 		<li>
@@ -37,5 +39,11 @@
 </nav>
 
 <script>
-	import "../js/nav.js";
+	const navLinks = document.querySelectorAll(".nav-li");
+
+	navLinks.forEach((link) => {
+		if (link.getAttribute("href") === window.location.pathname) {
+			link.setAttribute("class", "li-current");
+		}
+	});
 </script>
