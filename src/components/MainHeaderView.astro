@@ -1,0 +1,88 @@
+---
+import { Image } from "astro:assets";
+
+import localLogoEdgarWhite from "../images/edgarcornejo-white.svg";
+import localMenuOpen from "../images/open-menu.svg";
+import localMenuClosed from "../images/closed-menu.svg";
+
+const { title, visible, blog, description } = Astro.props;
+---
+<div class="container-logo-menu">
+	<div>
+		<a href="/" title="Edgar Cornejo">
+			<Image itemprop="logo" src={localLogoEdgarWhite} alt="Logo Edgar"/>
+		</a>
+	</div>
+
+	<div>
+		<input type="checkbox" id="menu" class="input-menu" />
+		<nav id="main-menu">
+			<label for="menu" class="open-menu">
+				<Image src={localMenuOpen} alt="Abrir menu" />
+			</label>
+			<label for="menu" class="closed-menu">
+				<Image src={localMenuClosed} alt="Cerrar menu" />
+			</label>
+			
+			<menu>
+				<li><a href="/" title="Inicio" class="nav-li">Inicio</a></li>
+				<li>
+					<a href="/presentacion/" title="Presentación" class="nav-li"
+						>Presentación</a
+					>
+				</li>
+				<li>
+					<a href="/portafolio/" title="Portafolio" class="nav-li">Portafolio</a>
+				</li>
+				<li>
+					<a href="/publicaciones/" title="Publicaciones" class="nav-li"
+						>Publicaciones</a
+					>
+				</li>
+				<li><a href="/contacto/" title="Contacto" class="nav-li">Contacto</a></li>
+			</menu>
+		</nav>
+	</div>
+</div>
+
+<header id="main-header">
+	<div class="wrapper-h1-h2">
+	 {visible ? <h2 itemprop="name" class="title">{title}</h2>
+	 <h1 itemprop="jobTitle" class="subtitle">
+		 Soy
+		 <a href="designer/" title="Diseñador Gráfico">Diseñador Gráfico</a> y
+		 <a href="desarrollador-web/" title="Desarrollador Web front-end"
+			 >Desarrollador Web front-end</a>
+	 </h1> : <h1 class="title">{title} {blog && <h2 class="subtitle">{description}</h2>}</h1>}
+ </div> 
+</header>
+
+<div id="bottom-call">
+	<div>
+		<p>
+			<a
+				href="https://wa.me/message/EEEHZULZQV5QG1"
+				title="WhatsApp">WhatsApp</a>
+		</p>
+	</div>
+</div>
+
+<script>
+	const navLinks = document.querySelectorAll(".nav-li");
+	//const logoCambio = document.getElementById("logo");
+
+	navLinks.forEach((link) => {
+		if (link.getAttribute("href") === window.location.pathname) {
+			link.setAttribute("class", "li-current");
+		}
+	});
+
+	/*addEventListener("scroll", (event) => {
+		if (window.scrollY > 100) {
+			logoCambio?.setAttribute("src", '/img/edgarcornejo.svg');
+		}
+		if (window.scrollY < 100) {
+			logoCambio?.setAttribute("src", '/img/edgarcornejo-white.svg');
+		}
+	});*/
+</script>

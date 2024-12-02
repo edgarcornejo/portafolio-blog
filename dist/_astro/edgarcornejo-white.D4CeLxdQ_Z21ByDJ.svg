@@ -3,12 +3,12 @@
 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 100 55.6" style="enable-background:new 0 0 100 55.6;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#080C3F;}
+	.st0{fill:#FFFFFF;}
 </style>
 <g>
 	<rect x="33.3" y="22.2" class="st0" width="11.1" height="11.1"/>
 	<rect x="55.6" y="22.2" class="st0" width="11.1" height="11.1"/>
-	<path class="st0" d="M50,33.3c0,6.1-5,11.1-11.1,11.1h-5.6v11.1h11.1h11.1h11.1V44.5H61C55,44.5,50,39.5,50,33.3z"/>
+	<path class="st0" d="M50,33.3c0,6.1-5,11.1-11.1,11.1h-5.6v11.1h11.1h11.1h11.1v-11H61C55,44.5,50,39.5,50,33.3z"/>
 	<path class="st0" d="M50,22.2c0-6.1,5-11.1,11.1-11.1h5.6V0H55.6H44.4H33.3v11.1h5.6C45,11.1,50,16.1,50,22.2z"/>
 	<path class="st0" d="M22.2,33.3V22.2h11.1V11.1h-5.6c-6.1,0-11.1,5-11.1,11.1c0-6.1-5-11.1-11.1-11.1H0v11.1h11.1v11.1H0v11.1h5.6
 		c6.1,0,11.1-5,11.1-11.1c0,6.1,5,11.1,11.1,11.1h5.6V33.3H22.2z"/>

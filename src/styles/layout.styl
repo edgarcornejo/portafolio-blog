@@ -5,62 +5,65 @@
 
 /* Variables */
 /* Colores */
-blueDev-50 = #d6d9fa
-blueDev-100 = #c4c8f8
-blueDev-200 = #9ba1f2
-blueDev-300 = #777fee
-blueDev-400 = #4e59e9
-blueDev-500 = #2a37e4
-blueDev-600 = #1925c7
-blueDev-700 = #141d9e
-blueDev-800 = #0f177a
-blueDev-900 = #0a0f51
-blueDev-950 = #080c3f
+blueDev-50 = #ebf3ff
+blueDev-100 = #dbe9ff
+blueDev-200 = #bed5ff
+blueDev-300 = #96b9ff
+blueDev-400 = #6d91ff
+blueDev-500 = #4b69ff
+blueDev-600 = #2b3eff
+blueDev-700 = #2a37e4
+blueDev-800 = #1d2ab6
+blueDev-900 = #202c8f
+blueDev-950 = #131853
 eWhite = #F2F2F2
 eRed = #e63d67
 
 /* Medidas */
 onespace = clamp(16px, 1vw, 1.1vw)
 twospace = clamp(32px, 2vw, 2.1vw)
-thirdpace = clamp(48px, 3vw, 3.1vw)
+thirdspace = clamp(48px, 3vw, 3.1vw)
 fourtspace = clamp(64px, 4vw, 4.1vw)
 
 thinline = solid clamp(1px, 0.1vw, 0.2vw)
+midline = solid clamp(3px, 0.3vw, 0.4vw)
 radius = clamp(3px, 0.2vw, 0.3vw)
+shadow = 0 3px 6px rgba(19,24,83,0.16), 0 3px 6px rgba(19,24,83,0.23)
+shadow-hover = 0 10px 20px rgba(19,24,83,0.19), 0 6px 6px rgba(19,24,83,0.23);
 
 /* Estilos ScrollBar */
 ::-webkit-scrollbar
   width auto
 
 ::-webkit-scrollbar-track
-  background blueDev-50
+  background blueDev-900
 
 ::-webkit-scrollbar-thumb
 	border-radius radius
 	background blueDev-800
 
-/* Titulos */
+/* Títulos */
 h1,h2,h3,h4,h5,h6
 	text-transform uppercase
-	line-height 120%
+	line-height 1.4
 	letter-spacing 1pt
 	padding onespace 0 onespace 0
 	margin-bottom onespace
 
 h1
-	font-size clamp(32px, 2vw, 2.1vw)
+	font-size clamp(36px, 3vw, 3.1vw)
 	font-weight 900
 h2
-	font-size clamp(28px, 1.8vw, 1.9vw)
+	font-size clamp(32px, 2.6vw, 2.7vw)
 	font-weight 800
 h3
-	font-size clamp(24px, 1.6vw, 1.7vw)
+	font-size clamp(28px, 2.2vw, 2.3vw)
 	font-weight 700
 h4
-	font-size clamp(20px, 1.4vw, 1.5vw)
+	font-size clamp(24px, 1.8vw, 1.9vw)
 	font-weight 600
 h5
-	font-size clamp(18px, 1.2vw, 1.3vw)
+	font-size clamp(20px, 1.4vw, 1.5vw)
 	font-weight 500
 h6
 	font-size clamp(16px, 1vw, 1.1vw)
@@ -83,7 +86,7 @@ p
 body
 	font-size clamp(16px, 1vw, 1.1vw)
 	font-weight 300
-	line-height 120%
+	line-height 1.2
 	hyphens none
 	background eWhite
 	font-family 'Outfit', Helvetica, Arial, sans-serif
@@ -92,26 +95,21 @@ body
 	background linear-gradient(90deg, eWhite 20px, transparent 1%) center, linear-gradient(eWhite 20px, transparent 1%) center, rgba(61, 188, 230, 0.4)
 	background-size 22px 22px
 
-/* Estilos componente MainMenuView */
-@import "../styles/MainMenuView.styl"
+/* Estilos componente MainHeaderView */
+@import "../styles/MainHeaderView.styl"
 
-/* Estilos componente MainTitlesView */
-@import "../styles/MainTitlesView.styl";
-
-/* Estilos componente CallView */
-@import "../styles/CallView.styl";
-		
 /* Contenedor principal de contenido */
 #main-content
 	width 100%
 	min-height 100vh
-	padding fourtspace 0 fourtspace 0
+	padding fourtspace 0 0 0
 
 main
 	scroll-snap-type y proximity
-	scroll-padding-top thirdpace
+	scroll-padding-top thirdspace
 	section
-		margin-bottom fourtspace
+		margin-bottom twospace
+		padding-top fourtspace
 		scroll-snap-align start
 		display flex
 		justify-content center
@@ -127,12 +125,50 @@ main
 	strong
 		font-weight 600
 
+.sushi-container
+	display grid
+	grid-template-columns 1fr 1fr
+	grid-auto-rows auto
+	align-items center
+	gap onespace
+	header,.omakase,.tuna
+		border-radius radius
+		padding onespace
+		height 100%
+	header
+		align-content flex-end
+	.omakase
+		align-self flex-start
+		display grid
+		grid-template-columns auto 1fr
+		align-items flex-start
+		gap onespace
+		h3
+			font-weight 200
+			align-content center
+			border-radius radius
+			padding onespace
+			cursor pointer
+	.tuna
+		height 100%
+		align-content center
+		grid-column-start 2
+		grid-row 1 / 3
+	h2,h3
+		margin 0
+		padding 0
+
 /* Proyectos en Index */
 .marcas-container
-	display flex
-	justify-content space-between
-	flex-wrap wrap
-	padding-top twospace
+	display grid
+	grid-template-columns repeat(auto-fit, minmax(120px, 1fr))
+	grid-auto-rows auto
+	justify-content center
+	gap onespace
+	div
+		border thinline blueDev-200
+		border-radius radius
+		padding onespace 0 onespace 0
 	a
 		&:hover img
 			filter grayscale(0%)
@@ -156,23 +192,22 @@ address
 	width 100%
 	display flex
 	flex-wrap wrap
-	justify-content space-between
 	gap onespace
 	margin-bottom onespace
 	a
 		text-transform capitalize
-		border thinline blueDev-100
 		padding onespace
 		border-radius radius
+		color eWhite
+		background blueDev-900
 		&:hover
-			color eWhite
-			background blueDev-500
+			background blueDev-950
 	.ultimo-enlace
 		color eWhite
-		background blueDev-500
+		background blueDev-600
 		&:hover
 			color eWhite
-			background blueDev-800
+			background blueDev-950
 
 /* estilos componente FooterView */
 #footer
@@ -186,37 +221,65 @@ address
 .navigator
 	display flex
 	justify-content center
-	margin-bottom fourtspace
+	background blueDev-800
 	ol
 		width 90%
 		display flex
 		justify-content space-between
 
+.wrapper-details
+	width 100%
+	summary
+		color eWhite
+		&::marker
+			content none
+	details
+		&:nth-of-type(1) summary
+			background blueDev-950
+		&:nth-of-type(2) summary
+			background blueDev-900
+		&:nth-of-type(3) summary
+			background blueDev-800
+	p
+		padding onespace
+	h3
+		font-weight 200
+		outline thinline blueDev-200
+		align-content center
+		border-radius radius
+		padding onespace
+		cursor pointer
+	
 /* Contenedor de uls */
 .wrapper-ul
 	display flex
 	flex-wrap wrap
-	justify-content space-between
+	justify-content space-around
 	gap onespace
 	div
 		max-width 45%
+	h3
+		font-weight 200
+		outline thinline blueDev-200
+		align-content center
+		border-radius radius
+		padding onespace
 	li
 		line-height 160%
 		list-style disc inside
 
 /* Pagina de portafolio*/
 .wrapper-gallery-work
-	display flex
-	flex-wrap wrap
-	justify-content space-between
+	display grid
+	grid-template-columns repeat(auto-fit, minmax(357px, 1fr))
+	grid-auto-rows auto
 	width 100%
 	gap twospace
 
 .gallery-cell
-	width 30%
-	padding 0 onespace 0 onespace
+	padding onespace
 	border-radius radius
-	outline thinline blueDev-50
+	outline thinline blueDev-400
 	&:hover
 		background blueDev-50
 		img
@@ -232,7 +295,9 @@ address
 		filter grayscale(1)
 		transition all 0.2s ease-in-out
 	h3
-		text-align center
+		font-size clamp(20px, 1.4vw, 1.5vw)
+		font-weight 200
+		overflow hidden
 
 /* Pagina de Publicaciones */
 /* estilos componente AdsArea */
@@ -251,7 +316,7 @@ address
 	gap 0 twospace
 	padding onespace 0 onespace 0
 	a
-		background blueDev-50
+		background blueDev-100
 		border-radius radius
 		padding onespace
 		letter-spacing 1pt
@@ -264,42 +329,45 @@ address
 				transform translatex(.4rem)
 
 .wrapper-post
-	display flex
-	flex-wrap wrap
-	justify-content space-between
+	display grid
+	grid-template-columns repeat(auto-fit, minmax(25vw, 1fr))
+	grid-auto-rows auto
 	gap onespace
 	padding onespace 0 onespace 0
 	article
-		width 48%
 		padding onespace
-		outline thinline blueDev-50
+		outline thinline blueDev-300
 		border-radius radius
 		&:hover
 			background blueDev-50
 	a
-		display flex
-		flex-wrap wrap
-		justify-content space-between
+		display grid
+		grid-template-columns 1fr 1fr
+		grid-auto-rows auto
 		gap onespace
 		&:hover
 			color inherit
 	h3
-		width 100%
+		grid-column-start span 2
+		font-size clamp(20px, 1.4vw, 1.5vw)
+		font-weight 200
+		padding 0
+		margin 0
 	figure
-		width 35%
+		width 100%
 		display flex
 	figcaption
 		position absolute
 		background blueDev-950
-		border-radius 0 0 radius 0
+		border-radius radius
 		color eWhite
 		padding onespace
 	img
 		width 100%
-		height 25vh
+		height auto
 		object-fit cover
-	div
-		width 60%
+		aspect-ratio 1/1
+		border-radius radius
 
 .aside-bottom
 	padding twospace 0 twospace 0
@@ -308,13 +376,9 @@ address
 .wrapper-content
 	width 90%
 	margin 0 auto
-	display flex
-	justify-content space-between
-	gap twospace
-	main
-		width 70%
-	aside
-		width 25%
+	display grid
+	grid-template-columns 1fr minmax(357px, 1fr)
+	gap onespace
 
 /* Estilos de MD */
 #wrapper-post
@@ -356,7 +420,7 @@ address
 		width 100%
 		height 100%
 
-/* Informacion y Publicidad */
+/* Información y Publicidad */
 .aside-blog
 	div
 		margin-bottom twospace
@@ -375,19 +439,19 @@ address
 		display flex
 		flex-flow column wrap
 		gap onespace
-		background blueDev-50
+		background eRed
+		color eWhite
 		padding onespace
 		border-radius radius
 		text-align center
 		&:hover
-			color eWhite
-			background eBlueDeep
+			background blueDev-950
 	span
 		font-size clamp(16px, 0.8vw, 0.9vw)
 		opacity .7
 
 /* Responsive Design */
-@media (max-width: 1920px)	
+@media (max-width: 1920px)
 	/* Componente IconSocial */
 	#icon-social
 		a
@@ -395,6 +459,21 @@ address
 			transform scale(1)
 			&:hover
 				transform scale3d(1.2, 1.2, 1)
+
+@media (max-width: 1366px)
+	.wrapper-post
+		grid-template-columns repeat(auto-fit, minmax(357px, 1fr))
+
+@media (max-width: 1280px)
+	.wrapper-post
+		article
+			width 100%
+		
+	.sushi-container
+		grid-template-columns 1fr
+		.tuna
+			grid-column-start 1
+			grid-row 3
 
 @media (max-width: 1024px)
 	/* Portafolio */
@@ -412,7 +491,7 @@ address
 		aside
 			width 100%
 	
-	/* Informacion y Publicidad */
+	/* Información y Publicidad */
 	.aside-blog
 		background blueDev-50
 		h4
@@ -426,19 +505,12 @@ address
 				max-width 50%
 
 @media (max-width: 768px)
-	/* Marcas */
-	.marcas-container
-		figure
-			width 42%
-		img
-			filter grayscale(0%)
-		.desaturar
-			opacity 1
+	#main-content
+		padding 0
+
+	.wrapper-post
 		a
-			flex-direction row-reverse
-			justify-content center
-		figcaption
-			display none
+			display block
 
 	/* Navegación por página */
 	/* Páginas presentación y portafolio */
@@ -449,23 +521,14 @@ address
 	.wrapper-ul
 		div
 			max-width 100%
+			width 100%
 	
-	/* Portafolio */
-	/* Wrapper Gallery */
-	.gallery-cell
-		width 100%
-	
-	/* Pagina de Publicaciones */
-	.wrapper-post
+	.wrapper-content
+		display block
 		article
 			width 100%
-			h2
-				text-align center
-			figcaption
-				text-align center
-			figure
-				width 100%
-			img
-				height auto
-			div
-				width 100%
+
+@media (max-width: 580px)
+	.sushi-container
+		.omakase
+			grid-template-columns 1fr

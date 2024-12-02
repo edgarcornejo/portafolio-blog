@@ -4,15 +4,13 @@ import "../styles/layout.css";
 
 /* Importando componentes */
 import Head from "../layouts/Head.astro";
-import MainMenuView from "../components/MainMenuView.astro";
-import MainTitlesView from "../components/MainTitlesView.astro";
+import MainHeaderView from "../components/MainHeaderView.astro";
 import FooterView from "../components/FooterView.astro";
-import CallView from "../components/CallView.astro";
 
 const {
 	title = "Edgar Cornejo",
 	description = "Mi nombre es Edgar Cornejo ofrezco los servicios de diseño gráfico, desarrollo web front-end y posicionamiento en Internet.",
-	keywords = "diseño web, desarrollo de páginas web, diseñador gráfico, maquetador web, elaboración de páginas web, desarrollo web profesional",
+	keywords = "diseño web, desarrollo de páginas web, diseñador gráfico, posicionamiento en Internet, frontend",
 	author,
 	url = "www.edgarcornejo.com",
 	image = "https://www.edgarcornejo.com/img/edgarcornejo.svg",
@@ -36,11 +34,7 @@ const {
 	/>
 
 	<body itemscope itemtype="http://data-vocabulary.org/Person">
-		<MainMenuView />
-
-		<MainTitlesView {title} {visible} {blog} {description} />
-
-		<CallView />
+		<MainHeaderView {title} {visible} {blog} {description} />
 
 		<div id="main-content">
 			<slot />

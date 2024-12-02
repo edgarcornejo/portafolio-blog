@@ -21,21 +21,24 @@ const { visible = true } = Astro.props;
 <Layout {visible}>
 	<main>
 		<section>
-			<article>
+			<article class="sushi-container">
 				<header>
 					<h2>Proyectos</h2>
 				</header>
 
-				<div class="parrafo">
+				<div class="omakase">
+					<h3>Propios</h3>
 					<p>
 						Te recomiendo algunas páginas que te puedan interesar como:
-						Agregarte en un directorio de profesionales y empresas, si necesitas
-						recursos fotográficos, si te gustan las naves hechas de papel o
-						enterarte de noticias de tecnología.
+						Agregarte en un <strong>directorio de profesionales</strong> y empresas,
+						si necesitas
+						<strong>recursos fotográficos</strong>, si te gustan las <strong
+							>naves de papel</strong
+						> o enterarte de <strong>noticias de tecnología</strong>.
 					</p>
 				</div>
 
-				<div class="marcas-container">
+				<div class="tuna marcas-container">
 					<div>
 						<a
 							href="https://www.fotos.edgarcornejo.com"
@@ -90,43 +93,49 @@ const { visible = true } = Astro.props;
 		</section>
 
 		<section>
-			<article>
+			<article class="sushi-container">
 				<header>
 					<h2>Publicaciones</h2>
 				</header>
 
-				<div class="parrafo">
+				<div class="omakase">
+					<h3>Recientes</h3>
 					<p>
-						Me gusta compartir lo que conozco, si tienes alguna duda
-						posiblemente tengo algunas recomendaciones que hago en estas
-						publicaciones.
+						Me gusta <strong>compartir</strong> lo que conozco, si tienes alguna
+						duda posiblemente tengo algunas <strong>recomendaciones</strong> que
+						hago en estas publicaciones.
 					</p>
 				</div>
 
-				<h3>Últimas publicaciones</h3>
-
-				<ListPosts />
+				<div class="tuna">
+					<ListPosts />
+				</div>
 			</article>
 		</section>
 
 		<section>
-			<article>
+			<article class="sushi-container">
 				<header>
 					<h2>Contacto</h2>
 				</header>
 
-				<div class="parrafo">
+				<div class="omakase">
+					<h3>Hola</h3>
 					<p>
-						Actualmente me encuentro en Arequipa - Perú. Consultas o
-						presupuestos, envía un correo a info@edgarcornejo.com
+						Actualmente me encuentro en <strong>Arequipa - Perú</strong>.
+						Consultas o presupuestos, envía un correo a <strong
+							>info@edgarcornejo.com</strong
+						>
 					</p>
 				</div>
 
-				<h3>Enlaces</h3>
-				<InfoContact />
+				<div class="tuna">
+					<h4>Enlaces</h4>
+					<InfoContact />
 
-				<h3>Redes Sociales</h3>
-				<IconSocial />
+					<h4>Redes Sociales</h4>
+					<IconSocial />
+				</div>
 			</article>
 		</section>
 	</main>

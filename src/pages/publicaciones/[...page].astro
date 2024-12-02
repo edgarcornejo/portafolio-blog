@@ -33,8 +33,6 @@ const { page, blog = true } = Astro.props;
 	<main>
 		<section>
 			<article>
-				<AdsArea />
-
 				<Pagination prevURL={page.url.prev} nextURL={page.url.next} />
 
 				<div class="wrapper-post">
@@ -44,7 +42,7 @@ const { page, blog = true } = Astro.props;
 				<Pagination prevURL={page.url.prev} nextURL={page.url.next} />
 
 				<aside class="aside-bottom">
-					<h4>Categorias:</h4>
+					<h4>Categorías:</h4>
 
 					<CategoryCloud showCount={true} />
 

@@ -8,7 +8,7 @@ const formattedPosts = formatBlogPosts(allPosts);
 <div class="lista-enlaces">
 	{
 		formattedPosts.map((post: any, index: any) => {
-			return index < 8 ? (
+			return index < 6 ? (
 				<a href={post.url} title={post.frontmatter.title}>
 					{post.frontmatter.title}
 				</a>
