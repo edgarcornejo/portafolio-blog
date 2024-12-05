@@ -10,6 +10,17 @@ greenMate = #0FAAA7
 greenPure = #0D8796
 hardGreen = #054d56
 
+espacio1 = clamp(16px, 1vw, 1.1vw)
+espacio2 = clamp(32px, 2vw, 2.1vw)
+espacio3 = clamp(48px, 3vw, 3.1vw)
+espacio4 = clamp(64px, 4vw, 4.1vw)
+
+lineDelgada = solid clamp(1px, 0.1vw, 0.2vw)
+lineaMedia = solid clamp(3px, 0.3vw, 0.4vw)
+lineaGruesa = solid clamp(6px, 1vw, 1.4vw)
+
+redondeado = clamp(6px, 0.4vw, 0.5vw)
+
 /* Body */
 body
   background hardWhite
@@ -22,7 +33,7 @@ body
   background-color hardWhite
   z-index 0
 
-/* Seleccion */
+/* Selección */
 ::selection
   background greenLiquid
   text-shadow none
@@ -45,13 +56,110 @@ a
   &:hover
     color hardGreen
 
+/* Cabecera principal */
+#main-header
+  width 100%
+  display flex
+  align-items center
+  gap espacio1
+  border-top lineaGruesa greenMate
+  z-index 1
+
+/* Logotipo */
+#logo
+  background url(../designer/edgarcornejo.svg) no-repeat 50% 20% greenMate
+  background-size 20%
+  height 8vh
+  min-height 3rem
+  width 20%
+  animation lefttoright 1s ease-in
+  position relative
+  border-radius 0 0 redondeado 0
+  top clamp(-6px, -1vw, -1.4vw)
+
+/* Título de página */
+.name-title
+  width 73%
+  h1
+    animation aparecer .5s ease-in both
+    font-size clamp(28px, 1.6vw, 1.7vw)
+    font-weight 700
+    letter-spacing .5pt
+    text-transform uppercase
+    animation-delay 1s
+
+/* Logotipo */
+@keyframes lefttoright
+  0%
+    left -230px
+  100%
+    left 0
+
+/* Animación de parecer H1 */
+@keyframes aparecer
+  0%
+    opacity 0
+  100%
+    opacity 100%
+
+/* Nav Header */
+nav
+  width 5%
+  display flex
+  align-items center
+  .open-menu,.closed-menu
+    user-select none
+    cursor pointer
+    display block
+    img
+      min-width 48px
+      width 2vw
+      height auto
+      filter invert(1)
+  .closed-menu
+    display none
+  menu
+    display none
+    padding-left 2rem
+  a
+    font-size 3rem
+    font-weight 700
+    color hardGreen
+    transition all 0.2s ease-out
+    padding 2rem
+    border-bottom dashed 2px greenMate
+    &:hover
+      background greenLiquid
+      border-radius 5px
+
+.input-menu
+  display none
+  &:checked ~ nav
+    .open-menu
+      display none
+    .closed-menu
+      user-select none
+      cursor pointer
+      display block
+    menu
+      display flex
+      flex-direction column
+      gap 1rem
+      position absolute
+      top 0
+      height 100vh
+      right 6vw
+      text-align right
+      background hardWhite
+      padding 2rem
+
 /* Contenedor principal */
 #main-content
   width 100%
   height auto
   margin 0 auto
 
-/* Contenedor de articulos */
+/* Contenedor de artículos */
 .wrapper-article
   min-height 100vh
   padding 20vh 0 20vh 0
@@ -178,7 +286,7 @@ a
     background-position center -995px
   &:nth-of-type(10) div
     background-position center -1119px
-  /* Titulo del serivicio */
+  /* Titulo del servicio */
   h3
     font-size 200%
     font-weight 800
@@ -190,7 +298,7 @@ a
 
 /* Responsive Design */
 @media screen and (max-width:2560px)
-  /* Contenedor de articulos */
+  /* Contenedor de artículos */
   .wrapper-article
     /* Imagen de Articulo */  
     figure
@@ -204,7 +312,7 @@ a
         max-width 1366px
 
 @media screen and (max-width:1440px)
-  /* Contenedor de articulos */
+  /* Contenedor de artículos */
   .wrapper-article
     /* Contenedor de texto de article */
     .wrap-txt
@@ -218,7 +326,7 @@ a
       font-weight 600
 
 @media screen and (max-width:1366px)
-  /* Contenedor de articulos */
+  /* Contenedor de artículos */
   .wrapper-article
     /* Header de article H2*/
     header
@@ -228,7 +336,7 @@ a
       margin 1rem auto
 
 @media screen and (max-width:1024px)
-  /* Contenedor de articulos */
+  /* Contenedor de artículos */
   .wrapper-article
     padding 14vh 0 14vh 0
     &:nth-child(even)
@@ -259,7 +367,27 @@ a
       padding 0
 
 @media screen and (max-width:768px)
-  /* Contenedor de articulos */
+  #main-header
+    flex-direction column
+
+  #logo
+    width 100%
+    background url(../designer/edgarcornejo.svg) no-repeat 50% 40% greenMate
+    background-size 10%
+  
+  .name-title
+    width 100%
+    text-align center
+  
+  nav
+    position absolute
+    right espacio2
+    align-content center
+    .open-menu,.closed-menu
+      img
+        filter invert(0)
+
+  /* Contenedor de artículos */
   .wrapper-article
     min-height auto
     padding 10vh 0 10vh 0

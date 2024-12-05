@@ -6,6 +6,7 @@ import "../styles/layout.css";
 import Head from "../layouts/Head.astro";
 import MainHeaderView from "../components/MainHeaderView.astro";
 import FooterView from "../components/FooterView.astro";
+import CookiesView from "../components/CookiesView.astro";
 
 const {
 	title = "Edgar Cornejo",
@@ -34,6 +35,16 @@ const {
 	/>
 
 	<body itemscope itemtype="http://data-vocabulary.org/Person">
+		<!-- Google Tag Manager (noscript) -->
+		<noscript
+			><iframe
+				src="https://www.googletagmanager.com/ns.html?id=GTM-WJ5Q3C8"
+				height="0"
+				width="0"
+				style="display:none;visibility:hidden"></iframe></noscript
+		>
+		<!-- End Google Tag Manager (noscript) -->
+
 		<MainHeaderView {title} {visible} {blog} {description} />
 
 		<div id="main-content">
@@ -41,5 +52,7 @@ const {
 		</div>
 
 		<FooterView />
+
+		<CookiesView />
 	</body>
 </html>
