@@ -1,10 +1,11 @@
 ---
-import { formatBlogPosts, slugify } from "../js/utils";
+import { getCollection } from "astro:content";
+import { formatPost, slugify } from "../js/formateo";
 
-const allPosts = await Astro.glob("../pages/publicaciones/*.md");
-const formattedPost = formatBlogPosts(allPosts);
-const allCategories = formattedPost
-	.map((cat: any) => cat.frontmatter.category.toLowerCase())
+const publicaciones = await getCollection("publicaciones");
+const lista = formatPost(publicaciones);
+const allCategories = lista
+	.map((cat: any) => cat.data.category.toLowerCase())
 	.flat();
 
 const processedCats = allCategories.reduce((acc: any, category: any) => {
@@ -15,7 +16,6 @@ const processedCats = allCategories.reduce((acc: any, category: any) => {
 		[category]: value + 1,
 	};
 }, {});
-
 const { showCount } = Astro.props;
 ---
 

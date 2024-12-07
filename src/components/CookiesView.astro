@@ -10,7 +10,6 @@
 	<button class="boton" id="btn-aceptar-cookies">De acuerdo</button>
 	<p><a href="/cookies/" title="Aviso de Cookies">Aviso de Cookies</a></p>
 </div>
-<div class="fondo-aviso-cookies" id="fondo-aviso-cookies"></div>
 
 <script src="../js/cookies.js"></script>
 
@@ -55,22 +54,6 @@
 		padding: 1rem;
 		&:hover {
 			background: #1d2ab6;
-		}
-	}
-
-	.fondo-aviso-cookies {
-		display: none;
-		background: rgba(0, 0, 0, 0.2);
-		position: fixed;
-		z-index: 99;
-		width: 100vw;
-		height: 100vh;
-		top: 0;
-		left: 0;
-		opacity: 0;
-		&.activo {
-			display: block;
-			opacity: 1;
 		}
 	}
 </style>

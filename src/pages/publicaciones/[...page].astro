@@ -2,12 +2,14 @@
 /* importando layouts */
 import Layout from "../../layouts/Layout.astro";
 
+import { getCollection } from "astro:content";
+
 /* Importando componentes */
 import PostPreview from "../../components/PostPreview.astro";
-import { formatBlogPosts } from "../../js/utils";
 import Pagination from "../../components/Pagination.astro";
 import CategoryCloud from "../../components/CategoryCloud.astro";
 import AdsArea from "../../components/AdsArea.astro";
+import { formatPost } from "../../js/formateo";
 
 interface Props {
 	page: any;
@@ -15,10 +17,10 @@ interface Props {
 }
 
 export async function getStaticPaths({ paginate }: any) {
-	const allPosts = await Astro.glob("./*.md");
-	const formattedPosts = formatBlogPosts(allPosts);
+	const publicaciones = await getCollection("publicaciones");
+	const lista = formatPost(publicaciones);
 
-	return paginate(formattedPosts, {
+	return paginate(lista, {
 		pageSize: 6,
 	});
 }

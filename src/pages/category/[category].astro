@@ -1,63 +1,40 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import { formatBlogPosts, slugify } from "../../js/utils";
+import { getCollection } from "astro:content";
+import { formatPost, slugify } from "../../js/formateo";
 import PostPreview from "../../components/PostPreview.astro";
 
 export async function getStaticPaths() {
-	return [
-		{
-			params: { category: slugify("Diseño") },
-			props: { name: "Diseño" },
-		},
-		{
-			params: { category: slugify("Programas") },
-			props: { name: "Programas" },
-		},
-		{
-			params: { category: slugify("Hardware") },
-			props: { name: "Hardware" },
-		},
-		{
-			params: { category: slugify("Web") },
-			props: { name: "Web" },
-		},
-		{
-			params: { category: slugify("Tips") },
-			props: { name: "Tips" },
-		},
-		{
-			params: { category: slugify("Comunicación") },
-			props: { name: "Comunicación" },
-		},
-		{
-			params: { category: slugify("Cuento") },
-			props: { name: "Cuento" },
-		},
-		{
-			params: { category: slugify("Game") },
-			props: { name: "Game" },
-		},
-		{
-			params: { category: slugify("Marketing") },
-			props: { name: "Marketing" },
-		},
+	const posts = await getCollection("publicaciones");
+	const lista = formatPost(posts);
+	const allCategories = [
+		...new Set(lista.map((post: any) => post.data.category).flat()),
 	];
+	return allCategories.map((category) => {
+		const authorPosts = lista.filter(
+			(post: any) => post.data.category === category
+		);
+		return {
+			params: { category: slugify(category) },
+			props: {
+				categoryName: category,
+				posts: authorPosts,
+			},
+		};
+	});
 }
 
-const { category } = Astro.params;
-const { name } = Astro.props;
-
-const allPost = await Astro.glob("../publicaciones/*.md");
-const formattedPosts = formatBlogPosts(allPost);
-const catPosts = formattedPosts.filter(
-	(post: any) => slugify(post.frontmatter.category) === category,
-);
+const { posts, categoryName } = Astro.props;
 ---
 
-<Layout title={name}>
+<Layout title={"Categoría de " + categoryName}>
 	<main>
-		<div class="wrapper-post">
-			{catPosts.map((apost: any) => <PostPreview post={apost} />)}
-		</div>
+		<section>
+			<article>
+				<div class="wrapper-post">
+					{posts.map((post: any) => <PostPreview post={post} />)}
+				</div>
+			</article>
+		</section>
 	</main>
 </Layout>

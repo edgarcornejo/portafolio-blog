@@ -1,19 +1,22 @@
 ---
-import { formatBlogPosts } from "../js/utils";
+import { getCollection } from "astro:content";
 
-const allPosts = await Astro.glob("../pages/publicaciones/*.md");
-const formattedPosts = formatBlogPosts(allPosts);
+import { formatPost, slugify } from "../js/formateo";
+const publicaciones = await getCollection("publicaciones");
+const lista = formatPost(publicaciones);
 ---
 
-<div class="lista-enlaces">
+<p class="lista-enlaces">
 	{
-		formattedPosts.map((post: any, index: any) => {
+		lista.map((post: any, index: any) => {
+			const { slug, data } = post;
+			const { title } = data;
 			return index < 6 ? (
-				<a href={post.url} title={post.frontmatter.title}>
-					{post.frontmatter.title}
+				<a href={`/publicaciones/${slugify(slug)}/`} title={title}>
+					{title}
 				</a>
 			) : null;
 		})
 	}
 	<a href="/publicaciones/" class="ultimo-enlace" title="Ver más">Ver más</a>
-</div>
+</p>

@@ -1,4 +1,7 @@
 ---
+// Importing Transitions
+import { ClientRouter } from "astro:transitions";
+
 const { title, description, keywords, type, url, image, imagealt } =
 	Astro.props;
 ---
@@ -108,4 +111,7 @@ const { title, description, keywords, type, url, image, imagealt } =
 		})(window, document, "script", "dataLayer", "GTM-WJ5Q3C8");
 	</script>
 	<!-- End Google Tag Manager -->
+
+	<!-- Transitions -->
+	<ClientRouter />
 </head>
