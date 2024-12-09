@@ -2,7 +2,7 @@
 // Importing Transitions
 import { ClientRouter } from "astro:transitions";
 
-const { title, description, keywords, type, url, image, imagealt } =
+const { title, description, keywords, type, url, image, imagealt, author } =
 	Astro.props;
 ---
 
@@ -16,18 +16,18 @@ const { title, description, keywords, type, url, image, imagealt } =
 
 	<title>
 		{title} - Diseñador gráfico, desarrollador Web Front-end y posicionamiento en
-		Internet
+		Internet.
 	</title>
 
 	<!-- META -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta name="author" content="Edgar Cornejo" />
+	<meta name="author" content={author} />
 	<meta name="description" content={description} />
 	<meta name="keywords" content={keywords} />
 	<meta name="distribution" content="global" />
 	<meta name="robots" content="Index,Follow" />
 	<meta name="copyright" content="© Edgar Cornejo" />
-	<meta name="designer" content="Edgar Cornejo" />
+	<meta name="designer" content={author} />
 
 	<!-- Open Graph -->
 	<meta property="og:title" content={title} />
@@ -44,7 +44,7 @@ const { title, description, keywords, type, url, image, imagealt } =
 	<meta property="fb:admins" content="100000001685554" />
 	<meta property="og:title" content="edgarcornejo.com" />
 	<meta property="og:type" content={type} />
-	<meta property="og:url" content="https://www.edgarcornejo.com" />
+	<meta property="og:url" content={url} />
 
 	<!-- Verificaciones -->
 	<meta
@@ -89,15 +89,9 @@ const { title, description, keywords, type, url, image, imagealt } =
 		}
 	</script>
 
-	<!-- importando fuentes -->
-	<link rel="preconnect" href="https://fonts.googleapis.com" />
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-	<link
-		rel="stylesheet"
-		href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap"
-	/>
+	<!-- Transitions -->
+	<ClientRouter />
 
-	<!-- Google Tag Manager -->
 	<script type="text/partytown">
 		(function (w, d, s, l, i) {
 			w[l] = w[l] || [];
@@ -110,8 +104,4 @@ const { title, description, keywords, type, url, image, imagealt } =
 			f.parentNode.insertBefore(j, f);
 		})(window, document, "script", "dataLayer", "GTM-WJ5Q3C8");
 	</script>
-	<!-- End Google Tag Manager -->
-
-	<!-- Transitions -->
-	<ClientRouter />
 </head>

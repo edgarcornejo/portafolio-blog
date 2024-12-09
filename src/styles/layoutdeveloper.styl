@@ -1,25 +1,54 @@
 @charset "UTF-8"
 
 @import "../styles/reset.styl"
-  
+
+@font-face
+  font-family "Roboto"
+  font-style normal
+  font-weight 400
+  font-display swap
+  src url(/fonts/Roboto-Regular.ttf) format("truetype")
+
+@font-face
+  font-family "Roboto"
+  font-style normal
+  font-weight 500
+  font-display swap
+  src url(/fonts/Roboto-Medium.ttf) format("truetype")
+
+@font-face
+  font-family "Titillium Web"
+  font-style normal
+  font-weight 700
+  font-display swap
+  src url(/fonts/TitilliumWeb-Bold.ttf) format("truetype")
+
 /* Colors */
-devWhite = #FFFFFF
+devWhite = #F2F2F2
 devGrey =#7B7B7B
 devLightGrey =#C4C4C4
 devGrape =#5B0DBE
 devOrange = #FFA500
 
+h1,h2,h3,h4,h5,h6
+  font-family 'Titillium Web'
+  font-weight 700
+
+a
+  transition all 0.4s ease
+
 ::-webkit-scrollbar
-  width 1.1rem
+  width 16px
 ::-webkit-scrollbar-track
   border-radius 0.2rem
 ::-webkit-scrollbar-thumb
   background devGrape
-  border-radius 0.2rem
+  border-radius 0
 
 body
   color devGrape
-  font-size 16px
+  font-size clamp(16px, 1vw, 1.1vw)
+  font-weight 400
   background devWhite
   font-family "Roboto", Helvetica, sans-serif
 
@@ -32,27 +61,27 @@ body
   background-repeat no-repeat
   background-blend-mode multiply
   color devWhite
+  border-radius 0 0 radius radius
 
 /* Envoltura de logo, nav y contact */
 #wrapper-logo-nav-contact-title
   width 90%
-  max-width 1920px
   margin 0 auto
-  padding 2vh 0 4vh 0
-  display flex
-  flex-wrap wrap
+  padding twospace 0 twospace 0
+  display grid
+  grid-template-columns 5vW 1fr 5vw
   align-items center
-  justify-content space-between
 
 /* Logotipo en Header */
 #logo
-  width 10%
+  width 100%
   display flex
-  align-items center
   img
     width 3vw
+    min-width 48px
+    height auto
     position relative
-    animation logo .5s ease-in
+    animation logo .6s ease
 
 /* Animation logo */
 @keyframes logo
@@ -66,33 +95,24 @@ body
 nav
   display flex
   align-items center
-  width 60%
-  animation menu .3s ease-in both
+  animation menu .6s ease both
   animation-delay .5s
   .open-menu, .closed-menu
     user-select none
     cursor pointer
     display block
-    font-size 4em
-    background rgba(255,255,255,.6)
     img
       min-width 48px
-      width 1vw
+      width 2vw
       height auto
-      filter brightness(1000%)
   .closed-menu
     display none
   menu
     display none
-  li
-    width 25%
-    text-align center
+    gap onespace
   a
-    font-size 1vw
-    font-weight 400
     color devWhite
     &:hover
-      font-weight 500
       color inherit
 
 .input-menu
@@ -104,7 +124,7 @@ nav
       display block
     menu
       display flex
-      width 100%
+      flex-wrap wrap
   
 /* Animation Menu */
 @keyframes menu
@@ -116,18 +136,17 @@ nav
 /* Contacto en Header */
 #contact
   justify-content flex-end
-  width 30%
   display flex
-  gap 1rem
+  gap onespace
   a
     color devWhite
     background devOrange
     display flex
     justify-content center
     align-items center
-    padding 1rem
-    border-radius 0.2vw
-    transition all 0.2s ease-in-out
+    padding onespace
+    border-radius radius
+    transition all 0.4s ease
     position relative
     &:hover
       background devGrape
@@ -137,8 +156,6 @@ nav
     &:last-child
       animation contacto .5s ease-in both
       animation-delay .8s
-  span
-    font-size 3em
 
 /* Animation Contact */
 @keyframes contacto
@@ -153,27 +170,21 @@ nav
 
 /* Envoltura de H1 y H2*/
 #wrapper-title
-  width 100%
+  grid-column: 1 / 3
   display flex
-  flex-direction column
-  padding-top 8vh
-  width 80%
+  flex-wrap wrap
+  align-items center
+  gap onespace
+  padding-top 20vh
+  position relative
+  animation ttob .5s ease-in both
+  animation-delay 1.2s
   h1
-    font-family 'Titillium Web'
-    font-weight 700
-    font-size 3vw
-    position relative
-    animation ttob .5s ease-in both
-    animation-delay 1.2s
-    line-height 120%
+    font-size clamp(32px, 2.6vw, 2.7vw)
   h2
-    font-size 2vw
     font-family 'Roboto'
-    font-weight 100
-    position relative
-    animation ttob .5s ease-in both
-    animation-delay 1s
-    line-height 120%
+    font-weight 400
+    font-size clamp(28px, 2vw, 2.1vw)
 
 /* Animation Titulo*/
 @keyframes ttob
@@ -186,53 +197,92 @@ nav
 
 /* Main Section*/
 #wrapper-articles
+  padding onespace 0 onespace 0
   margin 0 auto
   article
     min-height 100vh
     display flex
     align-items center
+    background-attachment fixed
+    background-size contain
+    background-repeat no-repeat
+    background-position 100% center
+    margin-bottom onespace
+    view-timeline-name --background
+    view-timeline-axis block
+    animation-timeline --background
+    animation-name move
+    animation-range entry 25% cover 50%
+    animation-fill-mode both
     &:nth-child(even)
       justify-content flex-end
       text-align left
     &:nth-child(odd)
       text-align right
+  
+@keyframes move
+  0%
+    border-radius 8vw
+  100%
+    border-radius 0
 
 .wrap-article
-  width 60%
-  padding 6vw
-  backdrop-filter blur(6px)
-  border-radius 0.4vw
+  width 50%
+  padding fourtspace
   h2
-    font-family 'Titillium Web'
     font-size 5vw
-    font-weight 700
-    line-height 100%
-    color devGrape
+    line-height 1.1
+    view-timeline-name --title
+    view-timeline-axis block
+    animation-timeline --title
+    animation-name aparecer
+    animation-range entry 25% cover 50%
+    animation-fill-mode both
+    position relative
+    background-clip text
+    color transparent
+    background-size cover
+    background-position center center
+    line-height 1
+    text-transform uppercase
   h3
-    font-family 'Titillium Web'
-    font-size 3vw
-    font-weight 400
-    line-height 120%
-    padding-bottom 2rem
-    color devOrange
+    font-size clamp(24px, 1.6vw, 1.7vw)
+    padding-top onespace
+    color devGrey
+    view-timeline-name --subtitle
+    view-timeline-axis block
+    animation-timeline --subtitle
+    animation-name starttoend
+    animation-range entry 25% cover 50%
+    animation-fill-mode both
+    position relative
   p
-    font-size 1vw
-    font-weight 400
     max-width 1024px
-    line-height 120%
     display inline-block
     hyphens none
+    color devGrey
     strong
       font-weight 500
+
+@keyframes aparecer
+  0%
+    transform translateY(-200px)
+  100%
+    transform translateY(0)
+
+@keyframes starttoend
+  0%
+    transform translateX(-200px)
+  100%
+    transform translateX(0)
 
 .bot-call
   background devGrape
   display inline-block
-  font-size 1vw
   color devWhite
-  padding 1vw
-  font-weight 400
-  transition all .1s ease-in-out
+  padding onespace
+  margin-bottom onespace
+  transition all .4s ease-in-out
   &:hover
     color devGrape
     background devOrange
@@ -241,21 +291,22 @@ nav
 #wrapper-articles
   article
     &:nth-child(1)
-      background url("/developer/iam.webp") no-repeat
-      background-size contain
-      background-position 120% 50%
+      background-image url("/developer/iam.webp")
+      h2
+        background-image url("/developer/iam.webp")
     &:nth-child(2)
-      background url("/developer/services.webp") no-repeat
-      background-size contain
-      background-size 40% 120%
+      background-image url("/developer/services.webp")
+      background-position 0 center
+      h2
+        background-image url("/developer/services.webp")
     &:nth-child(3)
-      background url("/developer/contact.webp") no-repeat
-      background-size contain
-      background-position 120% 50%
+      background-image url("/developer/contact.webp")
+      h2
+        background-image url("/developer/services.webp")
 
 footer
   position relative
-  padding 6vh 0 6vh 0
+  padding fourtspace 0 fourtspace 0
   background devGrape
   color devWhite
   &:before
@@ -267,13 +318,18 @@ footer
     right 2vw
     width 4vw
     height 4vw
+    min-width 48px
+    min-height 48px
     background url("/developer/edgarcornejo.svg") no-repeat center center devOrange
     background-size 70%
+    box-shadow shadow
+    transition all 0.6s ease
+    &:hover
+      box-shadow shadow-hover
 
 #wrapper-uls-footer
   margin 0 auto
   width 90%
-  max-width 1920px
   display flex
   flex-wrap wrap
   justify-content space-around
@@ -282,94 +338,54 @@ footer
   width 30%
   display flex
   flex-direction column
-  gap 1vw
+  gap onespace
   ul
     display flex
     flex-wrap wrap
   h3
-    font-family 'Titillium Web'
-    font-size 1.4vw
+    font-size clamp(20px, 1.4vw, 1.5vw)
     text-align right
     line-height 120%
     color devOrange
-    font-weight 600
-    border-bottom solid 0.1vh devOrange
-    padding 1vh
-    margin-bottom 1vh
+    border-bottom thinline devOrange
+    padding onespace
+    margin-bottom onespace
   li
-    margin 1vh
+    margin onespace
   a
-    font-size 1vw
-    font-weight 300
-    line-height 100%
     color devWhite
-    outline solid 0.1vh devWhite
-    padding 1vh
-    border-radius 0.2vh
+    outline thinline devWhite
+    padding onespace
+    border-radius radius
     display inline-block
     hyphens none
     &:hover
-      font-weight 400
+      font-weight 500
       color devGrape
       background devOrange
       outline 0
 
 #copyright
-  margin-top 2vh
+  margin-top twospace
   width 100%
-  font-size 1vw
   text-align right
   
 /* Responsive Design */
-@media screen and (max-width:1920px)
-  /* Logotipo en Header */
-  #logo
-    img
-      width 4vw
-
-  /* Menu en Header*/
-  nav
-    .open-menu, .closed-menu
-        font-size 3em
-  
-  /* Contacto en Header */
-  #contact
-    span
-      font-size 2em
-
 @media screen and (max-width:1024px)
-  /* Cabecera principal */
-  #main-header
-    &:after
-      display none
-  
-  /* Envoltura de logo, nav y contact */
   #wrapper-logo-nav-contact-title
-    padding 2vh 0 6vh 0
-
-  /* Logotipo en Header */
-  #logo
-    img
-      width 6vw
+    display flex
+    flex-direction column
+    gap onespace
   
-  /* Menu en Header*/
+  #logo
+    justify-content center
+  
   nav
-    a
-      font-size 1.4em
-
-  /* Contacto en Header */
-  #contact
-    span
-      font-size 1.2em
-
-  /* Envoltura de H1 y H2*/
+    display none
+  
   #wrapper-title
-    h1
-      font-size 6vw
-    h2
-      font-size 4vw
-    
-  /* Main Section*/
+    padding-top twospace
+
   #wrapper-articles
     article
       min-height auto
@@ -381,112 +397,27 @@ footer
       
   .wrap-article
     width 90%
+    padding onespace
     margin 0 auto
-    color devWhite
     h2
-      color devWhite
-    p
-      font-size 1em
+      padding-bottom twospace
+      animation none
+    h3
+      animation none
 
-  .bot-call
-    font-size 1em
-
-  /*background article*/
   #wrapper-articles
     article
       &:nth-child(1)
-        background-size cover
-        background-position center center
+        background none
       &:nth-child(2)
-        background-size cover
-        background-position center center
+        background none
       &:nth-child(3)
-        background-size cover
-        background-position center center
-
-  .ul-footer
-    a
-      font-size 1em
-
-  #copyright
-    font-size 1em
+        background none
 
 @media screen and (max-width:768px)
-  /* Envoltura de logo, nav y contact */
-  #wrapper-logo-nav-contact-title
-    padding 2rem 0 2rem 0
-    justify-content flex-start
-    gap 2rem
-
-  /* Logotipo en Header */
-  #logo
-    width 100%
-    justify-content center
-    order 1
-    img
-      width 10vw
-
-  /* Menu en Header*/
-  nav
-    width 100%
-    justify-content center
-    flex-direction column
-    order 4
-    flex-grow 2
-    li
-      width 100%
-    a
-      text-transform uppercase
-  
-  .input-menu
-    &:checked ~ nav
-      menu
-        display flex
-        flex-direction column
-        width 100%
-        padding-top 1rem
-        gap 2rem
-
-  /* Contacto en Header */
-  #contact
-    position absolute
-    order 2
-    top 4vh
-    right 4vw
-
-  /* Envoltura de H1 y H2*/
-  #wrapper-title
-    padding-top 2vh
-    justify-content center
-    text-align center
-    order 3
-    flex-grow 2
-
-  .wrap-article
-    padding 4rem 0 4rem 0
-    h2
-      font-size 2em
-    h3
-      font-size 1.6em
-
-  footer
-    &:before
-      display none
-
   #wrapper-uls-footer
     flex-direction column
     justify-content center
-
+  
   .ul-footer
     width 100%
-    ul
-      justify-content center
-      padding-bottom 1rem
-    h3
-      font-size 1.6em
-      text-align center
-
-  /* Contacto en Header */
-  #contact
-    display none
-

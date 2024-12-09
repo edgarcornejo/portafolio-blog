@@ -7,15 +7,17 @@ import Head from "../layouts/Head.astro";
 import MainHeaderView from "../components/MainHeaderView.astro";
 import FooterView from "../components/FooterView.astro";
 import CookiesView from "../components/CookiesView.astro";
+import TagManagerView from "../components/TagManagerView.astro";
 
+/* SEO */
 const {
 	title = "Edgar Cornejo",
 	description = "Mi nombre es Edgar Cornejo ofrezco los servicios de diseño gráfico, desarrollo web front-end y posicionamiento en Internet.",
 	keywords = "diseño web, desarrollo de páginas web, diseñador gráfico, posicionamiento en Internet, frontend",
-	author,
 	url = "www.edgarcornejo.com",
-	image = "https://www.edgarcornejo.com/img/edgarcornejo.svg",
+	image = "https://www.edgarcornejo.com/logo-edgarcornejo.webp",
 	imagealt = "Logotipo Edgar Cornejo",
+	author = "Edgar Cornejo",
 	type = "Website",
 	visible,
 	blog,
@@ -27,23 +29,15 @@ const {
 		{title}
 		{description}
 		{keywords}
-		{author}
 		{url}
 		{image}
 		{imagealt}
 		{type}
+		{author}
 	/>
 
 	<body itemscope itemtype="http://data-vocabulary.org/Person">
-		<!-- Google Tag Manager (noscript) -->
-		<noscript
-			><iframe
-				src="https://www.googletagmanager.com/ns.html?id=GTM-WJ5Q3C8"
-				height="0"
-				width="0"
-				style="display:none;visibility:hidden"></iframe></noscript
-		>
-		<!-- End Google Tag Manager (noscript) -->
+		<TagManagerView />
 
 		<MainHeaderView {title} {visible} {blog} {description} />
 
@@ -51,7 +45,7 @@ const {
 			<slot />
 		</div>
 
-		<FooterView />
+		<FooterView {author} />
 
 		<CookiesView />
 	</body>

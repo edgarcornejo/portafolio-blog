@@ -3,6 +3,14 @@
 /* importando reset */
 @import "../styles/reset.styl";
 
+/* Importando fuentes tipográficas*/
+@font-face
+	font-family "Outfit"
+	font-style normal
+	font-weight 400
+	font-display swap
+	src url(/fonts/Outfit-VariableFont_wght.ttf) format("truetype")
+
 /* Variables */
 /* Colores */
 blueDev-50 = #ebf3ff
@@ -18,18 +26,6 @@ blueDev-900 = #202c8f
 blueDev-950 = #131853
 eWhite = #F2F2F2
 eRed = #e63d67
-
-/* Medidas */
-onespace = clamp(16px, 1vw, 1.1vw)
-twospace = clamp(32px, 2vw, 2.1vw)
-thirdspace = clamp(48px, 3vw, 3.1vw)
-fourtspace = clamp(64px, 4vw, 4.1vw)
-
-thinline = solid clamp(1px, 0.1vw, 0.2vw)
-midline = solid clamp(3px, 0.3vw, 0.4vw)
-radius = clamp(3px, 0.2vw, 0.3vw)
-shadow = 0 3px 6px rgba(19,24,83,0.16), 0 3px 6px rgba(19,24,83,0.23)
-shadow-hover = 0 10px 20px rgba(19,24,83,0.19), 0 6px 6px rgba(19,24,83,0.23);
 
 /* Estilos ScrollBar */
 ::-webkit-scrollbar
@@ -244,7 +240,6 @@ address
 		padding onespace
 	h3
 		font-weight 200
-		outline thinline blueDev-200
 		align-content center
 		border-radius radius
 		padding onespace
@@ -260,7 +255,6 @@ address
 		max-width 45%
 	h3
 		font-weight 200
-		outline thinline blueDev-200
 		align-content center
 		border-radius radius
 		padding onespace

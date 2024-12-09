@@ -4,9 +4,6 @@ import Image from "astro/components/Image.astro";
 /* importando layout */
 import LayoutDeveloper from "../../layouts/LayoutDeveloper.astro";
 
-/* importando estilos */
-import "../../styles/layoutdeveloper.css";
-
 import localMenuOpen from "../../images/open-menu.svg";
 import localMenuClosed from "../../images/closed-menu.svg";
 ---
@@ -16,7 +13,7 @@ import localMenuClosed from "../../images/closed-menu.svg";
 		<header id="main-header">
 			<div id="wrapper-logo-nav-contact-title">
 				<div id="logo">
-					<a href="/"
+					<a href="/desarrollador-web/"
 						><img
 							src="/developer/edgarcornejo.svg"
 							alt="Logo Edgar Cornejo"
@@ -33,9 +30,6 @@ import localMenuClosed from "../../images/closed-menu.svg";
 						><Image src={localMenuClosed} alt="Cerrar menu" /></label
 					>
 					<menu>
-						<li>
-							<a href="/desarrollador-web/">Inicio</a>
-						</li>
 						<li><a href="#frontend">Frontend</a></li>
 						<li><a href="#servicios">Servicios</a></li>
 						<li><a href="#contacto">Contacto</a></li>
@@ -52,14 +46,14 @@ import localMenuClosed from "../../images/closed-menu.svg";
 				</div>
 
 				<div id="wrapper-title">
-					<h1>Frontend Developer</h1>
+					<h1>Frontend Developer /</h1>
 					<h2>Edgar Cornejo</h2>
 				</div>
 			</div>
 		</header>
 
 		<section id="wrapper-articles">
-			<article>
+			<article id="frontend">
 				<div class="wrap-article">
 					<header>
 						<h2>Soy desarrollador frontend</h2><hr />
@@ -68,23 +62,26 @@ import localMenuClosed from "../../images/closed-menu.svg";
 					<p>
 						Desarrollo, diseño y maqueto experiencias para usuarios digitales,
 						que transmiten el mensaje correcto de un producto o servicio.
-						Orientó todos mis proyectos al posicionamiento en Internet y su
-						rentabilidad.
+						Orientó todos mis proyectos al <strong
+							>posicionamiento en Internet</strong
+						> y su rentabilidad.
 					</p>
 				</div>
 			</article>
 
-			<article>
+			<article id="servicios">
 				<div class="wrap-article">
 					<header>
 						<h2>Los servicios que ofrezco</h2><hr />
 						<h3>Muchas Maneras de Ayudarte</h3>
 					</header>
 					<p>
-						Ofrezco servicios que se adecuan a lo que necesitas, y te asesoro si
-						aún no sabes que necesitas, pero sabes lo que quieres lograr. Me
-						gusta ayudar a empresas que quieren crecer y tienen poca experiencia
-						en tener presencia en Internet. <br /><br />
+						Ofrezco servicios que se adecuan a lo que necesitas, y <strong
+							>te asesoro</strong
+						> si aún no sabes que necesitas, pero <strong
+							>sabes lo que quieres lograr</strong
+						>. Me gusta ayudar a empresas que quieren crecer y tienen poca
+						experiencia en tener presencia en Internet. <br /><br />
 						Los servicios que te ofrezco son los siguientes: <strong
 							>Diseño Web</strong
 						>, <strong>Rediseño Web</strong>, <strong
@@ -94,15 +91,16 @@ import localMenuClosed from "../../images/closed-menu.svg";
 				</div>
 			</article>
 
-			<article>
+			<article id="contacto">
 				<div class="wrap-article">
 					<header>
 						<h2>Como contactarme</h2><hr />
 						<h3>Te Escucho</h3>
 					</header>
 					<p>
-						Puedes contactarme de Lunes a Viernes de 09:00 a.m. a 14:00 p.m. al
-						celular <strong>+51 974 795 622</strong> y al correo <strong
+						Puedes contactarme de <strong>Lunes a Viernes</strong> de <strong
+							>09:00 a.m. a 14:00 p.m.</strong
+						> al celular <strong>+51 974 795 622</strong> y al correo <strong
 							>info@edgarcornejo.com</strong
 						>. Actualmente todas las reuniones son por Google Meet o Skype. <br
 						/><br />
@@ -125,13 +123,13 @@ import localMenuClosed from "../../images/closed-menu.svg";
 					<h3>Contacto</h3>
 					<ul>
 						<li>
-							<a href="tel:+51974795622" title="+51974795622">+51 974 795 622</a
-							>
-						</li>
-						<li>
 							<a
 								href="mailto:info@edgarcornejo.com"
 								title="info@edgarcornejo.com">info@edgarcornejo.com</a
+							>
+						</li>
+						<li>
+							<a href="tel:+51974795622" title="+51974795622">+51 974 795 622</a
 							>
 						</li>
 					</ul>
@@ -153,11 +151,7 @@ import localMenuClosed from "../../images/closed-menu.svg";
 							>
 						</li>
 						<li>
-							<a
-								href="https://twitter.com/devcornejo"
-								title="Twitter"
-								target="_blank">Twitter</a
-							>
+							<a href="https://x.com/devcornejo" title="X" target="_blank">X</a>
 						</li>
 						<li>
 							<a
@@ -174,28 +168,28 @@ import localMenuClosed from "../../images/closed-menu.svg";
 					<ul>
 						<li>
 							<a
-								href="http://www.minilink.edgarcornejo.com/"
+								href="https://www.minilink.edgarcornejo.com/"
 								title="Minilink Soluciones"
 								target="_blank">Minilink Soluciones</a
 							>
 						</li>
 						<li>
 							<a
-								href="http://www.navedepapel.edgarcornejo.com/"
+								href="https://www.navedepapel.edgarcornejo.com/"
 								title="Nave de Papel"
 								target="_blank">Nave de Papel</a
 							>
 						</li>
 						<li>
 							<a
-								href="http://www.fotos.edgarcornejo.com/"
+								href="https://www.fotos.edgarcornejo.com/"
 								title="Fotos Gratis"
 								target="_blank">Fotos Gratis</a
 							>
 						</li>
 						<li>
 							<a
-								href="http://www.lucy.edgarcornejo.com/"
+								href="https://minimarketlucy.edgarcornejo.com/"
 								title="Minimarket Lucy"
 								target="_blank">Minimarket Lucy</a
 							>
@@ -211,7 +205,7 @@ import localMenuClosed from "../../images/closed-menu.svg";
 							<a
 								href="/publicaciones/el-servicio-de-desarrollo-front-end"
 								title="El servicio de Desarrollo fron-end"
-								target="_blank">El servicio de Desarrollo fron-end</a
+								target="_blank">El servicio de Desarrollo front-end</a
 							>
 						</li>
 						<li>
