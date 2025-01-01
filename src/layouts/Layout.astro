@@ -7,7 +7,6 @@ import Head from "../layouts/Head.astro";
 import MainHeaderView from "../components/MainHeaderView.astro";
 import FooterView from "../components/FooterView.astro";
 import CookiesView from "../components/CookiesView.astro";
-import TagManagerView from "../components/TagManagerView.astro";
 
 /* SEO */
 const {
@@ -37,8 +36,6 @@ const {
 	/>
 
 	<body itemscope itemtype="http://data-vocabulary.org/Person">
-		<TagManagerView />
-
 		<MainHeaderView {title} {visible} {blog} {description} />
 
 		<div id="main-content">
