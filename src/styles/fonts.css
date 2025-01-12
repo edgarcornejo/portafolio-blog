@@ -1,0 +1,5 @@
+@font-face {
+  font-family: 'Outfit';
+  src: url("/fonts/Outfit-VariableFont_wght.ttf") format('truetype-variations'), url("/fonts/Outfit-VariableFont_wght.woff") format('woff-variations');
+  font-weight: 100 900;
+}

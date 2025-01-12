@@ -1,15 +1,9 @@
 ---
-const fecha = new Date();
-const year = fecha.getFullYear();
-
 const { author } = Astro.props;
 ---
 
 <footer id="footer">
 	<p>
-		<small>
-			Copyright &copy; <span id="copyright">{year}</span>
-			<a href="/" title={author}> {author}</a> | Todos los derechos reservados.
-		</small>
+		<a href="/" title={author}>{author}</a>
 	</p>
 </footer>

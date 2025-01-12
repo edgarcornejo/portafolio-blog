@@ -80,15 +80,15 @@ body
 	line-height 1.2
 	hyphens none
 	background eWhite
-	font-family 'Outfit', Helvetica, Arial, sans-serif
-	font-display swap
+	font-family "Outfit", sans-serif
+	font-optical-sizing auto
 	color blueDev-950
 	background linear-gradient(90deg, eWhite 20px, transparent 1%) center, linear-gradient(eWhite 20px, transparent 1%) center, rgba(61, 188, 230, 0.4)
 	background-size 22px 22px
 
 /* Estilos componente MainHeaderView */
 @import "../styles/MainHeaderView.styl"
-
+	
 /* Contenedor principal de contenido */
 #main-content
 	width 100%
@@ -204,8 +204,17 @@ address
 #footer
 	margin 0 auto
 	padding twospace 0 twospace 0
-	text-align right
-	width 90%
+	text-align center
+	color eWhite
+	border-radius radius radius 0 0
+	background blueDev-950
+	background-size 21% 21%
+	background-image repeating-linear-gradient(
+		to left, 
+		blueDev-800, 
+		blueDev-800 4px,
+		blueDev-950 4px, 
+		blueDev-950)
 
 /* Páginas presentación y portafolio
  	Navegación por página */
