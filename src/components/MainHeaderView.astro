@@ -61,7 +61,7 @@ const { title, visible, blog, description } = Astro.props;
 	</div>
 </div>
 
-<script>
+<script is:inline>
 	const navLinks = document.querySelectorAll(".nav-li");
 	navLinks.forEach((link) => {
 		if (link.getAttribute("href") === window.location.pathname) {

@@ -23,6 +23,8 @@
 .container-logo-menu button {
   cursor: pointer;
   justify-self: flex-end;
+  background: none;
+  border: none;
 }
 #main-menu {
   width: 80vw;
@@ -30,6 +32,7 @@
   margin: 0 auto;
   background: blueDev-950;
   box-shadow: shadow;
+  border: none;
   border-radius: radius;
   transition: translate 0.4s ease, display 0.4s ease allow-discrete, overlay 0.4s ease allow-discrete;
 }
@@ -61,6 +64,7 @@
 }
 #main-menu button {
   margin: 0 auto;
+  display: block;
   padding-bottom: onespace;
 }
 [popover]::backdrop {
@@ -100,7 +104,7 @@
   content: '';
   position: absolute;
   background: eWhite;
-  border-radius: 0 0 radius radius;
+  border-radius: 0 0 radius 0;
   width: 2vw;
   height: 5vw;
   right: 0;

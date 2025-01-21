@@ -1,191 +1,49 @@
 @charset "UTF-8";
 /* importando variables */
 /* importando reset */
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
+* {
+  margin: 0;
+  padding: 0;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  min-height: 100dvh;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p {
+  text-wrap: pretty;
+}
+a {
+  text-decoration: none;
+}
 h1,
 h2,
 h3,
 h4,
 h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  font-size: 100%;
-  outline: 0;
-  text-rendering: optimizeLegibility;
-}
-* {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  vertical-align: baseline;
-}
-img {
-  vertical-align: middle;
-  aspect-ratio: auto;
+h6 {
+  text-wrap: balance;
 }
 img,
-picture,
 video,
-iframe,
-figure {
+svg {
+  height: auto;
   max-width: 100%;
-  width: 100%;
-  display: block;
-  -o-object-fit: cover;
-  object-fit: cover;
-  -o-object-position: center center;
-  object-position: center center;
-}
-li {
-  list-style: none;
 }
 @viewport {
   width: device-width;
 }
-body {
-  font-variant-ligatures: no-common-ligatures;
-  width: 100%;
-  height: 100%;
-}
-body {
-  min-height: 100vh;
-/* opcional */
-  font-smooth: always;
-/* opcional */
-  -webkit-font-smoothing: antialiased;
-/* opcional */
-  -moz-osx-font-smoothing: grayscale;
-}
-html {
-  scroll-behavior: smooth;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-span,
-a,
-strong,
-blockquote,
-i,
-b,
-u,
-em {
-  font-weight: inherit;
-  font-style: inherit;
-  text-decoration: none;
-  color: inherit;
-}
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
-  content: none;
-}
-form,
-input,
-textarea,
-select,
-button,
-label {
-  font-family: inherit;
-  font-size: inherit;
-  hyphens: auto;
-  background-color: transparent;
-  color: inherit;
-  display: block;
-/* opcional */
-  appearance: none;
-}
-table,
-tr,
-td {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-svg {
-  width: 100%;
-  display: block;
-  fill: currentColor;
+@view-transition {
+  navigation: auto;
 }
 /* Importando fuentes tipográficas */
 @font-face {
@@ -203,6 +61,11 @@ svg {
   src: url("/fonts/OpenSans-VariableFont_wdth,wght.ttf") format("truetype");
 }
 /* Colores */
+/* Estilos ScrollBar */
+html {
+  scrollbar-color: #a0eaeb #6ac8c7;
+  scrollbar-width: thin;
+}
 /* Body */
 body {
   background: #fff;
@@ -257,7 +120,7 @@ a:hover {
   background: url("/designer/edgarcornejo.svg") no-repeat center center #0faaa7;
   background-size: auto 50%;
   height: 100%;
-  border-radius: 0 0 clamp(6px, 1vw, 1.1vw) 0;
+  border-radius: 0 0 clamp(6px, 0.6vw, 1vw) 0;
 }
 /* Título de página */
 .name-title {
@@ -277,7 +140,7 @@ nav {
   background: #0faaa7;
   height: 100%;
   align-items: center;
-  border-radius: 0 0 0 clamp(6px, 1vw, 1.1vw);
+  border-radius: 0 0 0 clamp(6px, 0.6vw, 1vw);
 }
 nav .open-menu,
 nav .closed-menu {
@@ -307,7 +170,7 @@ nav a {
 }
 nav a:hover {
   background: #a0eaeb;
-  border-radius: clamp(6px, 1vw, 1.1vw);
+  border-radius: clamp(6px, 0.6vw, 1vw);
 }
 .input-menu {
   display: none;
@@ -329,7 +192,7 @@ nav a:hover {
   right: 5vw;
   text-align: right;
   background: #fff;
-  border-radius: clamp(6px, 1vw, 1.1vw);
+  border-radius: clamp(6px, 0.6vw, 1vw);
   padding: clamp(16px, 1vw, 1.1vw);
 }
 /* Contenedor principal */
@@ -360,7 +223,7 @@ nav a:hover {
 .wrapper-article:nth-child(even) figure {
   justify-content: flex-end;
   border-bottom: dashed clamp(1px, 0.1vw, 0.2vw) #0faaa7;
-  border-bottom-right-radius: clamp(6px, 1vw, 1.1vw);
+  border-bottom-right-radius: clamp(6px, 0.6vw, 1vw);
 }
 .wrapper-article:nth-child(even) header {
   color: #054d56;
@@ -370,7 +233,7 @@ nav a:hover {
   color: #0d8796;
   text-align: right;
   border-right: solid clamp(6px, 1vw, 1.4vw) #0d8796;
-  border-bottom-right-radius: clamp(6px, 1vw, 1.1vw);
+  border-bottom-right-radius: clamp(6px, 0.6vw, 1vw);
   padding-right: 2rem;
 }
 .wrapper-article:nth-child(even) .wrap-txt div {
@@ -393,7 +256,7 @@ nav a:hover {
   display: flex;
   justify-content: flex-start;
   border-bottom: dashed clamp(1px, 0.1vw, 0.2vw) #fff;
-  border-bottom-left-radius: clamp(6px, 1vw, 1.1vw);
+  border-bottom-left-radius: clamp(6px, 0.6vw, 1vw);
 }
 .wrapper-article figure img {
   max-width: 20%;
@@ -423,7 +286,7 @@ nav a:hover {
   justify-content: flex-start;
   flex-direction: column;
   border-left: solid clamp(6px, 1vw, 1.4vw) #fff;
-  border-bottom-left-radius: clamp(6px, 1vw, 1.1vw);
+  border-bottom-left-radius: clamp(6px, 0.6vw, 1vw);
   padding-left: clamp(16px, 1vw, 1.1vw);
 }
 .wrapper-article .wrap-txt div {
@@ -517,7 +380,7 @@ nav a:hover {
   background: url("/designer/edgarcornejo.svg") no-repeat center center #0faaa7;
   background-size: auto 50%;
   height: 100%;
-  border-radius: 0 clamp(6px, 1vw, 1.1vw) 0 0;
+  border-radius: 0 clamp(6px, 0.6vw, 1vw) 0 0;
 }
 #copyright {
   height: 100%;
@@ -532,7 +395,7 @@ nav a:hover {
 /* Botonera Social Footer */
 #wrap-social {
   background: #0faaa7;
-  border-radius: clamp(6px, 1vw, 1.1vw) 0 0 0;
+  border-radius: clamp(6px, 0.6vw, 1vw) 0 0 0;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -551,7 +414,7 @@ nav a:hover {
   background-size: cover;
   width: 48px;
   height: 48px;
-  border-radius: clamp(6px, 1vw, 1.1vw);
+  border-radius: clamp(6px, 0.6vw, 1vw);
   font-size: 0;
   transition: all 0.4s ease;
 }
@@ -577,7 +440,15 @@ nav a:hover {
   background-position: -288px 0;
 }
 /* Responsive Design */
-@media screen and (max-width: 1024px) {
+@media (max-width: 1366px) {
+  #wrap-social .social-footer a {
+    transform: scale(0.8);
+  }
+}
+@media (max-width: 1024px) {
+  #wrap-social .social-footer a {
+    transform: scale(1);
+  }
   #main-header {
     grid-template-columns: 1fr;
   }

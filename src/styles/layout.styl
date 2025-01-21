@@ -23,15 +23,9 @@ eWhite = #F2F2F2
 eRed = #e63d67
 
 /* Estilos ScrollBar */
-::-webkit-scrollbar
-  width auto
-
-::-webkit-scrollbar-track
-  background blueDev-900
-
-::-webkit-scrollbar-thumb
-	border-radius radius
-	background blueDev-800
+html
+  scrollbar-color blueDev-950 blueDev-900
+  scrollbar-width thin
 
 /* Títulos */
 h1,h2,h3,h4,h5,h6
@@ -62,6 +56,7 @@ h6
 
 /* enlaces */
 a
+	color eWhite
 	transition all 0.2s ease-in-out
 	&:hover
 		color blueDev-500
@@ -70,6 +65,7 @@ p
 	a
 		transition all 0.2s ease-in-out
 		border-bottom thinline blueDev-950
+		color blueDev-950
 		&:hover
 			opacity 0.8
 
@@ -192,20 +188,19 @@ address
 		color eWhite
 		background blueDev-900
 		&:hover
-			background blueDev-950
+			background eRed
 	.ultimo-enlace
 		color eWhite
 		background blueDev-600
 		&:hover
 			color eWhite
-			background blueDev-950
+			background eRed
 
 /* estilos componente FooterView */
 #footer
 	margin 0 auto
 	padding twospace 0 twospace 0
 	text-align center
-	color eWhite
 	border-radius radius radius 0 0
 	background blueDev-950
 	background-size 21% 21%
@@ -215,6 +210,8 @@ address
 		blueDev-800 4px,
 		blueDev-950 4px, 
 		blueDev-950)
+	a
+		color eWhite
 
 /* Páginas presentación y portafolio
  	Navegación por página */
@@ -269,7 +266,7 @@ address
 /* Pagina de portafolio*/
 .wrapper-gallery-work
 	display grid
-	grid-template-columns repeat(auto-fit, minmax(357px, 1fr))
+	grid-template-columns repeat(auto-fit, minmax(600px, 1fr))
 	grid-auto-rows auto
 	width 100%
 	gap twospace
@@ -292,6 +289,7 @@ address
 		width 100%
 		filter grayscale(1)
 		transition all 0.2s ease-in-out
+		border-radius radius
 	h3
 		font-size clamp(20px, 1.4vw, 1.5vw)
 		font-weight 200
@@ -318,6 +316,7 @@ address
 		border-radius radius
 		padding onespace
 		letter-spacing 1pt
+		color blueDev-950
 		&:hover
 			background blueDev-950
 			color eWhite
@@ -330,15 +329,18 @@ address
 	display grid
 	grid-template-columns repeat(auto-fit, minmax(25vw, 1fr))
 	grid-auto-rows auto
-	gap onespace
+	gap twospace
 	padding onespace 0 onespace 0
 	article
 		padding onespace
 		outline thinline blueDev-300
 		border-radius radius
+		box-shadow shadow
 		&:hover
 			background blueDev-50
+			box-shadow shadow-hover
 	a
+		color blueDev-950
 		display grid
 		grid-template-columns 1fr 1fr
 		grid-auto-rows auto
@@ -351,6 +353,10 @@ address
 		font-weight 200
 		padding 0
 		margin 0
+		overflow hidden
+		display -webkit-box
+		-webkit-box-orient vertical
+		-webkit-line-clamp 1
 	figure
 		width 100%
 		display flex
@@ -450,6 +456,9 @@ address
 
 /* Responsive Design */
 @media (max-width: 1920px)
+	.wrapper-gallery-work
+		grid-template-columns repeat(auto-fit, minmax(340px, 1fr))
+
 	/* Componente IconSocial */
 	#icon-social
 		a

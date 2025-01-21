@@ -1,198 +1,46 @@
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
+* {
+  margin: 0;
+  padding: 0;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  min-height: 100dvh;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p {
+  text-wrap: pretty;
+}
+a {
+  text-decoration: none;
+}
 h1,
 h2,
 h3,
 h4,
 h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
+h6 {
+  text-wrap: balance;
+}
 img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  font-size: 100%;
-  outline: 0;
-  text-rendering: optimizeLegibility;
-}
-/* Reseteamos los margin y paddings de todas las etiquetas */
-* {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  vertical-align: baseline;
-}
-/* Reset Img */
-img {
-  vertical-align: middle;
-  aspect-ratio: auto;
-}
-/* Evitamos problemas con las imágenes */
-img,
-picture,
 video,
-iframe,
-figure {
+svg {
+  height: auto;
   max-width: 100%;
-  width: 100%;
-  display: block;
-  -o-object-fit: cover;
-  object-fit: cover;
-  -o-object-position: center center;
-  object-position: center center;
-}
-/* Reset Li */
-li {
-  list-style: none;
 }
 /* Responsive */
 @viewport {
   width: device-width;
 }
-/* Estilos de Body */
-body {
-  font-variant-ligatures: no-common-ligatures;
-  width: 100%;
-  height: 100%;
-}
-/* Configuramos la tipografía para toda la web */
-body {
-  min-height: 100vh;
-/* opcional */
-  font-smooth: always;
-/* opcional */
-  -webkit-font-smoothing: antialiased;
-/* opcional */
-  -moz-osx-font-smoothing: grayscale;
-}
-html {
-  scroll-behavior: smooth;
-}
-/* Desactivamos estilos por defecto de las principales etiquetas de texto */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-span,
-a,
-strong,
-blockquote,
-i,
-b,
-u,
-em {
-  font-weight: inherit;
-  font-style: inherit;
-  text-decoration: none;
-  color: inherit;
-}
-/* Evitamos problemas con los pseudoelementos de quotes */
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
-  content: none;
-}
-/* Nivelamos problemas de tipografías y colocación de formularios */
-form,
-input,
-textarea,
-select,
-button,
-label {
-  font-family: inherit;
-  font-size: inherit;
-  hyphens: auto;
-  background-color: transparent;
-  color: inherit;
-  display: block;
-/* opcional */
-  appearance: none;
-}
-/* Reseteamos las tablas */
-table,
-tr,
-td {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-/* Evitamos problemas con los SVG */
-svg {
-  width: 100%;
-  display: block;
-  fill: currentColor;
+/* View Transition */
+@view-transition {
+  navigation: auto;
 }
