@@ -117,10 +117,16 @@ a:hover {
 /* Animación de parecer */
 /* Logotipo */
 #logo {
-  background: url("/designer/edgarcornejo.svg") no-repeat center center #0faaa7;
-  background-size: auto 50%;
+  background-color: #0faaa7;
   height: 100%;
-  border-radius: 0 0 clamp(6px, 0.6vw, 1vw) 0;
+  border-radius: 0 0 clamp(6px, 0.4vw, 0.4vw) 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#logo svg {
+  width: auto;
+  height: 60%;
 }
 /* Título de página */
 .name-title {
@@ -131,7 +137,7 @@ a:hover {
 .name-title h1 {
   font-size: clamp(28px, 1.6vw, 1.7vw);
   letter-spacing: 1pt;
-  padding: clamp(16px, 1vw, 1.1vw);
+  padding: clamp(16px, 1vw, 1vw);
 }
 /* Nav Header */
 nav {
@@ -140,7 +146,7 @@ nav {
   background: #0faaa7;
   height: 100%;
   align-items: center;
-  border-radius: 0 0 0 clamp(6px, 0.6vw, 1vw);
+  border-radius: 0 0 0 clamp(6px, 0.4vw, 0.4vw);
 }
 nav .open-menu,
 nav .closed-menu {
@@ -162,15 +168,15 @@ nav menu {
 }
 nav li {
   border-bottom: dashed 2px #0faaa7;
-  padding: clamp(16px, 1vw, 1.1vw);
+  padding: clamp(16px, 1vw, 1vw);
 }
 nav a {
   color: #054d56;
-  padding: clamp(16px, 1vw, 1.1vw);
+  padding: clamp(16px, 1vw, 1vw);
 }
 nav a:hover {
   background: #a0eaeb;
-  border-radius: clamp(6px, 0.6vw, 1vw);
+  border-radius: clamp(6px, 0.4vw, 0.4vw);
 }
 .input-menu {
   display: none;
@@ -192,8 +198,8 @@ nav a:hover {
   right: 5vw;
   text-align: right;
   background: #fff;
-  border-radius: clamp(6px, 0.6vw, 1vw);
-  padding: clamp(16px, 1vw, 1.1vw);
+  border-radius: clamp(6px, 0.4vw, 0.4vw);
+  padding: clamp(16px, 1vw, 1vw);
 }
 /* Contenedor principal */
 #main-content {
@@ -223,7 +229,7 @@ nav a:hover {
 .wrapper-article:nth-child(even) figure {
   justify-content: flex-end;
   border-bottom: dashed clamp(1px, 0.1vw, 0.2vw) #0faaa7;
-  border-bottom-right-radius: clamp(6px, 0.6vw, 1vw);
+  border-bottom-right-radius: clamp(6px, 0.4vw, 0.4vw);
 }
 .wrapper-article:nth-child(even) header {
   color: #054d56;
@@ -232,8 +238,8 @@ nav a:hover {
 .wrapper-article:nth-child(even) .wrap-txt {
   color: #0d8796;
   text-align: right;
-  border-right: solid clamp(6px, 1vw, 1.4vw) #0d8796;
-  border-bottom-right-radius: clamp(6px, 0.6vw, 1vw);
+  border-right: solid clamp(6px, 1vw, 1.1vw) #0d8796;
+  border-bottom-right-radius: clamp(6px, 0.4vw, 0.4vw);
   padding-right: 2rem;
 }
 .wrapper-article:nth-child(even) .wrap-txt div {
@@ -248,7 +254,7 @@ nav a:hover {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: clamp(16px, 1vw, 1.1vw) 0;
+  gap: clamp(16px, 1vw, 1vw) 0;
 }
 .wrapper-article figure {
   margin: 0 auto;
@@ -256,7 +262,7 @@ nav a:hover {
   display: flex;
   justify-content: flex-start;
   border-bottom: dashed clamp(1px, 0.1vw, 0.2vw) #fff;
-  border-bottom-left-radius: clamp(6px, 0.6vw, 1vw);
+  border-bottom-left-radius: clamp(6px, 0.4vw, 0.4vw);
 }
 .wrapper-article figure img {
   max-width: 20%;
@@ -271,7 +277,7 @@ nav a:hover {
   margin: 0 auto;
   display: flex;
   justify-content: flex-start;
-  padding-top: clamp(48px, 3vw, 3.1vw);
+  padding-top: clamp(48px, 3vw, 3vw);
 }
 .wrapper-article header h2 {
   font-family: 'DM Serif Display';
@@ -285,9 +291,9 @@ nav a:hover {
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
-  border-left: solid clamp(6px, 1vw, 1.4vw) #fff;
-  border-bottom-left-radius: clamp(6px, 0.6vw, 1vw);
-  padding-left: clamp(16px, 1vw, 1.1vw);
+  border-left: solid clamp(6px, 1vw, 1.1vw) #fff;
+  border-bottom-left-radius: clamp(6px, 0.4vw, 0.4vw);
+  padding-left: clamp(16px, 1vw, 1vw);
 }
 .wrapper-article .wrap-txt div {
   max-width: 900px;
@@ -296,7 +302,7 @@ nav a:hover {
 .wrapper-article .wrap-txt blockquote {
   font-weight: 500;
   hyphens: none;
-  padding-bottom: clamp(16px, 1vw, 1.1vw);
+  padding-bottom: clamp(16px, 1vw, 1vw);
 }
 .wrapper-article .wrap-txt blockquote {
   font-style: italic;
@@ -313,8 +319,8 @@ nav a:hover {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: clamp(32px, 2vw, 2.1vw);
-  padding-top: clamp(32px, 2vw, 2.1vw);
+  gap: clamp(32px, 2vw, 2vw);
+  padding-top: clamp(32px, 2vw, 2vw);
 }
 .item-services {
   min-width: 180px;
@@ -363,7 +369,7 @@ nav a:hover {
   font-size: clamp(20px, 1.4vw, 1.5vw);
   font-weight: 800;
   color: #6ac8c7;
-  padding-top: clamp(16px, 1vw, 1.1vw);
+  padding-top: clamp(16px, 1vw, 1vw);
   text-align: center;
   text-transform: uppercase;
 }
@@ -377,10 +383,16 @@ nav a:hover {
   align-content: center;
 }
 #logo-footer {
-  background: url("/designer/edgarcornejo.svg") no-repeat center center #0faaa7;
-  background-size: auto 50%;
+  background-color: #0faaa7;
   height: 100%;
-  border-radius: 0 clamp(6px, 0.6vw, 1vw) 0 0;
+  border-radius: 0 clamp(6px, 0.4vw, 0.4vw) 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#logo-footer svg {
+  width: auto;
+  height: 50%;
 }
 #copyright {
   height: 100%;
@@ -389,13 +401,13 @@ nav a:hover {
   align-items: center;
 }
 #copyright small {
-  padding: clamp(16px, 1vw, 1.1vw);
+  padding: clamp(16px, 1vw, 1vw);
   text-transform: uppercase;
 }
 /* Botonera Social Footer */
 #wrap-social {
   background: #0faaa7;
-  border-radius: clamp(6px, 0.6vw, 1vw) 0 0 0;
+  border-radius: clamp(6px, 0.4vw, 0.4vw) 0 0 0;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -407,14 +419,14 @@ nav a:hover {
   align-items: center;
   flex-wrap: wrap;
   justify-content: space-around;
-  gap: clamp(16px, 1vw, 1.1vw);
+  gap: clamp(16px, 1vw, 1vw);
 }
 #wrap-social .social-footer a {
   background: url("/img/icon-social.svg") no-repeat #6ac8c7;
   background-size: cover;
   width: 48px;
   height: 48px;
-  border-radius: clamp(6px, 0.6vw, 1vw);
+  border-radius: clamp(6px, 0.4vw, 0.4vw);
   font-size: 0;
   transition: all 0.4s ease;
 }
@@ -511,7 +523,7 @@ nav a:hover {
     text-align: center;
   }
   #wrap-social {
-    padding: clamp(16px, 1vw, 1.1vw);
+    padding: clamp(16px, 1vw, 1vw);
   }
 }
 @-moz-keyframes aparecer {

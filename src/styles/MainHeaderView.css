@@ -2,29 +2,37 @@
   background: blueDev-950;
   background-size: 21% 21%;
   background-image: repeating-linear-gradient(to left, blueDev-800, blueDev-800 4px, blueDev-950 4px, blueDev-950);
-  padding: onespace;
   display: grid;
   align-items: center;
   width: 100%;
   position: fixed;
   z-index: 1;
   grid-template-columns: minmax(44px, 1fr) 1fr;
+  grid-template-rows: auto;
 }
-.container-logo-menu:hover .wrapper-h1-h2:before {
-  transform: translateY(200%);
-}
-.container-logo-menu div a {
+.container-logo-menu #logo {
+  padding: onespace;
   display: inline-block;
 }
-.container-logo-menu img {
-  height: clamp(32px, 2vw, 2.1vw);
+.container-logo-menu #logo:hover svg {
+  fill: eRed;
+}
+.container-logo-menu svg {
+  height: twospace;
   width: auto;
+  transition: all 0.4s ease;
 }
 .container-logo-menu button {
   cursor: pointer;
   justify-self: flex-end;
   background: none;
   border: none;
+  border-radius: radius;
+  padding: onespace;
+  transition: all 0.4s ease;
+}
+.container-logo-menu button:hover {
+  background: eRed;
 }
 #main-menu {
   width: 80vw;
@@ -79,7 +87,7 @@
   font-weight: 700;
 }
 #main-header {
-  min-height: 50vh;
+  min-height: 40vh;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -88,9 +96,6 @@
   background: blueDev-950;
   background-size: 21% 21%;
   background-image: repeating-linear-gradient(to left, blueDev-800, blueDev-800 4px, blueDev-950 4px, blueDev-950);
-}
-#main-header:hover .wrapper-h1-h2:before {
-  transform: translateY(100%);
 }
 .wrapper-h1-h2 {
   width: 90%;
@@ -115,7 +120,7 @@
   position: relative;
   bottom: 0;
   opacity: 1;
-  animation: titulo1 0.4s ease both;
+  animation: top 0.4s ease both;
   padding: onespace 0 0 0;
   margin: 0;
 }
@@ -132,7 +137,7 @@
   font-size: clamp(20px, 1.4vw, 1.5vw);
   position: relative;
   font-weight: 200;
-  animation: titulo2 0.4s ease both;
+  animation: top 0.4s ease both;
   animation-delay: 0.2s;
 }
 .wrapper-h1-h2 a {
@@ -143,15 +148,11 @@
 }
 #bottom-call {
   display: flex;
-  justify-content: center;
-  width: 100%;
-  position: relative;
-  animation: callme 0.6s ease-in-out both;
-  animation-delay: 0.4s;
-}
-#bottom-call div {
-  display: flex;
+  margin: 0 auto;
   justify-content: flex-end;
+  position: relative;
+  animation: top 0.6s ease both;
+  animation-delay: 0.4s;
   width: 90%;
 }
 #bottom-call a {
@@ -168,155 +169,4 @@
 #bottom-call a:hover {
   opacity: 1;
   box-shadow: shadow-hover;
-}
-/* Animaciones */
-/* H1 y H2 */
-/* callme */
-@-moz-keyframes menu {
-  from {
-    opacity: 0;
-    top: -100%;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@-webkit-keyframes menu {
-  from {
-    opacity: 0;
-    top: -100%;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@-o-keyframes menu {
-  from {
-    opacity: 0;
-    top: -100%;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes menu {
-  from {
-    opacity: 0;
-    top: -100%;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@-moz-keyframes titulo1 {
-  from {
-    opacity: 0;
-    bottom: 100px;
-  }
-  to {
-    opacity: 1;
-    bottom: 0;
-  }
-}
-@-webkit-keyframes titulo1 {
-  from {
-    opacity: 0;
-    bottom: 100px;
-  }
-  to {
-    opacity: 1;
-    bottom: 0;
-  }
-}
-@-o-keyframes titulo1 {
-  from {
-    opacity: 0;
-    bottom: 100px;
-  }
-  to {
-    opacity: 1;
-    bottom: 0;
-  }
-}
-@keyframes titulo1 {
-  from {
-    opacity: 0;
-    bottom: 100px;
-  }
-  to {
-    opacity: 1;
-    bottom: 0;
-  }
-}
-@-moz-keyframes titulo2 {
-  from {
-    opacity: 0;
-    bottom: 50px;
-  }
-  to {
-    opacity: 1;
-    bottom: 0;
-  }
-}
-@-webkit-keyframes titulo2 {
-  from {
-    opacity: 0;
-    bottom: 50px;
-  }
-  to {
-    opacity: 1;
-    bottom: 0;
-  }
-}
-@-o-keyframes titulo2 {
-  from {
-    opacity: 0;
-    bottom: 50px;
-  }
-  to {
-    opacity: 1;
-    bottom: 0;
-  }
-}
-@keyframes titulo2 {
-  from {
-    opacity: 0;
-    bottom: 50px;
-  }
-  to {
-    opacity: 1;
-    bottom: 0;
-  }
-}
-@-moz-keyframes callme {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@-webkit-keyframes callme {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@-o-keyframes callme {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes callme {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }

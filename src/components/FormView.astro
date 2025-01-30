@@ -4,7 +4,7 @@
 
 <form name="contact" action="/pages/gracias" method="POST" data-netlify="true" data-netlify-recaptcha="true">
   <fieldset>
-    <legend>Hola, que necesitas.</legend>
+    <legend>Hola, que necesitas</legend>
     <label>Nombre: <input type="text" name="name" placeholder="Escriba su nombre" required/></label>
     <label>Correo: <input type="email" name="email" placeholder="Escriba su correo" required minlength="8" /></label>
     <label>Mensaje: <textarea name="message" placeholder="Escriba su mensaje" required></textarea></label>
@@ -24,7 +24,7 @@
     hyphens: none;
   }
   fieldset {
-    border: solid clamp(1px, 0.2vh, 0.3vh) gray;
+    border: solid clamp(1px, 0.2vh, 0.3vh) #131853;
     border-radius: clamp(3px, 0.3vw, 0.4vw);
     display: flex;
     flex-wrap: wrap;
@@ -41,13 +41,17 @@
   label {
     width: 100%;
   }
+  input:focus {
+    outline: solid clamp(2px, 0.3vh, 0.4vh) #2b3eff;
+  }
   input:invalid {
-    outline: solid clamp(2px, 0.3vh, 0.4vh) red;
+    outline: solid clamp(2px, 0.3vh, 0.4vh) #e63d67;
   }
   input,textarea {
     width: 100%;
     margin: clamp(16px, 1vw, 1.1vw) 0 clamp(16px, 1vw, 1.1vw) 0;
-    outline: solid clamp(1px, 0.2vh, 0.3vh) gray;
+    outline: solid clamp(1px, 0.2vh, 0.3vh) #131853;
+    border: 0;
     border-radius: clamp(3px, 0.3vw, 0.4vw);
     padding: clamp(16px, 1vw, 1.1vw);
   }
@@ -55,15 +59,19 @@
     width 100%
     height: auto;
     padding: clamp(16px, 1vw, 1.1vw);
-    outline: solid clamp(1px, 0.2vh, 0.3vh) gray;
+    outline: solid clamp(1px, 0.2vh, 0.3vh) #131853;
     border-radius: clamp(3px, 0.3vw, 0.4vw);
   }
   button {
     width: 100%;
-    background: turquoise;
+    background: #131853;
+    color: #F2F2F2;
     margin: clamp(16px, 1vw, 1.1vw) 0 clamp(16px, 1vw, 1.1vw) 0;
     border-radius: clamp(3px, 0.3vw, 0.4vw);
     padding: clamp(16px, 1vw, 1.1vw);
+    &:hover {
+      cursor: pointer;
+    }
   }
 </style>
 

@@ -1,21 +1,29 @@
 ---
-import { Image } from "astro:assets";
-
-import localLogoEdgarWhite from "../images/edgarcornejo-white.svg";
-import localMenuOpen from "../images/open-menu.svg";
-import localMenuClosed from "../images/closed-menu.svg";
-
 const { title, visible, blog, description } = Astro.props;
 ---
 
-<div class="container-logo-menu">
+<section class="container-logo-menu">
 	<div>
-		<a href="/" title="Edgar Cornejo">
-			<Image itemprop="logo" src={localLogoEdgarWhite} alt="Logo Edgar Cornejo, símbolo de una union de una cadena" />	
+		<a href="/" title="Edgar Cornejo" id="logo">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 55.6" fill="#FFFFFF">
+				<g>
+					<rect x="33.3" y="22.2" class="st0" width="11.1" height="11.1"/>
+					<rect x="55.6" y="22.2" class="st0" width="11.1" height="11.1"/>
+					<path class="st0" d="M50,33.3c0,6.1-5,11.1-11.1,11.1h-5.6v11.1h11.1h11.1h11.1v-11H61C55,44.5,50,39.5,50,33.3z"/>
+					<path class="st0" d="M50,22.2c0-6.1,5-11.1,11.1-11.1h5.6V0H55.6H44.4H33.3v11.1h5.6C45,11.1,50,16.1,50,22.2z"/>
+					<path class="st0" d="M22.2,33.3V22.2h11.1V11.1h-5.6c-6.1,0-11.1,5-11.1,11.1c0-6.1-5-11.1-11.1-11.1H0v11.1h11.1v11.1H0v11.1h5.6
+					c6.1,0,11.1-5,11.1-11.1c0,6.1,5,11.1,11.1,11.1h5.6V33.3H22.2z"/>
+					<path class="st0" d="M100,22.2V11.1h-5.6c-6.1,0-11.1,5-11.1,11.1c0-6.1-5-11.1-11.1-11.1h-5.6v11.1h11.1v11.1h-11v11.1h5.6
+					c6.1,0,11.1-5,11.1-11.1c0,6.1,5,11.1,11.1,11.1h5.6V33.3H88.9V22.2H100z"/>
+				</g>
+			</svg>
 		</a>
 	</div>
 
-	<button popovertarget="main-menu" title="Abrir menu"><Image src={localMenuOpen} alt="" /></button>
+
+	<button popovertarget="main-menu" title="Abrir menu">
+		<svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#FFFFFF"><path d="M120-240v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg>
+	</button>
 
 	<nav popover id="main-menu">
 		<menu>
@@ -35,9 +43,11 @@ const { title, visible, blog, description } = Astro.props;
 			</li>
 			<li><a href="/contacto/" title="Contacto" class="nav-li">Contacto</a></li>
 		</menu>
-		<button popovertargetaction="hide" popovertarget="main-menu" title="Cerrar menu"><Image src={localMenuClosed} alt="" /></button>
+		<button popovertargetaction="hide" popovertarget="main-menu" title="Cerrar menu">
+			<svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#FFFFFF"><path d="m249-207-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg>
+		</button>
 	</nav>
-</div>
+</section>
 
 <header id="main-header">
 	<div class="wrapper-h1-h2">
@@ -51,15 +61,13 @@ const { title, visible, blog, description } = Astro.props;
  </div> 
 </header>
 
-<div id="bottom-call">
-	<div>
-		<p>
-			<a
-				href="https://wa.me/message/EEEHZULZQV5QG1"
-				title="WhatsApp">WhatsApp</a>
-		</p>
-	</div>
-</div>
+<section id="bottom-call">
+	<p>
+		<a
+			href="https://wa.me/message/EEEHZULZQV5QG1"
+			title="WhatsApp" target="_blank">WhatsApp</a>
+	</p>
+</section>
 
 <script is:inline>
 	const navLinks = document.querySelectorAll(".nav-li");

@@ -103,13 +103,13 @@ body {
   background-repeat: no-repeat;
   background-blend-mode: multiply;
   color: #f2f2f2;
-  border-radius: 0 0 clamp(6px, 0.6vw, 1vw) clamp(6px, 0.6vw, 1vw);
+  border-radius: 0 0 clamp(6px, 0.4vw, 0.4vw) clamp(6px, 0.4vw, 0.4vw);
 }
 /* Envoltura de logo, nav y contact */
 #wrapper-logo-nav-contact-title {
   width: 90%;
   margin: 0 auto;
-  padding: clamp(32px, 2vw, 2.1vw) 0 clamp(32px, 2vw, 2.1vw) 0;
+  padding: clamp(32px, 2vw, 2vw) 0 clamp(32px, 2vw, 2vw) 0;
   display: grid;
   grid-template-columns: 5vW 1fr 5vw;
   align-items: center;
@@ -119,7 +119,7 @@ body {
   width: 100%;
   display: flex;
 }
-#logo img {
+#logo svg {
   width: 3vw;
   min-width: 48px;
   height: auto;
@@ -151,7 +151,7 @@ nav .closed-menu {
 }
 nav menu {
   display: none;
-  gap: clamp(16px, 1vw, 1.1vw);
+  gap: clamp(16px, 1vw, 1vw);
 }
 nav a {
   color: #f2f2f2;
@@ -177,7 +177,7 @@ nav a:hover {
 #contact {
   justify-content: flex-end;
   display: flex;
-  gap: clamp(16px, 1vw, 1.1vw);
+  gap: clamp(16px, 1vw, 1vw);
 }
 #contact a {
   color: #f2f2f2;
@@ -185,8 +185,8 @@ nav a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: clamp(16px, 1vw, 1.1vw);
-  border-radius: clamp(6px, 0.6vw, 1vw);
+  padding: clamp(16px, 1vw, 1vw);
+  border-radius: clamp(6px, 0.4vw, 0.4vw);
   transition: all 0.4s ease;
   position: relative;
 }
@@ -208,7 +208,7 @@ nav a:hover {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: clamp(16px, 1vw, 1.1vw);
+  gap: clamp(16px, 1vw, 1vw);
   padding-top: 20vh;
   position: relative;
   animation: ttob 0.5s ease-in both;
@@ -225,7 +225,7 @@ nav a:hover {
 /* Animation Titulo*/
 /* Main Section*/
 #wrapper-articles {
-  padding: clamp(16px, 1vw, 1.1vw) 0 clamp(16px, 1vw, 1.1vw) 0;
+  padding: clamp(16px, 1vw, 1vw) 0 clamp(16px, 1vw, 1vw) 0;
   margin: 0 auto;
 }
 #wrapper-articles article {
@@ -236,7 +236,7 @@ nav a:hover {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 100% center;
-  margin-bottom: clamp(16px, 1vw, 1.1vw);
+  margin-bottom: clamp(16px, 1vw, 1vw);
   view-timeline-name: --background;
   view-timeline-axis: block;
   animation-timeline: --background;
@@ -253,7 +253,7 @@ nav a:hover {
 }
 .wrap-article {
   width: 50%;
-  padding: clamp(64px, 4vw, 4.1vw);
+  padding: clamp(64px, 4vw, 4vw);
 }
 .wrap-article h2 {
   font-size: 5vw;
@@ -274,7 +274,7 @@ nav a:hover {
 }
 .wrap-article h3 {
   font-size: clamp(24px, 1.6vw, 1.7vw);
-  padding-top: clamp(16px, 1vw, 1.1vw);
+  padding-top: clamp(16px, 1vw, 1vw);
   color: #7b7b7b;
   view-timeline-name: --subtitle;
   view-timeline-axis: block;
@@ -297,8 +297,8 @@ nav a:hover {
   background: #5b0dbe;
   display: inline-block;
   color: #f2f2f2;
-  padding: clamp(16px, 1vw, 1.1vw);
-  margin-bottom: clamp(16px, 1vw, 1.1vw);
+  padding: clamp(16px, 1vw, 1vw);
+  margin-bottom: clamp(16px, 1vw, 1vw);
   transition: all 0.4s ease-in-out;
 }
 .bot-call:hover {
@@ -327,7 +327,7 @@ nav a:hover {
 }
 footer {
   position: relative;
-  padding: clamp(64px, 4vw, 4.1vw) 0 clamp(64px, 4vw, 4.1vw) 0;
+  padding: clamp(64px, 4vw, 4vw) 0 clamp(64px, 4vw, 4vw) 0;
   background: #5b0dbe;
   color: #f2f2f2;
 }
@@ -337,7 +337,7 @@ footer:before {
   display: block;
   position: absolute;
   top: -2vw;
-  right: 2vw;
+  left: 2vw;
   width: 4vw;
   height: 4vw;
   min-width: 48px;
@@ -361,7 +361,7 @@ footer:before:hover {
   width: 30%;
   display: flex;
   flex-direction: column;
-  gap: clamp(16px, 1vw, 1.1vw);
+  gap: clamp(16px, 1vw, 1vw);
 }
 .ul-footer ul {
   display: flex;
@@ -373,17 +373,17 @@ footer:before:hover {
   line-height: 120%;
   color: #ffa500;
   border-bottom: solid clamp(1px, 0.1vw, 0.2vw) #ffa500;
-  padding: clamp(16px, 1vw, 1.1vw);
-  margin-bottom: clamp(16px, 1vw, 1.1vw);
+  padding: clamp(16px, 1vw, 1vw);
+  margin-bottom: clamp(16px, 1vw, 1vw);
 }
 .ul-footer li {
-  margin: clamp(16px, 1vw, 1.1vw);
+  margin: clamp(16px, 1vw, 1vw);
 }
 .ul-footer a {
   color: #f2f2f2;
   outline: solid clamp(1px, 0.1vw, 0.2vw) #f2f2f2;
-  padding: clamp(16px, 1vw, 1.1vw);
-  border-radius: clamp(6px, 0.6vw, 1vw);
+  padding: clamp(16px, 1vw, 1vw);
+  border-radius: clamp(6px, 0.4vw, 0.4vw);
   display: inline-block;
   hyphens: none;
 }
@@ -394,7 +394,7 @@ footer:before:hover {
   outline: 0;
 }
 #copyright {
-  margin-top: clamp(32px, 2vw, 2.1vw);
+  margin-top: clamp(32px, 2vw, 2vw);
   width: 100%;
   text-align: right;
 }
@@ -403,7 +403,7 @@ footer:before:hover {
   #wrapper-logo-nav-contact-title {
     display: flex;
     flex-direction: column;
-    gap: clamp(16px, 1vw, 1.1vw);
+    gap: clamp(16px, 1vw, 1vw);
   }
   #logo {
     justify-content: center;
@@ -412,7 +412,7 @@ footer:before:hover {
     display: none;
   }
   #wrapper-title {
-    padding-top: clamp(32px, 2vw, 2.1vw);
+    padding-top: clamp(32px, 2vw, 2vw);
   }
   #wrapper-articles article {
     min-height: auto;
@@ -426,11 +426,11 @@ footer:before:hover {
   }
   .wrap-article {
     width: 90%;
-    padding: clamp(16px, 1vw, 1.1vw);
+    padding: clamp(16px, 1vw, 1vw);
     margin: 0 auto;
   }
   .wrap-article h2 {
-    padding-bottom: clamp(32px, 2vw, 2.1vw);
+    padding-bottom: clamp(32px, 2vw, 2vw);
     animation: none;
   }
   .wrap-article h3 {

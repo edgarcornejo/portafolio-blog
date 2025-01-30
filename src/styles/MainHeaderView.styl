@@ -7,26 +7,32 @@
 		blueDev-800 4px,
 		blueDev-950 4px, 
 		blueDev-950)
-	&:hover .wrapper-h1-h2:before
-		transform translateY(200%)
-	padding onespace
 	display grid
 	align-items center
 	width 100%
 	position fixed
 	z-index 1
 	grid-template-columns minmax(44px, 1fr) 1fr
-	div
-		a
-			display inline-block
-	img
-		height clamp(32px, 2vw, 2.1vw)
+	grid-template-rows auto
+	#logo
+		padding onespace
+		display inline-block
+		&:hover svg
+			fill eRed
+	svg
+		height twospace
 		width auto
+		transition all 0.4s ease
 	button
 		cursor pointer
 		justify-self flex-end
 		background none
 		border none
+		border-radius radius
+		padding onespace
+		transition all 0.4s ease
+		&:hover
+			background eRed
 
 #main-menu
 	width 80vw
@@ -78,7 +84,7 @@
 	font-weight 700
 
 #main-header
-	min-height 50vh
+	min-height 40vh
 	width 100%
 	display flex
 	justify-content center
@@ -92,8 +98,6 @@
 		blueDev-800 4px,
 		blueDev-950 4px, 
 		blueDev-950)
-	&:hover .wrapper-h1-h2:before
-		transform translateY(100%)
 
 .wrapper-h1-h2
 	width 90%
@@ -116,7 +120,7 @@
 		position relative
 		bottom 0
 		opacity 1
-		animation titulo1 0.4s ease both
+		animation top 0.4s ease both
 		padding onespace 0 0 0
 		margin 0
 		&:after
@@ -131,7 +135,7 @@
 		font-size clamp(20px, 1.4vw, 1.5vw)
 		position relative
 		font-weight 200
-		animation titulo2 0.4s ease both
+		animation top 0.4s ease both
 		animation-delay 0.2s
 	a
 		border-bottom thinline eWhite
@@ -140,15 +144,12 @@
 
 #bottom-call
 	display flex
-	justify-content center
-	width 100%
+	margin 0 auto
+	justify-content flex-end
 	position relative
-	animation callme 0.6s ease-in-out both
+	animation top 0.6s ease both
 	animation-delay 0.4s
-	div
-		display flex
-		justify-content flex-end
-		width 90%
+	width 90%
 	a
 		padding onespace
 		border-radius radius
@@ -162,34 +163,3 @@
 		&:hover
 			opacity 1
 			box-shadow shadow-hover
-
-/* Animaciones */
-/* H1 y H2 */
-@keyframes menu 
-	from
-		opacity 0
-		top -100%
-	to
-		opacity 1
-
-@keyframes titulo1
-	from
-		opacity 0
-		bottom 100px
-	to
-		opacity 1
-		bottom 0
-
-@keyframes titulo2
-	from
-		opacity 0
-		bottom 50px
-	to
-		opacity 1
-		bottom 0
-/* callme */
-@keyframes callme
-	from
-		opacity 0
-	to
-		opacity 1
