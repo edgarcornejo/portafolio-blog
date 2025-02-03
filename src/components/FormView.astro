@@ -34,7 +34,7 @@
 				placeholder="Escriba su mensaje"
 				required></textarea></label
 		>
-		<div data-netlify-recaptcha="true"></div>
+		<div data-netlify-recaptcha="true" id="recaptcha"></div>
 		<button type="submit">Enviar</button>
 		<p>Llene correctamente el formulario, para poder enviar el mensaje.</p>
 	</fieldset>
@@ -81,9 +81,13 @@
 		input:invalid {
 			outline: solid clamp(2px, 0.3vh, 0.4vh) #e63d67;
 		}
-		div {
+		#recaptcha {
 			width: 100%;
 			height: auto;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-color: #f2f2f2;
 			padding: clamp(16px, 1vw, 1.1vw);
 			outline: solid clamp(1px, 0.2vh, 0.3vh) #131853;
 			border-radius: clamp(3px, 0.3vw, 0.4vw);
