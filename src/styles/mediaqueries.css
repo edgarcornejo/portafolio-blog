@@ -28,8 +28,12 @@
   }
 }
 @media (max-width: 1024px) {
+  .gallery-cell {
+    color: transparent;
+  }
   .gallery-cell img {
-    filter: grayscale(0);
+    opacity: 1;
+    width: 90%;
   }
   .wrapper-content {
     flex-direction: column;

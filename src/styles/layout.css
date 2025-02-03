@@ -48,8 +48,8 @@ svg {
 /* importando fuentes tipográficas*/
 @font-face {
   font-family: 'Outfit';
-  src: url("/fonts/Outfit-VariableFont_wght.ttf") format('truetype-variations'), url("/fonts/Outfit-VariableFont_wght.woff") format('woff-variations');
   font-weight: 100 900;
+  src: url("/fonts/Outfit-VariableFont_wght.ttf") format('truetype-variations'), url("/fonts/Outfit-VariableFont_wght.woff") format('woff-variations');
 }
 /* Colores */
 /* Estilos ScrollBar */
@@ -381,7 +381,6 @@ main strong {
   grid-auto-rows: auto;
   justify-content: center;
   gap: clamp(16px, 1vw, 1vw);
-/* Para logos de color negro */
 }
 .marcas-container div {
   border: solid clamp(1px, 0.1vw, 0.2vw) #bed5ff;
@@ -389,16 +388,12 @@ main strong {
   padding: clamp(16px, 1vw, 1vw) 0 clamp(16px, 1vw, 1vw) 0;
 }
 .marcas-container a:hover img {
-  filter: grayscale(0%);
   opacity: 1;
 }
 .marcas-container img {
   height: auto;
   width: 100%;
   min-width: 48px;
-  filter: grayscale(100%);
-}
-.marcas-container .desaturar {
   opacity: 0.4;
 }
 /* Estilos de componente ListPosts - InfoContact - IconSocial - CategoryCloud*/
@@ -794,8 +789,12 @@ address a {
   }
 }
 @media (max-width: 1024px) {
+  .gallery-cell {
+    color: transparent;
+  }
   .gallery-cell img {
-    filter: grayscale(0);
+    opacity: 1;
+    width: 90%;
   }
   .wrapper-content {
     flex-direction: column;
