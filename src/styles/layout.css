@@ -669,6 +669,7 @@ address a {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 5;
+  padding-top: clamp(16px, 1vw, 1vw);
 }
 .aside-bottom {
   padding: clamp(32px, 2vw, 2vw) 0 clamp(32px, 2vw, 2vw) 0;
@@ -705,9 +706,20 @@ address a {
   width: auto/9;
   height: auto;
   max-width: 30vw;
+  border-radius: clamp(6px, 0.4vw, 0.4vw);
 }
 #wrapper-post figcaption {
   padding-top: clamp(16px, 1vw, 1vw);
+}
+#wrapper-post figcaption a {
+  color: #1d2ab6;
+}
+#wrapper-post pre {
+  padding: clamp(16px, 1vw, 1vw);
+  background: #dbe9ff;
+  border-radius: clamp(6px, 0.4vw, 0.4vw);
+  overflow-x: auto;
+  margin-bottom: clamp(16px, 1vw, 1vw);
 }
 /* Container Iframe */
 .wrapper-iframe {
