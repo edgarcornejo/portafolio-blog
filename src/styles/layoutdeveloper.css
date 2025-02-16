@@ -10,6 +10,8 @@
 *::after {
   box-sizing: border-box;
 }
+:root,
+interpolate-size allow-keywords,
 body {
   min-height: 100dvh;
 }
@@ -21,9 +23,12 @@ select {
 }
 p {
   text-wrap: pretty;
+  max-inline-size: 50ch;
+  text-box: trim-both cap alphabetic;
 }
 a {
   text-decoration: none;
+  text-box: trim-both cap alphabetic;
 }
 h1,
 h2,
@@ -32,6 +37,7 @@ h4,
 h5,
 h6 {
   text-wrap: balance;
+  text-box: trim-both cap alphabetic;
 }
 img,
 video,
@@ -89,15 +95,16 @@ html {
 }
 body {
   color: #5b0dbe;
-  font-size: clamp(16px, 1vw, 1.1vw);
+  font-size: clamp(18px, 1vw, 1.1vw);
   font-weight: 400;
-  background: #f2f2f2;
+  line-height: 1.4;
+  background-color: #f2f2f2;
   font-family: "Roboto", Helvetica, sans-serif;
 }
 /* Cabecera principal */
 #main-header {
   width: 100%;
-  background: linear-gradient(-45deg, #cd26fc 0%, #8c3ef4 53%, #9184fa 100%), url("/developer/top-back.jpg");
+  background-image: linear-gradient(-45deg, #5b0dbe 0%, rgba(91,13,190,0.8) 53%, rgba(91,13,190,0.6) 100%), url("/developer/top-back.jpg");
   background-size: cover;
   background-position: 0 center;
   background-repeat: no-repeat;
@@ -107,11 +114,11 @@ body {
 }
 /* Envoltura de logo, nav y contact */
 #wrapper-logo-nav-contact-title {
-  width: 90%;
+  width: 94%;
   margin: 0 auto;
   padding: clamp(32px, 2vw, 2vw) 0 clamp(32px, 2vw, 2vw) 0;
   display: grid;
-  grid-template-columns: 5vW 1fr 5vw;
+  grid-template-columns: 5vw 1fr 5vw;
   align-items: center;
 }
 /* Logotipo en Header */
@@ -140,8 +147,8 @@ nav .closed-menu {
   cursor: pointer;
   display: block;
 }
-nav .open-menu img,
-nav .closed-menu img {
+nav .open-menu svg,
+nav .closed-menu svg {
   min-width: 48px;
   width: 2vw;
   height: auto;
@@ -181,7 +188,7 @@ nav a:hover {
 }
 #contact a {
   color: #f2f2f2;
-  background: #ffa500;
+  background-color: #ffa500;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -191,7 +198,7 @@ nav a:hover {
   position: relative;
 }
 #contact a:hover {
-  background: #5b0dbe;
+  background-color: #5b0dbe;
 }
 #contact a:first-child {
   animation: contacto 0.5s ease-in both;
@@ -215,12 +222,12 @@ nav a:hover {
   animation-delay: 1.2s;
 }
 #wrapper-title h1 {
-  font-size: clamp(32px, 2.6vw, 2.7vw);
+  font-size: clamp(32px, 2.6vw, 2.6vw);
 }
 #wrapper-title h2 {
   font-family: 'Roboto';
   font-weight: 400;
-  font-size: clamp(28px, 2vw, 2.1vw);
+  font-size: clamp(28px, 2vw, 2vw);
 }
 /* Animation Titulo*/
 /* Main Section*/
@@ -257,7 +264,7 @@ nav a:hover {
 }
 .wrap-article h2 {
   font-size: 5vw;
-  line-height: 1.1;
+  line-height: 1;
   view-timeline-name: --title;
   view-timeline-axis: block;
   animation-timeline: --title;
@@ -269,11 +276,11 @@ nav a:hover {
   color: transparent;
   background-size: cover;
   background-position: center center;
-  line-height: 1;
   text-transform: uppercase;
+  margin-bottom: clamp(16px, 1vw, 1vw);
 }
 .wrap-article h3 {
-  font-size: clamp(24px, 1.6vw, 1.7vw);
+  font-size: clamp(24px, 1.6vw, 1.6vw);
   padding-top: clamp(16px, 1vw, 1vw);
   color: #7b7b7b;
   view-timeline-name: --subtitle;
@@ -285,25 +292,25 @@ nav a:hover {
   position: relative;
 }
 .wrap-article p {
-  max-width: 1024px;
   display: inline-block;
   hyphens: none;
   color: #7b7b7b;
+  margin-top: clamp(16px, 1vw, 1vw);
 }
 .wrap-article p strong {
   font-weight: 500;
 }
 .bot-call {
-  background: #5b0dbe;
+  background-color: #5b0dbe;
   display: inline-block;
   color: #f2f2f2;
   padding: clamp(16px, 1vw, 1vw);
   margin-bottom: clamp(16px, 1vw, 1vw);
-  transition: all 0.4s ease-in-out;
+  border-radius: clamp(6px, 0.4vw, 0.4vw);
 }
 .bot-call:hover {
   color: #5b0dbe;
-  background: #ffa500;
+  background-color: #ffa500;
 }
 /*background article*/
 #wrapper-articles article:nth-child(1) {
@@ -328,7 +335,7 @@ nav a:hover {
 footer {
   position: relative;
   padding: clamp(64px, 4vw, 4vw) 0 clamp(64px, 4vw, 4vw) 0;
-  background: #5b0dbe;
+  background-color: #5b0dbe;
   color: #f2f2f2;
 }
 footer:before {
@@ -344,15 +351,12 @@ footer:before {
   min-height: 48px;
   background: url("/developer/edgarcornejo.svg") no-repeat center center #ffa500;
   background-size: 70%;
-  box-shadow: 0 3px 6px rgba(19,24,83,0.16), 0 3px 6px rgba(19,24,83,0.23);
+  box-shadow: 0 clamp(1px, 0.2vw, 0.2vw) clamp(3px, 0.4vw, 0.4vw) rgba(91,13,190,0.6);
   transition: all 0.6s ease;
-}
-footer:before:hover {
-  box-shadow: 0 10px 20px rgba(19,24,83,0.19), 0 6px 6px rgba(19,24,83,0.23);
 }
 #wrapper-uls-footer {
   margin: 0 auto;
-  width: 90%;
+  width: 94%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -370,9 +374,8 @@ footer:before:hover {
 .ul-footer h3 {
   font-size: clamp(20px, 1.4vw, 1.5vw);
   text-align: right;
-  line-height: 120%;
   color: #ffa500;
-  border-bottom: solid clamp(1px, 0.1vw, 0.2vw) #ffa500;
+  border-bottom: solid clamp(1px, 0.2vw, 0.2vw) #ffa500;
   padding: clamp(16px, 1vw, 1vw);
   margin-bottom: clamp(16px, 1vw, 1vw);
 }
@@ -381,22 +384,20 @@ footer:before:hover {
 }
 .ul-footer a {
   color: #f2f2f2;
-  outline: solid clamp(1px, 0.1vw, 0.2vw) #f2f2f2;
+  outline: solid clamp(1px, 0.2vw, 0.2vw) #f2f2f2;
   padding: clamp(16px, 1vw, 1vw);
   border-radius: clamp(6px, 0.4vw, 0.4vw);
   display: inline-block;
   hyphens: none;
 }
 .ul-footer a:hover {
-  font-weight: 500;
   color: #5b0dbe;
-  background: #ffa500;
+  background-color: #ffa500;
   outline: 0;
 }
 #copyright {
   margin-top: clamp(32px, 2vw, 2vw);
   width: 100%;
-  text-align: right;
 }
 /* Responsive Design */
 @media screen and (max-width: 1024px) {
@@ -645,7 +646,7 @@ footer:before:hover {
 }
 @-moz-keyframes aparecer {
   0% {
-    transform: translateY(-200px);
+    transform: translateY(-100px);
   }
   100% {
     transform: translateY(0);
@@ -653,7 +654,7 @@ footer:before:hover {
 }
 @-webkit-keyframes aparecer {
   0% {
-    transform: translateY(-200px);
+    transform: translateY(-100px);
   }
   100% {
     transform: translateY(0);
@@ -661,7 +662,7 @@ footer:before:hover {
 }
 @-o-keyframes aparecer {
   0% {
-    transform: translateY(-200px);
+    transform: translateY(-100px);
   }
   100% {
     transform: translateY(0);
@@ -669,7 +670,7 @@ footer:before:hover {
 }
 @keyframes aparecer {
   0% {
-    transform: translateY(-200px);
+    transform: translateY(-100px);
   }
   100% {
     transform: translateY(0);
@@ -677,7 +678,7 @@ footer:before:hover {
 }
 @-moz-keyframes starttoend {
   0% {
-    transform: translateX(-200px);
+    transform: translateX(-100px);
   }
   100% {
     transform: translateX(0);
@@ -685,7 +686,7 @@ footer:before:hover {
 }
 @-webkit-keyframes starttoend {
   0% {
-    transform: translateX(-200px);
+    transform: translateX(-100px);
   }
   100% {
     transform: translateX(0);
@@ -693,7 +694,7 @@ footer:before:hover {
 }
 @-o-keyframes starttoend {
   0% {
-    transform: translateX(-200px);
+    transform: translateX(-100px);
   }
   100% {
     transform: translateX(0);
@@ -701,7 +702,7 @@ footer:before:hover {
 }
 @keyframes starttoend {
   0% {
-    transform: translateX(-200px);
+    transform: translateX(-100px);
   }
   100% {
     transform: translateX(0);

@@ -16,19 +16,22 @@
 @font-face 
 	font-family "Open Sans"
 	font-style normal
-	font-weight 400
+	font-weight 300 700
 	font-display swap
-	src url(/fonts/OpenSans-VariableFont_wdth,wght.ttf) format("truetype")
+	src url(/fonts/OpenSans-VariableFont_wdth,wght.ttf) format('truetype-variations')
 	
 /* Colores */
-hardWhite = #FFFFFF
-greenLiquid = #A0EAEB
-greenPastel = #6AC8C7
-greenMate = #0FAAA7
-greenPure = #0D8796
-hardGreen = #054d56
+hardWhite = rgb(255, 255, 255)
+greenLiquid = rgb(160, 234, 235)
+greenPastel = rgb(106, 200, 199)
+greenMate = rgb(15, 170, 167)
+greenPure = rgb(13, 135, 150)
+hardGreen = rgb(5, 77, 86)
 
-puntadaDelgada = dashed clamp(1px, 0.1vw, 0.2vw)
+h1,h2,h3,h4,h5,h6
+	font-family "DM Serif Display", serif
+	font-weight bolder
+	letter-spacing 1pt
 
 /* Estilos ScrollBar */
 html
@@ -37,15 +40,17 @@ html
 
 /* Body */
 body
-	background hardWhite
-	background-image repeating-linear-gradient(to right, rgba(160, 234, 235, .5), rgba(160, 234, 235, .5) 2px, hardWhite 2px, hardWhite)
+	background-color hardWhite
+	background-image repeating-linear-gradient(to right, rgba(greenLiquid, .5), rgba(greenLiquid, .5) 2px, hardWhite 2px, hardWhite)
 	background-size 32px 32px
 	width 100%
 	color hardWhite
-	font-size clamp(16px, 1vw, 1.1vw)
+	font-size clamp(18px, 1vw, 1vw)
 	font-family 'Open Sans',Helvetica,Arial,sans-serif
-	background-color hardWhite
+	font-weight 400
+	line-height 1.4
 	z-index 0
+	hyphens none
 
 /* Selección */
 ::selection
@@ -67,7 +72,7 @@ hr
 a
 	color greenPure
 	text-decoration none
-	transition all 0.2s ease
+	transition all .4s ease
 	&:hover
 		color hardGreen
 
@@ -100,6 +105,7 @@ a
 	svg
 		width auto
 		height 60%
+		max-height 48px
 
 /* Título de página */
 .name-title
@@ -107,15 +113,18 @@ a
 	display flex
 	align-items center
 	h1
-		font-size clamp(28px, 1.6vw, 1.7vw)
-		letter-spacing 1pt
+		color hardGreen
+		font-size clamp(28px, 1.6vw, 1.6vw)
 		padding onespace
+		font-family 'Open Sans',Helvetica,Arial,sans-serif
+		font-weight 500
+
 
 /* Nav Header */
 nav
 	display flex
 	justify-content center
-	background greenMate
+	background-color greenMate
 	height 100%
 	align-items center
 	border-radius 0 0 0 radius
@@ -131,12 +140,12 @@ nav
 		display none
 	menu
 		display none
-	li
-		border-bottom dashed 2px greenMate
-		padding onespace
 	a
+		display inline-block
 		color hardGreen
 		padding onespace
+		outline solid thinline greenMate
+		border-radius radius
 		&:hover
 			background greenLiquid
 			border-radius radius
@@ -158,9 +167,10 @@ nav
 			top 10vh
 			right 5vw
 			text-align right
-			background hardWhite
+			background-color hardWhite
 			border-radius radius
 			padding onespace
+			box-shadow shadow rgba(greenMate, .6)
 
 /* Contenedor principal */
 #main-content
@@ -173,17 +183,18 @@ nav
 	padding 12vh 0 12vh 0
 	/* Estilos para wrapper impares */
 	&:nth-child(odd)
-		background greenPure
+		background-color greenPure
 		color hardWhite
 		background-size 32px 32px
-		background-image repeating-linear-gradient(to right, rgba(5, 77, 86, .5), rgba(5, 77, 86, .5) 2px, greenPure 2px, greenPure)
+		background-image repeating-linear-gradient(to right, rgba(hardGreen, .5), rgba(hardGreen, .5) 2px, greenPure 2px, greenPure)
 		.wrap-txt
-			opacity 0.8
+			opacity .8
 	/* Estilos para wrapper pares */
 	&:nth-child(even)
 		figure
 			justify-content flex-end
-			border-bottom puntadaDelgada greenMate
+			padding-bottom onespace
+			border-bottom dashed thinline greenMate
 			border-bottom-right-radius radius
 		header
 			color hardGreen
@@ -191,18 +202,19 @@ nav
 		.wrap-txt
 			color greenPure
 			text-align right
-			border-right thickline greenPure
+			border-right solid thickline greenPure
 			border-bottom-right-radius radius
-			padding-right 2rem
+			padding-right onespace
+			margin-top onespace
 			div
 				align-self flex-end
 			a
 				color greenPure
-				border-bottom puntadaDelgada greenMate
+				border-bottom dashed thinline greenMate
 	
 	/* Artículos */
 	article
-		width 90%
+		width 94%
 		margin 0 auto
 		display flex
 		flex-direction column
@@ -214,8 +226,9 @@ nav
 		width 100%
 		display flex
 		justify-content flex-start
-		border-bottom puntadaDelgada hardWhite
+		border-bottom dashed thinline hardWhite
 		border-bottom-left-radius radius
+		padding-bottom onespace
 		img
 			max-width 20%
 		figcaption
@@ -231,11 +244,7 @@ nav
 		justify-content flex-start
 		padding-top thirdspace
 		h2
-			font-family 'DM Serif Display'
 			font-size clamp(36px, 6vw, 6.1vw)
-			font-weight 800
-			line-height 90%
-			letter-spacing 3pt
 
 	/* Contenedor de texto de article */
 	.wrap-txt
@@ -243,14 +252,12 @@ nav
 		display flex
 		justify-content flex-start
 		flex-direction column
-		border-left thickline hardWhite
+		border-left solid thickline hardWhite
 		border-bottom-left-radius radius
 		padding-left onespace
-		div
-			max-width 900px
+		margin-top onespace
 		p, blockquote
 			font-weight 500
-			hyphens none
 			padding-bottom onespace
 		blockquote
 			font-style italic
@@ -258,7 +265,7 @@ nav
 			font-weight 600
 		a
 			color hardWhite
-			border-bottom puntadaDelgada hardWhite
+			border-bottom dashed thinline hardWhite
 
 /* Lista de servicios */
 #list-services
@@ -301,11 +308,11 @@ nav
 	/* Titulo del servicio */
 	h3
 		font-size clamp(20px, 1.4vw, 1.5vw)
-		font-weight 800
-		color greenPastel
+		color greenPure
 		padding-top onespace
 		text-align center
 		text-transform uppercase
+		font-family 'Open Sans',Helvetica,Arial,sans-serif
 
 /* Footer */
 #footer
@@ -326,6 +333,7 @@ nav
 	svg
 		width auto
 		height 50%
+		max-height 48px
 
 #copyright
 	height 100%
@@ -338,7 +346,7 @@ nav
 
 /* Botonera Social Footer */
 #wrap-social
-	background greenMate
+	background-color greenMate
 	border-radius radius 0 0 0
 	height 100%
 	display flex

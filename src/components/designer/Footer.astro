@@ -1,7 +1,4 @@
 ---
-const fecha = new Date();
-const year = fecha.getFullYear();
-
 const { author } = Astro.props;
 ---
 
@@ -39,8 +36,7 @@ const { author } = Astro.props;
 
 	<div id="copyright">
 		<small>
-			Copyright &copy; <span>{year}</span>
-			<a href="/" title={author}> {author}</a> | Todos los derechos reservados.
+			&copy; <a href="/" title={author}> {author}</a>
 		</small>
 	</div>
 
@@ -71,9 +67,7 @@ const { author } = Astro.props;
 				title="Facebook"
 				target="_blank">Facebook</a
 			>
-			<a href="https://twitter.com/devcornejo" title="Twitter" target="_blank"
-				>Twitter</a
-			>
+			<a href="https://x.com/devcornejo" title="X" target="_blank">X</a>
 		</div>
 	</div>
 </footer>

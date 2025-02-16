@@ -27,11 +27,11 @@
   src url(/fonts/TitilliumWeb-Bold.ttf) format("truetype")
 
 /* Colors */
-devWhite = #F2F2F2
-devGrey =#7B7B7B
-devLightGrey =#C4C4C4
-devGrape =#5B0DBE
-devOrange = #FFA500
+devWhite = rgb(242, 242, 242)
+devGrey =rgb(123, 123, 123)
+devLightGrey =rgb(196, 196, 196)
+devGrape =rgb(91, 13, 190)
+devOrange = rgb(255, 165, 0)
 
 h1,h2,h3,h4,h5,h6
   font-family 'Titillium Web'
@@ -50,15 +50,16 @@ html
 
 body
   color devGrape
-  font-size clamp(16px, 1vw, 1.1vw)
+  font-size clamp(18px, 1vw, 1.1vw)
   font-weight 400
-  background devWhite
+  line-height 1.4
+  background-color devWhite
   font-family "Roboto", Helvetica, sans-serif
 
 /* Cabecera principal */
 #main-header
   width 100%
-  background linear-gradient(-45deg, rgba(205,38,252,1) 0%, rgba(140,62,244,1) 53%, rgba(145,132,250,1) 100%), url("/developer/top-back.jpg")
+  background-image linear-gradient(-45deg, rgba(devGrape, 1) 0%, rgba(devGrape, .8) 53%, rgba(devGrape, .6) 100%), url("/developer/top-back.jpg") 
   background-size cover
   background-position 0 center
   background-repeat no-repeat
@@ -68,11 +69,11 @@ body
 
 /* Envoltura de logo, nav y contact */
 #wrapper-logo-nav-contact-title
-  width 90%
+  width 94%
   margin 0 auto
   padding twospace 0 twospace 0
   display grid
-  grid-template-columns 5vW 1fr 5vw
+  grid-template-columns 5vw 1fr 5vw
   align-items center
 
 /* Logotipo en Header */
@@ -104,7 +105,7 @@ nav
     user-select none
     cursor pointer
     display block
-    img
+    svg
       min-width 48px
       width 2vw
       height auto
@@ -143,16 +144,16 @@ nav
   gap onespace
   a
     color devWhite
-    background devOrange
+    background-color devOrange
     display flex
     justify-content center
     align-items center
     padding onespace
     border-radius radius
-    transition all 0.4s ease
+    transition all .4s ease
     position relative
     &:hover
-      background devGrape
+      background-color devGrape
     &:first-child
       animation contacto .5s ease-in both
       animation-delay 1s
@@ -183,11 +184,11 @@ nav
   animation ttob .5s ease-in both
   animation-delay 1.2s
   h1
-    font-size clamp(32px, 2.6vw, 2.7vw)
+    font-size clamp(32px, 2.6vw, 2.6vw)
   h2
     font-family 'Roboto'
     font-weight 400
-    font-size clamp(28px, 2vw, 2.1vw)
+    font-size clamp(28px, 2vw, 2vw)
 
 /* Animation Titulo*/
 @keyframes ttob
@@ -234,7 +235,7 @@ nav
   padding fourtspace
   h2
     font-size 5vw
-    line-height 1.1
+    line-height 1
     view-timeline-name --title
     view-timeline-axis block
     animation-timeline --title
@@ -246,10 +247,10 @@ nav
     color transparent
     background-size cover
     background-position center center
-    line-height 1
     text-transform uppercase
+    margin-bottom onespace
   h3
-    font-size clamp(24px, 1.6vw, 1.7vw)
+    font-size clamp(24px, 1.6vw, 1.6vw)
     padding-top onespace
     color devGrey
     view-timeline-name --subtitle
@@ -260,35 +261,35 @@ nav
     animation-fill-mode both
     position relative
   p
-    max-width 1024px
     display inline-block
     hyphens none
     color devGrey
+    margin-top onespace
     strong
       font-weight 500
 
 @keyframes aparecer
   0%
-    transform translateY(-200px)
+    transform translateY(-100px)
   100%
     transform translateY(0)
 
 @keyframes starttoend
   0%
-    transform translateX(-200px)
+    transform translateX(-100px)
   100%
     transform translateX(0)
 
 .bot-call
-  background devGrape
+  background-color devGrape
   display inline-block
   color devWhite
   padding onespace
   margin-bottom onespace
-  transition all .4s ease-in-out
+  border-radius radius
   &:hover
     color devGrape
-    background devOrange
+    background-color devOrange
 
 /*background article*/
 #wrapper-articles
@@ -310,7 +311,7 @@ nav
 footer
   position relative
   padding fourtspace 0 fourtspace 0
-  background devGrape
+  background-color devGrape
   color devWhite
   &:before
     border-radius 50%
@@ -325,14 +326,12 @@ footer
     min-height 48px
     background url("/developer/edgarcornejo.svg") no-repeat center center devOrange
     background-size 70%
-    box-shadow shadow
+    box-shadow shadow rgba(devGrape, .6)
     transition all 0.6s ease
-    &:hover
-      box-shadow shadow-hover
 
 #wrapper-uls-footer
   margin 0 auto
-  width 90%
+  width 94%
   display flex
   flex-wrap wrap
   justify-content space-around
@@ -348,30 +347,27 @@ footer
   h3
     font-size clamp(20px, 1.4vw, 1.5vw)
     text-align right
-    line-height 120%
     color devOrange
-    border-bottom thinline devOrange
+    border-bottom solid thinline devOrange
     padding onespace
     margin-bottom onespace
   li
     margin onespace
   a
     color devWhite
-    outline thinline devWhite
+    outline solid thinline devWhite
     padding onespace
     border-radius radius
     display inline-block
     hyphens none
     &:hover
-      font-weight 500
       color devGrape
-      background devOrange
+      background-color devOrange
       outline 0
 
 #copyright
   margin-top twospace
   width 100%
-  text-align right
   
 /* Responsive Design */
 @media screen and (max-width:1024px)

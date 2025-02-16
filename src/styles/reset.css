@@ -7,6 +7,9 @@
 *::after {
   box-sizing: border-box;
 }
+/* Opt-in the whole page to interpolate sizes to/from keywords */
+:root,
+interpolate-size allow-keywords,
 body {
   min-height: 100dvh;
 }
@@ -18,9 +21,12 @@ select {
 }
 p {
   text-wrap: pretty;
+  max-inline-size: 50ch;
+  text-box: trim-both cap alphabetic;
 }
 a {
   text-decoration: none;
+  text-box: trim-both cap alphabetic;
 }
 h1,
 h2,
@@ -29,6 +35,7 @@ h4,
 h5,
 h6 {
   text-wrap: balance;
+  text-box: trim-both cap alphabetic;
 }
 img,
 video,

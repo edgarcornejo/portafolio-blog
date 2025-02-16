@@ -30,9 +30,13 @@
 	/* Wrapper Gallery */
 	.gallery-cell
 		color transparent
+		&:before
+			width 100%
 		img
 			opacity 1
 			width 90%
+		h3
+			border 0
 
 	/* Layout Blog */
 	.wrapper-content
@@ -79,6 +83,10 @@
 		display block
 		article
 			width 100%
+	
+	.wrapper-post
+		p
+			margin-top onespace
 
 @media (max-width: 580px)
 	.sushi-container

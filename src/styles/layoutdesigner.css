@@ -10,6 +10,8 @@
 *::after {
   box-sizing: border-box;
 }
+:root,
+interpolate-size allow-keywords,
 body {
   min-height: 100dvh;
 }
@@ -21,9 +23,12 @@ select {
 }
 p {
   text-wrap: pretty;
+  max-inline-size: 50ch;
+  text-box: trim-both cap alphabetic;
 }
 a {
   text-decoration: none;
+  text-box: trim-both cap alphabetic;
 }
 h1,
 h2,
@@ -32,6 +37,7 @@ h4,
 h5,
 h6 {
   text-wrap: balance;
+  text-box: trim-both cap alphabetic;
 }
 img,
 video,
@@ -56,11 +62,21 @@ svg {
 @font-face {
   font-family: "Open Sans";
   font-style: normal;
-  font-weight: 400;
+  font-weight: 300 700;
   font-display: swap;
-  src: url("/fonts/OpenSans-VariableFont_wdth,wght.ttf") format("truetype");
+  src: url("/fonts/OpenSans-VariableFont_wdth,wght.ttf") format('truetype-variations');
 }
 /* Colores */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "DM Serif Display", serif;
+  font-weight: bolder;
+  letter-spacing: 1pt;
+}
 /* Estilos ScrollBar */
 html {
   scrollbar-color: #a0eaeb #6ac8c7;
@@ -68,15 +84,17 @@ html {
 }
 /* Body */
 body {
-  background: #fff;
+  background-color: #fff;
   background-image: repeating-linear-gradient(to right, rgba(160,234,235,0.5), rgba(160,234,235,0.5) 2px, #fff 2px, #fff);
   background-size: 32px 32px;
   width: 100%;
   color: #fff;
-  font-size: clamp(16px, 1vw, 1.1vw);
+  font-size: clamp(18px, 1vw, 1vw);
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-  background-color: #fff;
+  font-weight: 400;
+  line-height: 1.4;
   z-index: 0;
+  hyphens: none;
 }
 /* Selección */
 ::selection {
@@ -98,7 +116,7 @@ hr {
 a {
   color: #0d8796;
   text-decoration: none;
-  transition: all 0.2s ease;
+  transition: all 0.4s ease;
 }
 a:hover {
   color: #054d56;
@@ -127,6 +145,7 @@ a:hover {
 #logo svg {
   width: auto;
   height: 60%;
+  max-height: 48px;
 }
 /* Título de página */
 .name-title {
@@ -135,15 +154,17 @@ a:hover {
   align-items: center;
 }
 .name-title h1 {
-  font-size: clamp(28px, 1.6vw, 1.7vw);
-  letter-spacing: 1pt;
+  color: #054d56;
+  font-size: clamp(28px, 1.6vw, 1.6vw);
   padding: clamp(16px, 1vw, 1vw);
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-weight: 500;
 }
 /* Nav Header */
 nav {
   display: flex;
   justify-content: center;
-  background: #0faaa7;
+  background-color: #0faaa7;
   height: 100%;
   align-items: center;
   border-radius: 0 0 0 clamp(6px, 0.4vw, 0.4vw);
@@ -166,13 +187,12 @@ nav .closed-menu {
 nav menu {
   display: none;
 }
-nav li {
-  border-bottom: dashed 2px #0faaa7;
-  padding: clamp(16px, 1vw, 1vw);
-}
 nav a {
+  display: inline-block;
   color: #054d56;
   padding: clamp(16px, 1vw, 1vw);
+  outline: solid clamp(1px, 0.2vw, 0.2vw) #0faaa7;
+  border-radius: clamp(6px, 0.4vw, 0.4vw);
 }
 nav a:hover {
   background: #a0eaeb;
@@ -197,9 +217,10 @@ nav a:hover {
   top: 10vh;
   right: 5vw;
   text-align: right;
-  background: #fff;
+  background-color: #fff;
   border-radius: clamp(6px, 0.4vw, 0.4vw);
   padding: clamp(16px, 1vw, 1vw);
+  box-shadow: 0 clamp(1px, 0.2vw, 0.2vw) clamp(3px, 0.4vw, 0.4vw) rgba(15,170,167,0.6);
 }
 /* Contenedor principal */
 #main-content {
@@ -218,7 +239,7 @@ nav a:hover {
 /* Contenedor de texto de article */
 }
 .wrapper-article:nth-child(odd) {
-  background: #0d8796;
+  background-color: #0d8796;
   color: #fff;
   background-size: 32px 32px;
   background-image: repeating-linear-gradient(to right, rgba(5,77,86,0.5), rgba(5,77,86,0.5) 2px, #0d8796 2px, #0d8796);
@@ -228,7 +249,8 @@ nav a:hover {
 }
 .wrapper-article:nth-child(even) figure {
   justify-content: flex-end;
-  border-bottom: dashed clamp(1px, 0.1vw, 0.2vw) #0faaa7;
+  padding-bottom: clamp(16px, 1vw, 1vw);
+  border-bottom: dashed clamp(1px, 0.2vw, 0.2vw) #0faaa7;
   border-bottom-right-radius: clamp(6px, 0.4vw, 0.4vw);
 }
 .wrapper-article:nth-child(even) header {
@@ -238,19 +260,20 @@ nav a:hover {
 .wrapper-article:nth-child(even) .wrap-txt {
   color: #0d8796;
   text-align: right;
-  border-right: solid clamp(6px, 1vw, 1.1vw) #0d8796;
+  border-right: solid clamp(6px, 1vw, 1vw) #0d8796;
   border-bottom-right-radius: clamp(6px, 0.4vw, 0.4vw);
-  padding-right: 2rem;
+  padding-right: clamp(16px, 1vw, 1vw);
+  margin-top: clamp(16px, 1vw, 1vw);
 }
 .wrapper-article:nth-child(even) .wrap-txt div {
   align-self: flex-end;
 }
 .wrapper-article:nth-child(even) .wrap-txt a {
   color: #0d8796;
-  border-bottom: dashed clamp(1px, 0.1vw, 0.2vw) #0faaa7;
+  border-bottom: dashed clamp(1px, 0.2vw, 0.2vw) #0faaa7;
 }
 .wrapper-article article {
-  width: 90%;
+  width: 94%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -261,8 +284,9 @@ nav a:hover {
   width: 100%;
   display: flex;
   justify-content: flex-start;
-  border-bottom: dashed clamp(1px, 0.1vw, 0.2vw) #fff;
+  border-bottom: dashed clamp(1px, 0.2vw, 0.2vw) #fff;
   border-bottom-left-radius: clamp(6px, 0.4vw, 0.4vw);
+  padding-bottom: clamp(16px, 1vw, 1vw);
 }
 .wrapper-article figure img {
   max-width: 20%;
@@ -280,28 +304,21 @@ nav a:hover {
   padding-top: clamp(48px, 3vw, 3vw);
 }
 .wrapper-article header h2 {
-  font-family: 'DM Serif Display';
   font-size: clamp(36px, 6vw, 6.1vw);
-  font-weight: 800;
-  line-height: 90%;
-  letter-spacing: 3pt;
 }
 .wrapper-article .wrap-txt {
   width: 100%;
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
-  border-left: solid clamp(6px, 1vw, 1.1vw) #fff;
+  border-left: solid clamp(6px, 1vw, 1vw) #fff;
   border-bottom-left-radius: clamp(6px, 0.4vw, 0.4vw);
   padding-left: clamp(16px, 1vw, 1vw);
-}
-.wrapper-article .wrap-txt div {
-  max-width: 900px;
+  margin-top: clamp(16px, 1vw, 1vw);
 }
 .wrapper-article .wrap-txt p,
 .wrapper-article .wrap-txt blockquote {
   font-weight: 500;
-  hyphens: none;
   padding-bottom: clamp(16px, 1vw, 1vw);
 }
 .wrapper-article .wrap-txt blockquote {
@@ -312,7 +329,7 @@ nav a:hover {
 }
 .wrapper-article .wrap-txt a {
   color: #fff;
-  border-bottom: dashed clamp(1px, 0.1vw, 0.2vw) #fff;
+  border-bottom: dashed clamp(1px, 0.2vw, 0.2vw) #fff;
 }
 /* Lista de servicios */
 #list-services {
@@ -367,11 +384,11 @@ nav a:hover {
 }
 .item-services h3 {
   font-size: clamp(20px, 1.4vw, 1.5vw);
-  font-weight: 800;
-  color: #6ac8c7;
+  color: #0d8796;
   padding-top: clamp(16px, 1vw, 1vw);
   text-align: center;
   text-transform: uppercase;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 }
 /* Footer */
 #footer {
@@ -393,6 +410,7 @@ nav a:hover {
 #logo-footer svg {
   width: auto;
   height: 50%;
+  max-height: 48px;
 }
 #copyright {
   height: 100%;
@@ -406,7 +424,7 @@ nav a:hover {
 }
 /* Botonera Social Footer */
 #wrap-social {
-  background: #0faaa7;
+  background-color: #0faaa7;
   border-radius: clamp(6px, 0.4vw, 0.4vw) 0 0 0;
   height: 100%;
   display: flex;

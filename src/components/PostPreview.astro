@@ -22,7 +22,7 @@ const { post } = Astro.props;
 			<p>
 				{post.data.description.slice(0, 180)}...
 			</p>
-			<p>Categoría: <strong>{post.data.category}</strong></p>
+			<small>Categoría: <strong>{post.data.category}</strong></small>
 		</div>
 	</a>
 </article>

@@ -31,9 +31,15 @@
   .gallery-cell {
     color: transparent;
   }
+  .gallery-cell:before {
+    width: 100%;
+  }
   .gallery-cell img {
     opacity: 1;
     width: 90%;
+  }
+  .gallery-cell h3 {
+    border: 0;
   }
   .wrapper-content {
     flex-direction: column;
@@ -80,6 +86,9 @@
   }
   .wrapper-content article {
     width: 100%;
+  }
+  .wrapper-post p {
+    margin-top: onespace;
   }
 }
 @media (max-width: 580px) {

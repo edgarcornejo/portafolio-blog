@@ -7,19 +7,19 @@
 @import "../styles/fonts.styl";
 
 /* Colores */
-blueDev-50 = #ebf3ff
-blueDev-100 = #dbe9ff
-blueDev-200 = #bed5ff
-blueDev-300 = #96b9ff
-blueDev-400 = #6d91ff
-blueDev-500 = #4b69ff
-blueDev-600 = #2b3eff
-blueDev-700 = #2a37e4
-blueDev-800 = #1d2ab6
-blueDev-900 = #202c8f
-blueDev-950 = #131853
-eWhite = #F2F2F2
-eRed = #e63d67
+blueDev-50 = rgb(235, 243, 255)
+blueDev-100 = rgb(219, 233, 255)
+blueDev-200 = rgb(189, 212, 255)
+blueDev-300 = rgb(148, 184, 255)
+blueDev-400 = rgb(107, 144, 255)
+blueDev-500 = rgb(77, 106, 255)
+blueDev-600 = rgb(41, 59, 255)
+blueDev-700 = rgb(42, 54, 229)
+blueDev-800 = rgb(28, 41, 181)
+blueDev-900 = rgb(32, 43, 141)
+blueDev-950 = rgb(19, 24, 83)
+eWhite = rgb(242, 242, 242)
+eRed = rgb(230, 61, 103)
 
 /* Estilos ScrollBar */
 html
@@ -40,76 +40,244 @@ h1,h2,h3,h4,h5,h6
 	margin-bottom onespace
 
 h1
-	font-size clamp(36px, 3vw, 3.1vw)
+	font-size clamp(36px, 3vw, 3vw)
 	font-weight 900
 h2
-	font-size clamp(32px, 2.6vw, 2.7vw)
+	font-size clamp(32px, 2.6vw, 2.6vw)
 	font-weight 800
 h3
-	font-size clamp(28px, 2.2vw, 2.3vw)
+	font-size clamp(28px, 2.2vw, 2.2vw)
 	font-weight 700
 h4
-	font-size clamp(24px, 1.8vw, 1.9vw)
+	font-size clamp(24px, 1.8vw, 1.8vw)
 	font-weight 600
 h5
-	font-size clamp(20px, 1.4vw, 1.5vw)
+	font-size clamp(20px, 1.4vw, 1.4vw)
 	font-weight 500
 h6
-	font-size clamp(16px, 1vw, 1.1vw)
+	font-size clamp(16px, 1vw, 1vw)
 	font-weight 400
 
 /* enlaces */
 a
 	color eWhite
-	transition all 0.2s ease-in-out
+	transition all .2s ease-in-out
 	&:hover
 		color blueDev-500
 
 p
 	a
-		transition all 0.2s ease-in-out
-		border-bottom thinline blueDev-950
+		transition all .2s ease-in-out
+		border-bottom solid thinline blueDev-950
 		color blueDev-950
 		&:hover
-			opacity 0.8
+			opacity .8
 
 /* Estilos de Body */
 body
-	font-size clamp(16px, 1vw, 1vw)
+	font-size clamp(18px, 1vw, 1vw)
 	font-weight 300
-	line-height 1.2
+	line-height 1.4
 	hyphens none
 	font-family "Outfit", sans-serif
 	font-optical-sizing auto
 	color blueDev-950
 	background-color eWhite
-	background linear-gradient(90deg, eWhite 20px, transparent 1%) center, linear-gradient(eWhite 20px, transparent 1%) center, rgba(61, 188, 230, 0.5)
+	background linear-gradient(90deg, eWhite 20px, transparent 1%) center, linear-gradient(eWhite 20px, transparent 1%) center, rgba(blueDev-950, 0.3)
 	background-size 22px 22px
 
 /* Estilos componente MainHeaderView */
-@import "../styles/MainHeaderView.styl"
+.container-logo-menu
+	background blueDev-950
+	background-size 21% 21%
+	background-image repeating-linear-gradient(
+		to left, 
+		blueDev-800, 
+		blueDev-800 4px,
+		blueDev-950 4px, 
+		blueDev-950)
+	box-shadow inset insetshadow rgba(blueDev-950, 0.8)
+	display grid
+	align-items center
+	width 100%
+	position fixed
+	z-index 1
+	grid-template-columns minmax(44px, 1fr) 1fr
+	grid-template-rows auto
+	#logo
+		padding space
+		text-box none
+		display inline-block
+		&:hover svg
+			fill eRed
+	svg
+		height twospace
+		width auto
+		transition all 0.4s ease
+	button
+		appearance none
+		cursor pointer
+		justify-self flex-end
+		background none
+		border none
+		border-radius radius
+		padding space
+		transition all 0.4s ease
+		&:hover
+			background eRed
+
+#main-menu
+	width 90vw
+	animation menu .4s ease-in
+	margin 0 auto
+	background blueDev-950
+	box-shadow shadow
+	border none
+	border-radius radius
+	transition translate .4s ease,
+	display .4s ease allow-discrete,
+	overlay .4s ease allow-discrete
+	@starting-style
+		opacity 0
+		top -100%
+	menu
+		display flex
+		flex-direction column
+		padding twospace
+		box-shadow inset insetshadow rgba(blueDev-950, .8)
+	li
+		display flex
+		justify-content center
+		align-items center
+		width 100%
+		font-size clamp(36px, 2vw, 2.1vw)
+		border-bottom solid thinline blueDev-900
+		padding onespace 0 onespace 0
+	a
+		cursor pointer
+		letter-spacing 1pt
+		color eWhite
+		padding space
+		&:hover
+			letter-spacing 0
+	button
+		margin 0 auto
+		display block
+
+[popover]
+	&::backdrop
+		transition all .4s ease-in
+		background linear-gradient(to top, rgba(eWhite, 0.8), rgba(blueDev-950, 0.8))
+		mix-blend-mode multiply
+		backdrop-filter grayscale(100%) blur(2px)
+
+/* estas en esta página */
+.li-current
+	text-transform uppercase
+	font-weight 700
+
+#main-header
+	min-height 50vh
+	width 100%
+	display flex
+	justify-content center
+	align-items center
+	border-radius 0 0 radius radius
+	background blueDev-950
+	background-size 21% 21%
+	background-image repeating-linear-gradient(
+		to left, 
+		blueDev-800, 
+		blueDev-800 4px,
+		blueDev-950 4px, 
+		blueDev-950)
+	box-shadow inset insetshadow rgba(blueDev-950, 0.8)
+
+.wrapper-h1-h2
+	width 96%
+	display flex
+	flex-flow column wrap
+	color eWhite
+	position relative
+	margin fourtspace 0 thirdspace 0
+	&:before
+		content ''
+		position absolute
+		background eWhite
+		border-radius 0 0 radius 0
+		width 2vw
+		height 5vw
+		right 0
+		transition all .4s ease-in-out
+	.title
+		font-size clamp(36px, 3vw, 3.1vw)
+		position relative
+		bottom 0
+		opacity 1
+		animation top .4s ease both
+		padding onespace 0 0 0
+		&:after
+			border-radius radius
+			content ''
+			position absolute
+			background linear-gradient(to left, eWhite, blueDev-950)
+			width 100%
+			inset 0
+			opacity .1
+	.subtitle
+		font-size clamp(20px, 1.4vw, 1.5vw)
+		position relative
+		font-weight 200
+		animation top 0.4s ease both
+		animation-delay 0.2s
+	a
+		border-bottom solid thinline eWhite
+		&:hover
+			color blueDev-300
+			border-bottom solid thinline blueDev-300
+
+#bottom-call
+	display flex
+	margin 0 auto
+	justify-content flex-end
+	position relative
+	animation top .6s ease both
+	animation-delay .4s
+	width 90%
+	a
+		padding onespace
+		border-radius radius
+		background blueDev-800
+		box-shadow shadow rgba(blueDev-950, .6)
+		color eWhite
+		font-weight 800
+		letter-spacing 1pt
+		gap onespace
+		transition all .4s ease-in-out
+		&:hover
+			opacity 1
+			box-shadow shadow-hover rgba(blueDev-950, .8)
 	
 /* Contenedor principal de contenido */
 #main-content
 	width 100%
-	min-height 100vh
-	padding twospace 0 0 0
+	min-height 100dvh
+	padding thirdspace 0 0 0
 
 main
 	scroll-snap-type y proximity
 	scroll-padding-top thirdspace
 	section
-		margin-bottom twospace
-		padding-top twospace
+		margin-bottom thirdspace
+		padding-top thirdspace
 		scroll-snap-align start
 		display flex
 		justify-content center
 	article
 		display flex
 		flex-direction column
-		width 90%
+		width 98%
 	.parrafo
-		max-width 900px
 		margin-bottom twospace
 	p
 		padding-bottom onespace
@@ -127,7 +295,7 @@ main
 		padding onespace
 		height 100%
 	header
-		align-content flex-end
+		align-content flex-start
 	.omakase
 		align-self flex-start
 		display grid
@@ -137,9 +305,6 @@ main
 		h3
 			font-weight 200
 			align-content center
-			border-radius radius
-			padding onespace
-			cursor pointer
 	.tuna
 		height 100%
 		align-content center
@@ -157,8 +322,6 @@ main
 	justify-content center
 	gap onespace
 	div
-		border thinline blueDev-200
-		border-radius radius
 		padding onespace 0 onespace 0
 	a
 		&:hover img
@@ -188,9 +351,12 @@ address
 		padding onespace
 		border-radius radius
 		color eWhite
+		border 0
 		background blueDev-900
+		box-shadow shadow rgba(blueDev-950, .6)
 		&:hover
 			background eRed
+			box-shadow shadow-hover rgba(blueDev-950, .8)
 	.ultimo-enlace
 		color eWhite
 		background blueDev-600
@@ -202,7 +368,6 @@ address
 #footer
 	margin 0 auto
 	padding twospace 0 twospace 0
-	text-align center
 	border-radius radius radius 0 0
 	background blueDev-950
 	background-size 21% 21%
@@ -212,6 +377,12 @@ address
 		blueDev-800 4px,
 		blueDev-950 4px, 
 		blueDev-950)
+	box-shadow inset insetshadow rgba(blueDev-950, .8)
+	display flex
+	justify-content center
+	align-items center
+	p
+		text-align center
 	a
 		color eWhite
 
@@ -226,23 +397,35 @@ address
 
 .wrapper-details
 	width 100%
-	summary
-		color eWhite
-		&::marker
-			content none
 	details
+		transition all .4s ease
+		overflow hidden
+		margin-bottom onespace
+		&::details-content
+			transition all .4s ease, content-visibility .4s allow-discrete
+			overflow clip
+			height 0
 		&:nth-of-type(1) summary
 			background blueDev-950
 		&:nth-of-type(2) summary
 			background blueDev-900
 		&:nth-of-type(3) summary
 			background blueDev-800
+		&[open]::details-content
+			height auto
+		&[open]
+			padding-bottom onespace
+	summary
+		color eWhite
+		border-radius radius
+		transition all .4s ease
+		&::marker
+			content ''
 	p
 		padding onespace
 	h3
 		font-weight 200
 		align-content center
-		border-radius radius
 		padding onespace
 		cursor pointer
 	
@@ -260,8 +443,10 @@ address
 		border-radius radius
 		padding onespace
 	li
-		line-height 160%
+		line-height 1.6
 		list-style disc inside
+		&::marker
+			color eRed
 
 /* Pagina de portafolio*/
 .wrapper-gallery-work
@@ -274,13 +459,21 @@ address
 .gallery-cell
 	padding onespace
 	border-radius radius
-	outline thinline blueDev-400
 	position relative
 	overflow hidden
+	transition all .4s ease
+	position relative
+	&:before
+		content ''
+		position absolute
+		background eRed
+		height midline
+		width 10%
+		top 0
 	&:hover
-		background eWhite
+		background-color eWhite
 		color transparent
-		box-shadow shadow-hover
+		box-shadow shadow-hover rgba(blueDev-950, .4)
 		img
 			opacity 1
 			width 90%
@@ -310,6 +503,7 @@ address
 		border-radius radius
 		opacity 0
 	h3
+		border-bottom solid thinline blueDev-400
 		font-size clamp(20px, 1.4vw, 1.5vw)
 		font-weight 700
 		overflow hidden
@@ -344,13 +538,14 @@ address
 	gap 0 twospace
 	padding onespace 0 onespace 0
 	a
-		background blueDev-100
+		background-color blueDev-200
 		border-radius radius
 		padding onespace
 		letter-spacing 1pt
 		color blueDev-950
+		font-weight 400
 		&:hover
-			background blueDev-950
+			background-color eRed
 			color eWhite
 			&:nth-child(odd)
 				transform translatex(-.4rem)
@@ -365,12 +560,19 @@ address
 	padding onespace 0 onespace 0
 	article
 		padding onespace
-		outline thinline blueDev-300
 		border-radius radius
-		box-shadow shadow
+		transition all .4s ease
+		position relative
 		&:hover
-			background blueDev-50
-			box-shadow shadow-hover
+			background-color eWhite
+			box-shadow shadow-hover rgba(blueDev-950, .4)
+		&:after
+			content ''
+			position absolute
+			background-color eRed
+			height midline
+			width 10%
+			top 0
 	a
 		color blueDev-950
 		display grid
@@ -380,10 +582,9 @@ address
 		&:hover
 			color inherit
 	h3
+		border-bottom solid thinline blueDev-400
 		grid-column-start span 2
 		font-size clamp(20px, 1.4vw, 1.5vw)
-		font-weight 200
-		padding 0
 		margin 0
 		overflow hidden
 		display -webkit-box
@@ -394,10 +595,11 @@ address
 		display flex
 	figcaption
 		position absolute
-		background blueDev-950
+		background-color blueDev-950
 		border-radius radius
 		color eWhite
-		padding onespace
+		padding space
+		font-size smaller
 	img
 		width 100%
 		height auto
@@ -408,8 +610,12 @@ address
 		overflow hidden
 		display -webkit-box
 		-webkit-box-orient vertical
-		-webkit-line-clamp 5
+		-webkit-line-clamp 6
+		line-height 1.2
+		padding-bottom 0
+	small
 		padding-top onespace
+		display inline-block
 
 .aside-bottom
 	padding twospace 0 twospace 0
